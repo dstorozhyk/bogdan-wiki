@@ -60,9 +60,24 @@ python3 ~/.hermes/skills/ukraine-specialists-finder/scripts/find_specialist.py -
   "source": "OLX / Telegram / Facebook / Viber",
   "url": "https://посилання",
   "response_time_hours": 2,
-  "price_range": "200-500 грн/час"
+  "price_range": "200-500 грн/час",
+  "found_at": {
+    "date": "2026-06-01",
+    "platform": "OLX / Telegram / Facebook / Viber",
+    "location": "Опис місця, де знайдено",
+    "notes": "Додаткові нотатки про джерело пошуку"
+  }
 }
 ```
+
+### Структура `found_at`
+
+Кожен спеціаліст тепер містить поле `found_at` з інформацією про джерело:
+
+- **date** — Коли контакт був додан до системи
+- **platform** — На якій платформі знайдено (OLX, Telegram, Facebook, Viber, тощо)
+- **location** — Де саме (посилання, назва групи, канал)
+- **notes** — Як саме контакт був знайдений (поиск, рекомендація, тощо)
 
 ## Потенціальні Розширення
 
