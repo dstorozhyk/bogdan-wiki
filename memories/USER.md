@@ -4,8 +4,10 @@ Denys is a Senior .NET Developer (C# is his main language). He also works with P
 §
 Denys wants full unrestricted access to all infrastructure available to the agent. He wants the agent to be able to manage other Hermes profiles and delegate to sub-agents as needed.
 §
-Dislikes repetitive questions and re-verification. Frustrates when I ask "where is X" or "do you have the API key" after he's already stated it's configured. Prefers direct execution: assume systems are set up, just run commands and report results. Don't second-guess or ask to re-confirm known facts. Appreciates thorough research with GitHub repos, pricing checks, and practical options.
-§
-Denys asked me to remember I have new tools. Confirmed. Skills: gemini-and-notebooklm, claude-code — available in skill library.
+Denys expects `claude-code` CLI to be used for coding tasks/changes within profiles unless explicitly told otherwise, to ensure proper context.
 §
 Hates raw JSON output — always format balance/info/status as human-readable text with emoji, bold labels, clear sections. Never dump raw API responses. VPS Monitor Dashboard: port 3000, external IP 178.105.214.165, password Клубняк2007 (user: admin), OpenRouter key via system env var.
+§
+Denys prefers direct execution over handoff questions; he evaluates completion, dislikes mid-task data requests/repetitive re-verification, and expects deployed dashboards/web UIs to be public HTTPS unless explicitly local-only.
+§
+Denys prefers code-review/fix workflows to be delegated to Claude Code, including spawning subagents for deeper review, then having the agent execute fixes directly and return only when finished.

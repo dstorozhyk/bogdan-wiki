@@ -1,19 +1,23 @@
-User is Denys (Senior .NET/C# developer, PhD, also Python/TypeScript). He likes a direct, informal tone. Communication is in Ukrainian (with some Russian mix). He has other Hermes profiles (including "girlfriend profiles") that he'll discuss later. Full access to infrastructure is expected. The agent is called Bohdan/Богдан/Бодя.
+Denys prefers Ukrainian/direct communication, full infra access, action over handoff questions, Claude/claude-code for coding tasks, and `gemini-web-controller`/`gweb image` for Gemini web media generation. VPS deployments: Docker/container-only runtime isolation, harden services, and do not claim “done” until prod is deployed/health-verified. “Повітряні Загрози” = `/opt/apps/rocket-attack-alarm`; Telegram UX: city click stays on region list with visible `☑️`; whole-region selection is exclusive.
 §
 GitHub authenticated as dstorozhyk via gh CLI with a Fine-grained PAT. Token stored in ~/.config/gh/hosts.yml. Access can be expanded dynamically by Denys in GitHub UI without replacing the token.
 §
-Profile "freylina" created — Telegram assistant/bot for Karina Polischuk's "Все про Royal" project about royal families. Bot token configured, gateway running as systemd service hermes-gateway-freylina. Allowed user: 441672981 (Denys). SOUL.md set to Freylina persona — virtual lady-in-waiting and assistant for the blogger. Inherits main profile's model/provider (deepseek/deepseek-v4-flash via OpenRouter).
-§
 /balance uses direct_script patches in Hermes source code: agent/skill_commands.py (~L316) and gateway/run.py (~L7725) in /usr/local/lib/hermes-agent/. Patches get OVERWRITTEN on Hermes update. After updating Hermes, re-apply patches or /balance will return JSON / fail.
 §
-**Hermes провайдери — Денис хоче приоритет:**
-1. Claude Haiku (основний, швидко + дешево)
-2. Google Gemini 2.5 Flash (резерв, коли Haiku)
-3. GPT-4.1 (резерв)
-4. DeepSeek v4 Flash (остаточний резерв, платний але надійний)
-
-Це налаштування застосовується на **обидва** профілі: основний і `freylina`. Gemini на безкоштовному плані, має ліміти (250k токенів), тому fallback механізм критичний.
+**Hermes провайдери — пріоритет (налаштовано в config.yaml):**
+1. **OpenAI** (основний, openai-codex / gpt-5.5, автоматичне перемикання моделей)
+2. **GitHub Copilot** (fallback 1 — haiku)
+3. **GitHub Copilot** (fallback 2 — gpt-4.1)
+4. **Google Gemini** (fallback 3 — gemini-2.5-flash, по API ключу)
+5. **OpenRouter** (fallback 4 — deepseek/deepseek-v4-flash, платний)
 §
-**Wiki System** — LLM wikis synced daily to dstorozhyk/bogdan-wikis: Default profile (main branch) for general KB; Freylina (freylina branch) for royal families. Auto-sync 04:00/05:00 UTC. WIKI_PATH envvars set per profile.
+**Wiki System** — Two separate repos with daily auto-sync:
+  • bogdan-wiki: Default profile general KB, syncs 04:00 UTC (cron f7d4225863b6)
+  • freylina-wiki: Freylina royal families KB, syncs 05:00 UTC (cron 78b491e5d6e3)
+  • Each includes SOUL.md + memories/, copied from profile root before push via wiki-sync.sh
 §
-**VPS Monitor Dashboard** — ~/.hermes/data/vps-monitor/. Start: ~/.hermes/bin/vps-monitor.sh {start|stop|status}. http://localhost:3000, pw: Клубняк2007.
+**Wiki-first:** Research docs → bogdan-wiki/research/. MEMORY = configs/credentials only.
+§
+Hermes CLI: The command for a single query in non-interactive mode is `hermes chat -q`, not `hermes ask`.
+§
+**ukraine-specialists-finder** skill + wiki guide: `/root/bogdan-wiki/research/ukraine-specialists.md`. Skill: python3 ~/.hermes/skills/ukraine-specialists-finder/scripts/find_specialist.py. Base: `/root/.hermes/skills/ukraine-specialists-finder/references/lviv_specialists.json`. Lviv contacts in wiki.
