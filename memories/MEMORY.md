@@ -11,10 +11,7 @@ GitHub authenticated as dstorozhyk via gh CLI with a Fine-grained PAT. Token sto
 4. **Google Gemini** (fallback 3 — gemini-2.5-flash, по API ключу)
 5. **OpenRouter** (fallback 4 — deepseek/deepseek-v4-flash, платний)
 §
-**Wiki System** — Two separate repos with daily auto-sync:
-  • bogdan-wiki: Default profile general KB, syncs 04:00 UTC (cron f7d4225863b6)
-  • freylina-wiki: Freylina royal families KB, syncs 05:00 UTC (cron 78b491e5d6e3)
-  • Each includes SOUL.md + memories/, copied from profile root before push via wiki-sync.sh
+**Wiki System** — daily GitHub sync: bogdan-wiki `/root/bogdan-wiki`, cron f7d4225863b6 04:00 UTC via `wiki-sync-bogdan.sh`; freylina-wiki `/root/.hermes/profiles/freylina/wiki`, cron 78b491e5d6e3 05:00 UTC via `wiki-sync-freylina.sh`. Cron script needs wrapper (no args). Exclude `*.lock`.
 §
 **Wiki-first:** Research docs → bogdan-wiki/research/. MEMORY = configs/credentials only.
 §
