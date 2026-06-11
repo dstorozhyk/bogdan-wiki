@@ -72,6 +72,9 @@ The `sha256` prevents duplicate ingests and detects source drift on re-ingest.
 ### People & Organizations
 - person, company, lab, open-source, researcher, startup
 
+### Product & Business
+- saas, payments, invoicing, validation, workflow, wiki
+
 ### Meta
 - comparison, timeline, controversy, prediction, guide, tutorial
 
@@ -119,4 +122,4 @@ When new information conflicts with existing content:
 
 ---
 
-*Last updated: 2026-05-29*
+*Last updated: 2026-06-10*

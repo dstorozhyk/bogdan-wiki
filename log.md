@@ -14,3 +14,12 @@ Actions: ingest, update, query, lint, create, archive, delete
 - OpenAI нав'язує місячний reset_at, Hermes його поважає → circuit-breaker до кінця місяця
 - Лікування: `hermes auth reset openai-codex`; запобігання: справні fallback-провайдери
 - Спостережено на акаунті Denys (ChatGPT Plus), reset був до 2026-06-30
+
+## [2026-06-10] create | SaaS payments/invoice validation research
+- Створено decomposed wiki set замість одного монолітного note:
+  - research/saas-payments-ukraine-validation-2026-06.md
+  - research/payoneer-invoice-payment-request-ukraine-saas.md
+  - research/saas-invoice-service-shortlist-ukraine.md
+  - research/manual-paid-pilot-workflow.md
+  - concepts/wiki-decomposition-workflow.md
+- Оновлено index.md і SCHEMA.md tag taxonomy для `saas`, `payments`, `invoicing`, `validation`, `workflow`, `wiki`.
