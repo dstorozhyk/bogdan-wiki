@@ -33,7 +33,8 @@ Read this first to find relevant pages for any query.
 
 - [saas-payments-ukraine-validation-2026-06](research/saas-payments-ukraine-validation-2026-06.md) — як тестити SaaS payments з України без негайного відкриття іноземної компанії.
 - [manual-paid-pilot-workflow](research/manual-paid-pilot-workflow.md) — покроковий ручний paid pilot workflow: landing → form → invoice → manual activation.
-- [freedom24-ukraine-funding-2026-06](research/freedom24-ukraine-funding-2026-06.md) — практичний маршрут поповнення Freedom24/Freedom Finance з України через Genome/SEPA.
+- [whitebit-binance-usdt-staking-route-2026-06](research/whitebit-binance-usdt-staking-route-2026-06.md) — when WhiteBIT direct UAH→USDT beats Binance P2P, and Binance→WhiteBIT network workflow for USDT staking/lending.
+- [freedom24-ukraine-funding-2026-06](research/freedom24-ukraine-funding-2026-06.md) — практичний маршрут поповнення Freedom24/Freedom Finance з України; Wise/ZEN викреслені, Genome/SEPA лишається fallback через ~20 EUR/USD monthly fee.
 - [rocket-attack-alarm-marketing](research/rocket-attack-alarm-marketing.md) — marketing/research notes for the Повітряні Загрози / rocket attack alarm project.
 - [hermes-memory-roadmap](research/hermes-memory-roadmap.md) — roadmap/research notes for Hermes memory improvements.
 - [ai-agent-memory-landscape-2026](research/ai-agent-memory-landscape-2026.md) — landscape of AI agent memory approaches.
