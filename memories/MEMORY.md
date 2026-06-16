@@ -1,4 +1,4 @@
-Denys prefers Ukrainian/direct, concise, decision-oriented communication: action over handoff questions, less text by default, details only when asked. Wants full infra access; prefers Claude/claude-code for coding; `gemini-web-controller`/`gweb image` for Gemini media. VPS: Docker-only, hardened, health-verified before “done”. “Повітряні Загрози” = `/opt/apps/rocket-attack-alarm`; Telegram UX: city click stays on region list with visible `☑️`; whole-region selection is exclusive. ZEN.COM blocked him due to Ukrainian address; avoid for Freedom24.
+“Повітряні Загрози” = `/opt/apps/rocket-attack-alarm`; Telegram UX: city click stays on region list with visible `☑️`; whole-region selection is exclusive. User-facing alerts must exclude retrospective reports/digests like `#зведення` and `візуалізація`.
 §
 GitHub authenticated as dstorozhyk via gh CLI with a Fine-grained PAT. Token stored in ~/.config/gh/hosts.yml. Access can be expanded dynamically by Denys in GitHub UI without replacing the token.
 §
