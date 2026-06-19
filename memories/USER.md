@@ -8,6 +8,6 @@ Denys expects `claude-code` CLI to be used for coding tasks/changes within profi
 §
 Hates raw JSON output — always format balance/info/status as human-readable text with emoji, bold labels, clear sections. Never dump raw API responses. VPS Monitor Dashboard: port 3000, external IP 178.105.214.165, password Клубняк2007 (user: admin), OpenRouter key via system env var.
 §
-Denys prefers direct execution over handoff questions, dislikes repetitive re-verification, expects public HTTPS for deployed UIs unless local-only, and wants wiki research split into focused cross-linked files.
+Denys prefers direct execution, minimal re-verification, public HTTPS for deployed UIs unless local-only, focused cross-linked wiki research, and low-fee broker funding routes; ~5% friction is unacceptable.
 §
 Denys prefers code-review/fix workflows delegated to Claude Code; for Claude/Fable production audits, the model should independently identify critical issues/fixes, not be steered to a preselected bottleneck.
