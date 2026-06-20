@@ -3,7 +3,7 @@
 Content catalog. Every wiki page listed under its type with a one-line summary.
 Read this first to find relevant pages for any query.
 
-> Last updated: 2026-06-10 | Content pages listed: 16 | Markdown files total: 21 including schema/log/memory
+> Last updated: 2026-06-20 | Content pages listed: 18 | Markdown files total: 23 including schema/log/memory
 
 ## Core / Meta
 
@@ -11,6 +11,12 @@ Read this first to find relevant pages for any query.
 - [SCHEMA](SCHEMA.md) — wiki schema, tag taxonomy, update policy.
 - [SOUL](SOUL.md) — high-level operating note/persona artifact.
 - [log](log.md) — append-only wiki action log.
+
+## Agent Knowledge Ops
+
+- [agents/knowledge-policy](agents/knowledge-policy.md) — routing policy for memory vs skills vs wiki plus nightly sleep job behavior.
+- [agents/review-queue](agents/review-queue.md) — safe-mode staging queue for memory, skill, wiki, and open-loop candidates.
+- `logs/daily/` — generated daily knowledge digests from the safe nightly consolidation job.
 
 ## Entities
 

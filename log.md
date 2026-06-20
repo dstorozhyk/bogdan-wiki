@@ -33,3 +33,14 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Уточнено research/freedom24-ukraine-funding-2026-06.md: Genome не блокував Denys; проблема — близько 20 EUR/USD місячної підписки для України/non-EEA.
 - Оновлено index.md summary.
 
+## [2026-06-20] create | Agent knowledge sleep policy and review queue
+- Створено agents/knowledge-policy.md з правилами маршрутизації durable knowledge між memory, skills, wiki і session DB.
+- Створено agents/review-queue.md як safe-mode staging queue для nightly consolidation.
+- Створено logs/daily/ для щоденних digest-файлів.
+- Оновлено index.md.
+
+## [2026-06-20] create | daily-knowledge-consolidation-safe cron
+- Створено Hermes cron job `1773cf46a5ec` з розкладом `30 3 * * *` UTC.
+- Режим: SAFE MODE — пише daily digest і review queue у wiki, не змінює memory/skills автоматично.
+- Delivery: origin Telegram chat.
+
