@@ -11,7 +11,7 @@ GitHub authenticated as dstorozhyk via gh CLI with a Fine-grained PAT. Token sto
 4. **Google Gemini** (fallback 3 — gemini-2.5-flash, по API ключу)
 5. **OpenRouter** (fallback 4 — deepseek/deepseek-v4-flash, платний)
 §
-**Wiki System** — daily GitHub sync: bogdan-wiki `/root/bogdan-wiki`, cron f7d4225863b6 04:00 UTC via `wiki-sync-bogdan.sh`; freylina-wiki `/root/.hermes/profiles/freylina/wiki`, cron 78b491e5d6e3 05:00 UTC via `wiki-sync-freylina.sh`. Cron script needs wrapper (no args). Exclude `*.lock`.
+**Wiki System** — bogdan-wiki `/root/bogdan-wiki`: nightly safe knowledge consolidation cron `1773cf46a5ec` 03:30 UTC writes digest/review queue; GitHub sync cron `f7d4225863b6` 04:00 UTC via `wiki-sync-bogdan.sh`. freylina-wiki `/root/.hermes/profiles/freylina/wiki`: sync cron `78b491e5d6e3` 05:00 UTC. Cron scripts need wrapper/no args; exclude `*.lock`.
 §
 **Wiki-first:** Research docs → bogdan-wiki/research/. MEMORY = configs/credentials only.
 §

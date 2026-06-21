@@ -44,3 +44,11 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Режим: SAFE MODE — пише daily digest і review queue у wiki, не змінює memory/skills автоматично.
 - Delivery: origin Telegram chat.
 
+## [2026-06-20] update | Daily knowledge consolidation
+- Created/updated logs/daily/2026-06-20.md.
+- Added 0 memory candidates, 2 skill candidates, 2 wiki candidates, 5 open loops to agents/review-queue.md.
+
+## [2026-06-21] update | Daily knowledge consolidation
+- Created/updated logs/daily/2026-06-21.md.
+- Added 0 memory candidates, 1 skill candidates, 1 wiki candidates, 3 open loops to agents/review-queue.md.
+
