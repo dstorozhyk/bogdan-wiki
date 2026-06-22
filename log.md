@@ -52,3 +52,8 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Created/updated logs/daily/2026-06-21.md.
 - Added 0 memory candidates, 1 skill candidates, 1 wiki candidates, 3 open loops to agents/review-queue.md.
 
+## [2026-06-22] update | Daily knowledge consolidation
+- Created/updated logs/daily/2026-06-22.md.
+- Added 0 memory candidates, 1 skill candidates, 2 wiki candidates, 4 open loops to agents/review-queue.md.
+- Updated index.md with three newly discovered research notes from Jun 21 work.
+

@@ -3,7 +3,7 @@
 Content catalog. Every wiki page listed under its type with a one-line summary.
 Read this first to find relevant pages for any query.
 
-> Last updated: 2026-06-20 | Content pages listed: 18 | Markdown files total: 23 including schema/log/memory
+> Last updated: 2026-06-22 | Content pages listed: 21 | Markdown files total: 30 including schema/log/memory
 
 ## Core / Meta
 
@@ -37,6 +37,9 @@ Read this first to find relevant pages for any query.
 
 ## Summaries / Research
 
+- [life-rpg-startup-strategy-2026-06-21](research/life-rpg-startup-strategy-2026-06-21.md) — startup strategy for a mobile-first AI-powered Life RPG habit/self-improvement app.
+- [life-rpg-habit-app-roadmap-2026-06-21](research/life-rpg-habit-app-roadmap-2026-06-21.md) — roadmap, MVP scope, validation metrics, and launch plan for the Life RPG habit app concept.
+- [mobile-app-stores-as-saas-payment-route-ukraine-2026-06-21](research/mobile-app-stores-as-saas-payment-route-ukraine-2026-06-21.md) — using iOS/Android app stores and in-app purchases as a B2C/prosumer SaaS payment workaround for Ukraine.
 - [saas-payments-ukraine-validation-2026-06](research/saas-payments-ukraine-validation-2026-06.md) — як тестити SaaS payments з України без негайного відкриття іноземної компанії.
 - [manual-paid-pilot-workflow](research/manual-paid-pilot-workflow.md) — покроковий ручний paid pilot workflow: landing → form → invoice → manual activation.
 - [whitebit-binance-usdt-staking-route-2026-06](research/whitebit-binance-usdt-staking-route-2026-06.md) — when WhiteBIT direct UAH→USDT beats Binance P2P, and Binance→WhiteBIT network workflow for USDT staking/lending.

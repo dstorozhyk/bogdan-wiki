@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Review Queue
 created: 2026-06-20
-updated: 2026-06-21
+updated: 2026-06-22
 type: query
 tags: [wiki]
 ---
@@ -26,6 +26,13 @@ _No pending candidates yet._
 
 ## Pending Skill Candidates
 
+- [ ] **2026-06-22 — Create `startup-validation-asset-pack` skill**
+  - Proposed skill name: `startup-validation-asset-pack`
+  - Trigger: validating a startup/product idea quickly when Denys asks to “do what you can yourself,” especially before committing to a full build.
+  - Reusable workflow: synthesize positioning and validation plan; create wiki/research notes; build a local artifact folder with README, brand positioning, validation plan, landing page, mockup board, content pack, and generated MP4 prototypes; verify HTML via local HTTP checks and videos via `ffprobe`; package artifacts as a tarball for delivery.
+  - Include pitfalls/verification: Python/PIL/ffmpeg is enough for fast local video prototypes; `ffmpeg` filter args like `d=.4` can fail and should be `d=0.4`; generated app-screen art often has tiny/incorrect text, so prefer controlled UI overlays for later iterations; verify `test -s`, `ffprobe`, HTTP 200, and final artifact paths.
+  - Evidence: `20260621_130017_acde58` — Life RPG validation pack plus promo v1/v2 generation.
+
 - [ ] **2026-06-21 — Create `rocket-attack-alarm-ops` skill**
   - Proposed skill name: `rocket-attack-alarm-ops`
   - Trigger: modifying/deploying `/opt/apps/rocket-attack-alarm` bot behavior, especially threat categories, nationwide alert logic, city filters, Telegram commands, cron scripts, or production deploys.
@@ -49,6 +56,16 @@ _No pending candidates yet._
 
 ## Pending Wiki Candidates
 
+- [ ] **2026-06-22 — Create Life RPG project overview / validation hub**
+  - Suggested destination: `projects/life-rpg/overview.md` or `research/life-rpg-validation-hub-2026-06.md`, linked from `index.md`.
+  - Candidate content: central links to `research/life-rpg-startup-strategy-2026-06-21.md`, `research/life-rpg-habit-app-roadmap-2026-06-21.md`, `/root/life-rpg-validation` artifact pack, landing/mockup/video files, current positioning, validation metrics, and next actions.
+  - Evidence: `20260621_130017_acde58`.
+
+- [ ] **2026-06-22 — Integrate mobile app-store payment route into SaaS payments wiki set**
+  - Suggested destination: update `research/saas-payments-ukraine-validation-2026-06.md` and `research/saas-invoice-service-shortlist-ukraine.md` to link `research/mobile-app-stores-as-saas-payment-route-ukraine-2026-06-21.md` as a B2C/prosumer route.
+  - Candidate content: app stores can reduce Ukrainian PSP friction for B2C/prosumer SaaS by using Apple/Google IAP/subscriptions, but require store fees, app review, platform policy compliance, entitlement sync, and payout/KYC verification; verify Apple App Store Connect for Denys’s real account/entity.
+  - Evidence: `20260621_130017_acde58`.
+
 - [ ] **2026-06-21 — Create Rocket Attack Alarm project/runbook wiki page**
   - Suggested destination: new `projects/rocket-attack-alarm.md` or decomposed `projects/rocket-attack-alarm/{overview,runbook,decisions,open-loops}.md`, linked from `index.md`.
   - Candidate content: current operational facts for `/opt/apps/rocket-attack-alarm`, MiG-31K as `mig` nationwide alert category, `threat_ended` suppression for MiG all-clear posts, source-text sanitization of promotional lines, Boryspil/Bucha city-filter changes, `/suggestcity` workflow, daily city-suggestion digest, and production deploy verification checklist.
@@ -66,8 +83,17 @@ _No pending candidates yet._
 
 ## Open Loops
 
-- [ ] **2026-06-21 — Verify Rocket bot update announcement delivery**
-  - Context: one-shot job `b12d4eb20acb` should send the approved update text on 2026-06-22 12:30 Europe/Kyiv about Bucha, Boryspil, and `/suggestcity`; confirm delivery summary afterward.
+- [ ] **2026-06-22 — Repair Rocket bot `Дніпровський район (Київ)` live filters**
+  - Context: `20260621_094520_60c52a99` found 2 live filters where `Дніпровський район (Київ)` was incorrectly linked to `Київська область` instead of district hierarchy id `83`; needs explicit approval because it requires live DB update/restart.
+
+- [ ] **2026-06-22 — Decide next Life RPG validation step**
+  - Context: Life RPG validation pack and promo v2 exist; next likely steps are deploy landing + waitlist, clean generated UI text/artifacts, and/or create promo v3 with controlled UI overlays and better motion/audio.
+
+- [ ] **2026-06-22 — Cross-link App Store payment route in SaaS payments wiki**
+  - Context: `mobile-app-stores-as-saas-payment-route-ukraine-2026-06-21.md` exists and is now indexed, but still needs integration into the earlier decomposed SaaS payments overview/comparison.
+
+- [ ] **2026-06-22 — Repair Freylina missing YouTube-to-wiki pipeline skill reference**
+  - Context: Jun 22 cron again reported missing `devops/youtube-to-wiki-pipeline`; no pending queue was found and the wiki repo was clean, so this is a workflow repair, not urgent content recovery.
 
 - [ ] **2026-06-21 — Review first `/suggestcity` daily digest**
   - Context: daily job `7c6dab4509cc` reports new `city_suggestions` if users submit missing cities; review whether suggestions should be added and whether the workflow needs a runbook.
@@ -92,4 +118,5 @@ _No pending candidates yet._
 
 ## Archive / Decisions
 
-_No reviewed items yet._
+- [x] **2026-06-22 — Rocket bot update announcement delivery verified early**
+  - Result: the scheduled 2026-06-22 12:30 announcement was deleted and sent immediately in `20260621_094520_60c52a99`; delivery was `17/18`, with 1 Telegram `Forbidden: bot was blocked by the user` failure.
