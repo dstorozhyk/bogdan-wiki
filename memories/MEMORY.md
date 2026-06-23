@@ -15,3 +15,5 @@ Hermes CLI: The command for a single query in non-interactive mode is `hermes ch
 **ukraine-specialists-finder** skill + wiki guide: `/root/bogdan-wiki/research/ukraine-specialists.md`. Skill: python3 ~/.hermes/skills/ukraine-specialists-finder/scripts/find_specialist.py. Base: `/root/.hermes/skills/ukraine-specialists-finder/references/lviv_specialists.json`. Lviv contacts in wiki.
 §
 For image/media generation, use `gemini-web-controller`/`gweb` first (`gweb image ...`, Drive fallback via `gweb drive upload`) instead of FAL `image_generate`; Denys says gweb is available and should not be forgotten.
+§
+Broker funding: best confirmed route is Raiffeisen EUR → Wise EUR balance → Freedom EUR from Wise main balance = 0 fee. Avoid USD conversion, Wise card payment, direct SWIFT/broker card top-up, Paysera.

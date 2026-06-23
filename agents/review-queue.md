@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Review Queue
 created: 2026-06-20
-updated: 2026-06-22
+updated: 2026-06-23
 type: query
 tags: [wiki]
 ---
@@ -22,9 +22,27 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Memory Candidates
 
-_No pending candidates yet._
+- [ ] **2026-06-23 — Broker funding confirmed candidate route**
+  - Proposed text: `Broker funding: current best candidate route is Raiffeisen EUR → Wise EUR balance/main account → Freedom24/Freedom Finance Europe EUR. Avoid Paysera, direct SWIFT, direct broker card top-up, Wise card payment, and USD→EUR conversion for this flow; verify final route after Freedom credits funds.`
+  - Why durable: account-specific correction that prevents repeated bad recommendations for Denys's broker-funding workflow.
+  - Risk/staleness: route is not fully final until Freedom credits funds; financial rails/compliance can change.
+  - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-06-23 — Update `rocket-attack-alarm-ops` for air-alert API + city suggestions**
+  - Proposed skill name: update `rocket-attack-alarm-ops`.
+  - Trigger: adding/changing Rocket bot alert data sources, city suggestions, user broadcasts, or production deploys.
+  - Reusable workflow: inspect suggestions DB; avoid duplicating cities already in seeds/live DB; mark suggestions `added/reviewed/rejected`; add source-specific tests; route synthetic API messages through `MonitorService.processSyntheticMessage`; run focused tests + TypeScript/build; deploy via `docker compose -f docker-compose.prod.yml up -d --build bot`; verify `/health`, logs, runtime channel list, API baseline, and broadcast dry-runs.
+  - Include pitfalls/verification: public endpoint `https://ubilling.net.ua/aerialalerts/`; baseline on startup to avoid mass notifications; clear messages should remain non-alert; foreground debug container timeouts/SIGTERM can look like restart loops; verify `npm run test:city-suggestions`, `npm run test:location-seeds`, `npm run test:air-alert-api`, `npx tsc --noEmit`, `npm run build`, Docker health, and `Air alert API baseline loaded`.
+  - Evidence: `20260622_190640_2a951e4e`.
+
+- [ ] **2026-06-23 — Update `cross-border-broker-funding` for Raiffeisen → Wise → Freedom EUR route**
+  - Proposed skill name: update `cross-border-broker-funding`.
+  - Trigger: Denys asks how to fund Freedom24/Freedom Finance Europe or calculate real funding friction.
+  - Reusable workflow: prefer account-proven flows over generic fee-page research; inspect screenshots; test EUR end-to-end; record Raif spent, Wise received, Wise sent, Freedom credited, fees, conversion rates, dates; compute all-in friction.
+  - Include pitfalls/verification: use actual arithmetic with a tool; distinguish Wise EUR balance transfer from Wise card payment; Paysera card/transfer route is not viable here; final confirmation requires broker credit, not just Wise send screen.
+  - Evidence: `20260622_163026_d7eee1f1`.
 
 - [ ] **2026-06-22 — Create `startup-validation-asset-pack` skill**
   - Proposed skill name: `startup-validation-asset-pack`
@@ -56,6 +74,26 @@ _No pending candidates yet._
 
 ## Pending Wiki Candidates
 
+- [ ] **2026-06-23 — Create/update Rocket Attack Alarm project/runbook page**
+  - Suggested destination: `projects/rocket-attack-alarm.md` or decomposed `projects/rocket-attack-alarm/{overview,runbook,roadmap,open-loops}.md`, linked from `index.md`.
+  - Candidate content: air-alert API source `https://ubilling.net.ua/aerialalerts/`; `air_alert_api` synthetic source; 30s polling; startup baseline/no burst; active/clear synthetic messages; removal of `sirena_kyiv`; city suggestion `Кривий Ріг` marked `added` without duplicate; `markSuggestionStatus`; tests/deploy/health verification; broadcast script with marker protection.
+  - Evidence: `20260622_190640_2a951e4e`.
+
+- [ ] **2026-06-23 — Add Rocket bot stateful live-card UX roadmap note**
+  - Suggested destination: Rocket bot roadmap/project page or `projects/rocket-attack-alarm/roadmap.md`.
+  - Candidate content: replace raw event stream/concatenation with one live card per active incident; edit card for minor updates; push only on significant risk changes; group by incident type; expose optional history/details buttons.
+  - Evidence: `20260622_211516_f2939aa1`.
+
+- [ ] **2026-06-23 — Update Freedom24/broker-funding wiki after final credit confirmation**
+  - Suggested destination: `research/freedom24-ukraine-funding-2026-06.md` and/or focused route note.
+  - Candidate content: Paysera rejected for this route; current best candidate is `Raiffeisen EUR → Wise EUR balance/main account → Freedom EUR`; avoid USD conversion, Wise card payment, direct SWIFT, direct broker card top-up; compute all-in friction after Freedom credits funds.
+  - Evidence: `20260622_163026_d7eee1f1`.
+
+- [ ] **2026-06-23 — Create portfolio tracking note if Denys wants recurring checks**
+  - Suggested destination: `finance/portfolio-tracker.md` or `research/investment-portfolio-2026.md` with clear staleness/date labels.
+  - Candidate content: consultant-report holdings/targets, satellite thesis monitors, DCA plan, podushka distinction, and a checklist for future “глянь портфель” requests; do not treat prices as durable.
+  - Evidence: `20260622_061004_e3501b49`.
+
 - [ ] **2026-06-22 — Create Life RPG project overview / validation hub**
   - Suggested destination: `projects/life-rpg/overview.md` or `research/life-rpg-validation-hub-2026-06.md`, linked from `index.md`.
   - Candidate content: central links to `research/life-rpg-startup-strategy-2026-06-21.md`, `research/life-rpg-habit-app-roadmap-2026-06-21.md`, `/root/life-rpg-validation` artifact pack, landing/mockup/video files, current positioning, validation metrics, and next actions.
@@ -82,6 +120,18 @@ _No pending candidates yet._
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-06-23 — Verify Rocket bot 12:30 broadcast delivery**
+  - Context: one-shot cron job `5ab7ee5a7792` should run at 2026-06-23 09:30 UTC / 12:30 Kyiv; dry-run showed 21 active subscribers and marker-file duplicate protection.
+
+- [ ] **2026-06-23 — Confirm broker-funding route after Freedom credits funds**
+  - Context: need Raif spent, Wise received, Wise sent, Freedom credited, fees/conversions, and timing; then compute all-in friction as `1 - Freedom credited / Raif spent` normalized to one currency.
+
+- [ ] **2026-06-23 — Decide whether to create a persistent portfolio tracker**
+  - Context: no saved portfolio/targets were found before Denys pasted the consultant report; a structured wiki/file would let future “глянь портфель” checks run without re-supplying data.
+
+- [ ] **2026-06-23 — Convert Rocket live-card/significant-change UX into roadmap/issue**
+  - Context: Denys liked anti-spam improvements but rejected simple concatenation; the stronger direction is a stateful incident manager with live cards and pushes only when risk changes.
 
 - [ ] **2026-06-22 — Repair Rocket bot `Дніпровський район (Київ)` live filters**
   - Context: `20260621_094520_60c52a99` found 2 live filters where `Дніпровський район (Київ)` was incorrectly linked to `Київська область` instead of district hierarchy id `83`; needs explicit approval because it requires live DB update/restart.
