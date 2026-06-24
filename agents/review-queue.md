@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Review Queue
 created: 2026-06-20
-updated: 2026-06-23
+updated: 2026-06-24
 type: query
 tags: [wiki]
 ---
@@ -22,6 +22,12 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Memory Candidates
 
+- [ ] **2026-06-24 — Broker funding route confirmed with 0 EUR observed fee**
+  - Proposed text: `Broker funding confirmed: Raiffeisen EUR → Wise EUR balance/main account → Freedom/Freedom24 EUR credited successfully; observed test transfer 8.72 EUR arrived as 8.72 EUR, implying 0 EUR route fee if no separate Wise/bank fee exists.`
+  - Why durable: account-specific route confirmation that should prevent repeated exploration of Paysera/SWIFT/card alternatives for the same workflow.
+  - Risk/staleness: financial rails and account rules can change; mark as confirmed as of 2026-06-23.
+  - Evidence: `20260623_120149_3bb6c070`.
+
 - [ ] **2026-06-23 — Broker funding confirmed candidate route**
   - Proposed text: `Broker funding: current best candidate route is Raiffeisen EUR → Wise EUR balance/main account → Freedom24/Freedom Finance Europe EUR. Avoid Paysera, direct SWIFT, direct broker card top-up, Wise card payment, and USD→EUR conversion for this flow; verify final route after Freedom credits funds.`
   - Why durable: account-specific correction that prevents repeated bad recommendations for Denys's broker-funding workflow.
@@ -29,6 +35,20 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-06-24 — Update `rocket-attack-alarm-ops` for state-based dedup + disk-full recovery**
+  - Proposed skill name: update `rocket-attack-alarm-ops`.
+  - Trigger: changing Rocket bot deduplication, production deploy/restart, or recovering bot container failures.
+  - Reusable workflow: add regression tests for semantic duplicates; implement threat-status keying by user/filter/category; keep content-hash dedup; run focused tests/build; deploy Docker; verify `/health`, `/ready`, runtime dedup probe; if SQLite fails due to disk full, clean Docker cache/images, remove broken WAL/SHM only after stopping the container, then restart.
+  - Include pitfalls/verification: run `npm run test:deduplication`, `npm run test:mig-nationwide`, `npm run build`, `docker compose -f docker-compose.prod.yml up -d --build bot`, `curl http://127.0.0.1:9090/health`, `curl http://127.0.0.1:9090/ready`, `df -h /`; clarify that “same threat later” is inferred only from another same-status message, not a separate authoritative continuous state.
+  - Evidence: `20260623_192047_4f643f`.
+
+- [ ] **2026-06-24 — Update `crypto-fiat-onramps` for Binance P2P → WhiteBIT workflow**
+  - Proposed skill name: update `crypto-fiat-onramps`.
+  - Trigger: Denys asks for cheapest UAH→USDT or Binance/WhiteBIT route.
+  - Reusable workflow: compare WhiteBIT spot + actual UAH deposit fee against Binance/Bybit P2P; treat Binance P2P→WhiteBIT as main practical path when WhiteBIT direct is expensive; inspect screenshots for auto-selected bad offers; advise manual Binance P2P filter/sorting and network compatibility before withdrawal.
+  - Include pitfalls/verification: timestamp quotes; calculate effective UAH/USDT with a tool; avoid ERC20 unless explicitly acceptable; verify WhiteBIT supports the selected withdrawal network; warn that Binance “Buy Crypto” auto flow may show worse rates than manual P2P.
+  - Evidence: `20260623_193417_3dd79fc7`.
 
 - [ ] **2026-06-23 — Update `rocket-attack-alarm-ops` for air-alert API + city suggestions**
   - Proposed skill name: update `rocket-attack-alarm-ops`.
@@ -73,6 +93,21 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `cron_ef9b3fb5feed_20260620_030049`; skill was missing and queue was empty at HEAD `654a3f9`.
 
 ## Pending Wiki Candidates
+
+- [ ] **2026-06-24 — Update Freedom24/broker-funding wiki with confirmed route**
+  - Suggested destination: `research/freedom24-ukraine-funding-2026-06.md` and/or a focused route note.
+  - Candidate content: `Raiffeisen EUR → Wise EUR balance/main account → Freedom/Freedom24 EUR` was confirmed by a test transfer: 8.72 EUR arrived as 8.72 EUR; apparent route fee is 0 EUR if Wise/bank show no separate fee; keep date and caveat that rails can change.
+  - Evidence: `20260623_120149_3bb6c070`.
+
+- [ ] **2026-06-24 — Update Rocket Attack Alarm project/runbook with dedup + recovery notes**
+  - Suggested destination: `projects/rocket-attack-alarm.md` or decomposed `projects/rocket-attack-alarm/{overview,runbook,decisions,open-loops}.md`.
+  - Candidate content: state-based dedup by user/filter/threat category; MiG duplicate suppression across channels; 30-minute re-alert cooldown; content-hash dedup retained; user-facing wording caveat; verification commands; SQLite WAL/SHM + disk-full recovery steps; DB size after incident (~1.9 MB plus WAL/SHM).
+  - Evidence: `20260623_192047_4f643f`.
+
+- [ ] **2026-06-24 — Update UAH→USDT route note with Binance P2P → WhiteBIT workflow**
+  - Suggested destination: `research/whitebit-binance-usdt-staking-route-2026-06.md` or a focused crypto on-ramp note.
+  - Candidate content: if WhiteBIT UAH deposit/quick exchange is expensive, use Binance P2P UAH→USDT then withdraw to WhiteBIT over a supported low-fee network; avoid auto-selected Binance Buy Crypto offers when they are materially worse than manual P2P; compare final effective UAH/USDT with a timestamp.
+  - Evidence: `20260623_193417_3dd79fc7`.
 
 - [ ] **2026-06-23 — Create/update Rocket Attack Alarm project/runbook page**
   - Suggested destination: `projects/rocket-attack-alarm.md` or decomposed `projects/rocket-attack-alarm/{overview,runbook,roadmap,open-loops}.md`, linked from `index.md`.
@@ -120,6 +155,15 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-06-24 — Verify Rocket bot update announcement delivery**
+  - Context: one-shot cron job `e717319bd742` is scheduled for 2026-06-24 09:30 UTC / 12:30 Kyiv; text was corrected to avoid implying an authoritative continuous threat state.
+
+- [ ] **2026-06-24 — Promote Rocket bot state-based dedup into project/runbook docs**
+  - Context: production deploy was verified with tests/build/health/ready/runtime probe, but wiki runbook still needs the new 30-minute cooldown, semantic dedup, and disk-full SQLite recovery notes.
+
+- [ ] **2026-06-24 — Repair Freylina missing YouTube-to-wiki pipeline skill reference**
+  - Context: Jun 24 analyzer again reported missing `devops/youtube-to-wiki-pipeline`; no `.pending-videos.json` queue was found and no content was processed.
 
 - [ ] **2026-06-23 — Verify Rocket bot 12:30 broadcast delivery**
   - Context: one-shot cron job `5ab7ee5a7792` should run at 2026-06-23 09:30 UTC / 12:30 Kyiv; dry-run showed 21 active subscribers and marker-file duplicate protection.
