@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Review Queue
 created: 2026-06-20
-updated: 2026-06-24
+updated: 2026-06-25
 type: query
 tags: [wiki]
 ---
@@ -22,6 +22,12 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Memory Candidates
 
+- [ ] **2026-06-25 — Freedom cash-like UCITS ETF ticker mapping**
+  - Proposed text: `Freedom/Freedom24 showed the accumulating SGOV-like UCITS ETF as IB01.EU; verify ISIN IE00BGSF1X88 before buying. Related cash-like UCITS candidates discussed: IB01/IE00BGSF1X88 for 0–1yr US Treasuries, IBTA/IE00BYXPSP02 for 1–3yr, IBTE/IE00BDFK1573 for EUR-hedged 1–3yr.`
+  - Why durable: account/platform-specific lookup that can prevent repeated ETF-symbol discovery.
+  - Risk/staleness: broker ticker suffixes, availability, yields, and tax treatment can change; treat as symbol lookup, not investment advice.
+  - Evidence: `20260624_151903_aef3232f`.
+
 - [ ] **2026-06-24 — Broker funding route confirmed with 0 EUR observed fee**
   - Proposed text: `Broker funding confirmed: Raiffeisen EUR → Wise EUR balance/main account → Freedom/Freedom24 EUR credited successfully; observed test transfer 8.72 EUR arrived as 8.72 EUR, implying 0 EUR route fee if no separate Wise/bank fee exists.`
   - Why durable: account-specific route confirmation that should prevent repeated exploration of Paysera/SWIFT/card alternatives for the same workflow.
@@ -35,6 +41,20 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-06-25 — Update `rocket-attack-alarm-ops` for city-suggestion live DB + real bot broadcast**
+  - Proposed skill name: update `rocket-attack-alarm-ops`.
+  - Trigger: adding city suggestions/filters, updating live DB, or sending Rocket bot user broadcasts.
+  - Reusable workflow: separate city vs district filters when needed; update seed keywords and regression tests; backup live DB before insertion; insert missing `locations_hierarchy` rows; verify FTS lookup; mark `city_suggestions` as `added`; send subscriber announcements from inside the bot container, not by scheduling an origin-chat cron response.
+  - Include pitfalls/verification: run `npm run test:location-seeds`, `npm run build`; create DB backup under `/opt/apps/rocket-attack-alarm/data/backups/manual/`; verify inserted rows and FTS; use `docker exec rocket-attack-alarm` so `TELEGRAM_BOT_TOKEN` stays in container env; pitfall: one-shot Hermes cron delivery to origin chat is not a Telegram bot broadcast.
+  - Evidence: `20260624_072541_0e1e451a`, `cron_e717319bd742_20260624_093041`.
+
+- [ ] **2026-06-25 — Update/create Freylina YouTube-to-wiki pipeline runbook for cron-safe paths**
+  - Proposed skill name: update/create Freylina `youtube-to-wiki-pipeline` runbook.
+  - Trigger: Freylina YouTube fetcher/analyzer cron failure, missing `devops/youtube-to-wiki-pipeline`, or queued @vse_pro_royal videos.
+  - Reusable workflow: use absolute Freylina profile paths; fetch @vse_pro_royal videos; generate wiki pages with deterministic title heuristics when LLM/OAuth is unavailable; update `video-log.json`, clear `.pending-videos.json`, commit/push, verify cron jobs.
+  - Include pitfalls/verification: avoid `Path.home()` because Freylina cron HOME may become `/root/.hermes/profiles/freylina/home`; verify with `py_compile`, JSON validation, `hermes -p freylina skills list`, scheduler tick/cron list, `git status --short`, and latest commit hash; investigate why Jun 25 cron still reports missing skill despite the Jun 24 repair.
+  - Evidence: `20260624_055648_7bbd60f9`, `cron_ef9b3fb5feed_20260625_030044`.
 
 - [ ] **2026-06-24 — Update `rocket-attack-alarm-ops` for state-based dedup + disk-full recovery**
   - Proposed skill name: update `rocket-attack-alarm-ops`.
@@ -93,6 +113,21 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `cron_ef9b3fb5feed_20260620_030049`; skill was missing and queue was empty at HEAD `654a3f9`.
 
 ## Pending Wiki Candidates
+
+- [ ] **2026-06-25 — Update Rocket project/runbook with Шептицький filters + broadcast correction**
+  - Suggested destination: `projects/rocket-attack-alarm.md` or decomposed `projects/rocket-attack-alarm/{overview,runbook,decisions,open-loops}.md`.
+  - Candidate content: add separate filters for city `Шептицький` and administrative `Шептицький район`; include legacy names `Червоноград`/`Червоноградський район`; live DB insert used backup `/opt/apps/rocket-attack-alarm/data/backups/manual/bot-before-sheptytskyi-live-2026-06-24T094035831Z.db`; suggestion was marked `added`; corrected broadcast went through the bot to `21/21` active subscribers.
+  - Evidence: `20260624_072541_0e1e451a`.
+
+- [ ] **2026-06-25 — Add Freylina YouTube-to-wiki pipeline operational note**
+  - Suggested destination: Freylina operations/runbook wiki or a Hermes ops note linked from agent knowledge docs.
+  - Candidate content: repaired pipeline uses absolute Freylina profile paths, deterministic title heuristics, fetcher/analyzer cron wrappers, and jobs `84a87c09869f` / `ab1160450211`; Jun 24 verification created pages and commit `4cbeb58`; Jun 25 analyzer still reported missing skill and found empty queue, so profile skill preload/reference should be checked.
+  - Evidence: `20260624_055648_7bbd60f9`, `cron_ef9b3fb5feed_20260625_030044`.
+
+- [ ] **2026-06-25 — Create finance note for accumulating cash-like UCITS ETF alternatives**
+  - Suggested destination: `finance/cash-like-ucits-etfs-freedom.md` or `research/freedom24-cash-parking-ucits-2026-06.md`.
+  - Candidate content: `IB01` / `IE00BGSF1X88` as SGOV-like accumulating 0–1yr US Treasury UCITS; `IBTA` / `IE00BYXPSP02` as VGSH-like 1–3yr; `IBTE` / `IE00BDFK1573` as EUR-hedged 1–3yr; Freedom may show `IB01.EU`; explain inverted yield curve and why 1–3yr yield can be below 0–1yr; include tax/staleness caveats.
+  - Evidence: `20260624_151903_aef3232f`.
 
 - [ ] **2026-06-24 — Update Freedom24/broker-funding wiki with confirmed route**
   - Suggested destination: `research/freedom24-ukraine-funding-2026-06.md` and/or a focused route note.
@@ -155,6 +190,15 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-06-25 — Reconcile Freylina analyzer missing-skill warning**
+  - Context: Jun 24 repaired/replaced Freylina `youtube-to-wiki-pipeline` and verified jobs, but Jun 25 analyzer cron still began with “Skill(s) not found and skipped: devops/youtube-to-wiki-pipeline”; likely profile/skill preload/reference mismatch.
+
+- [ ] **2026-06-25 — Promote Rocket Шептицький filters and bot-broadcast method into runbook**
+  - Context: live DB insert and broadcast were verified, but project/runbook docs still need city-vs-district split, backup/FTS/mark-added steps, and warning that origin-chat cron is not a subscriber broadcast.
+
+- [ ] **2026-06-25 — Decide whether to create Freedom cash-like UCITS ETF note**
+  - Context: SGOV/VGSH accumulating alternatives were identified for Freedom (`IB01`, `IBTA`, `IBTE`), but yields/prices are time-sensitive and tax treatment needs explicit caveats.
 
 - [ ] **2026-06-24 — Verify Rocket bot update announcement delivery**
   - Context: one-shot cron job `e717319bd742` is scheduled for 2026-06-24 09:30 UTC / 12:30 Kyiv; text was corrected to avoid implying an authoritative continuous threat state.
