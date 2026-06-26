@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Review Queue
 created: 2026-06-20
-updated: 2026-06-25
+updated: 2026-06-26
 type: query
 tags: [wiki]
 ---
@@ -41,6 +41,13 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-06-26 — Update `rocket-attack-alarm-ops` for source-channel repeat alerts + `/updates` toggle**
+  - Proposed skill name: update `rocket-attack-alarm-ops`.
+  - Trigger: changing active-threat deduplication, repeat notifications, update-news broadcasts, command menu, dashboard tracking, or production deploys for `/opt/apps/rocket-attack-alarm`.
+  - Reusable workflow: model 30-minute locks with `sourceChannel`; allow repeat notification only when the same active threat comes from the channel that created the lock; keep cross-channel suppression; add/update regression tests; implement `/updates` as a single toggle rather than separate on/off commands; update `/help`, Telegram command menu, scheduled update text, dashboard metrics, and container dry-run.
+  - Include pitfalls/verification: run `npm run test:deduplication`, `npx tsc --noEmit`, `npm run test:dashboard`, `npm run updates:send -- --dry-run`, `npm run build`, `docker compose -f docker-compose.prod.yml up -d --build bot`, health checks, and `docker exec rocket-attack-alarm node dist/scripts/send-update-notification.js --dry-run`; pitfall: wording “уточнює” is too weak/incorrect for new launches or new waves.
+  - Evidence: `20260625_180939_5df7944e`.
 
 - [ ] **2026-06-25 — Update `rocket-attack-alarm-ops` for city-suggestion live DB + real bot broadcast**
   - Proposed skill name: update `rocket-attack-alarm-ops`.
@@ -113,6 +120,11 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `cron_ef9b3fb5feed_20260620_030049`; skill was missing and queue was empty at HEAD `654a3f9`.
 
 ## Pending Wiki Candidates
+
+- [ ] **2026-06-26 — Update Rocket project/runbook with source-channel repeat alerts, `/updates`, and dashboard tracking**
+  - Suggested destination: `projects/rocket-attack-alarm.md` or decomposed `projects/rocket-attack-alarm/{overview,runbook,decisions,open-loops}.md`.
+  - Candidate content: 30-minute active-threat lock now stores `sourceChannel`; repeat notifications are allowed from the channel that created the lock, while other-channel duplicates remain suppressed; update-news preferences use a single `/updates` toggle; `/updates_on` and `/updates_off` were removed; `/help`, Telegram command menu, scheduled update text, dashboard metric, dry-run and production deploy were verified; user-approved wording should describe new launches/new waves/continued activity, not merely “clarification.”
+  - Evidence: `20260625_180939_5df7944e`.
 
 - [ ] **2026-06-25 — Update Rocket project/runbook with Шептицький filters + broadcast correction**
   - Suggested destination: `projects/rocket-attack-alarm.md` or decomposed `projects/rocket-attack-alarm/{overview,runbook,decisions,open-loops}.md`.
@@ -190,6 +202,15 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-06-26 — Verify Rocket update announcement delivery**
+  - Context: Jun 25 session verified code, container health, and dry-run with 21 recipients for the scheduled update about repeat alerts + `/updates`; actual scheduled send outcome was not recalled in this consolidation.
+
+- [ ] **2026-06-26 — Promote Rocket repeat-alert logic and `/updates` toggle into runbook**
+  - Context: source-channel repeat notifications, dashboard tracking, one-command `/updates` toggle, and user-approved wording for new launches/new waves should be added to the project/runbook docs.
+
+- [ ] **2026-06-26 — Reconcile Freylina analyzer missing-skill warning persists**
+  - Context: Jun 26 Freylina cron still reported missing `devops/youtube-to-wiki-pipeline`; default queue was empty and no files were changed, but the profile/skill preload/reference mismatch remains unresolved.
 
 - [ ] **2026-06-25 — Reconcile Freylina analyzer missing-skill warning**
   - Context: Jun 24 repaired/replaced Freylina `youtube-to-wiki-pipeline` and verified jobs, but Jun 25 analyzer cron still began with “Skill(s) not found and skipped: devops/youtube-to-wiki-pipeline”; likely profile/skill preload/reference mismatch.
