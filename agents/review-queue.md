@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Review Queue
 created: 2026-06-20
-updated: 2026-06-26
+updated: 2026-06-27
 type: query
 tags: [wiki]
 ---
@@ -121,6 +121,11 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Wiki Candidates
 
+- [ ] **2026-06-27 — Capture weekly Hermes/Claude update report in ops notes**
+  - Suggested destination: `agents/hermes-ops-weekly-updates.md` or a focused Hermes/Claude operations note linked from Agent Knowledge Ops.
+  - Candidate content: weekly report said local Hermes Agent is v0.17.0 / 2026.6.19 but 807 commits behind; local Claude Code is 2.1.183 while latest reported is 2.1.193; prioritize Hermes update for gateway/Telegram/email/cron/browser reliability/security; after update run `hermes doctor`, gateway restart/status, `hermes cron list`, Telegram `[SILENT]` smoke test, and email/browser checks if used; for Claude update verify OTEL assistant-response privacy, MCP auth, `sandbox.credentials`, and changed `!` bash behavior.
+  - Evidence: `cron_d809074fdb23_20260626_060049`.
+
 - [ ] **2026-06-26 — Update Rocket project/runbook with source-channel repeat alerts, `/updates`, and dashboard tracking**
   - Suggested destination: `projects/rocket-attack-alarm.md` or decomposed `projects/rocket-attack-alarm/{overview,runbook,decisions,open-loops}.md`.
   - Candidate content: 30-minute active-threat lock now stores `sourceChannel`; repeat notifications are allowed from the channel that created the lock, while other-channel duplicates remain suppressed; update-news preferences use a single `/updates` toggle; `/updates_on` and `/updates_off` were removed; `/help`, Telegram command menu, scheduled update text, dashboard metric, dry-run and production deploy were verified; user-approved wording should describe new launches/new waves/continued activity, not merely “clarification.”
@@ -203,8 +208,14 @@ The nightly sleep job should prepend new candidates below.
 
 ## Open Loops
 
-- [ ] **2026-06-26 — Verify Rocket update announcement delivery**
-  - Context: Jun 25 session verified code, container health, and dry-run with 21 recipients for the scheduled update about repeat alerts + `/updates`; actual scheduled send outcome was not recalled in this consolidation.
+- [ ] **2026-06-27 — Update Hermes Agent on VPS and smoke-test gateway/cron flows**
+  - Context: weekly report found local Hermes Agent v0.17.0 / 2026.6.19 but 807 commits behind; recommended checks after update include `hermes doctor`, gateway restart/status, `hermes cron list`, Telegram `[SILENT]`, and email/browser flows if active.
+
+- [ ] **2026-06-27 — Update Claude Code and check privacy/security settings**
+  - Context: weekly report found local Claude Code 2.1.183 while latest reported was 2.1.193; check OTEL assistant-response logging, MCP headless auth, `sandbox.credentials`, and changed `!` bash response behavior after update.
+
+- [-] **2026-06-26 — Verify Rocket update announcement delivery**
+  - Result: resolved in `cron_56aaf01b43a2_20260626_070049`; production command sent to 21/21 recipients with 0 failures, and `/updates` remains the user toggle for update-news messages.
 
 - [ ] **2026-06-26 — Promote Rocket repeat-alert logic and `/updates` toggle into runbook**
   - Context: source-channel repeat notifications, dashboard tracking, one-command `/updates` toggle, and user-approved wording for new launches/new waves should be added to the project/runbook docs.

@@ -77,3 +77,9 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Added 0 memory candidates, 1 skill candidates, 1 wiki candidates, 3 open loops to agents/review-queue.md.
 - `index.md` already mentioned `logs/daily/`; no index change needed.
 
+## [2026-06-27] update | Daily knowledge consolidation
+- Created/updated logs/daily/2026-06-27.md.
+- Added 0 memory candidates, 0 skill candidates, 1 wiki candidates, 2 open loops to agents/review-queue.md.
+- Marked Rocket update announcement delivery open loop as resolved after 21/21 successful sends.
+- `index.md` already mentioned `logs/daily/`; no index change needed.
+
