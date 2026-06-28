@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Review Queue
 created: 2026-06-20
-updated: 2026-06-27
+updated: 2026-06-28
 type: query
 tags: [wiki]
 ---
@@ -207,6 +207,9 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-06-28 — Reconcile Freylina analyzer missing-skill warning persists**
+  - Context: Jun 28 Freylina analyzer still began with “Skill(s) not found and skipped: devops/youtube-to-wiki-pipeline”; default queue `/root/.hermes/profiles/freylina/wiki/.pending-videos.json` was empty, no files were changed, and repo HEAD remained `4cbeb58`. This is an operational profile/skill-reference repair rather than content recovery.
 
 - [ ] **2026-06-27 — Update Hermes Agent on VPS and smoke-test gateway/cron flows**
   - Context: weekly report found local Hermes Agent v0.17.0 / 2026.6.19 but 807 commits behind; recommended checks after update include `hermes doctor`, gateway restart/status, `hermes cron list`, Telegram `[SILENT]`, and email/browser flows if active.

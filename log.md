@@ -83,3 +83,8 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Marked Rocket update announcement delivery open loop as resolved after 21/21 successful sends.
 - `index.md` already mentioned `logs/daily/`; no index change needed.
 
+## [2026-06-28] update | Daily knowledge consolidation
+- Created/updated logs/daily/2026-06-28.md.
+- Added 0 memory candidates, 0 skill candidates, 0 wiki candidates, 1 open loops to agents/review-queue.md.
+- `index.md` already mentioned `logs/daily/`; no index change needed.
+
