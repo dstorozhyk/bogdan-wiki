@@ -267,6 +267,160 @@ Alternatives:
 
 ---
 
+## Killer feature candidate: contextual upsell assistant
+
+This can become the real differentiator: not just “calendar/CRM”, but a system that **helps the master earn more from every booking without sounding pushy**.
+
+### Core idea
+
+> **Smart add-on offers at the right moment.**  
+> The system suggests a relevant drink, product, or extra service based on the booked service, client history, timing, and context — but the master controls whether to offer it.
+
+This fits the trust-first positioning: the product does not blindly sell. It prepares a suggestion, and the master approves or edits it.
+
+### Why this can be a killer feature
+
+Most beauty CRMs optimize operations: calendar, reminders, client base. Upsell assistant directly connects to revenue:
+
+- increases average check;
+- helps sell low-effort add-ons;
+- gives measurable ROI for the SaaS;
+- makes the tool feel like a revenue assistant, not an admin burden;
+- works even for solo masters without complex salon infrastructure.
+
+### Upsell types
+
+| Type | Examples | When to suggest |
+|---|---|---|
+| Drink / comfort add-on | кава, чай, матча, просекко, вода, снек | before arrival, during confirmation, at check-in |
+| Service add-on | зняття покриття, укріплення, дизайн, SPA-догляд, маска, тонування брів, ламінування, масаж рук | during booking after main service selection |
+| Product retail | олійка для кутикули, шампунь, SPF, крем, сироватка, догляд після процедури | after service or in follow-up |
+| Time-slot optimization | “Є +20 хв — можна додати догляд/дизайн” | when selected slot has buffer |
+| Repeat booking | “Записати наступний візит через 3–4 тижні?” | after visit / payment |
+| Bundle | “Манікюр + педикюр”, “брови + вії”, “чистка + SPF” | during booking or follow-up |
+
+### MVP version
+
+Do not start with AI. Start with **rules + templates**:
+
+1. Master defines add-ons:
+   - name;
+   - price;
+   - duration;
+   - eligible services;
+   - message template;
+   - whether it requires extra time.
+2. System suggests add-ons during booking:
+   - “До цієї послуги часто додають…”;
+   - only if enough time exists;
+   - only if master enabled the add-on.
+3. Client can select add-on, but if it changes timing/price, booking goes to manual confirmation.
+4. Master sees: base service + selected add-ons + extra time + extra revenue.
+5. Dashboard shows upsell revenue.
+
+### Product UX patterns
+
+#### Booking flow
+
+After choosing the main service:
+
+> **Хочете додати щось до візиту?**  
+> - Дизайн нігтів +150 грн / +15 хв  
+> - SPA-догляд рук +250 грн / +20 хв  
+> - Кава/чай під час процедури +0–80 грн
+
+Important: keep it tasteful, not marketplace-like. Beauty clients buy trust and comfort.
+
+#### Master-side suggestion
+
+For manual-confirmation workflow:
+
+> Client booked: Манікюр гель-лак, 90 хв, 700 грн.  
+> Suggested upsell: Зняття старого покриття, +150 грн / +20 хв.  
+> Reason: client selected “є старе покриття” in form.  
+> Buttons: `Запропонувати`, `Додати вручну`, `Не пропонувати`.
+
+#### Follow-up retail
+
+After visit:
+
+> “Дякую за візит ❤️ Щоб покриття трималось довше, можна використовувати олійку для кутикули. Якщо хочете — відкладу для вас до наступного разу.”
+
+### Trust controls
+
+| Risk | Control |
+|---|---|
+| Master fears pushy sales | suggestions disabled by default; preview before sending |
+| Client annoyed by irrelevant offers | only 1–2 contextual offers; no spam |
+| Add-on breaks schedule | offer only if enough time or route to manual confirmation |
+| Product sounds robotic | editable templates in master’s tone |
+| Master wants full control | “suggest only to me” mode before client-facing automation |
+
+### Revenue dashboard
+
+This is essential for making it sellable:
+
+- upsell conversion rate;
+- extra revenue from add-ons;
+- top add-ons;
+- missed opportunities;
+- repeat booking revenue;
+- no-show savings.
+
+Example ROI message inside product:
+
+> “Цього місяця add-ons принесли +2 450 грн. Підписка окупилась у 6.1×.”
+
+### Prioritization
+
+| Feature | MVP? | Why |
+|---|---|---|
+| Add-on catalog | Yes | foundation for upsells |
+| Add-on eligibility by service | Yes | keeps offers relevant |
+| Add-on duration and price | Yes | prevents schedule conflict |
+| Client-side add-on choice | Yes | direct average-check lift |
+| Master approval for add-on bookings | Yes | trust-first control |
+| Editable upsell templates | Yes | avoids robotic/pushy tone |
+| Upsell revenue dashboard | Yes | proves SaaS ROI |
+| AI recommendations | Later | useful only after data exists |
+| Inventory-linked retail | Later | salon/studio feature, not solo MVP |
+| A/B testing offers | Later | growth feature after traction |
+
+### Positioning extension
+
+Base positioning:
+
+> Порядок у записах без втрати контролю.
+
+Stronger revenue positioning:
+
+> **Не просто записує клієнтів — допомагає збільшувати середній чек.**
+
+Or:
+
+> **Beauty-асистент, який нагадує, підтверджує і м’яко допомагає продавати додаткові послуги.**
+
+### Validation experiment
+
+Run a concierge test before building full automation:
+
+1. Pick 5–10 masters.
+2. For each, define 3 add-ons manually.
+3. Add add-on checkboxes to the booking form or ask via message after booking.
+4. Track:
+   - % bookings with add-on;
+   - average extra revenue;
+   - client complaints/annoyance;
+   - whether master keeps using it after 2 weeks.
+
+Continue if:
+
+- 15–25% of bookings accept at least one add-on; or
+- add-ons generate enough monthly revenue to cover subscription 3×+; and
+- masters do not feel it damages client relationship.
+
+---
+
 ## Packaging hypothesis
 
 ### Solo

@@ -98,3 +98,7 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Зафіксовано вимоги, MVP scope, competitor/source signals, trust-first automation model і objection handling для українських beauty-майстрів.
 - Оновлено index.md.
 
+## [2026-06-29] update | beauty masters SaaS upsell assistant
+- Додано до research/beauty-masters-saas-ukraine-requirements-2026-06-29.md killer feature candidate: contextual upsell assistant.
+- Зафіксовано add-on catalog, rules/templates MVP, client-side add-on choice, master approval, trust controls, ROI dashboard і validation experiment.
+
