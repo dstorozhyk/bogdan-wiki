@@ -88,3 +88,8 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Added 0 memory candidates, 0 skill candidates, 0 wiki candidates, 1 open loops to agents/review-queue.md.
 - `index.md` already mentioned `logs/daily/`; no index change needed.
 
+## [2026-06-29] update | Daily knowledge consolidation
+- Created/updated logs/daily/2026-06-29.md.
+- Added 0 memory candidates, 1 skill candidates, 0 wiki candidates, 1 open loops to agents/review-queue.md.
+- `index.md` already mentioned `logs/daily/`; no index change needed.
+

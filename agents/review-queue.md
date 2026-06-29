@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Review Queue
 created: 2026-06-20
-updated: 2026-06-28
+updated: 2026-06-29
 type: query
 tags: [wiki]
 ---
@@ -41,6 +41,13 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-06-29 — Update `game-walkthrough-visual-guidance` with annotated map-tile workflow**
+  - Proposed skill name: update `game-walkthrough-visual-guidance`.
+  - Trigger: user is stuck locating an in-game objective and asks for a drawn/visual map rather than more text directions.
+  - Reusable workflow: identify exact quest/location; search for a reliable interactive/static map; if browser rendering fails, fetch map page assets/tiles directly; crop the relevant area; draw labels, route, and target marker; verify the output image visually before sending.
+  - Include pitfalls/verification: use `requests`/PIL for tile downloads and annotation when browser navigation times out; inspect JS/assets for tile URL patterns and coordinate conventions; verify labels are not cropped; avoid overclaiming exact routes when coordinates are approximate.
+  - Evidence: `20260628_202416_b4f12782`.
 
 - [ ] **2026-06-26 — Update `rocket-attack-alarm-ops` for source-channel repeat alerts + `/updates` toggle**
   - Proposed skill name: update `rocket-attack-alarm-ops`.
@@ -207,6 +214,9 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-06-29 — Reconcile Freylina analyzer missing-skill warning persists**
+  - Context: Jun 29 Freylina analyzer still began with “Skill(s) not found and skipped: devops/youtube-to-wiki-pipeline”; default queue `/root/.hermes/profiles/freylina/wiki/.pending-videos.json` was empty, no files were changed, and no commit was created. This remains an operational profile/skill-reference repair; no content loss was observed in this run.
 
 - [ ] **2026-06-28 — Reconcile Freylina analyzer missing-skill warning persists**
   - Context: Jun 28 Freylina analyzer still began with “Skill(s) not found and skipped: devops/youtube-to-wiki-pipeline”; default queue `/root/.hermes/profiles/freylina/wiki/.pending-videos.json` was empty, no files were changed, and repo HEAD remained `4cbeb58`. This is an operational profile/skill-reference repair rather than content recovery.
