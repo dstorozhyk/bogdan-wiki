@@ -93,3 +93,8 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Added 0 memory candidates, 1 skill candidates, 0 wiki candidates, 1 open loops to agents/review-queue.md.
 - `index.md` already mentioned `logs/daily/`; no index change needed.
 
+## [2026-06-29] create | beauty masters SaaS requirements
+- Створено research/beauty-masters-saas-ukraine-requirements-2026-06-29.md.
+- Зафіксовано вимоги, MVP scope, competitor/source signals, trust-first automation model і objection handling для українських beauty-майстрів.
+- Оновлено index.md.
+

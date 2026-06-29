@@ -3,7 +3,7 @@
 Content catalog. Every wiki page listed under its type with a one-line summary.
 Read this first to find relevant pages for any query.
 
-> Last updated: 2026-06-22 | Content pages listed: 21 | Markdown files total: 30 including schema/log/memory
+> Last updated: 2026-06-29 | Content pages listed: 22 | Markdown files total: 39 including schema/log/memory
 
 ## Core / Meta
 
@@ -37,6 +37,7 @@ Read this first to find relevant pages for any query.
 
 ## Summaries / Research
 
+- [beauty-masters-saas-ukraine-requirements-2026-06-29](research/beauty-masters-saas-ukraine-requirements-2026-06-29.md) — вимоги, MVP, позиціонування і objection handling для SaaS онлайн-запису/CRM для українських beauty-майстрів із trust-first автоматизацією.
 - [life-rpg-startup-strategy-2026-06-21](research/life-rpg-startup-strategy-2026-06-21.md) — startup strategy for a mobile-first AI-powered Life RPG habit/self-improvement app.
 - [life-rpg-habit-app-roadmap-2026-06-21](research/life-rpg-habit-app-roadmap-2026-06-21.md) — roadmap, MVP scope, validation metrics, and launch plan for the Life RPG habit app concept.
 - [mobile-app-stores-as-saas-payment-route-ukraine-2026-06-21](research/mobile-app-stores-as-saas-payment-route-ukraine-2026-06-21.md) — using iOS/Android app stores and in-app purchases as a B2C/prosumer SaaS payment workaround for Ukraine.
