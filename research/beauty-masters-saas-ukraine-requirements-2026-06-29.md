@@ -267,9 +267,97 @@ Alternatives:
 
 ---
 
+## Killer feature candidate: low-tech revenue OS
+
+New field signal from Denys: a beauty master was ready to pay even for a simple QR code that links to Instagram and Google Maps. This implies the average target user can have **very low technical maturity**, while even small digitization steps can create visible revenue lift. The product should not start as a complex CRM; it should feel like a low-tech revenue layer that begins with QR/links and gradually grows into booking, upsells, reminders, and analytics.
+
+Core wedge:
+
+> **Start with a QR/link that brings more clients. Then show the master where money is being lost and what simple action increases revenue.**
+
+This reframes the SaaS from “software to manage a salon” into “a simple tool that makes the master easier to find, easier to book, and easier to buy more from.”
+
+### Entry-level product: QR mini-site
+
+The first sellable unit can be extremely simple:
+
+- QR code for studio/workplace;
+- mobile mini-page with:
+  - Instagram;
+  - Google Maps;
+  - phone / Telegram / Viber;
+  - services and prices;
+  - “book appointment” button;
+  - reviews/photos;
+  - add-ons or promos;
+- printable QR assets for mirror/table/door/business card;
+- basic click tracking.
+
+Why this matters:
+
+- requires almost no technical learning;
+- is easy to explain in-person;
+- creates immediate perceived value;
+- can become the acquisition wedge for later CRM features.
+
+### Analytics as killer feature
+
+Analytics should not look like BI dashboards. For low-tech beauty masters, it should be phrased as **money hints**:
+
+> “Ось де ви втрачаєте гроші. Ось що зробити цього тижня.”
+
+Examples:
+
+| Insight | Plain-language message | Suggested action |
+|---|---|---|
+| Many profile clicks, few bookings | “Люди дивляться, але не записуються” | add visible booking button / price / reviews |
+| Clients choose service but abandon | “На цьому етапі клієнти губляться” | shorten form / add manual confirmation text |
+| No repeat booking after manicure | “Після манікюру клієнти не повертаються вчасно” | send reminder after 3–4 weeks |
+| No add-ons selected | “Клієнти не бачать додаткові послуги” | show 1 relevant add-on in booking flow |
+| High no-show rate | “Ви втрачаєте X грн через неявки” | enable confirmation reminder / deposit for risky clients |
+| Google Maps clicks are low | “Вас важко знайти на місці” | improve map link, address text, route button |
+
+This can make analytics a killer feature because it connects data to direct money outcomes, not abstract charts.
+
+### Product maturity ladder
+
+| Level | User-facing product | Value |
+|---|---|---|
+| 0 | QR to Instagram + Google Maps | easy visibility, immediate low-tech value |
+| 1 | QR mini-site with services/prices/contact buttons | more conversions from existing traffic |
+| 2 | Booking request form with manual confirmation | fewer переписок, more structured demand |
+| 3 | Reminders and no-show tracking | less lost revenue |
+| 4 | Add-on suggestions / upsell assistant | higher average check |
+| 5 | Money hints analytics | tells master what to improve next |
+| 6 | Full CRM / automation | only after trust and digital habit exist |
+
+### Revised positioning
+
+For low-tech market entry:
+
+> **QR-сторінка, яка приводить клієнтів у Instagram, Google Maps і запис — без складної CRM.**
+
+For evolved product:
+
+> **Простий beauty-асистент, який показує, де ви втрачаєте гроші, і допомагає збільшити запис та середній чек.**
+
+### Product implication
+
+The first onboarding should not ask the master to “configure CRM”. It should ask:
+
+1. Як вас знайти в Instagram?
+2. Де ви на Google Maps?
+3. Які 3–5 послуг найпопулярніші?
+4. Як клієнту записатись?
+5. Хочете QR-код для столу/дзеркала/дверей?
+
+Only after this should the product introduce booking, reminders, upsells, and analytics.
+
+---
+
 ## Killer feature candidate: contextual upsell assistant
 
-This can become the real differentiator: not just “calendar/CRM”, but a system that **helps the master earn more from every booking without sounding pushy**.
+This can become the next differentiator after the low-tech QR wedge: not just “calendar/CRM”, but a system that **helps the master earn more from every booking without sounding pushy**.
 
 ### Core idea
 

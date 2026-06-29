@@ -102,3 +102,8 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Додано до research/beauty-masters-saas-ukraine-requirements-2026-06-29.md killer feature candidate: contextual upsell assistant.
 - Зафіксовано add-on catalog, rules/templates MVP, client-side add-on choice, master approval, trust controls, ROI dashboard і validation experiment.
 
+## [2026-06-29] update | beauty masters SaaS low-tech QR + analytics wedge
+- Додано field signal: майстер готова платити навіть за QR-код на Instagram і Google Maps, що вказує на низьку технічну обізнаність і високу цінність простих digitization кроків.
+- Додано концепцію low-tech revenue OS: QR mini-site → booking request → reminders/no-show → upsell assistant → money-hints analytics → CRM.
+- Зафіксовано, що analytics має подаватись як прості money hints, а не BI dashboards.
+
