@@ -111,3 +111,8 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Уточнено product decision: QR/mini-site не варто виносити в окремий продукт; це має бути легка вбудована acquisition/onboarding фіча загальної системи.
 - Core product лишається beauty revenue assistant: booking, reminders, upsells, repeat visits, money-hints analytics.
 
+## [2026-06-29] update | beauty SaaS pricing and configuration model
+- Уточнено: не продавати як “CRM”; продавати outcome — менше головного болю + більше грошей через записи, нагадування, допродажі, повторні візити і money hints.
+- Зафіксовано, що QR/mini-site не тягне 1500–2000+ грн/міс сам по собі; premium plan має включати done-for-you/guided setup і ongoing growth assistant loop.
+- Додано pricing hypothesis: Starter/QR 0–499 грн, Solo Growth 1500–2000 грн/міс, Studio Growth 2500–5000+ грн/міс.
+

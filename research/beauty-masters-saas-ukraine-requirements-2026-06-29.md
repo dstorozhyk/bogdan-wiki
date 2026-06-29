@@ -515,20 +515,50 @@ Continue if:
 
 ## Packaging hypothesis
 
-### Solo
+### Product naming and pricing decision
 
-| Plan | Approx. price | Contents |
-|---|---:|---|
-| Free / Starter | 0 грн | календар, до 20 записів/міс, ручні заявки |
-| Solo | 199–399 грн/міс | необмежені записи, клієнти, нагадування, онлайн-посилання |
-| Solo Pro | 499–799 грн/міс | follow-up, no-show tracking, фінанси, шаблони, Telegram/Viber |
+Do **not** sell this as “CRM”. The buyer likely does not care what the software category is called. Sell the outcome:
 
-### Studio
+> **Система, яка забирає головний біль із записами/нагадуваннями/клієнтами і додає гроші в кишеню через допродажі, повторні візити та менше втрат.**
 
-| Plan | Approx. price | Contents |
-|---|---:|---|
-| Studio | 799–1499 грн/міс | 2–5 майстрів, спільний календар, ролі, базова аналітика |
-| Studio Pro | 1499–2999 грн/міс | зарплати, передоплата, лояльність, розширені звіти |
+A QR/mini-site alone cannot justify 1500–2000+ грн/міс. It should be a small visible part of a broader business product. The paid product should be positioned as a **business growth/operations assistant**, not a digital business card.
+
+### Configuration model
+
+For target users with low technical maturity, configuration should be **done-for-you or guided**, not self-serve-heavy.
+
+Recommended setup:
+
+| Setup layer | Who configures | Why |
+|---|---|---|
+| Initial onboarding | vendor/concierge or guided wizard | low-tech users will not configure complex rules themselves |
+| QR/mini-page | mostly auto-generated from Instagram/Maps/services | instant visible value |
+| Services/prices/durations | entered once with help | needed for booking and upsells |
+| Add-ons/upsells | configured from templates | core revenue feature |
+| Reminder templates | prebuilt + editable | avoids blank-page problem |
+| Analytics/actions | system-generated “money hints” | user sees what to do, not charts |
+| Monthly optimization | vendor reviews data and suggests changes | justifies premium subscription |
+
+The 1500–2000+ грн/month plan should include not just software access but an ongoing “growth assistant” loop:
+
+1. setup QR/mini-page/booking;
+2. configure services and add-ons;
+3. enable reminders and no-show controls;
+4. monthly/weekly money-hints report;
+5. recommended changes to increase bookings/average check;
+6. optional done-for-you updates.
+
+### Revised pricing
+
+| Plan | Approx. price | Buyer promise | Contents |
+|---|---:|---|---|
+| Starter / QR included | 0–499 грн | easy digital presence | QR/mini-page, Instagram/Maps/buttons, basic clicks |
+| Solo Growth | 1500–2000 грн/міс | more bookings, fewer lost clients, higher average check | booking requests, reminders, client base, add-ons, money hints, monthly optimization |
+| Studio Growth | 2500–5000+ грн/міс | owner control and revenue growth for a team | multi-master schedule, roles, advanced no-show, team analytics, upsell tracking |
+
+Critical: at 1500–2000+ грн/month, the product must sell a financial outcome, not features. The sales page and dashboard should constantly answer:
+
+> “Скільки грошей ця система принесла або зберегла?”
 
 ---
 
