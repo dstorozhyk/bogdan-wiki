@@ -273,11 +273,15 @@ New field signal from Denys: a beauty master was ready to pay even for a simple 
 
 Core wedge:
 
-> **Start with a QR/link that brings more clients. Then show the master where money is being lost and what simple action increases revenue.**
+> **Start with the general beauty system, but make QR/mini-page a lightweight built-in acquisition feature, not a separate product. Then use analytics to show where money is being lost and what simple action increases revenue.**
+
+Important product decision: **do not spin QR into a separate product**. It is too simple and strategically better as an entry/onboarding module inside the overall system. It should be the first “aha” moment and acquisition surface, while the core product remains the broader beauty revenue assistant: booking, reminders, upsells, repeat visits, and money-hints analytics.
 
 This reframes the SaaS from “software to manage a salon” into “a simple tool that makes the master easier to find, easier to book, and easier to buy more from.”
 
 ### Entry-level product: QR mini-site
+
+The QR/mini-site should be a **module of the general system**, not a standalone product. It is the easiest entry point for low-tech masters and should be included in onboarding, plan packaging, and printed materials.
 
 The first sellable unit can be extremely simple:
 

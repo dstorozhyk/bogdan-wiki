@@ -107,3 +107,7 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Додано концепцію low-tech revenue OS: QR mini-site → booking request → reminders/no-show → upsell assistant → money-hints analytics → CRM.
 - Зафіксовано, що analytics має подаватись як прості money hints, а не BI dashboards.
 
+## [2026-06-29] update | beauty masters SaaS QR as module, not separate product
+- Уточнено product decision: QR/mini-site не варто виносити в окремий продукт; це має бути легка вбудована acquisition/onboarding фіча загальної системи.
+- Core product лишається beauty revenue assistant: booking, reminders, upsells, repeat visits, money-hints analytics.
+
