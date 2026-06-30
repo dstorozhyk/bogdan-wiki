@@ -121,3 +121,9 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Added 3 memory candidates, 0 skill candidates, 3 wiki candidates, 5 open loops to agents/review-queue.md.
 - `index.md` already mentioned `logs/daily/`; no index change needed.
 
+## [2026-06-30] update | beauty public profile standalone-first
+- Оновлено research/beauty-masters-saas-ukraine-requirements-2026-06-29.md.
+- Зафіксовано правило: public-візитівка має працювати без CRM; CRM/calendar/free-slots/reminders/client-history — optional modules.
+- Додано baseline без CRM, optional module table, design direction і theme rule: замість темної black/gold теми використовувати світлі premium напрями, зокрема Champagne Ivory.
+- Оновлено index.md.
+
