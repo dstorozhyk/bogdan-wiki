@@ -116,3 +116,8 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Зафіксовано, що QR/mini-site не тягне 1500–2000+ грн/міс сам по собі; premium plan має включати done-for-you/guided setup і ongoing growth assistant loop.
 - Додано pricing hypothesis: Starter/QR 0–499 грн, Solo Growth 1500–2000 грн/міс, Studio Growth 2500–5000+ грн/міс.
 
+## [2026-06-30] update | Daily knowledge consolidation
+- Created/updated logs/daily/2026-06-30.md.
+- Added 3 memory candidates, 0 skill candidates, 3 wiki candidates, 5 open loops to agents/review-queue.md.
+- `index.md` already mentioned `logs/daily/`; no index change needed.
+

@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Review Queue
 created: 2026-06-20
-updated: 2026-06-29
+updated: 2026-06-30
 type: query
 tags: [wiki]
 ---
@@ -21,6 +21,24 @@ The nightly sleep job should prepend new candidates below.
 ---
 
 ## Pending Memory Candidates
+
+- [ ] **2026-06-30 — Mobile app ideas should use portfolio/business validation discipline**
+  - Proposed text: `When Denys asks for smartphone app ideas, treat it as business-side portfolio research: use current market/app-store data, monetization evidence, distribution strategy, validation gates, and explicit kill/bankruptcy criteria before recommending development.`
+  - Why durable: stable preference for future app-idea work and avoids generic ideation.
+  - Risk/staleness: benchmarks and source availability change; keep the principle but refresh data.
+  - Evidence: `20260629_175146_d78a7cb1`, `cron_54b894b9fd7d_20260630_000558`.
+
+- [ ] **2026-06-30 — Micro-SaaS feature discovery should be evidence-first**
+  - Proposed text: `When Denys asks for micro-SaaS feature discovery or business analysis, derive features from the business flow plus internet evidence: competitors, reviews/pain, pricing, monetization, onboarding, validation, and prioritization; avoid vibe-based feature lists.`
+  - Why durable: recurring workflow preference and quality bar for future business-analysis tasks.
+  - Risk/staleness: exact frameworks/tools may evolve, but the evidence-first preference is stable.
+  - Evidence: `20260629_183354_7d362b1f`.
+
+- [ ] **2026-06-30 — Beauty Growth Assistant project location**
+  - Proposed text: `Beauty Growth Assistant prototype lives at /opt/apps/beauty-growth-assistant and GitHub repo https://github.com/dstorozhyk/beauty-growth-assistant; initial scaffold commit is d6fc4a3.`
+  - Why durable: project location/config pointer useful for future continuation.
+  - Risk/staleness: repo path, branch, deploy status, and commit pointer can change.
+  - Evidence: `20260629_183841_50ab40de`.
 
 - [ ] **2026-06-25 — Freedom cash-like UCITS ETF ticker mapping**
   - Proposed text: `Freedom/Freedom24 showed the accumulating SGOV-like UCITS ETF as IB01.EU; verify ISIN IE00BGSF1X88 before buying. Related cash-like UCITS candidates discussed: IB01/IE00BGSF1X88 for 0–1yr US Treasuries, IBTA/IE00BYXPSP02 for 1–3yr, IBTE/IE00BDFK1573 for EUR-hedged 1–3yr.`
@@ -128,6 +146,21 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Wiki Candidates
 
+- [ ] **2026-06-30 — Create mobile app portfolio research hub**
+  - Suggested destination: `research/mobile-app-portfolio-strategy-2026-06.md` or decomposed `projects/mobile-app-portfolio/{overview,research-log,idea-scorecards}.md`.
+  - Candidate content: Denys wants app ideation as a business portfolio discipline; first CLI scan tested `ai calorie counter`, `macro tracker`, `pet symptom checker`, `baby sleep tracker`, `plant disease identifier`, `receipt scanner expense tracker`, `medication reminder`, `outfit planner wardrobe`, `home workout planner`, `travel packing list`, `skin care routine tracker`, and `room design ai`. Top smoke-test candidates were privacy-first family travel packing, receipt scanner for freelancers outside the US, and outfit purchase checker; avoid generic AI calorie/home workout/room design unless narrowed to a strong wedge. Jun 30 research update added theses: mobile spend grows while downloads are flat, AI monetizes but needs vertical/outcome-specific apps, visual AI has stronger viral/purchase signals, and top-paid iOS can still reward narrow pro utilities.
+  - Evidence: `20260629_175146_d78a7cb1`, `cron_54b894b9fd7d_20260630_000558`.
+
+- [ ] **2026-06-30 — Create Beauty Growth Assistant project/prototype note**
+  - Suggested destination: `projects/beauty-growth-assistant.md` or `projects/beauty-growth-assistant/overview.md`, linked from the existing beauty SaaS research note.
+  - Candidate content: repo `https://github.com/dstorozhyk/beauty-growth-assistant`, local path `/opt/apps/beauty-growth-assistant`, initial commit `d6fc4a3 feat: scaffold beauty growth assistant UI`; React/Vite/MUI prototype includes dashboard, money hints, QR/mini-page module, booking/manual approval, upsell/add-on performance, public mini-page preview, and Ukrainian outcome-based copy. Verification passed `npm run build` and `npm run lint`; deployment of protected preview remains blocked pending explicit approval for Nginx/basic-auth changes.
+  - Evidence: `20260629_183841_50ab40de`.
+
+- [ ] **2026-06-30 — Capture business-analysis feature discovery methodology in wiki**
+  - Suggested destination: `concepts/micro-saas-feature-discovery-workflow.md` or a section in an existing product strategy note.
+  - Candidate content: derive feature lists from business flow, process mapping, JTBD, competitor/pricing/review/search evidence, sellable MVP scope, manual/fake-now scope, validation plan, and MoSCoW/RICE-style prioritization; avoid generic feature lists not tied to revenue outcomes or internet evidence.
+  - Evidence: `20260629_183354_7d362b1f`.
+
 - [ ] **2026-06-27 — Capture weekly Hermes/Claude update report in ops notes**
   - Suggested destination: `agents/hermes-ops-weekly-updates.md` or a focused Hermes/Claude operations note linked from Agent Knowledge Ops.
   - Candidate content: weekly report said local Hermes Agent is v0.17.0 / 2026.6.19 but 807 commits behind; local Claude Code is 2.1.183 while latest reported is 2.1.193; prioritize Hermes update for gateway/Telegram/email/cron/browser reliability/security; after update run `hermes doctor`, gateway restart/status, `hermes cron list`, Telegram `[SILENT]` smoke test, and email/browser checks if used; for Claude update verify OTEL assistant-response privacy, MCP auth, `sandbox.credentials`, and changed `!` bash behavior.
@@ -214,6 +247,21 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-06-30 — Decide whether to create mobile app portfolio research hub**
+  - Context: Jun 29–30 work produced a repeatable app-idea factory skill, a first 12-keyword App Store/Google Play scan, and updated 2026 mobile monetization theses. This could become a wiki hub for scorecards, killed ideas, and validated app bets.
+
+- [ ] **2026-06-30 — Decide whether to create Beauty Growth Assistant project note**
+  - Context: `/opt/apps/beauty-growth-assistant` and GitHub repo `dstorozhyk/beauty-growth-assistant` now contain the first React/Vite/MUI prototype at commit `d6fc4a3`; build/lint passed, but protected preview is not deployed.
+
+- [ ] **2026-06-30 — Deploy Beauty Growth Assistant protected preview if approved**
+  - Context: source session planned `https://bodya-monitor.duckdns.org/beauty/`, but Nginx/basic-auth and `/var/www` changes required explicit approval. Do not store the basic-auth password in wiki.
+
+- [ ] **2026-06-30 — Fix Claude Code auth before using it for review**
+  - Context: beauty project review was cancelled because Claude Code returned `401 Invalid authentication credentials` even though `claude auth status` reportedly showed a Claude Pro login.
+
+- [ ] **2026-06-30 — Reconcile Freylina analyzer missing-skill warning persists**
+  - Context: Jun 30 Freylina analyzer still began with “Skill(s) not found and skipped: devops/youtube-to-wiki-pipeline”; default queue was empty, no files changed, repo was clean at `06acf06`, and no content loss was observed.
 
 - [ ] **2026-06-29 — Reconcile Freylina analyzer missing-skill warning persists**
   - Context: Jun 29 Freylina analyzer still began with “Skill(s) not found and skipped: devops/youtube-to-wiki-pipeline”; default queue `/root/.hermes/profiles/freylina/wiki/.pending-videos.json` was empty, no files were changed, and no commit was created. This remains an operational profile/skill-reference repair; no content loss was observed in this run.
