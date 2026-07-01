@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Review Queue
 created: 2026-06-20
-updated: 2026-06-30
+updated: 2026-07-01
 type: query
 tags: [wiki]
 ---
@@ -21,6 +21,24 @@ The nightly sleep job should prepend new candidates below.
 ---
 
 ## Pending Memory Candidates
+
+- [ ] **2026-07-01 — Front/UI work should be manual and not confuse UI kits with landing pages**
+  - Proposed text: `For Denys's frontend/UI kit work, write frontend manually without “колода”/external UI generator unless explicitly asked, and do not replace a requested UI kit/design-system task with a landing page.`
+  - Why durable: direct recurring workflow preference and correction.
+  - Risk/staleness: term “колода” may refer to a specific tool; keep broad until clarified.
+  - Evidence: `20260630_182440_b9e4ac` compacted context.
+
+- [ ] **2026-07-01 — Beauty Growth Assistant preview routes**
+  - Proposed text: `Beauty Growth Assistant project preview routes: /beauty/ is the UI kit/design page; /beauty/olena-nails is the standalone mobile-first client public profile. Latest public-profile commit observed: 0351b0e.`
+  - Why durable: project route/config pointer useful for future continuation.
+  - Risk/staleness: deployment URL, routes, and commit can change.
+  - Evidence: `20260630_205901_297be096`.
+
+- [ ] **2026-07-01 — Hermes deferred task queue operational paths**
+  - Proposed text: `Hermes deferred task queue is installed under ~/.hermes/deferred-tasks with scripts ~/.hermes/scripts/deferred_tasks.py and ~/.hermes/scripts/deferred_task_watchdog.py; cron job ed23278d9458 runs the no-agent watchdog every 20m.`
+  - Why durable: operational config pointer likely useful for future large tasks.
+  - Risk/staleness: cron/job IDs and script paths may change after refactors.
+  - Evidence: `20260630_191516_dda9ca32`, `20260630_192732_bb7b42`.
 
 - [ ] **2026-06-30 — Mobile app ideas should use portfolio/business validation discipline**
   - Proposed text: `When Denys asks for smartphone app ideas, treat it as business-side portfolio research: use current market/app-store data, monetization evidence, distribution strategy, validation gates, and explicit kill/bankruptcy criteria before recommending development.`
@@ -59,6 +77,27 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-07-01 — Review/update `beauty-saas-product-design` for standalone public profile route and no-photo rules**
+  - Proposed skill name: review/update `beauty-saas-product-design`.
+  - Trigger: designing Beauty Growth Assistant public profiles, no-photo variants, UI kit vs client-facing visit-card pages.
+  - Reusable workflow: keep `/beauty/` as UI kit/design surface and `/beauty/<slug>` as client-facing standalone profile; strip CRM/dashboard/SaaS copy from public pages; use service-first no-photo headers; verify via build/lint/deploy/browser screenshot; commit/push.
+  - Include pitfalls/verification: run `npm run build`, `npm run lint`, deploy `dist/` to `/var/www/beauty-growth-assistant`, `nginx -t`, `systemctl reload nginx`, browser verify `/beauty/` and `/beauty/olena-nails`; pitfall: fake monogram no-photo headers look artificial; avoid storing preview credentials.
+  - Evidence: `20260630_182440_b9e4ac`, `20260630_205901_297be096`.
+
+- [ ] **2026-07-01 — Review/update `hermes-deferred-task-queue` runbook**
+  - Proposed skill name: review/update `hermes-deferred-task-queue`.
+  - Trigger: large Hermes tasks risk provider limits or context exhaustion and need automatic continuation.
+  - Reusable workflow: create task/progress/artifact files, capture session id, watchdog picks `pending/`, runs `hermes --resume <session_id> chat -Q -q ...`, moves tasks to `done/failed`, stays silent when idle or rate-limited.
+  - Include pitfalls/verification: run `python3 -m py_compile ~/.hermes/scripts/deferred_tasks.py ~/.hermes/scripts/deferred_task_watchdog.py`, `python3 ~/.hermes/scripts/deferred_tasks.py create/list/show`, `HERMES_DEFERRED_DRY_RUN=1 python3 ~/.hermes/scripts/deferred_task_watchdog.py`, `hermes cron list`; verify no pending produces empty stdout and self-test reaches `done/`.
+  - Evidence: `20260630_191516_dda9ca32`, `20260630_192732_bb7b42`.
+
+- [ ] **2026-07-01 — Update `hermes-update-operations` for Jun 30 Hermes/Claude update and gateway restart handling**
+  - Proposed skill name: update `hermes-update-operations`.
+  - Trigger: Hermes/Claude updates on a gateway-hosting VPS, especially when reports fail or local patches must survive update.
+  - Reusable workflow: inspect cron output and gateway logs; backup local patches; run `hermes update`, `hermes doctor --fix`, `hermes doctor`, `claude update`, Claude smoke test; confirm direct-script custom commands and cron `[SILENT]` behavior; restart gateways via delayed `systemd-run` rather than direct restart inside gateway.
+  - Include pitfalls/verification: backup path `/root/hermes-update-backups/YYYYMMDD_HHMMSS/local-patches.patch`; run `hermes --version`, `claude --version`, `claude -p 'Reply with exactly: OK' --max-turns 1 --model haiku`; pitfall: default gateway restart may hang until current response delivery completes.
+  - Evidence: `20260630_194546_704e6fbb`.
 
 - [ ] **2026-06-29 — Update `game-walkthrough-visual-guidance` with annotated map-tile workflow**
   - Proposed skill name: update `game-walkthrough-visual-guidance`.
@@ -145,6 +184,21 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `cron_ef9b3fb5feed_20260620_030049`; skill was missing and queue was empty at HEAD `654a3f9`.
 
 ## Pending Wiki Candidates
+
+- [ ] **2026-07-01 — Update/create Beauty Growth Assistant project note with public profile route**
+  - Suggested destination: `projects/beauty-growth-assistant.md` or `projects/beauty-growth-assistant/overview.md`, linked from the existing beauty SaaS research note.
+  - Candidate content: `/beauty/` remains the UI kit/design page; `/beauty/olena-nails` is the clean standalone mobile-first client public profile without CRM/dashboard/SaaS copy; no-photo design should be service-first/editorial rather than fake monogram; commits observed: `80e46e3 ui: replace no-photo monogram with service-first header` and `0351b0e feat: add standalone beauty public profile route`; verification included build/lint/nginx/browser checks and screenshots under deferred-task artifacts.
+  - Evidence: `20260630_182440_b9e4ac`, `20260630_205901_297be096`.
+
+- [ ] **2026-07-01 — Create Hermes deferred task queue operations note**
+  - Suggested destination: `agents/hermes-deferred-task-queue.md` or `agents/hermes-ops-deferred-tasks.md` linked from Agent Knowledge Ops.
+  - Candidate content: document queue folders `pending/running/done/failed/progress/artifacts/logs`, scripts `~/.hermes/scripts/deferred_tasks.py` and `~/.hermes/scripts/deferred_task_watchdog.py`, cron `ed23278d9458` every 20m no-agent, resume prompt rules, silent no-op/rate-limit behavior, self-test evidence, and manual create/list/show commands.
+  - Evidence: `20260630_191516_dda9ca32`, `20260630_192732_bb7b42`.
+
+- [ ] **2026-07-01 — Update Hermes ops note with weekly report delivery bug and Jun 30 update**
+  - Suggested destination: `agents/hermes-ops-weekly-updates.md` or `agents/hermes-update-operations.md`.
+  - Candidate content: weekly Hermes report generated but did not deliver to Telegram; Hermes updated to upstream `571092ee`, Claude Code to `2.1.197`, config migrated v30→v32, direct-script commands and cron `[SILENT]` behavior checked, gateway restart had to be scheduled via delayed `systemd-run` from inside gateway.
+  - Evidence: `20260630_194546_704e6fbb`.
 
 - [ ] **2026-06-30 — Create mobile app portfolio research hub**
   - Suggested destination: `research/mobile-app-portfolio-strategy-2026-06.md` or decomposed `projects/mobile-app-portfolio/{overview,research-log,idea-scorecards}.md`.
@@ -247,6 +301,18 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-07-01 — Verify default Hermes gateway restart completed after delayed update restart**
+  - Context: Jun 30 Hermes/Claude update scheduled gateway restart via `systemd-run`; final report said Freylina had a new PID, but default gateway restart was still in `systemctl restart` while the response was being delivered.
+
+- [ ] **2026-07-01 — Decide whether to create/update Beauty Growth Assistant project note**
+  - Context: `/beauty/olena-nails` is now a deployed standalone client public profile route, `/beauty/` remains UI kit/design page, and commits `80e46e3`/`0351b0e` plus screenshot artifacts should be captured if the project note is promoted.
+
+- [ ] **2026-07-01 — Decide whether to create Hermes deferred task queue wiki runbook**
+  - Context: deferred task queue/watchdog is installed and tested; a wiki runbook would make future recovery, debugging, and manual task creation easier.
+
+- [ ] **2026-07-01 — Reconcile Freylina analyzer missing skill warning plus stale nested queue**
+  - Context: Jul 1 Freylina analyzer still begins with missing `devops/youtube-to-wiki-pipeline`; default queue is empty and repo clean at `06acf06`, but stale nested queue remains at `~/.hermes/profiles/freylina/home/.hermes/profiles/freylina/wiki/.pending-videos.json`.
 
 - [ ] **2026-06-30 — Decide whether to create mobile app portfolio research hub**
   - Context: Jun 29–30 work produced a repeatable app-idea factory skill, a first 12-keyword App Store/Google Play scan, and updated 2026 mobile monetization theses. This could become a wiki hub for scorecards, killed ideas, and validated app bets.

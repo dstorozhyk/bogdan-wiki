@@ -127,3 +127,8 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Додано baseline без CRM, optional module table, design direction і theme rule: замість темної black/gold теми використовувати світлі premium напрями, зокрема Champagne Ivory.
 - Оновлено index.md.
 
+## [2026-07-01] update | Daily knowledge consolidation
+- Created/updated logs/daily/2026-07-01.md.
+- Added 3 memory candidates, 3 skill candidates, 3 wiki candidates, 4 open loops to agents/review-queue.md.
+- `index.md` already mentioned `logs/daily/`; no index change needed.
+
