@@ -132,3 +132,18 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Added 3 memory candidates, 3 skill candidates, 3 wiki candidates, 4 open loops to agents/review-queue.md.
 - `index.md` already mentioned `logs/daily/`; no index change needed.
 
+
+## [2026-07-01] ingest | Emergency Fund strategy documents
+- Імпортовано 4 надані Denys Obsidian-документи у wiki:
+  - research/emergency-fund-dashboard.md
+  - research/emergency-fund-strategy.md
+  - research/emergency-fund-ovdp-research.md
+  - research/emergency-fund-usdt-usdc-research.md
+- Зафіксовано source of truth для подушки: цілі $6k/$12k/$18k, повна ціль $18k, структура Р1/Р2/Р3, OВДП/UCITS/stablecoin розподіл і квартальний ребаланс.
+- Оновлено index.md.
+
+## [2026-07-02] update | Daily knowledge consolidation
+- Created/updated logs/daily/2026-07-02.md.
+- Added 1 memory candidates, 1 skill candidates, 2 wiki candidates, 3 open loops to agents/review-queue.md.
+- `index.md` already mentioned `logs/daily/`; no index change needed.
+

@@ -3,7 +3,7 @@
 Content catalog. Every wiki page listed under its type with a one-line summary.
 Read this first to find relevant pages for any query.
 
-> Last updated: 2026-06-30 | Content pages listed: 22 | Markdown files total: 40 including schema/log/memory
+> Last updated: 2026-07-01 | Content pages listed: 26 | Markdown files total: 45 including schema/log/memory
 
 ## Core / Meta
 
@@ -37,6 +37,10 @@ Read this first to find relevant pages for any query.
 
 ## Summaries / Research
 
+- [emergency-fund-dashboard](research/emergency-fund-dashboard.md) — Obsidian Dataview dashboard для трекінгу Emergency Fund: фази $6k/$12k/$18k, рівні доступу, географія, категорії та current/target по інструментах.
+- [emergency-fund-strategy](research/emergency-fund-strategy.md) — стратегія побудови подушки Denys: $2k/міс витрат, ціль $18k, структура Р1/Р2/Р3, правила використання і квартальний ребаланс.
+- [emergency-fund-ovdp-research](research/emergency-fund-ovdp-research.md) — дослідження USD ОВДП для подушки; фінальне рішення: mono валютна банка $5k, звільнені $600 → SGOV/UCITS-equivalent routing.
+- [emergency-fund-usdt-usdc-research](research/emergency-fund-usdt-usdc-research.md) — дослідження USDT/USDC частини подушки; фінальне рішення: $3.8k stablecoin sleeve через WhiteBIT/Binance, транші instant/30д/90д, ризики CEX/емітентів.
 - [beauty-masters-saas-ukraine-requirements-2026-06-29](research/beauty-masters-saas-ukraine-requirements-2026-06-29.md) — вимоги, MVP, позиціонування, standalone-first public-візитівка і objection handling для SaaS/CRM українських beauty-майстрів із optional automation modules.
 - [life-rpg-startup-strategy-2026-06-21](research/life-rpg-startup-strategy-2026-06-21.md) — startup strategy for a mobile-first AI-powered Life RPG habit/self-improvement app.
 - [life-rpg-habit-app-roadmap-2026-06-21](research/life-rpg-habit-app-roadmap-2026-06-21.md) — roadmap, MVP scope, validation metrics, and launch plan for the Life RPG habit app concept.

@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Review Queue
 created: 2026-06-20
-updated: 2026-07-01
+updated: 2026-07-02
 type: query
 tags: [wiki]
 ---
@@ -21,6 +21,12 @@ The nightly sleep job should prepend new candidates below.
 ---
 
 ## Pending Memory Candidates
+
+- [ ] **2026-07-02 — Emergency fund source-of-truth wiki files**
+  - Proposed text: `Denys's emergency fund source of truth lives in /root/bogdan-wiki/research/emergency-fund-{dashboard,strategy,ovdp-research,usdt-usdc-research}.md; use those files before advising on podushka/stablecoin allocation.`
+  - Why durable: stable wiki/source pointer that prevents repeated rediscovery of the emergency-fund strategy.
+  - Risk/staleness: allocation and filenames can change; verify current wiki files before detailed advice.
+  - Evidence: `20260701_110157_85b8c913`.
 
 - [ ] **2026-07-01 — Front/UI work should be manual and not confuse UI kits with landing pages**
   - Proposed text: `For Denys's frontend/UI kit work, write frontend manually without “колода”/external UI generator unless explicitly asked, and do not replace a requested UI kit/design-system task with a landing page.`
@@ -77,6 +83,13 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-07-02 — Update `rocket-attack-alarm-ops` for restart-loop/OOM production debugging**
+  - Proposed skill name: update `rocket-attack-alarm-ops`.
+  - Trigger: Rocket bot misses alerts, health endpoint is down, Docker container is restarting, or logs show Node.js heap out-of-memory.
+  - Reusable workflow: inspect `docker inspect` RestartCount/OOMKilled/ExitCode and recent events/logs; if production stop/restart/debug is destructive, require explicit approval; run a debug container on a separate health port if possible; capture exact startup error; apply fix; run focused tests/build; redeploy and verify `/health`/`/ready` plus live channel monitoring.
+  - Include pitfalls/verification: `docker inspect rocket-attack-alarm`, `docker events --since=... --filter container=rocket-attack-alarm`, foreground debug run with env/data mounts and alternate `HEALTH_PORT`; pitfall: a restart-loop means no Telegram monitoring even if source channels have messages; Hermes may block `docker stop`/production restart without explicit user confirmation.
+  - Evidence: `20260701_215059_abd2456d`.
 
 - [ ] **2026-07-01 — Review/update `beauty-saas-product-design` for standalone public profile route and no-photo rules**
   - Proposed skill name: review/update `beauty-saas-product-design`.
@@ -184,6 +197,16 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `cron_ef9b3fb5feed_20260620_030049`; skill was missing and queue was empty at HEAD `654a3f9`.
 
 ## Pending Wiki Candidates
+
+- [ ] **2026-07-02 — Update emergency fund stablecoin note with custody split discussion**
+  - Suggested destination: `research/emergency-fund-usdt-usdc-research.md` and possibly `research/emergency-fund-strategy.md`.
+  - Candidate content: clarify that CEX balance is an operational hot exchange path, not the safest store; self-custody can usually be converted via wallet → WhiteBIT/Binance deposit → sell → card in ~10–30 minutes on normal days but adds network/deposit/error friction; Earn locks reduce emergency liquidity. Candidate alternative crypto sleeve: `$200–300 WhiteBIT hot balance`, `$700–1000 self-custody USDT/USDC`, `$1,200 30d Earn`, and `$1,300–1,700 60–90d Earn`, instead of keeping the full instant/long sleeve on CEX.
+  - Evidence: `20260701_110157_85b8c913`.
+
+- [ ] **2026-07-02 — Update Rocket project/runbook with restart-loop/OOM incident**
+  - Suggested destination: `projects/rocket-attack-alarm.md` or decomposed `projects/rocket-attack-alarm/{runbook,incidents,open-loops}.md`.
+  - Candidate content: July 1 incident where Kyiv/alert messages were missed because production container `rocket-attack-alarm` was in a restart loop (`RestartCount=336`, `ExitCode=1`) after Node.js heap out-of-memory around `2026-07-01T16:20:05Z`; repair required explicit approval for production stop/restart/debug, so no fix was applied in that session.
+  - Evidence: `20260701_215059_abd2456d`.
 
 - [ ] **2026-07-01 — Update/create Beauty Growth Assistant project note with public profile route**
   - Suggested destination: `projects/beauty-growth-assistant.md` or `projects/beauty-growth-assistant/overview.md`, linked from the existing beauty SaaS research note.
@@ -301,6 +324,15 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-07-02 — Repair Rocket Attack Alarm restart loop after explicit production approval**
+  - Context: Jul 1 session found `rocket-attack-alarm` in restart loop (`RestartCount=336`, `ExitCode=1`) after a Node.js heap out-of-memory around `2026-07-01T16:20:05Z`; bot was not monitoring/sending Kyiv alerts. Debug/repair was blocked because stopping production container required explicit confirmation.
+
+- [ ] **2026-07-02 — Update emergency fund stablecoin note with custody/hot-balance trade-off**
+  - Context: Jul 1 discussion clarified that `$600` on WhiteBIT only makes sense as a hot operational exchange balance, while a self-custody wallet can still be used relatively quickly but adds network/deposit/error steps; consider documenting the `$200–300 hot + $700–1000 wallet` alternative.
+
+- [ ] **2026-07-02 — Reconcile Freylina analyzer missing skill warning plus stale nested queue**
+  - Context: Jul 2 Freylina analyzer still begins with missing `devops/youtube-to-wiki-pipeline`; canonical queue is empty and repo HEAD stayed `06acf06`, but stale nested queue remains at `~/.hermes/profiles/freylina/home/.hermes/profiles/freylina/wiki/.pending-videos.json` with videos already processed in `video-log.json`.
 
 - [ ] **2026-07-01 — Verify default Hermes gateway restart completed after delayed update restart**
   - Context: Jun 30 Hermes/Claude update scheduled gateway restart via `systemd-run`; final report said Freylina had a new PID, but default gateway restart was still in `systemctl restart` while the response was being delivered.
