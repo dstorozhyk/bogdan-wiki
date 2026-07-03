@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Review Queue
 created: 2026-06-20
-updated: 2026-07-02
+updated: 2026-07-03
 type: query
 tags: [wiki]
 ---
@@ -21,6 +21,18 @@ The nightly sleep job should prepend new candidates below.
 ---
 
 ## Pending Memory Candidates
+
+- [ ] **2026-07-03 — AI-assisted SDLC terminology for vibe-coded products**
+  - Proposed text: `For Denys's vibe-coded product planning, use the wiki note /root/bogdan-wiki/research/ai-assisted-sdlc-vibe-coding-project-lifecycle-2026-07-02.md and frame early stages as AI-assisted SDLC with PoC/Prototype/RAT/Walking Skeleton/Vertical Slice/MLP/Pilot rather than defaulting to “MVP”.`
+  - Why durable: stable terminology/preference pointer for future project planning.
+  - Risk/staleness: terminology can evolve; use the note as a starting point, not a rigid taxonomy.
+  - Evidence: `20260702_192700_19352d8d`.
+
+- [ ] **2026-07-03 — Wise KYC should wait for pending broker transfer settlement**
+  - Proposed text: `For Denys's Wise→broker route, if Wise asks to confirm Ukraine residence while broker transfers are still pending, prefer waiting until broker credit is confirmed and Wise balance is zero/minimal if there is no hard Wise deadline; do not advise fake residence data.`
+  - Why durable: account/route-specific operational rule that reduces future transfer/KYC risk.
+  - Risk/staleness: Wise country/product rules can change; verify current Wise prompts/help pages before high-stakes advice.
+  - Evidence: `20260702_155655_553cd9a5`.
 
 - [ ] **2026-07-02 — Emergency fund source-of-truth wiki files**
   - Proposed text: `Denys's emergency fund source of truth lives in /root/bogdan-wiki/research/emergency-fund-{dashboard,strategy,ovdp-research,usdt-usdc-research}.md; use those files before advising on podushka/stablecoin allocation.`
@@ -83,6 +95,20 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-07-03 — Update `rocket-attack-alarm-ops` for migration permissions + aftermath false positives**
+  - Proposed skill name: update `rocket-attack-alarm-ops`.
+  - Trigger: Rocket bot is in restart-loop after migration/deploy, or false positives are sent for attack aftermath reports.
+  - Reusable workflow: inspect Docker `RestartCount`, logs, `/health`/`/ready`; run a foreground/debug container if needed; check copied migration file permissions in both `src/database/migrations` and `dist/database/migrations`; normalize unreadable migration files to `644`; run focused tests/build; redeploy; verify container health and readiness; for aftermath false positives, query recent `alert_outbox`, add strong report patterns and regression tests before deploy.
+  - Include pitfalls/verification: `docker inspect rocket-attack-alarm`, `docker compose -f docker-compose.prod.yml up -d --build bot`, `stat -c '%a %U:%G %n' src/database/migrations/*.sql dist/database/migrations/*.sql`, `chmod 644 ...`, `npm run test:report-filter`, `npm run build`, `curl http://127.0.0.1:9090/ready`; pitfall: words like `зараз`/`зафіксовано` can appear in retrospective casualty/cleanup reports and should not automatically make them live alerts.
+  - Evidence: `20260702_060227_507ddd8d`.
+
+- [ ] **2026-07-03 — Create/update `ai-assisted-sdlc-product-planning`**
+  - Proposed skill name: create/update `ai-assisted-sdlc-product-planning`.
+  - Trigger: Denys asks how to structure a vibe-coded/AI-built product, or asks “PoC vs MVP vs something else”.
+  - Reusable workflow: choose the first artifact type by the risk being tested: PoC for feasibility, Prototype for UX, RAT for riskiest assumption, Spike for implementation uncertainty, Walking Skeleton for end-to-end technical foundation, Vertical Slice for one complete scenario, MLP for polished first user value, MMP/Pilot for marketable controlled launch.
+  - Include pitfalls/verification: use wiki note `research/ai-assisted-sdlc-vibe-coding-project-lifecycle-2026-07-02.md`; produce an AI-assisted SDLC brief with product intent, artifact type, core scenario, acceptance criteria, architecture guardrails, AI-agent rules, and definition of done; pitfall: do not call every early artifact “MVP”.
+  - Evidence: `20260702_192700_19352d8d`.
 
 - [ ] **2026-07-02 — Update `rocket-attack-alarm-ops` for restart-loop/OOM production debugging**
   - Proposed skill name: update `rocket-attack-alarm-ops`.
@@ -197,6 +223,21 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `cron_ef9b3fb5feed_20260620_030049`; skill was missing and queue was empty at HEAD `654a3f9`.
 
 ## Pending Wiki Candidates
+
+- [ ] **2026-07-03 — Index and cross-link AI-assisted SDLC/vibe-coding lifecycle note**
+  - Suggested destination: `index.md`, and possibly a future `concepts/product-development-lifecycle.md` or project-planning hub.
+  - Candidate content: new research note `research/ai-assisted-sdlc-vibe-coding-project-lifecycle-2026-07-02.md` defines AI-assisted SDLC and the ladder PoC → Prototype/RAT/Spike → Walking Skeleton → Vertical Slice → MLP → Pilot/MMP/v1. Use it when Denys asks how to structure AI/vibe-coded product work instead of defaulting to MVP.
+  - Evidence: `20260702_192700_19352d8d`.
+
+- [ ] **2026-07-03 — Update broker-funding/Wise route note with KYC timing rule**
+  - Suggested destination: `research/freedom24-ukraine-funding-2026-06.md` or a focused Wise/Freedom route section.
+  - Candidate content: if Wise requests confirmation of Ukraine residence while broker transfers are pending, wait until broker deposit is credited and Wise balance is zero/minimal when no hard deadline exists; confirming real data is safer than fake EU residence, but unsupported Ukrainian-resident product access can still cause onboarding/balance restrictions.
+  - Evidence: `20260702_155655_553cd9a5`.
+
+- [ ] **2026-07-03 — Update Rocket project/runbook with Jul 2 restart-loop and false-positive fixes**
+  - Suggested destination: `projects/rocket-attack-alarm.md` or decomposed `projects/rocket-attack-alarm/{runbook,incidents,decisions}.md`.
+  - Candidate content: Jul 2 repair found `rocket-attack-alarm` restart-looping (`RestartCount=815`, unhealthy) because new migration files `019_city_suggestions.sql` and `020_update_notification_preferences.sql` were mode `600`; normalizing `src`/`dist` copies to `644`, rebuild, and redeploy restored healthy readiness. Same session fixed a false-positive Kyiv alert from `@vanek_nikolaev` message `41404` sent to 10 users by adding strong aftermath report patterns for cleanup/casualty/overnight totals and regression test coverage (`npm run test:report-filter` 23/23, `npm run build`, healthy `/ready`).
+  - Evidence: `20260702_060227_507ddd8d`.
 
 - [ ] **2026-07-02 — Update emergency fund stablecoin note with custody split discussion**
   - Suggested destination: `research/emergency-fund-usdt-usdc-research.md` and possibly `research/emergency-fund-strategy.md`.
@@ -324,6 +365,15 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-07-03 — Decide whether to create/update AI-assisted SDLC product-planning skill**
+  - Context: Jul 2 research produced `research/ai-assisted-sdlc-vibe-coding-project-lifecycle-2026-07-02.md` and a practical taxonomy for PoC/Prototype/RAT/Walking Skeleton/Vertical Slice/MLP/Pilot.
+
+- [ ] **2026-07-03 — Promote Rocket Jul 2 migration-permission and aftermath false-positive fix into runbook/skill**
+  - Context: bot restart-loop was repaired by normalizing migration SQL file modes to `644`; later a false-positive Kyiv aftermath report was fixed with strong report patterns and regression tests.
+
+- [ ] **2026-07-03 — Update broker-funding note with Wise KYC pending-transfer timing rule**
+  - Context: Wise Ukraine residence confirmation is safer with real data, but if broker transfers are still pending and no deadline exists, wait until broker credit and Wise balance is zero/minimal.
 
 - [ ] **2026-07-02 — Repair Rocket Attack Alarm restart loop after explicit production approval**
   - Context: Jul 1 session found `rocket-attack-alarm` in restart loop (`RestartCount=336`, `ExitCode=1`) after a Node.js heap out-of-memory around `2026-07-01T16:20:05Z`; bot was not monitoring/sending Kyiv alerts. Debug/repair was blocked because stopping production container required explicit confirmation.
