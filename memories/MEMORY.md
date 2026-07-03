@@ -6,7 +6,7 @@ Hermes local patches after updates: `/balance` direct_script (`agent/skill_comma
 §
 Hermes providers priority in config: OpenAI primary; fallbacks GitHub Copilot haiku → Copilot gpt-4.1 → Google Gemini flash → OpenRouter deepseek-v4-flash.
 §
-Wiki system: bogdan-wiki `/root/bogdan-wiki` crons `1773cf46a5ec` 03:30 UTC digest, `f7d4225863b6` 04:00 UTC sync via `wiki-sync-bogdan.sh`; freylina sync `78b491e5d6e3` 05:00 UTC. Cron scripts: wrapper/no args, exclude `*.lock`.
+Wiki system: `/root/bogdan-wiki`; sleep cron `1773cf46a5ec` 03:30 UTC digest+>80% memory compaction+skill usage, sync `f7d4225863b6` 04:00 UTC via `wiki-sync-bogdan.sh`.
 §
 **Wiki-first:** Research docs → bogdan-wiki/research/. MEMORY = configs/credentials only.
 §

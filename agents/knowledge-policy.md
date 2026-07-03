@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Policy
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-07-03
 type: concept
 tags: [wiki, guide]
 ---
@@ -39,7 +39,32 @@ The nightly consolidation job runs in **safe mode** first:
 3. Write a daily digest under `logs/daily/YYYY-MM-DD.md`.
 4. Append a short entry to `log.md`.
 5. Update `agents/review-queue.md` with candidates.
-6. Do **not** automatically write to memory or create/edit skills unless Denys explicitly changes the mode.
+6. Track skill usage in `agents/skill-usage.md` from `/root/.hermes/skills/.usage.json` and `hermes curator status`.
+7. Do **not** automatically create/edit/delete skills unless Denys explicitly changes the mode.
+8. **Memory compaction exception:** if `~/.hermes/memories/MEMORY.md` or `USER.md` exceeds 80% of its configured limit, the job may compact/remove stale or non-operational entries after first mirroring displaced detail to wiki. It must not invent new facts, store secrets, or remove core user preferences/config pointers.
+
+## Memory Compaction Rules
+
+Default limits: `MEMORY.md` 2,200 chars, `USER.md` 1,375 chars. The sleep job should calculate live usage from `/root/.hermes/memories/MEMORY.md` and `/root/.hermes/memories/USER.md`.
+
+When either store is above 80%:
+
+1. Archive displaced detail to a wiki note if it is still useful but too operational/verbose for always-on memory.
+2. Prefer shortening/merging overlapping entries over deleting important facts.
+3. Keep user identity, stable preferences, critical infra pointers, credentials/config pointers, and active project roots.
+4. Move long project direction, research summaries, completed-task logs, and stale implementation detail to wiki.
+5. Use the `memory` tool batch operations when available; otherwise write proposed compactions to review queue only.
+6. Record before/after char counts in the daily digest.
+
+## Skill Usage Rules
+
+Skill lifecycle is handled by Hermes Curator plus human review, not daily-job deletion.
+
+- Usage source: `/root/.hermes/skills/.usage.json`.
+- Summary source: `hermes curator status`.
+- Daily output: update `agents/skill-usage.md` with totals, most active, least active, zero-use/stale candidates.
+- Review queue: add candidates for pin/archive/consolidation, but do not delete skills automatically.
+- Marketplace fallback: when a needed skill is missing, first search/inspect hub sources before installing; install only with a clear task need and safe scan verdict.
 
 ## Daily Digest Template
 

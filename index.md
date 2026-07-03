@@ -3,7 +3,7 @@
 Content catalog. Every wiki page listed under its type with a one-line summary.
 Read this first to find relevant pages for any query.
 
-> Last updated: 2026-07-03 | Content pages listed: 27 | Markdown files total: 47 including schema/log/memory
+> Last updated: 2026-07-03 | Content pages listed: 28 | Markdown files total: 48 including schema/log/memory
 
 ## Core / Meta
 
@@ -16,6 +16,7 @@ Read this first to find relevant pages for any query.
 
 - [agents/knowledge-policy](agents/knowledge-policy.md) — routing policy for memory vs skills vs wiki plus nightly sleep job behavior.
 - [agents/review-queue](agents/review-queue.md) — safe-mode staging queue for memory, skill, wiki, and open-loop candidates.
+- [agents/skill-usage](agents/skill-usage.md) — skill usage telemetry and review rules for pruning/pinning/consolidation candidates.
 - `logs/daily/` — generated daily knowledge digests from the safe nightly consolidation job.
 
 ## Entities

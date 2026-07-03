@@ -151,4 +151,8 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Created/updated logs/daily/2026-07-03.md.
 - Added 2 memory candidates, 2 skill candidates, 3 wiki candidates, 3 open loops to agents/review-queue.md.
 - Updated index.md with the AI-assisted SDLC/vibe-coding lifecycle research note and refreshed counts.
-
+## [2026-07-03] update | Sleep job memory compaction and skill usage tracking
+- Updated `agents/knowledge-policy.md` with the >80% memory compaction exception and skill usage review rules.
+- Created `agents/skill-usage.md` to track `/root/.hermes/skills/.usage.json` plus `hermes curator status`.
+- Updated `index.md` to include the skill usage note.
+- Updated cron job `1773cf46a5ec` to enable memory-aware compaction and skill-usage reporting.
