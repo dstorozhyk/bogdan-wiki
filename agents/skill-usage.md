@@ -1,7 +1,7 @@
 ---
 title: Hermes Skill Usage Review
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-04
 type: query
 tags: [wiki, skills]
 ---
@@ -26,7 +26,7 @@ Track which Hermes skills are actually used so Bogdan can keep the skill library
 - Installed skill inventory: `hermes skills list`
 - Hub/marketplace discovery when a missing skill is needed: `hermes skills search`, `hermes skills inspect`, `hermes skills install`
 
-## Current Snapshot — 2026-07-03
+## Current Snapshot — 2026-07-04
 
 From `/root/.hermes/skills/.usage.json`:
 
@@ -34,19 +34,22 @@ From `/root/.hermes/skills/.usage.json`:
 |---|---:|
 | Skills tracked | 111 |
 | Zero-use skills | 60 |
-| Old or never active skills | 65 |
+| Never-active skills | 60 |
 
 Most active examples:
 
 | Skill | Use | View | Patch | Last activity |
 |---|---:|---:|---:|---|
-| `nodejs-vps-operations` | 41 | 41 | 74 | today |
-| `crypto-fiat-onramps` | 19 | 19 | 31 | 1d ago |
-| `ukraine-specialists-finder` | 13 | 13 | 32 | 15d ago |
-| `gemini-web-controller` | 15 | 15 | 25 | 10d ago |
-| `mobile-app-idea-factory` | 17 | 16 | 17 | 3d ago |
-| `obsidian` | 23 | 9 | 2 | today |
-| `claude-code` | 17 | 15 | 4 | today |
+| `nodejs-vps-operations` | 41 | 41 | 74 | 2026-07-03 |
+| `obsidian` | 24 | 9 | 3 | 2026-07-04 |
+| `beauty-saas-product-design` | 20 | 20 | 9 | 2026-07-03 |
+| `claude-code` | 20 | 18 | 4 | 2026-07-03 |
+| `crypto-fiat-onramps` | 19 | 19 | 31 | 2026-07-01 |
+| `youtube-content` | 17 | 17 | 0 | 2026-07-04 |
+| `mobile-app-idea-factory` | 17 | 16 | 17 | 2026-06-30 |
+| `gemini-web-controller` | 15 | 15 | 25 | 2026-06-22 |
+| `ukraine-specialists-finder` | 13 | 13 | 32 | 2026-06-17 |
+| `systematic-debugging` | 13 | 13 | 15 | 2026-07-01 |
 
 Zero-use examples to keep under review, not auto-delete:
 
@@ -60,6 +63,28 @@ Zero-use examples to keep under review, not auto-delete:
 - `audiocraft-audio-generation`
 - `baoyu-infographic`
 - `codebase-inspection`
+- `codex`
+- `comfyui`
+- `computer-use`
+- `design-md`
+- `evaluating-llms-harness`
+
+Curator status (`hermes curator status`):
+
+- Curator enabled; 5 runs; last run 3 days ago.
+- Last summary: `auto: no changes; llm: skipped (consolidation off)`.
+- Interval: every 7 days; stale after 30d unused; archive after 90d unused.
+- Consolidation: off (prune-only; LLM merge pass opt-in).
+- Agent-created skills: 79 active, 0 stale, 0 archived.
+- Least recently active examples: `google-ai-tools`, `online-shopping-research`, `xurl`, `maps`, `airtable`.
+- Most active curator examples: `crypto-fiat-onramps`, `claude-code`, `systematic-debugging`, `obsidian`, `youtube-content`.
+
+## Review Recommendations — 2026-07-04
+
+- **Pin/review for criticality:** `obsidian`, `claude-code`, `hermes-deferred-task-queue`, `hermes-update-operations`, and recurring production/project skills such as Rocket/Beauty workflows once promoted.
+- **Consolidation candidate:** Freylina YouTube pipeline references remain split/confusing (`devops/youtube-to-wiki-pipeline` is reported missing by cron even though usage metadata contains it); review profile skill preload/reference rather than deleting anything.
+- **Archive review only after human approval:** zero-use official/optional tools should stay unless they are agent-created, redundant, old enough, and have no cron/project reference.
+- **Marketplace replacement:** safe to propose missing skills via review queue, but do not auto-install from the nightly job.
 
 ## Nightly Job Rules
 

@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Review Queue
 created: 2026-06-20
-updated: 2026-07-03
+updated: 2026-07-04
 type: query
 tags: [wiki]
 ---
@@ -21,6 +21,24 @@ The nightly sleep job should prepend new candidates below.
 ---
 
 ## Pending Memory Candidates
+
+- [ ] **2026-07-04 — Beauty Growth Assistant gated rebuild workflow**
+  - Proposed text: `Beauty Growth Assistant rebuild should follow a gated workflow: approved business requirements → design → architecture → backend → frontend from approved design → QA → UX validation loop; core product is solo-master mobile-first CRM/booking with manual confirmation by default.`
+  - Why durable: stable project direction and workflow guardrail for the active Beauty project.
+  - Risk/staleness: may change after Denys reviews BRD/open questions.
+  - Evidence: `20260703_145854_9a7ecf72`.
+
+- [ ] **2026-07-04 — Proposed memory compaction for MEMORY.md**
+  - Proposed change: shorten the Rocket alert memory, remove volatile cron IDs from the wiki-system memory, and merge duplicate Beauty public-profile direction entries.
+  - Why durable: memory is at `2129 / 2200` chars (`96.8%`), above the 80% compaction threshold; compaction preserves routing/project pointers while reducing prompt pressure.
+  - Risk/staleness: low if core pointers are kept; do not remove active project roots or stable preferences.
+  - Evidence: 2026-07-04 nightly consolidation; memory tool unavailable, so no mutation was applied.
+
+- [ ] **2026-07-04 — Proposed memory compaction for USER.md / secret minimization**
+  - Proposed change: shorten the status/preferences line and remove raw VPS credential material from always-on memory, replacing it with a non-secret pointer to operational config/credential location.
+  - Why durable: `USER.md` is at `1294 / 1375` chars (`94.1%`) and should avoid embedding secrets in the always-on prompt.
+  - Risk/staleness: must not lose the actual credential source; do not copy secrets into wiki.
+  - Evidence: 2026-07-04 nightly consolidation; memory tool unavailable, so no mutation was applied.
 
 - [ ] **2026-07-03 — AI-assisted SDLC terminology for vibe-coded products**
   - Proposed text: `For Denys's vibe-coded product planning, use the wiki note /root/bogdan-wiki/research/ai-assisted-sdlc-vibe-coding-project-lifecycle-2026-07-02.md and frame early stages as AI-assisted SDLC with PoC/Prototype/RAT/Walking Skeleton/Vertical Slice/MLP/Pilot rather than defaulting to “MVP”.`
@@ -95,6 +113,27 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-07-04 — Update/create Beauty CRM rebuild workflow skill**
+  - Proposed skill name: update `beauty-saas-product-design` or create `beauty-crm-rebuild-workflow`.
+  - Trigger: Denys asks to rebuild/design/implement the Beauty Growth Assistant CRM/booking product.
+  - Reusable workflow: enforce BRD/PRD approval, design gate, architecture gate, backend implementation, frontend from approved design only, automated/manual QA, and repeated UX validation loop before shipping.
+  - Include pitfalls/verification: keep docs under `/opt/apps/beauty-growth-assistant/docs/beauty-crm-rebuild/`; do not return only local paths when Denys needs content in Telegram; verify mobile 390px UX; avoid generic dashboard/fake metrics; public page must not use CRM/SaaS/admin language.
+  - Evidence: `20260703_145854_9a7ecf72`.
+
+- [ ] **2026-07-04 — Update Claude/Hermes ops skill for Claude Code update verification**
+  - Proposed skill name: update `claude-code` or `hermes-update-operations`.
+  - Trigger: updating Claude Code on this VPS.
+  - Reusable workflow: check `claude --version`, npm global package, package metadata, and executable path; tolerate `claude doctor` hanging if bounded by timeout and other checks pass.
+  - Include pitfalls/verification: `npm install -g @anthropic-ai/claude-code@latest`, `npm list -g @anthropic-ai/claude-code --depth=0`, `claude --version`, `node -p "require('/root/.hermes/node/lib/node_modules/@anthropic-ai/claude-code/package.json').version"`; pitfall: full `claude doctor` can hang.
+  - Evidence: `20260703_065217_4498a970`.
+
+- [ ] **2026-07-04 — Repair/consolidate Freylina YouTube pipeline skill reference**
+  - Proposed skill name: repair/consolidate Freylina `youtube-to-wiki-pipeline` profile reference.
+  - Trigger: Freylina cron starts with “Skill(s) not found and skipped: devops/youtube-to-wiki-pipeline”.
+  - Reusable workflow: check Freylina profile skill path/reference, canonical queue, nested stale queue, processed `video-log.json`, and git HEAD; do not mutate another profile except in explicitly scoped repair mode.
+  - Include pitfalls/verification: read `/root/.hermes/profiles/freylina/wiki/.pending-videos.json`, `video-log.json`, git status/HEAD; avoid treating an empty queue as failure.
+  - Evidence: `cron_ef9b3fb5feed_20260704_030027`.
 
 - [ ] **2026-07-03 — Update `rocket-attack-alarm-ops` for migration permissions + aftermath false positives**
   - Proposed skill name: update `rocket-attack-alarm-ops`.
@@ -223,6 +262,21 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `cron_ef9b3fb5feed_20260620_030049`; skill was missing and queue was empty at HEAD `654a3f9`.
 
 ## Pending Wiki Candidates
+
+- [ ] **2026-07-04 — Create/update Beauty Growth Assistant rebuild/project note**
+  - Suggested destination: `projects/beauty-growth-assistant.md` or `projects/beauty-growth-assistant/overview.md`, linked from the existing beauty SaaS research note.
+  - Candidate content: Jul 3 Claude Sonnet UI/UX audit scored the current UI about 6/10; top issues were missing real photos/portfolio/trust on public profile, duplicated services, unclear CTA, and placeholder-like copy. Rebuild direction: solo-master mobile-first CRM/booking assistant, calendar/control-first, manual confirmation by default, public profile standalone, no generic dashboards/fake metrics. Process gate: BRD/PRD → design → architecture → backend → frontend from approved design → QA → UX validation loop.
+  - Evidence: `20260703_145854_9a7ecf72`.
+
+- [ ] **2026-07-04 — Update emergency fund / ETF note with IBTA screenshot confirmation**
+  - Suggested destination: `research/emergency-fund-strategy.md`, `research/emergency-fund-dashboard.md`, or a future cash-like UCITS ETF note.
+  - Candidate content: Denys screenshot of `IBTA.EU / IBTA` was confirmed as the 1–3yr US Treasury UCITS Acc candidate for the podushka strategy; it maps to VGSH-like exposure and should be verified by ISIN `IE00BYXPSP02` before trading. `IB01` remains the more cash-like 0–1yr option.
+  - Evidence: `20260703_144155_2968a206`.
+
+- [ ] **2026-07-04 — Update Hermes ops note with Claude Code 2.1.199 and weekly report**
+  - Suggested destination: `agents/hermes-ops-weekly-updates.md` or `agents/hermes-update-operations.md`.
+  - Candidate content: Claude Code updated from `2.1.197` to `2.1.199`; executable path `/root/.hermes/node/bin/claude`, npm package and package metadata verified; full `claude doctor` timed out after 180s. Weekly report also noted Hermes v0.18.0 / v2026.7.1 release items and follow-up commits, but those external facts were not re-verified in consolidation.
+  - Evidence: `20260703_065217_4498a970`, `cron_d809074fdb23_20260703_060059`.
 
 - [ ] **2026-07-03 — Index and cross-link AI-assisted SDLC/vibe-coding lifecycle note**
   - Suggested destination: `index.md`, and possibly a future `concepts/product-development-lifecycle.md` or project-planning hub.
@@ -365,6 +419,21 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-07-04 — Review Beauty Growth Assistant BRD v0.1 and answer open questions**
+  - Context: BRD asks whether MVP is strictly solo-master or also small studio; whether confirming a request creates `pending` or `confirmed`; first channels; public booking vs public profile + chat CTA; and auth/preview approach.
+
+- [ ] **2026-07-04 — Promote Beauty rebuild process and UI audit into project/wiki docs**
+  - Context: current durable decisions live in session/digest only; project note should capture Claude audit, gated workflow, and mobile-first solo-master product direction.
+
+- [ ] **2026-07-04 — Enable or repair memory-tool availability for nightly compaction**
+  - Context: both `MEMORY.md` and `USER.md` exceed 80% pressure, but `memory` tool returned unavailable during the July 4 cron run, so only proposed compaction was staged.
+
+- [ ] **2026-07-04 — Reconcile Freylina analyzer missing skill warning**
+  - Context: Jul 4 Freylina analyzer still began with missing `devops/youtube-to-wiki-pipeline`; canonical queue was empty and repo HEAD stayed `06acf06`, so this is workflow/profile-skill repair rather than content recovery.
+
+- [ ] **2026-07-04 — Decide whether to document Claude Code 2.1.199 update in Hermes ops**
+  - Context: update succeeded, but `claude doctor` hung; a concise ops note would prevent future confusion about acceptable verification.
 
 - [ ] **2026-07-03 — Decide whether to create/update AI-assisted SDLC product-planning skill**
   - Context: Jul 2 research produced `research/ai-assisted-sdlc-vibe-coding-project-lifecycle-2026-07-02.md` and a practical taxonomy for PoC/Prototype/RAT/Walking Skeleton/Vertical Slice/MLP/Pilot.

@@ -156,3 +156,9 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Created `agents/skill-usage.md` to track `/root/.hermes/skills/.usage.json` plus `hermes curator status`.
 - Updated `index.md` to include the skill usage note.
 - Updated cron job `1773cf46a5ec` to enable memory-aware compaction and skill-usage reporting.
+
+## [2026-07-04] update | Daily knowledge consolidation
+- Created/updated logs/daily/2026-07-04.md.
+- Memory pressure: MEMORY 2129→2129, USER 1294→1294; compaction proposed only because the memory tool was unavailable in this cron run.
+- Skill usage: updated agents/skill-usage.md; added 3 skill-review candidates.
+- Added 3 memory candidates, 3 skill candidates, 3 wiki candidates, 5 open loops to agents/review-queue.md.
