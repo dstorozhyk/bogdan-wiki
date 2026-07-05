@@ -22,6 +22,18 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Memory Candidates
 
+- [ ] **2026-07-05 — Proposed memory compaction for MEMORY.md**
+  - Proposed change: shorten the Rocket alert bot memory, remove volatile cron IDs from the wiki-system memory, and merge duplicate Beauty public-profile direction entries.
+  - Why durable: `MEMORY.md` is still at `2129 / 2200` chars (`96.8%`), above the 80% compaction threshold; compaction preserves high-signal routing/project pointers while reducing prompt pressure.
+  - Risk/staleness: low if active project roots and stable preferences are kept; verify current cron before relying on schedule details.
+  - Evidence: 2026-07-05 nightly consolidation; memory tool returned unavailable, so no mutation was applied.
+
+- [ ] **2026-07-05 — Proposed memory compaction for USER.md / secret minimization**
+  - Proposed change: replace raw VPS Monitor credential material with a non-secret pointer to operational env/config/credential location; keep Denys identity, seniority, access preference, formatting preferences, and key workflow preferences.
+  - Why durable: `USER.md` is still at `1294 / 1375` chars (`94.1%`) and should not embed secrets in always-on prompt context.
+  - Risk/staleness: must not lose the actual credential source; do not copy secrets into wiki.
+  - Evidence: 2026-07-05 nightly consolidation; memory tool returned unavailable, so no mutation was applied.
+
 - [ ] **2026-07-04 — Beauty Growth Assistant gated rebuild workflow**
   - Proposed text: `Beauty Growth Assistant rebuild should follow a gated workflow: approved business requirements → design → architecture → backend → frontend from approved design → QA → UX validation loop; core product is solo-master mobile-first CRM/booking with manual confirmation by default.`
   - Why durable: stable project direction and workflow guardrail for the active Beauty project.
@@ -113,6 +125,13 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-07-05 — Repair/consolidate Freylina YouTube pipeline skill reference**
+  - Proposed skill name: repair/consolidate Freylina `youtube-to-wiki-pipeline` profile reference.
+  - Trigger: Freylina cron starts with “Skill(s) not found and skipped: devops/youtube-to-wiki-pipeline”.
+  - Reusable workflow: check Freylina profile skill inventory/reference, canonical queue, stale nested queue, `video-log.json`, existing pages, and git HEAD; if queue is empty or videos are already processed, report no-op instead of duplicating pages.
+  - Include pitfalls/verification: inspect `/root/.hermes/profiles/freylina/wiki/.pending-videos.json`, `/root/.hermes/profiles/freylina/home/.hermes/profiles/freylina/wiki/.pending-videos.json`, `video-log.json`, `git status --short`, `git log -1 --oneline`; pitfall: dotfile queue discovery may require explicit path/Python traversal rather than filename search.
+  - Evidence: `cron_ef9b3fb5feed_20260705_030040`.
 
 - [ ] **2026-07-04 — Update/create Beauty CRM rebuild workflow skill**
   - Proposed skill name: update `beauty-saas-product-design` or create `beauty-crm-rebuild-workflow`.
@@ -262,6 +281,11 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `cron_ef9b3fb5feed_20260620_030049`; skill was missing and queue was empty at HEAD `654a3f9`.
 
 ## Pending Wiki Candidates
+
+- [ ] **2026-07-05 — Update Freylina/Hermes ops note with stale duplicate queue behavior**
+  - Suggested destination: Freylina operations/runbook wiki or a Hermes ops note linked from Agent Knowledge Ops.
+  - Candidate content: Jul 5 analyzer found canonical queue empty (`/root/.hermes/profiles/freylina/wiki/.pending-videos.json`) and repo clean at `06acf06`; stale nested duplicate queue under `/root/.hermes/profiles/freylina/home/.hermes/profiles/freylina/wiki/.pending-videos.json` listed four videos already in `video-log.json` and with existing pages, so they should not be reprocessed.
+  - Evidence: `cron_ef9b3fb5feed_20260705_030040`.
 
 - [ ] **2026-07-04 — Create/update Beauty Growth Assistant rebuild/project note**
   - Suggested destination: `projects/beauty-growth-assistant.md` or `projects/beauty-growth-assistant/overview.md`, linked from the existing beauty SaaS research note.
@@ -419,6 +443,12 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-07-05 — Enable or repair memory-tool availability for nightly compaction**
+  - Context: both `MEMORY.md` and `USER.md` remain above 80% pressure, but the memory tool returned unavailable during the July 5 cron run, so only proposed compaction was staged again.
+
+- [ ] **2026-07-05 — Reconcile Freylina analyzer missing skill warning and stale nested queue**
+  - Context: Jul 5 Freylina analyzer still began with missing `devops/youtube-to-wiki-pipeline`; canonical queue was empty and repo stayed clean at `06acf06`, while the stale nested queue contains videos already processed in `video-log.json`.
 
 - [ ] **2026-07-04 — Review Beauty Growth Assistant BRD v0.1 and answer open questions**
   - Context: BRD asks whether MVP is strictly solo-master or also small studio; whether confirming a request creates `pending` or `confirmed`; first channels; public booking vs public profile + chat CTA; and auth/preview approach.
