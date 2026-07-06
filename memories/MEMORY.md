@@ -8,7 +8,7 @@ Hermes providers priority in config: OpenAI primary; fallbacks GitHub Copilot ha
 §
 Wiki system: `/root/bogdan-wiki`; sleep cron `1773cf46a5ec` 03:30 UTC digest+>80% memory compaction+skill usage, sync `f7d4225863b6` 04:00 UTC via `wiki-sync-bogdan.sh`.
 §
-**Wiki-first:** Research docs → bogdan-wiki/research/. MEMORY = configs/credentials only.
+**Wiki-first:** Research docs → bogdan-wiki/research/. Options guide: `options-investor-guide.md`; IV=Implied Volatility. MEMORY=configs/credentials only.
 §
 Hermes CLI: The command for a single query in non-interactive mode is `hermes chat -q`, not `hermes ask`.
 §

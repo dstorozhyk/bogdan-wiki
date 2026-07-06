@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Review Queue
 created: 2026-06-20
-updated: 2026-07-04
+updated: 2026-07-06
 type: query
 tags: [wiki]
 ---
@@ -21,6 +21,24 @@ The nightly sleep job should prepend new candidates below.
 ---
 
 ## Pending Memory Candidates
+
+- [ ] **2026-07-06 — MAMENORI correction for Lviv sushi/NOA context**
+  - Proposed text: `For Denys's Lviv sushi/place lookups, “sushi near NOA” referred to MAMENORI; do not default to Red Pepper / Yoki / ЯпонаХата for that context.`
+  - Why durable: direct correction likely prevents repeat wrong recommendations in local restaurant lookups.
+  - Risk/staleness: restaurants, hours, and quality can change; verify current location/hours before recommending.
+  - Evidence: `20260705_175420_3a0830d4`.
+
+- [ ] **2026-07-06 — Proposed memory compaction for MEMORY.md**
+  - Proposed change: shorten the Rocket alert bot entry, remove volatile cron IDs from the wiki-system entry, and merge duplicate Beauty public-profile direction entries.
+  - Why durable: `MEMORY.md` is at `2194 / 2200` chars (`99.7%`), above the 80% compaction threshold; compaction preserves high-signal routing/project pointers while reducing prompt pressure.
+  - Risk/staleness: low if active project roots, stable preferences, wiki/source pointers, and config pointers are kept; verify live cron before relying on job IDs/schedules.
+  - Evidence: 2026-07-06 nightly consolidation; memory tool returned unavailable, so no mutation was applied.
+
+- [ ] **2026-07-06 — Proposed memory compaction for USER.md / secret minimization**
+  - Proposed change: replace raw VPS Monitor credential material with a non-secret pointer to operational env/config/credential location; keep identity, seniority, infrastructure access preference, formatting preferences, and workflow preferences.
+  - Why durable: `USER.md` is at `1294 / 1375` chars (`94.1%`) and should not embed secrets in always-on prompt context.
+  - Risk/staleness: must not lose the actual credential source; do not copy secrets into wiki.
+  - Evidence: 2026-07-06 nightly consolidation; memory tool returned unavailable, so no mutation was applied.
 
 - [ ] **2026-07-05 — Proposed memory compaction for MEMORY.md**
   - Proposed change: shorten the Rocket alert bot memory, remove volatile cron IDs from the wiki-system memory, and merge duplicate Beauty public-profile direction entries.
@@ -125,6 +143,20 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-07-06 — Update/create Freylina YouTube pipeline operations runbook**
+  - Proposed skill name: update/create Freylina `youtube-to-wiki-pipeline` / operations runbook.
+  - Trigger: Freylina YouTube cron reports missing `devops/youtube-to-wiki-pipeline`, duplicate queues, or already-processed pending videos.
+  - Reusable workflow: distinguish stale default-profile cron jobs from canonical `freylina` profile script-only jobs; inspect canonical and nested `.pending-videos.json`; check `video-log.json`; verify page files exist; clear stale nested duplicates only after confirming already processed; smoke-test wrappers; verify `hermes -p freylina cron list --all`.
+  - Include pitfalls/verification: `hermes cron list --all`, `hermes -p freylina cron list --all`, `python3 /root/.hermes/profiles/freylina/scripts/video-analyzer-cron.py`, inspect `/root/.hermes/profiles/freylina/wiki/.pending-videos.json` and `/root/.hermes/profiles/freylina/home/.hermes/profiles/freylina/wiki/.pending-videos.json`; pitfall: default profile can contain stale duplicate jobs with missing skills even when the freylina profile is healthy.
+  - Evidence: `20260705_113458_df8d2751`.
+
+- [ ] **2026-07-06 — Document PDF-to-wiki extraction pattern if repeated**
+  - Proposed skill name: update `ocr-and-documents` or create a narrow `document-to-wiki-ingest` workflow if Denys repeats “process, understand, remember this document”.
+  - Trigger: Denys sends PDFs/documents and asks to process them for future use.
+  - Reusable workflow: extract with PyMuPDF, write a focused wiki note, add only a compact source pointer/correction to memory when pressure allows, and verify the created note by reading it back.
+  - Include pitfalls/verification: install `pymupdf` in the active env if missing; verify page count/chars; do not add long summaries to memory; avoid raw transcript dumps; if memory is above pressure, stage pointer/compaction instead of adding.
+  - Evidence: `20260705_205457_e86ffdf2`.
 
 - [ ] **2026-07-05 — Repair/consolidate Freylina YouTube pipeline skill reference**
   - Proposed skill name: repair/consolidate Freylina `youtube-to-wiki-pipeline` profile reference.
@@ -281,6 +313,21 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `cron_ef9b3fb5feed_20260620_030049`; skill was missing and queue was empty at HEAD `654a3f9`.
 
 ## Pending Wiki Candidates
+
+- [ ] **2026-07-06 — Update Freylina/Hermes ops note with resolved stale default cron jobs**
+  - Suggested destination: Freylina operations/runbook wiki or a Hermes ops note linked from Agent Knowledge Ops.
+  - Candidate content: Jul 5 repair found two parallel Freylina YouTube cron schemes. Stale duplicate default-profile jobs `b12b466f905d` (fetcher) and `ef9b3fb5feed` (analyzer with missing `devops/youtube-to-wiki-pipeline`) were removed. Canonical `freylina` profile script-only jobs remain `84a87c09869f` (`youtube-fetcher-cron.py`) and `ab1160450211` (`video-analyzer-cron.py`). Nested stale queue was cleared after all four videos were verified in `video-log.json` and page files.
+  - Evidence: `20260705_113458_df8d2751`.
+
+- [ ] **2026-07-06 — Add local places/preference note for MAMENORI if local-food lookups recur**
+  - Suggested destination: `research/lviv-local-places.md` or a lightweight local preferences note.
+  - Candidate content: Denys corrected that in the “sushi near NOA” context he meant MAMENORI, not Red Pepper / Yoki / ЯпонаХата; verify current location/hours before making future recommendations.
+  - Evidence: `20260705_175420_3a0830d4`.
+
+- [ ] **2026-07-06 — Index or cross-link options investor guide**
+  - Suggested destination: `index.md` finance/research section or a future finance hub.
+  - Candidate content: `research/options-investor-guide.md` is the source-of-truth summary for the Jul 5 options PDF; includes IV = Implied Volatility, Greeks, CALL/PUT, covered calls, CSP, PMCC/LEAPS, debit spreads, liquidity and assignment/exercise risk checklist.
+  - Evidence: `20260705_205457_e86ffdf2`.
 
 - [ ] **2026-07-05 — Update Freylina/Hermes ops note with stale duplicate queue behavior**
   - Suggested destination: Freylina operations/runbook wiki or a Hermes ops note linked from Agent Knowledge Ops.
@@ -443,6 +490,18 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-07-06 — Enable or repair memory-tool availability for nightly compaction**
+  - Context: `MEMORY.md` is `2194 / 2200` chars (`99.7%`) and `USER.md` is `1294 / 1375` chars (`94.1%`), but the memory tool returned unavailable during the July 6 cron run, so only proposed compaction was staged again.
+
+- [ ] **2026-07-06 — Promote Freylina canonical script-only cron workflow into runbook/skill**
+  - Context: Jul 5 user-triggered repair removed stale default duplicate cron jobs and cleared the nested duplicate queue; reusable documentation still needs to capture the canonical `freylina` profile workflow and verification commands.
+
+- [ ] **2026-07-06 — Finish high-quality football photo search if Denys still needs it**
+  - Context: Jul 5 photo session found a likely AP/Alamy candidate (`2MA74T0`, Fabinho vs Erling Haaland at Anfield, 2022-10-16), but the session ended after browser/reverse-search issues without a final confirmed high-res source delivered.
+
+- [ ] **2026-07-06 — Decide whether MAMENORI local-place correction belongs in memory or wiki**
+  - Context: direct correction may be useful for future Lviv food lookups, but memory is over pressure; keep in review queue until compaction works.
 
 - [ ] **2026-07-05 — Enable or repair memory-tool availability for nightly compaction**
   - Context: both `MEMORY.md` and `USER.md` remain above 80% pressure, but the memory tool returned unavailable during the July 5 cron run, so only proposed compaction was staged again.

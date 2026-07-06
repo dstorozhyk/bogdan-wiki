@@ -168,3 +168,9 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Memory pressure: MEMORY 2129→2129, USER 1294→1294; compaction proposed only because the memory tool was unavailable in this cron run.
 - Skill usage: updated agents/skill-usage.md; added 1 skill-review candidate.
 - Added 2 memory candidates, 1 skill candidate, 1 wiki candidate, 2 open loops to agents/review-queue.md.
+
+## [2026-07-06] update | Daily knowledge consolidation
+- Created/updated logs/daily/2026-07-06.md.
+- Memory pressure: MEMORY 2194→2194, USER 1294→1294; compaction proposed only because the memory tool was unavailable in this cron run.
+- Skill usage: updated agents/skill-usage.md; added 2 skill-review candidates.
+- Added 3 memory candidates, 2 skill candidates, 3 wiki candidates, 4 open loops to agents/review-queue.md.
