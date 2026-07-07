@@ -1,7 +1,7 @@
 ---
 title: Hermes Skill Usage Review
 created: 2026-07-03
-updated: 2026-07-06
+updated: 2026-07-07
 type: query
 tags: [wiki, skills]
 ---
@@ -26,7 +26,7 @@ Track which Hermes skills are actually used so Bogdan can keep the skill library
 - Installed skill inventory: `hermes skills list`
 - Hub/marketplace discovery when a missing skill is needed: `hermes skills search`, `hermes skills inspect`, `hermes skills install`
 
-## Current Snapshot — 2026-07-06
+## Current Snapshot — 2026-07-07
 
 From `/root/.hermes/skills/.usage.json`:
 
@@ -36,28 +36,29 @@ From `/root/.hermes/skills/.usage.json`:
 | Zero-use skills | 59 |
 | Never-active skills | 59 |
 
-Most active examples:
+Most active examples by total activity (`use + view + patch`):
 
 | Skill | Use | View | Patch | Last activity |
 |---|---:|---:|---:|---|
 | `nodejs-vps-operations` | 41 | 41 | 74 | 2026-07-03 |
-| `obsidian` | 26 | 9 | 3 | 2026-07-06 |
-| `beauty-saas-product-design` | 20 | 20 | 9 | 2026-07-03 |
-| `claude-code` | 20 | 18 | 4 | 2026-07-03 |
 | `crypto-fiat-onramps` | 19 | 19 | 31 | 2026-07-01 |
-| `youtube-content` | 18 | 18 | 0 | 2026-07-05 |
-| `mobile-app-idea-factory` | 17 | 16 | 17 | 2026-06-30 |
-| `gemini-web-controller` | 15 | 15 | 25 | 2026-06-22 |
-| `hermes-agent` | 14 | 12 | 0 | 2026-07-05 |
+| `gemini-web-controller` | 16 | 16 | 35 | 2026-07-06 |
 | `ukraine-specialists-finder` | 13 | 13 | 32 | 2026-06-17 |
+| `mobile-app-idea-factory` | 17 | 16 | 17 | 2026-06-30 |
+| `beauty-saas-product-design` | 20 | 20 | 9 | 2026-07-03 |
+| `vps-monitor-telegram` | 8 | 8 | 30 | 2026-05-29 |
+| `claude-code` | 20 | 18 | 4 | 2026-07-03 |
+| `obsidian` | 28 | 10 | 3 | 2026-07-07 |
 | `systematic-debugging` | 13 | 13 | 15 | 2026-07-01 |
-| `popular-web-designs` | 13 | 13 | 7 | 2026-07-03 |
+| `wiki-knowledge-pipelines` | 13 | 13 | 10 | 2026-07-06 |
+| `youtube-content` | 18 | 18 | 0 | 2026-07-05 |
 
 Recently used / newly relevant:
 
-- `ocr-and-documents` was used 2026-07-05 to extract and summarize an options PDF into wiki.
-- `maps` was used 2026-07-05 for Lviv restaurant/place lookup.
-- `hermes-agent` was used 2026-07-05 for Freylina cron/profile cleanup.
+- `obsidian` was used by the nightly consolidation job on 2026-07-07.
+- `gemini-web-controller` was used and patched on 2026-07-06 during image/wallpaper generation work.
+- `codex` and `comfyui` each moved from zero-use to 1 use / 1 view on 2026-07-06.
+- `maps`, `ocr-and-documents`, and `wiki-knowledge-pipelines` remained recently relevant from the July 6 consolidation cycle.
 
 Zero-use examples to keep under review, not auto-delete:
 
@@ -71,16 +72,11 @@ Zero-use examples to keep under review, not auto-delete:
 - `audiocraft-audio-generation`
 - `baoyu-infographic`
 - `codebase-inspection`
-- `codex`
-- `comfyui`
 - `computer-use`
 - `design-md`
 - `evaluating-llms-harness`
 - `excalidraw`
-- `github-auth`
-- `github-code-review`
-- `google-workspace`
-- `jupyter-live-kernel`
+- `findmy`
 
 Agent-created low/zero-use examples to review carefully:
 
@@ -90,20 +86,20 @@ Agent-created low/zero-use examples to review carefully:
 
 Curator status (`hermes curator status`):
 
-- Curator enabled; 5 runs; last run 5 days ago.
+- Curator enabled; 5 runs; last run 6 days ago.
 - Last summary: `auto: no changes; llm: skipped (consolidation off)`.
 - Interval: every 7 days; stale after 30d unused; archive after 90d unused.
 - Consolidation: off (prune-only; LLM merge pass opt-in).
 - Agent-created skills: 79 active, 0 stale, 0 archived.
 - Least recently active examples: `google-ai-tools`, `online-shopping-research`, `xurl`, `airtable`, `apple-notes`.
-- Most active curator examples: `crypto-fiat-onramps`, `claude-code`, `systematic-debugging`, `obsidian`, `youtube-content`.
+- Most active curator examples: `crypto-fiat-onramps`, `claude-code`, `obsidian`, `systematic-debugging`, `youtube-content`.
 
-## Review Recommendations — 2026-07-06
+## Review Recommendations — 2026-07-07
 
-- **Pin/review for criticality:** `obsidian`, `claude-code`, `hermes-agent`, `hermes-deferred-task-queue`, `hermes-update-operations`, `youtube-content`, and recurring production/project skills such as Rocket/Beauty workflows once promoted.
-- **Keep but monitor rare utility skills:** `ocr-and-documents` and `maps` were useful in the last 24h despite low total usage; do not treat low usage alone as archive evidence.
-- **Consolidation / repair candidate now mostly resolved:** Freylina’s duplicate default-profile cron jobs that referenced missing `devops/youtube-to-wiki-pipeline` were removed in a user-triggered repair session; keep a review item to capture the canonical script-only Freylina profile workflow in a runbook/skill, but no destructive skill action is needed from nightly SAFE MODE.
-- **Archive review only after human approval:** zero-use official/optional tools should stay unless they are agent-created, redundant, old enough, and have no cron/project reference.
+- **Pin/review for criticality:** `obsidian`, `hermes-agent`, `wiki-knowledge-pipelines`, `claude-code`, `gemini-web-controller`, `hermes-deferred-task-queue`, `hermes-update-operations`, `youtube-content`, plus production/project runbooks once promoted.
+- **Keep but monitor rare utility skills:** `codex`, `comfyui`, `ocr-and-documents`, and `maps` are low-use but recently useful; low count alone is not archive evidence.
+- **Media-generation workflow gap:** July 6 wallpaper work suggests a reusable skill/playbook for wallpaper outpaint/upscale QA, including file-existence verification before promising delivery.
+- **Archive review only after human approval:** zero-use official/optional tools should stay unless agent-created, redundant, old enough, and no cron/project reference exists.
 - **Marketplace replacement:** safe to propose missing skills via review queue, but do not auto-install from the nightly job.
 
 ## Nightly Job Rules

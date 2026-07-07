@@ -14,12 +14,10 @@ Hermes CLI: The command for a single query in non-interactive mode is `hermes ch
 §
 ukraine-specialists: wiki `/root/bogdan-wiki/research/ukraine-specialists.md`; run `python3 ~/.hermes/skills/ukraine-specialists-finder/scripts/find_specialist.py`; Lviv base JSON in skill refs.
 §
-Image/media gen: prefer `gemini-web-controller`/`gweb` over FAL `image_generate`; Drive fallback `gweb drive upload`.
+Image/media gen: prefer gweb/Gemini first. Denys wants self-approved final media only; don’t send weak wallpaper outpaint/collage intermediates—iterate or switch to fictionalized/designed scene.
 §
 Broker funding: Raiffeisen EUR → Wise EUR → Freedom EUR = 0 fee. Avoid USD conversion/card top-ups/direct SWIFT/Paysera.
 §
 Beauty SaaS front/UI: Denys wants Bohdan to write frontend manually without Claude Code/“колода” unless explicitly requested; UI kit must not be replaced with a landing page.
 §
-Beauty public profile direction: mobile-first personal visit card inspired by `vse-pro-royal.site` — master/style/services/slots/portfolio/reviews/location/contact. No QR/dashboard/analytics on public page; QR belongs to promotion/admin assets.
-§
-Beauty public profile direction: public visit card must work standalone without CRM; CRM/calendar/free-slots/reminders/client-history are optional modules. Baseline page = master identity, services, portfolio, route, Instagram/chat contact.
+Beauty public profile: standalone mobile-first visit card inspired by `vse-pro-royal.site` — master identity/style/services/slots/portfolio/reviews/location/Instagram-chat. No QR/dashboard/analytics; CRM/calendar/reminders optional modules.

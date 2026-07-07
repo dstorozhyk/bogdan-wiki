@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Review Queue
 created: 2026-06-20
-updated: 2026-07-06
+updated: 2026-07-07
 type: query
 tags: [wiki]
 ---
@@ -21,6 +21,18 @@ The nightly sleep job should prepend new candidates below.
 ---
 
 ## Pending Memory Candidates
+
+- [ ] **2026-07-07 — Proposed compaction for MEMORY.md still blocked by unavailable memory tool**
+  - Proposed change: shorten the Rocket, wiki-system, Ukraine-specialists, media-generation, broker-funding, and Beauty public-profile entries while keeping project roots, stable routing rules, and source pointers.
+  - Why durable: `MEMORY.md` is `2024 / 2200` chars (`92.0%`), above the 80% compaction threshold; proposed replacements would reduce always-on prompt pressure without losing operational pointers.
+  - Risk/staleness: low if volatile cron IDs and verbose wording are removed but active roots and core preferences remain; verify live cron IDs before relying on schedules.
+  - Evidence: 2026-07-07 nightly consolidation; memory tool returned unavailable, so no mutation was applied.
+
+- [ ] **2026-07-07 — Proposed compaction for USER.md / secret minimization still blocked**
+  - Proposed change: replace raw VPS Monitor credential material in always-on user memory with a non-secret pointer to the secure operational config/credential location; keep identity, seniority, infrastructure access preference, Claude Code preference, formatting preference, and Lviv reference location.
+  - Why durable: `USER.md` is `1294 / 1375` chars (`94.1%`) and should not embed secrets in prompt context.
+  - Risk/staleness: must not lose the actual credential source; do not copy secrets into wiki.
+  - Evidence: 2026-07-07 nightly consolidation; memory tool returned unavailable.
 
 - [ ] **2026-07-06 — MAMENORI correction for Lviv sushi/NOA context**
   - Proposed text: `For Denys's Lviv sushi/place lookups, “sushi near NOA” referred to MAMENORI; do not default to Red Pepper / Yoki / ЯпонаХата for that context.`
@@ -143,6 +155,18 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-07-07 — Create/update media wallpaper outpaint QA workflow**
+  - Proposed skill name: `media-wallpaper-outpaint-qa` or update `gemini-web-controller` / creative media workflow.
+  - Trigger: Denys asks to turn a found/screenshot image into desktop wallpaper, upscale, outpaint, or “догенеруй правильно через gweb”.
+  - Reusable workflow: identify original/source image; download/verify dimensions; create candidate canvases; run outpaint/upscale; verify file exists and visually QA before promising or sending; compare candidates; only deliver final `MEDIA:` after successful file size/dimension check and visual pass.
+  - Include pitfalls/verification: `file`, PIL dimension checks, `test -s`, visual QA; avoid claiming a generated variant exists before checking; don’t send weak intermediates unless user asks; if Gemini/browser generation fails, explicitly report the blocker and best verified candidate.
+  - Evidence: `20260706_074551_d8ebfdbc` ended with “Не бачу” and no verified ready 78% wallpaper file.
+
+- [ ] **2026-07-07 — Skill pin/review candidates from usage telemetry**
+  - Proposed action: review whether to pin critical operational skills: `obsidian`, `hermes-agent`, `wiki-knowledge-pipelines`, `claude-code`, `gemini-web-controller`, `hermes-deferred-task-queue`, `hermes-update-operations`, and recurring production/project runbooks once promoted.
+  - Rationale: these are high-activity or high-impact skills where accidental archive/removal would be costly; pinning should still be explicit, not automatic from SAFE MODE.
+  - Evidence: `/root/.hermes/skills/.usage.json` and `hermes curator status` in 2026-07-07 nightly consolidation.
 
 - [ ] **2026-07-06 — Update/create Freylina YouTube pipeline operations runbook**
   - Proposed skill name: update/create Freylina `youtube-to-wiki-pipeline` / operations runbook.
@@ -313,6 +337,11 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `cron_ef9b3fb5feed_20260620_030049`; skill was missing and queue was empty at HEAD `654a3f9`.
 
 ## Pending Wiki Candidates
+
+- [ ] **2026-07-07 — Add media-generation QA note/playbook if wallpaper work recurs**
+  - Suggested destination: `agents/media-generation-qa.md`, a creative workflow note, or a section in an existing Gemini/media ops note.
+  - Candidate content: for wallpaper/outpaint tasks, keep a verified artifact ledger with source URL/file, candidate dimensions, generation prompt, visual QA result, final file path, and whether `MEDIA:` was actually sent. Never promise a “ready in minutes” result until a non-empty output file and visual pass exist.
+  - Evidence: `20260706_074551_d8ebfdbc`.
 
 - [ ] **2026-07-06 — Update Freylina/Hermes ops note with resolved stale default cron jobs**
   - Suggested destination: Freylina operations/runbook wiki or a Hermes ops note linked from Agent Knowledge Ops.
@@ -490,6 +519,15 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-07-07 — Enable or repair memory-tool availability for nightly compaction**
+  - Context: `MEMORY.md` is `2024 / 2200` chars (`92.0%`) and `USER.md` is `1294 / 1375` chars (`94.1%`), but the memory tool is unavailable in the cron environment again; compaction remains proposed only.
+
+- [ ] **2026-07-07 — Finish or explicitly close Haaland/Fabinho wallpaper task**
+  - Context: Jul 6 wallpaper session ended with Denys saying “Не бачу”; latest visible assistant state said no verified high-quality 78% generated file was available. If Denys still wants it, resume from verified files under `/root/haaland_wallpaper/` and do not promise delivery before file/visual QA.
+
+- [ ] **2026-07-07 — Decide whether media wallpaper/outpaint QA becomes a skill**
+  - Context: The Jul 6 task exposed a reusable pitfall: generated image variants and final delivery must be verified before reporting completion.
 
 - [ ] **2026-07-06 — Enable or repair memory-tool availability for nightly compaction**
   - Context: `MEMORY.md` is `2194 / 2200` chars (`99.7%`) and `USER.md` is `1294 / 1375` chars (`94.1%`), but the memory tool returned unavailable during the July 6 cron run, so only proposed compaction was staged again.
