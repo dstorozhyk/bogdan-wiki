@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Review Queue
 created: 2026-06-20
-updated: 2026-07-07
+updated: 2026-07-08
 type: query
 tags: [wiki]
 ---
@@ -21,6 +21,18 @@ The nightly sleep job should prepend new candidates below.
 ---
 
 ## Pending Memory Candidates
+
+- [ ] **2026-07-08 — Proposed compaction for MEMORY.md still blocked by unavailable memory tool**
+  - Proposed change: shorten Rocket, wiki-system, Ukraine-specialists, and Beauty entries; remove volatile cron IDs from always-on memory; keep project roots/source pointers and stable routing rules.
+  - Why durable: `MEMORY.md` is `2024 / 2200` chars (`92.0%`), above the 80% compaction threshold; proposed replacements preserve operational pointers while reducing prompt pressure.
+  - Risk/staleness: low if active project roots and source-of-truth paths remain; verify live cron IDs before relying on schedules.
+  - Evidence: 2026-07-08 nightly consolidation; memory tool returned unavailable, so no mutation was applied.
+
+- [ ] **2026-07-08 — Proposed compaction for USER.md / secret minimization still blocked**
+  - Proposed change: replace raw VPS Monitor credential material with `VPS Monitor: 178.105.214.165:3000; credentials/keys live in operational env/config, not wiki/memory`; shorten infrastructure-access and preference lines while keeping identity, Claude Code preference, formatting preference, Lviv reference location, and CK3 Russian-UI preference.
+  - Why durable: `USER.md` is `1368 / 1375` chars (`99.5%`) and should not embed secrets in always-on prompt context.
+  - Risk/staleness: must not lose the actual credential source; do not copy secrets into wiki.
+  - Evidence: 2026-07-08 nightly consolidation; memory tool returned unavailable.
 
 - [ ] **2026-07-07 — Proposed compaction for MEMORY.md still blocked by unavailable memory tool**
   - Proposed change: shorten the Rocket, wiki-system, Ukraine-specialists, media-generation, broker-funding, and Beauty public-profile entries while keeping project roots, stable routing rules, and source pointers.
@@ -155,6 +167,18 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-07-08 — Create/update CK3 Ukrainian/Russian-interface coaching skill if game help recurs**
+  - Proposed skill name: `ck3-ukrainian-russian-ui-coach` or update `game-walkthrough-visual-guidance` with CK3 strategy-coaching guidance.
+  - Trigger: Denys asks about Crusader Kings 3 mechanics, strategy, screenshots, or “how do I play” questions while using Russian UI.
+  - Reusable workflow: answer in Ukrainian, include Russian in-game labels, map abstract strategy/Machiavelli concepts to actual CK3 buttons/mechanics, distinguish direct actions from passive modifiers/events, and give immediate next actions plus risk checks.
+  - Include pitfalls/verification: use vision on screenshots; do not hallucinate unavailable CK3 buttons; avoid long lore unless asked; ask for exact screenshot/state only when it changes the tactical recommendation.
+  - Evidence: `20260706_193417_6f92bafb`, `20260707_182842_7d5b042a`.
+
+- [ ] **2026-07-08 — Refresh skill pin/review candidates from usage telemetry**
+  - Proposed action: review whether to pin critical operational skills: `obsidian`, `hermes-agent`, `wiki-knowledge-pipelines`, `claude-code`, `gemini-web-controller`, `hermes-deferred-task-queue`, `hermes-update-operations`, `youtube-content`, and promoted production/project runbooks.
+  - Rationale: these are high-activity or high-impact skills where accidental archive/removal would be costly; pinning should remain explicit, not automatic from SAFE MODE.
+  - Evidence: `/root/.hermes/skills/.usage.json` and `hermes curator status` in 2026-07-08 nightly consolidation; 111 tracked skills, 57 zero-use, curator enabled with no changes.
 
 - [ ] **2026-07-07 — Create/update media wallpaper outpaint QA workflow**
   - Proposed skill name: `media-wallpaper-outpaint-qa` or update `gemini-web-controller` / creative media workflow.
@@ -338,6 +362,11 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Wiki Candidates
 
+- [ ] **2026-07-08 — Add CK3 learning/playbook note if game coaching continues**
+  - Suggested destination: `games/ck3-learning-notes.md` or a lightweight gaming note linked from the index if Denys keeps asking CK3 questions.
+  - Candidate content: Denys is learning CK3 through Ireland/tutorial-like play, prefers Ukrainian explanations with Russian UI labels, and is interested in practical power-politics/Machiavelli framing; capture recurring concepts such as direct actions vs passive modifiers, raids/prestige, schemes/secrets, rival assessment, and succession/army basics.
+  - Evidence: `20260706_193417_6f92bafb`, `20260707_182842_7d5b042a`.
+
 - [ ] **2026-07-07 — Add media-generation QA note/playbook if wallpaper work recurs**
   - Suggested destination: `agents/media-generation-qa.md`, a creative workflow note, or a section in an existing Gemini/media ops note.
   - Candidate content: for wallpaper/outpaint tasks, keep a verified artifact ledger with source URL/file, candidate dimensions, generation prompt, visual QA result, final file path, and whether `MEDIA:` was actually sent. Never promise a “ready in minutes” result until a non-empty output file and visual pass exist.
@@ -519,6 +548,18 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-07-08 — Enable or repair memory-tool availability for nightly compaction**
+  - Context: `MEMORY.md` is `2024 / 2200` chars (`92.0%`) and `USER.md` is `1368 / 1375` chars (`99.5%`), but the memory tool is unavailable in the cron environment again; compaction remains proposed only.
+
+- [ ] **2026-07-08 — Finish or explicitly close Haaland/Fabinho wallpaper task**
+  - Context: Jul 6–7 resume still did not deliver a verified final wallpaper; the 78% composite depended on missing `/root/haaland_wallpaper/refocus_strict_expand_78_gweb.png`, and later validation stopped before a successful `MEDIA:` final.
+
+- [ ] **2026-07-08 — Decide whether recurring CK3 coaching should become a skill/wiki note**
+  - Context: Denys had two CK3 sessions in the last 24h covering strategy, UI labels, raids, prestige, army growth, laws, inheritance, secrets, and murder schemes; current `game-walkthrough-visual-guidance` is only partially suited.
+
+- [ ] **2026-07-08 — Improve local business-hours lookup fallback for blocked sources**
+  - Context: Kebabця hours lookup failed due DNS/login/anti-bot blocks across Google/Facebook/Instagram/TripAdvisor/RestaurantGuru; future local lookup should try direct map/search APIs or ask for exact branch only after source-first attempts are exhausted.
 
 - [ ] **2026-07-07 — Enable or repair memory-tool availability for nightly compaction**
   - Context: `MEMORY.md` is `2024 / 2200` chars (`92.0%`) and `USER.md` is `1294 / 1375` chars (`94.1%`), but the memory tool is unavailable in the cron environment again; compaction remains proposed only.
