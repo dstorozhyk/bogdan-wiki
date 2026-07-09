@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Review Queue
 created: 2026-06-20
-updated: 2026-07-08
+updated: 2026-07-09
 type: query
 tags: [wiki]
 ---
@@ -21,6 +21,24 @@ The nightly sleep job should prepend new candidates below.
 ---
 
 ## Pending Memory Candidates
+
+- [ ] **2026-07-09 — Proposed compaction for MEMORY.md still blocked by unavailable memory tool**
+  - Proposed change: shorten Rocket, wiki-system, wiki-first, image/media, broker-funding, and Beauty public-profile entries; remove volatile cron IDs from always-on memory; keep project roots/source pointers and stable routing rules.
+  - Why durable: `MEMORY.md` is `2024 / 2200` chars (`92.0%`), above the 80% compaction threshold; proposed replacements preserve operational pointers while reducing prompt pressure.
+  - Risk/staleness: low if active project roots and source-of-truth paths remain; verify live cron IDs before relying on schedules.
+  - Evidence: 2026-07-09 nightly consolidation; memory tool returned unavailable, so no mutation was applied.
+
+- [ ] **2026-07-09 — Proposed compaction for USER.md / secret minimization still blocked**
+  - Proposed change: replace raw VPS Monitor credential material with a non-secret pointer such as `VPS Monitor: 178.105.214.165:3000; credentials/keys live in operational env/config, not wiki/memory`; keep identity, Claude Code preference, formatting preference, Lviv reference location, and CK3 UI-language preference.
+  - Why durable: `USER.md` is `1368 / 1375` chars (`99.5%`) and should not embed secrets in always-on prompt context.
+  - Risk/staleness: must not lose the actual credential source; do not copy secrets into wiki.
+  - Evidence: 2026-07-09 nightly consolidation; memory tool returned unavailable.
+
+- [ ] **2026-07-09 — CK3/Linux setup memory candidate if gaming support recurs**
+  - Proposed text: `Denys’s CK3/Linux setup: HP Pavilion Power 15-cb0xx on Pop!_OS; CK3 works best via Proton on NVIDIA GTX 1050 (not Intel HD 630), medium settings ok; use English language when enabling Ukrainian Workshop localizer that replaces English.`
+  - Why durable: could prevent repeated hardware/launch troubleshooting if CK3 support continues.
+  - Risk/staleness: device setup, driver, Proton version, and Workshop mod IDs can change; prefer wiki note unless repeated often.
+  - Evidence: `20260708_084508_c98db802`.
 
 - [ ] **2026-07-08 — Proposed compaction for MEMORY.md still blocked by unavailable memory tool**
   - Proposed change: shorten Rocket, wiki-system, Ukraine-specialists, and Beauty entries; remove volatile cron IDs from always-on memory; keep project roots/source pointers and stable routing rules.
@@ -167,6 +185,18 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-07-09 — Create/update CK3 Linux/Proton setup runbook if support recurs**
+  - Proposed skill name: `ck3-linux-proton-setup` or update `game-walkthrough-visual-guidance` / `steam-game-purchase-advice`.
+  - Trigger: Denys asks about CK3 on Linux/Pop!_OS, Proton/native choice, NVIDIA hybrid graphics, performance settings, or Workshop localization.
+  - Reusable workflow: inspect hardware/driver output; force NVIDIA/Hybrid launch options; choose Proton if native lags; set low/medium graphics with FPS cap; enable shader pre-caching; preserve Proton prefix/shader cache; explain Russian/UI labels in Ukrainian.
+  - Include pitfalls/verification: `system76-power graphics`, Steam launch options `__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia gamemoderun %command%`, `sudo apt install gamemode`; pitfall: Steam may launch on Intel HD 630 unless NVIDIA offload is explicit; Ukrainian localizer may require Steam game language `English`.
+  - Evidence: `20260708_084508_c98db802`.
+
+- [ ] **2026-07-09 — Review new `steam-game-purchase-advice` skill after first real use**
+  - Proposed action: keep for now, then review whether it overlaps with existing gaming/product-research skills after the first Steam edition/DLC/bundle task.
+  - Rationale: usage sidecar shows it was agent-created on 2026-07-08, patched once, and has 0 use/view so far; new zero-use is not enough archive evidence.
+  - Evidence: `/root/.hermes/skills/.usage.json` and 2026-07-09 nightly consolidation.
 
 - [ ] **2026-07-08 — Create/update CK3 Ukrainian/Russian-interface coaching skill if game help recurs**
   - Proposed skill name: `ck3-ukrainian-russian-ui-coach` or update `game-walkthrough-visual-guidance` with CK3 strategy-coaching guidance.
@@ -362,6 +392,11 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Wiki Candidates
 
+- [ ] **2026-07-09 — Add CK3 Linux/Proton setup note if game support continues**
+  - Suggested destination: `games/ck3-linux-popos-setup.md` or extend a future `games/ck3-learning-notes.md`.
+  - Candidate content: Denys’s HP Pavilion Power / Pop!_OS setup runs CK3 acceptably via Proton on NVIDIA GTX 1050; native/Intel path can lag; useful settings include NVIDIA offload, GameMode, shader pre-caching, medium/low graphics, FPS cap, and avoiding deletion of `compatdata/1158310` / `shadercache/1158310`; Ukrainian localizer candidate was Workshop `3197478188` with English game language caveat.
+  - Evidence: `20260708_084508_c98db802`.
+
 - [ ] **2026-07-08 — Add CK3 learning/playbook note if game coaching continues**
   - Suggested destination: `games/ck3-learning-notes.md` or a lightweight gaming note linked from the index if Denys keeps asking CK3 questions.
   - Candidate content: Denys is learning CK3 through Ireland/tutorial-like play, prefers Ukrainian explanations with Russian UI labels, and is interested in practical power-politics/Machiavelli framing; capture recurring concepts such as direct actions vs passive modifiers, raids/prestige, schemes/secrets, rival assessment, and succession/army basics.
@@ -548,6 +583,15 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-07-09 — Enable or repair memory-tool availability for nightly compaction**
+  - Context: `MEMORY.md` is `2024 / 2200` chars (`92.0%`) and `USER.md` is `1368 / 1375` chars (`99.5%`), but the memory tool is unavailable in the cron environment again; compaction remains proposed only.
+
+- [ ] **2026-07-09 — Decide whether CK3/Linux setup deserves a wiki note or skill**
+  - Context: Jul 8 session covered CK3 system requirements, Pop!_OS/NVIDIA/Proton tuning, slow loading causes, and Ukrainian Workshop localization setup; keep as review candidate unless CK3 support continues.
+
+- [ ] **2026-07-09 — Review `steam-game-purchase-advice` after first real invocation**
+  - Context: usage sidecar shows a new agent-created, patched-once skill with 0 use/view; do not archive automatically, but check whether it overlaps with existing gaming/product-research workflows.
 
 - [ ] **2026-07-08 — Enable or repair memory-tool availability for nightly compaction**
   - Context: `MEMORY.md` is `2024 / 2200` chars (`92.0%`) and `USER.md` is `1368 / 1375` chars (`99.5%`), but the memory tool is unavailable in the cron environment again; compaction remains proposed only.

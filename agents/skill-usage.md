@@ -1,7 +1,7 @@
 ---
 title: Hermes Skill Usage Review
 created: 2026-07-03
-updated: 2026-07-08
+updated: 2026-07-09
 type: query
 tags: [wiki, skills]
 ---
@@ -26,13 +26,13 @@ Track which Hermes skills are actually used so Bogdan can keep the skill library
 - Installed skill inventory: `hermes skills list`
 - Hub/marketplace discovery when a missing skill is needed: `hermes skills search`, `hermes skills inspect`, `hermes skills install`
 
-## Current Snapshot — 2026-07-08
+## Current Snapshot — 2026-07-09
 
 From `/root/.hermes/skills/.usage.json`:
 
 | Metric | Value |
 |---|---:|
-| Skills tracked | 111 |
+| Skills tracked | 112 |
 | Zero-use skills | 57 |
 | Never-active skills | 57 |
 
@@ -47,7 +47,7 @@ Most active examples by total activity (`use + view + patch`):
 | `mobile-app-idea-factory` | 50 | 17 | 16 | 17 | 2026-06-30 |
 | `beauty-saas-product-design` | 49 | 20 | 20 | 9 | 2026-07-03 |
 | `vps-monitor-telegram` | 46 | 8 | 8 | 30 | 2026-05-29 |
-| `obsidian` | 42 | 29 | 10 | 3 | 2026-07-08 |
+| `obsidian` | 43 | 30 | 10 | 3 | 2026-07-09 |
 | `claude-code` | 42 | 20 | 18 | 4 | 2026-07-03 |
 | `systematic-debugging` | 41 | 13 | 13 | 15 | 2026-07-01 |
 | `youtube-content` | 36 | 18 | 18 | 0 | 2026-07-05 |
@@ -55,10 +55,11 @@ Most active examples by total activity (`use + view + patch`):
 
 Recently used / newly relevant:
 
-- `obsidian` was used by the nightly consolidation job on 2026-07-08.
-- `game-walkthrough-visual-guidance` was used on 2026-07-07 for CK3/gaming guidance; this may indicate need for a narrower CK3 coaching skill or an update candidate.
-- `gemini-web-controller`, `codex`, and `comfyui` remained recently relevant from the Haaland/Fabinho wallpaper/outpaint work.
-- `wiki-knowledge-pipelines`, `maps`, and `ocr-and-documents` remain low-to-moderate-use but recently useful.
+- `obsidian` was used by the nightly consolidation job on 2026-07-09.
+- `game-walkthrough-visual-guidance` remains recently relevant for CK3 strategy/UI coaching.
+- `steam-game-purchase-advice` appeared in usage telemetry as agent-created on 2026-07-08 with 1 patch and 0 use/view; review after first real Steam purchase-advice task rather than archiving immediately.
+- `codex`, `comfyui`, and `gemini-web-controller` remain recently relevant from media/wallpaper workflows.
+- `maps`, `ocr-and-documents`, and `wiki-knowledge-pipelines` remain low-to-moderate-use but recently useful.
 
 Zero-use examples to keep under review, not auto-delete:
 
@@ -87,25 +88,25 @@ Agent-created low/zero-use examples to review carefully:
 
 - `payment-link-safety` — zero use/view/patch in usage sidecar; created by agent.
 - `vps-monitor-dashboard-setup` — zero use/view but 8 patches; likely historical/operational, do not archive without checking VPS Monitor references.
-- `game-walkthrough-visual-guidance` — 2 use/2 view/1 patch; recently used for CK3 but the skill is currently more map/navigation oriented than strategy coaching.
+- `steam-game-purchase-advice` — new agent-created skill with 1 patch and 0 use/view; keep until a real Steam purchase/advice task validates or disproves usefulness.
+- `game-walkthrough-visual-guidance` — low count but recently used for CK3; currently more map/navigation oriented than strategy/Linux setup coaching.
 
 Curator status (`hermes curator status`):
 
-- Curator enabled; 6 runs; last run ~3h before the nightly job.
+- Curator enabled; 6 runs; last run ~1 day before this nightly job.
 - Last summary: `auto: no changes; llm: skipped (consolidation off)`.
 - Last report: `/root/.hermes/logs/curator/20260707-235839`.
 - Interval: every 7 days; stale after 30d unused; archive after 90d unused.
 - Consolidation: off (prune-only; LLM merge pass opt-in).
-- Agent-created skills: 79 active, 0 stale, 0 archived.
+- Agent-created skills: 80 active, 0 stale, 0 archived.
 - Least recently active examples: `google-ai-tools`, `online-shopping-research`, `xurl`, `airtable`, `apple-notes`.
 - Most active curator examples: `crypto-fiat-onramps`, `obsidian`, `claude-code`, `systematic-debugging`, `youtube-content`.
 
-## Review Recommendations — 2026-07-08
+## Review Recommendations — 2026-07-09
 
 - **Pin/review for criticality:** `obsidian`, `hermes-agent`, `wiki-knowledge-pipelines`, `claude-code`, `gemini-web-controller`, `hermes-deferred-task-queue`, `hermes-update-operations`, `youtube-content`, plus production/project runbooks once promoted.
-- **Keep but monitor rare utility skills:** `codex`, `comfyui`, `ocr-and-documents`, `maps`, and `game-walkthrough-visual-guidance` are low-use but recently useful; low count alone is not archive evidence.
-- **CK3 coaching gap:** Denys is asking a recurring sequence of CK3 strategy/mechanics questions with Russian UI labels; consider a dedicated CK3 Ukrainian/Russian-interface coaching skill if this continues.
-- **Media-generation workflow gap:** July 6–7 wallpaper work confirms need for a stricter outpaint/upscale QA workflow: verify file existence, dimensions, and visual pass before promising or sending.
+- **Keep but monitor rare utility skills:** `codex`, `comfyui`, `ocr-and-documents`, `maps`, `game-walkthrough-visual-guidance`, and `steam-game-purchase-advice` are low-use/new but plausibly useful; low count alone is not archive evidence.
+- **CK3/Linux setup gap:** Denys now asks both CK3 strategy/UI questions and Linux/Proton/NVIDIA performance questions; consider a narrow gaming runbook/wiki note if this continues.
 - **Archive review only after human approval:** zero-use official/optional tools should stay unless agent-created, redundant, old enough, and no cron/project reference exists.
 - **Marketplace replacement:** safe to propose missing skills via review queue, but do not auto-install from the nightly job.
 
