@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Review Queue
 created: 2026-06-20
-updated: 2026-07-09
+updated: 2026-07-10
 type: query
 tags: [wiki]
 ---
@@ -21,6 +21,18 @@ The nightly sleep job should prepend new candidates below.
 ---
 
 ## Pending Memory Candidates
+
+- [ ] **2026-07-10 — Proposed compaction for MEMORY.md still blocked by unavailable memory tool**
+  - Proposed change: shorten Rocket, wiki-system, wiki-first, Ukraine-specialists, image/media, broker-funding, and Beauty public-profile entries; remove volatile cron IDs from always-on memory while preserving active project roots/source pointers and stable routing rules.
+  - Why durable: `MEMORY.md` is `2024 / 2200` chars (`92.0%`), above the 80% compaction threshold; proposed replacements preserve high-signal operational pointers while reducing prompt pressure.
+  - Risk/staleness: low if paths/source-of-truth pointers remain; verify live cron IDs before relying on schedule details.
+  - Evidence: 2026-07-10 nightly consolidation; `memory` tool returned unavailable, so no mutation was applied.
+
+- [ ] **2026-07-10 — Proposed compaction for USER.md / secret minimization still blocked**
+  - Proposed change: replace raw VPS Monitor credential material with a non-secret pointer such as `VPS Monitor: 178.105.214.165:3000; credentials/keys live in operational env/config, not wiki/memory`; preserve identity, backend/Claude preference, Markdown preference, Lviv reference location, and CK3 Ukrainian-UI preference.
+  - Why durable: `USER.md` is `1358 / 1375` chars (`98.8%`) and should not embed secrets in always-on prompt context.
+  - Risk/staleness: must not lose the actual credential source; do not copy secrets into wiki.
+  - Evidence: 2026-07-10 nightly consolidation; `memory` tool returned unavailable.
 
 - [ ] **2026-07-09 — Proposed compaction for MEMORY.md still blocked by unavailable memory tool**
   - Proposed change: shorten Rocket, wiki-system, wiki-first, image/media, broker-funding, and Beauty public-profile entries; remove volatile cron IDs from always-on memory; keep project roots/source pointers and stable routing rules.
@@ -185,6 +197,18 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-07-10 — Review new `ck3-economic-vassal-play` skill after more real CK3 coaching**
+  - Proposed action: keep for now; after 2–3 more CK3 sessions, decide whether it should stay standalone, merge into a broader CK3 skill, or be mirrored mainly as a wiki playbook.
+  - Trigger: Denys asks CK3 economy/roleplay/count-under-liege questions with Ukrainian UI terms.
+  - Reusable workflow: use Ukrainian UI labels; preserve Denys's peaceful/economic roleplay constraint; prioritize control, economic buildings, development, reserve, hooks, liege politics, council roles, activities, and practical “what to click/check” guidance.
+  - Include pitfalls/verification: avoid Russian UI terms unless Denys switches back; avoid default conquest-first advice; verify answers include a practical ordered checklist and reserve/risk caveats.
+  - Evidence: `20260709_144322_da2aa910`; skill was created and used once during the session.
+
+- [ ] **2026-07-10 — Refresh skill pin/review candidates from usage telemetry**
+  - Proposed action: review whether to pin critical operational skills: `obsidian`, `hermes-agent`, `wiki-knowledge-pipelines`, `claude-code`, `gemini-web-controller`, `hermes-deferred-task-queue`, `hermes-update-operations`, `youtube-content`, and promoted production/project runbooks.
+  - Rationale: these are high-activity or high-impact skills where accidental archive/removal would be costly; pinning should remain explicit, not automatic from SAFE MODE.
+  - Evidence: `/root/.hermes/skills/.usage.json` and `hermes curator status` in 2026-07-10 nightly consolidation; 113 tracked skills, 60 zero-use, curator enabled with no changes.
 
 - [ ] **2026-07-09 — Create/update CK3 Linux/Proton setup runbook if support recurs**
   - Proposed skill name: `ck3-linux-proton-setup` or update `game-walkthrough-visual-guidance` / `steam-game-purchase-advice`.
@@ -392,6 +416,11 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Wiki Candidates
 
+- [ ] **2026-07-10 — Add CK3 economic-vassal playbook note if game coaching continues**
+  - Suggested destination: `games/ck3-economic-vassal-playbook.md` or extend a future `games/ck3-learning-notes.md`.
+  - Candidate content: Denys is learning CK3 with Ukrainian UI and likes a count-under-liege, low-expansion economic roleplay. Capture durable guidance: control before development; economic buildings first; `+2 gold/month` is normal for counts; keep reserves; use hooks/secrets, ransoms, activities, council positions, and liege politics; recommended start is Werner von Habsburg in Aargau, 1066.
+  - Evidence: `20260709_144322_da2aa910`.
+
 - [ ] **2026-07-09 — Add CK3 Linux/Proton setup note if game support continues**
   - Suggested destination: `games/ck3-linux-popos-setup.md` or extend a future `games/ck3-learning-notes.md`.
   - Candidate content: Denys’s HP Pavilion Power / Pop!_OS setup runs CK3 acceptably via Proton on NVIDIA GTX 1050; native/Intel path can lag; useful settings include NVIDIA offload, GameMode, shader pre-caching, medium/low graphics, FPS cap, and avoiding deletion of `compatdata/1158310` / `shadercache/1158310`; Ukrainian localizer candidate was Workshop `3197478188` with English game language caveat.
@@ -583,6 +612,12 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-07-10 — Enable or repair memory-tool availability for nightly compaction**
+  - Context: `MEMORY.md` is `2024 / 2200` chars (`92.0%`) and `USER.md` is `1358 / 1375` chars (`98.8%`), but the memory tool is unavailable in the cron environment again; compaction remains proposed only.
+
+- [ ] **2026-07-10 — Review whether CK3 economic-vassal guidance belongs in skill, wiki, or both**
+  - Context: Jul 9 session created and used `ck3-economic-vassal-play`; it captures a recurring-looking game coaching pattern, but should be validated with more use before pinning/consolidation.
 
 - [ ] **2026-07-09 — Enable or repair memory-tool availability for nightly compaction**
   - Context: `MEMORY.md` is `2024 / 2200` chars (`92.0%`) and `USER.md` is `1368 / 1375` chars (`99.5%`), but the memory tool is unavailable in the cron environment again; compaction remains proposed only.

@@ -14,4 +14,4 @@ Denys prefers code-review/fix workflows delegated to Claude Code; for Claude/Fab
 §
 Denys’s reference location for local distance calculations in Lviv: Кульпарківська 64а.
 §
-Denys plays CK3 with Russian UI; explain in Ukrainian but include Russian in-game menu/label names.
+Denys plays CK3 with Ukrainian UI; explain in Ukrainian and use Ukrainian in-game labels.
