@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Review Queue
 created: 2026-06-20
-updated: 2026-07-10
+updated: 2026-07-11
 type: query
 tags: [wiki]
 ---
@@ -21,6 +21,24 @@ The nightly sleep job should prepend new candidates below.
 ---
 
 ## Pending Memory Candidates
+
+- [ ] **2026-07-11 — Proposed compaction for MEMORY.md still blocked by unavailable memory tool**
+  - Proposed change: shorten Rocket, wiki-system, wiki-first, Ukraine-specialists, image/media, and Beauty public-profile entries; remove volatile cron IDs from always-on memory while preserving active project roots/source pointers and stable routing rules.
+  - Why durable: `MEMORY.md` is `2024 / 2200` chars (`92.0%`), above the 80% compaction threshold; proposed replacements preserve high-signal operational pointers while reducing prompt pressure.
+  - Risk/staleness: low if source-of-truth paths remain; verify live cron IDs before relying on schedule details.
+  - Evidence: 2026-07-11 nightly consolidation; `memory` tool returned unavailable, so no mutation was applied.
+
+- [ ] **2026-07-11 — Proposed compaction for USER.md / secret minimization still blocked**
+  - Proposed change: replace raw VPS Monitor credential material with a non-secret pointer such as `VPS Monitor: 178.105.214.165:3000; credentials/keys live in operational env/config, not wiki/memory`; preserve identity, seniority, backend/Claude preference, Markdown preference, Lviv reference location, and CK3 Ukrainian-UI preference.
+  - Why durable: `USER.md` is `1358 / 1375` chars (`98.8%`) and should not embed secrets in always-on prompt context.
+  - Risk/staleness: must not lose the actual credential source; do not copy secrets into wiki.
+  - Evidence: 2026-07-11 nightly consolidation; `memory` tool returned unavailable.
+
+- [ ] **2026-07-11 — Game-purchase edition preference if Steam advice recurs**
+  - Proposed text: `For Denys’s game-purchase advice, if he says he will “play once and forget,” favor Standard/discount over Deluxe/Ultimate unless extras add substantial story/gameplay.`
+  - Why durable: captures a clear purchase-style preference from the Assassin’s Creed edition task.
+  - Risk/staleness: validate across more game-purchase sessions before using scarce memory.
+  - Evidence: `20260710_134926_0ceafcf6`.
 
 - [ ] **2026-07-10 — Proposed compaction for MEMORY.md still blocked by unavailable memory tool**
   - Proposed change: shorten Rocket, wiki-system, wiki-first, Ukraine-specialists, image/media, broker-funding, and Beauty public-profile entries; remove volatile cron IDs from always-on memory while preserving active project roots/source pointers and stable routing rules.
@@ -197,6 +215,32 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-07-11 — Broaden/review CK3 coaching skill beyond economy**
+  - Proposed skill name: update `ck3-economic-vassal-play` or create broader `ck3-strategy-coach`.
+  - Trigger: Denys asks CK3 beginner questions beyond economy: marriage acceptance, dynastic succession, claims, council roles, court recruitment, female council eligibility, intrigue.
+  - Reusable workflow: answer in Ukrainian with Ukrainian UI labels; inspect screenshots when present; distinguish marriage/claim/succession mechanics; provide ordered click/check steps; preserve low-expansion roleplay constraints unless Denys pivots.
+  - Include pitfalls/verification: do not overclaim exact CK3 localization names; verify war goal/succession before advising inheritance schemes; do not treat traits like `Блудниця` as hard council blockers without checking eligibility rules.
+  - Evidence: `20260710_211638_149336a6`, `20260709_144322_da2aa910`.
+
+- [ ] **2026-07-11 — Review `steam-game-purchase-advice` after first real use**
+  - Proposed action: keep for now; review after a few more edition/DLC/bundle tasks to decide whether it stays standalone or merges into a broader gaming purchase/research workflow.
+  - Trigger: Denys asks whether to buy a specific game edition/DLC/bundle.
+  - Reusable workflow: compare live store prices, edition contents, DLC substance vs cosmetics, likely discount cadence, and Denys’s intended play style (`one-and-done` vs completionist/live-service).
+  - Include pitfalls/verification: source-first price/content lookup; use arithmetic tools for price deltas; avoid hallucinating edition contents; distinguish remake/new release from old editions when store/search results are confusing.
+  - Evidence: `20260710_134926_0ceafcf6`; usage sidecar now shows `steam-game-purchase-advice` active.
+
+- [ ] **2026-07-11 — Update `hermes-update-operations` for interrupted update resume**
+  - Proposed skill name: update `hermes-update-operations`.
+  - Trigger: Hermes update/gateway restart interrupts an active session after local patches were backed up/stashed.
+  - Reusable workflow: find backup path, inspect git status/stash, verify `hermes --version`, resume/complete update, reapply local patches as needed, run `hermes doctor`, verify gateway services and cron `[SILENT]` behavior.
+  - Include pitfalls/verification: `git stash list`, `/tmp/hermes_update_backup_path`, backup dir under `~/hermes-update-backups/`, `systemctl status hermes-gateway*`; pitfall: do not blindly continue if production/gateway state is unclear after restart.
+  - Evidence: `20260710_075319_5503656c`.
+
+- [ ] **2026-07-11 — Refresh skill pin/review candidates from usage telemetry**
+  - Proposed action: review whether to pin critical operational skills: `obsidian`, `hermes-agent`, `wiki-knowledge-pipelines`, `claude-code`, `gemini-web-controller`, `hermes-deferred-task-queue`, `hermes-update-operations`, `youtube-content`, and promoted production/project runbooks.
+  - Rationale: these are high-activity or high-impact skills where accidental archive/removal would be costly; pinning should remain explicit, not automatic from SAFE MODE.
+  - Evidence: `/root/.hermes/skills/.usage.json` and `hermes curator status` in 2026-07-11 nightly consolidation; 113 tracked skills, 57 zero-use, curator enabled with no changes.
 
 - [ ] **2026-07-10 — Review new `ck3-economic-vassal-play` skill after more real CK3 coaching**
   - Proposed action: keep for now; after 2–3 more CK3 sessions, decide whether it should stay standalone, merge into a broader CK3 skill, or be mirrored mainly as a wiki playbook.
@@ -416,6 +460,16 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Wiki Candidates
 
+- [ ] **2026-07-11 — Add CK3 dynastic/council playbook note if coaching continues**
+  - Suggested destination: `games/ck3-learning-notes.md` or `games/ck3-dynasty-and-court-playbook.md`.
+  - Candidate content: marriage acceptance via `Велике весілля`; avoid matrilineal marriage for male-heir dynasty continuity; verify whether target has inheritance, claim, or only succession position; check war goal before letting another ruler weaken/replace the current holder; high-stat women may be blocked from council by status/gender/religion/council-right rules, not by `Блудниця` itself.
+  - Evidence: `20260710_211638_149336a6`.
+
+- [ ] **2026-07-11 — Add Hermes interrupted-update note to ops docs**
+  - Suggested destination: `agents/hermes-update-operations.md` or a future Hermes ops weekly-update note.
+  - Candidate content: Jul 10 `hermes update` attempt backed up/stashed local patches (`agent/skill_commands.py`, `gateway/run.py`, `cron/scheduler.py`) and wrote a backup path under `~/hermes-update-backups/`, but the session was interrupted by gateway restart before completion; resume requires checking git status/stash, versions, gateway services, and local patch reapplication.
+  - Evidence: `20260710_075319_5503656c`.
+
 - [ ] **2026-07-10 — Add CK3 economic-vassal playbook note if game coaching continues**
   - Suggested destination: `games/ck3-economic-vassal-playbook.md` or extend a future `games/ck3-learning-notes.md`.
   - Candidate content: Denys is learning CK3 with Ukrainian UI and likes a count-under-liege, low-expansion economic roleplay. Capture durable guidance: control before development; economic buildings first; `+2 gold/month` is normal for counts; keep reserves; use hooks/secrets, ransoms, activities, council positions, and liege politics; recommended start is Werner von Habsburg in Aargau, 1066.
@@ -612,6 +666,18 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-07-11 — Resume or explicitly close interrupted Hermes update**
+  - Context: Jul 10 update attempt backed up/stashed local patches and started `hermes update`, but the active session was interrupted by gateway restart; verify git status/stash, Hermes version, local patches, gateway services, and cron `[SILENT]` behavior before considering update complete.
+
+- [ ] **2026-07-11 — Enable or repair memory-tool availability for nightly compaction**
+  - Context: `MEMORY.md` is `2024 / 2200` chars (`92.0%`) and `USER.md` is `1358 / 1375` chars (`98.8%`), but the memory tool is unavailable in the cron environment again; compaction remains proposed only, and secret minimization in `USER.md` is still blocked.
+
+- [ ] **2026-07-11 — Decide whether active CK3 coaching belongs in a wiki playbook, broader skill, or both**
+  - Context: CK3 sessions now cover economy, development/control, raids/prestige, intrigue, marriage acceptance, inheritance, council eligibility, and court recruitment; current `ck3-economic-vassal-play` may be too narrow if this continues.
+
+- [ ] **2026-07-11 — Review `steam-game-purchase-advice` after more purchase tasks**
+  - Context: the skill now has real usage after Assassin’s Creed edition advice; keep it for now and decide later whether it overlaps with broader gaming/product-research skills.
 
 - [ ] **2026-07-10 — Enable or repair memory-tool availability for nightly compaction**
   - Context: `MEMORY.md` is `2024 / 2200` chars (`92.0%`) and `USER.md` is `1358 / 1375` chars (`98.8%`), but the memory tool is unavailable in the cron environment again; compaction remains proposed only.
