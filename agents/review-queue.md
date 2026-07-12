@@ -22,6 +22,18 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Memory Candidates
 
+- [ ] **2026-07-12 — Proposed compaction for MEMORY.md; tool unavailable**
+  - Proposed change: shorten verbose Rocket/wiki/specialist/media/Beauty entries and remove volatile cron IDs while retaining project roots, routing rules, and non-secret configuration pointers.
+  - Why durable: `MEMORY.md` is `2024 / 2200` chars (`92.0%`), above threshold.
+  - Risk/staleness: preserve source pointers; inspect live cron rather than retaining IDs.
+  - Evidence: 2026-07-12 nightly consolidation; batched `memory` operation returned unavailable.
+
+- [ ] **2026-07-12 — Proposed compaction for USER.md / secret minimization; tool unavailable**
+  - Proposed change: replace raw VPS Monitor credential material with a non-secret host/port plus operational env/config pointer; keep identity, preferences, and reference location.
+  - Why durable: `USER.md` is `1358 / 1375` chars (`98.8%`), above threshold.
+  - Risk/staleness: do not lose the actual credential source or copy any secret into wiki.
+  - Evidence: 2026-07-12 nightly consolidation; batched `memory` operation returned unavailable.
+
 - [ ] **2026-07-11 — Proposed compaction for MEMORY.md still blocked by unavailable memory tool**
   - Proposed change: shorten Rocket, wiki-system, wiki-first, Ukraine-specialists, image/media, and Beauty public-profile entries; remove volatile cron IDs from always-on memory while preserving active project roots/source pointers and stable routing rules.
   - Why durable: `MEMORY.md` is `2024 / 2200` chars (`92.0%`), above the 80% compaction threshold; proposed replacements preserve high-signal operational pointers while reducing prompt pressure.
@@ -215,6 +227,12 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-07-12 — Fact-check before broadening `ck3-economic-vassal-play`**
+  - Proposed action: verify and then narrowly patch `gaming/ck3-economic-vassal-play/SKILL.md` for council eligibility, faith-defined criminal status, inherited claims, and papal/event claims.
+  - Trigger: Denys’s recurring Ukrainian-UI CK3 coaching now includes council and dynasty questions, not only economy.
+  - Evidence: 3 sessions across 2026-07-09–11: `20260709_144322_da2aa910`, `20260710_211638_149336a6`, `20260711_121523_815dd800`.
+  - Blocker: the latest answer made conflicting unverified claims about secular council eligibility. Do not encode it until an in-game tooltip/current source confirms the rule.
 
 - [ ] **2026-07-11 — Broaden/review CK3 coaching skill beyond economy**
   - Proposed skill name: update `ck3-economic-vassal-play` or create broader `ck3-strategy-coach`.
@@ -459,6 +477,12 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `cron_ef9b3fb5feed_20260620_030049`; skill was missing and queue was empty at HEAD `654a3f9`.
 
 ## Pending Wiki Candidates
+
+- [ ] **2026-07-12 — Validate/update Codex model usage-limit guidance**
+  - Suggested destination: update `concepts/hermes-codex-oauth-quota-exhaustion.md` or create a focused current-plan note only after official-source confirmation.
+  - Candidate content: session reported that Codex/ChatGPT Work share usage and that `gpt-5.6-luna` targets higher-volume/lighter work. Preserve the distinction between plan quota, shared usage, and model-specific limits.
+  - Evidence: `20260711_120917_3c02d715`.
+  - Caveat: direct session output was oversized; the nightly job did not independently revalidate current OpenAI pricing/docs.
 
 - [ ] **2026-07-11 — Add CK3 dynastic/council playbook note if coaching continues**
   - Suggested destination: `games/ck3-learning-notes.md` or `games/ck3-dynasty-and-court-playbook.md`.

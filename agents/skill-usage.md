@@ -26,83 +26,46 @@ Track which Hermes skills are actually used so Bogdan can keep the skill library
 - Installed skill inventory: `hermes skills list`
 - Hub/marketplace discovery when a missing skill is needed: `hermes skills search`, `hermes skills inspect`, `hermes skills install`
 
-## Current Snapshot — 2026-07-11
+## Current Snapshot — 2026-07-12
 
 From `/root/.hermes/skills/.usage.json`:
 
 | Metric | Value |
 |---|---:|
 | Skills tracked | 113 |
-| Zero-use skills | 57 |
+| Zero-use skills | 59 |
 | Never-active skills | 57 |
 
 Most active examples by total activity (`use + view + patch`):
 
-| Skill | Total | Use | View | Patch | Last activity |
-|---|---:|---:|---:|---:|---|
-| `nodejs-vps-operations` | 156 | 41 | 41 | 74 | 2026-07-03 |
-| `crypto-fiat-onramps` | 69 | 19 | 19 | 31 | 2026-07-01 |
-| `gemini-web-controller` | 67 | 16 | 16 | 35 | 2026-07-06 |
-| `ukraine-specialists-finder` | 58 | 13 | 13 | 32 | 2026-06-17 |
-| `mobile-app-idea-factory` | 50 | 17 | 16 | 17 | 2026-06-30 |
-| `beauty-saas-product-design` | 49 | 20 | 20 | 9 | 2026-07-03 |
-| `vps-monitor-telegram` | 46 | 8 | 8 | 30 | 2026-05-29 |
-| `obsidian` | 45 | 32 | 10 | 3 | 2026-07-11 |
-| `claude-code` | 43 | 21 | 18 | 4 | 2026-07-10 |
-| `systematic-debugging` | 41 | 13 | 13 | 15 | 2026-07-01 |
-| `wiki-knowledge-pipelines` | 36 | 13 | 13 | 10 | 2026-07-06 |
-| `youtube-content` | 36 | 18 | 18 | 0 | 2026-07-05 |
+| Skill | Total |
+|---|---:|
+| `nodejs-vps-operations` | 156 |
+| `crypto-fiat-onramps` | 69 |
+| `gemini-web-controller` | 67 |
+| `ukraine-specialists-finder` | 58 |
+| `mobile-app-idea-factory` | 50 |
+| `beauty-saas-product-design` | 49 |
+| `obsidian` | 46 |
+| `vps-monitor-telegram` | 46 |
 
-Recently used / newly relevant:
+Zero-use examples to review, not auto-delete: `airtable`, `apple-notes`, `apple-reminders`, `architecture-diagram`, `arxiv`, `ascii-art`, `ascii-video`, `audiocraft-audio-generation`, `baoyu-infographic`, `codebase-inspection`.
 
-- `obsidian` was used by the nightly consolidation job on 2026-07-11.
-- `claude-code`, `hermes-agent`, and `hermes-update-operations` were relevant to the Jul 10 Hermes update attempt and weekly report flow.
-- `steam-game-purchase-advice` moved from zero-use to active: 2 uses / 2 views / 5 patches after the Assassin’s Creed edition advice task; review quality after a few more purchase-advice tasks.
-- `ck3-economic-vassal-play` is now at 2 uses / 2 views and is actively supporting CK3 coaching; likely worth keeping while Denys continues CK3.
-- `game-walkthrough-visual-guidance` remains relevant for CK3 screenshots and game guidance, but its original map-annotation focus only partially covers CK3 strategy coaching.
+Notable active skills:
 
-Zero-use examples to keep under review, not auto-delete:
-
-- `airtable`
-- `apple-notes`
-- `apple-reminders`
-- `architecture-diagram`
-- `arxiv`
-- `ascii-art`
-- `ascii-video`
-- `audiocraft-audio-generation`
-- `baoyu-infographic`
-- `codebase-inspection`
-- `computer-use`
-- `design-md`
-- `evaluating-llms-harness`
-- `excalidraw`
-- `findmy`
-- `gif-search`
-- `github-auth`
-- `github-code-review`
-- `github-issues`
-- `google-workspace`
-
-Agent-created low/zero-use examples to review carefully:
-
-- `payment-link-safety` — zero use/view/patch in usage sidecar; created by agent.
-- `vps-monitor-dashboard-setup` — zero use/view but 8 patches; likely historical/operational, do not archive without checking VPS Monitor references.
-- `steam-game-purchase-advice` — now used twice; keep and review for overlap with broader gaming/product-research skills after more real tasks.
-- `ck3-economic-vassal-play` — targeted gaming skill with two uses; likely useful if CK3 coaching continues, but check overlap with `game-walkthrough-visual-guidance` and any future gaming hub.
+- `ck3-economic-vassal-play`: 3 uses / 3 views; keep while CK3 coaching continues, but fact-check broader mechanics before patching.
+- `steam-game-purchase-advice`: active after recent real use; keep and review overlap only after more evidence.
+- `obsidian`: used by this nightly job; operationally important.
 
 Curator status (`hermes curator status`):
 
-- Curator enabled; 6 runs; last run ~3 days before this nightly job.
-- Last summary: `auto: no changes; llm: skipped (consolidation off)`.
-- Last report: `/root/.hermes/logs/curator/20260707-235839`.
-- Interval: every 7 days; stale after 30d unused; archive after 90d unused.
-- Consolidation: off (prune-only; LLM merge pass opt-in).
-- Agent-created skills: 80 active, 0 stale, 0 archived.
-- Least recently active examples: `google-ai-tools`, `online-shopping-research`, `xurl`, `airtable`, `apple-notes`.
+- Enabled; 6 runs; last run 4 days ago; last summary `auto: no changes; llm: skipped (consolidation off)`.
+- Interval: 7d; stale after 30d unused; archive after 90d unused.
+- Agent-created: 80 active, 0 stale, 0 archived.
+- Least recently active: `google-ai-tools`, `online-shopping-research`, `xurl`, then zero-activity `airtable` and `apple-notes`.
 - Most active curator examples: `crypto-fiat-onramps`, `obsidian`, `claude-code`, `systematic-debugging`, `youtube-content`.
 
-## Review Recommendations — 2026-07-11
+## Review Recommendations — 2026-07-12
 
 - **Pin/review for criticality:** `obsidian`, `hermes-agent`, `wiki-knowledge-pipelines`, `claude-code`, `gemini-web-controller`, `hermes-deferred-task-queue`, `hermes-update-operations`, `youtube-content`, plus production/project runbooks once promoted.
 - **Keep but monitor rare utility skills:** `codex`, `comfyui`, `ocr-and-documents`, `maps`, `game-walkthrough-visual-guidance`, `ck3-economic-vassal-play`, and `steam-game-purchase-advice` are low-use/new but plausibly useful; low count alone is not archive evidence.
