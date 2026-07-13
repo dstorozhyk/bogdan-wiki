@@ -38,6 +38,9 @@ Read this first to find relevant pages for any query.
 
 ## Summaries / Research
 
+- [enterprise-ai-team-vision-tech-lead-meeting-prep-2026-07-12](research/enterprise-ai-team-vision-tech-lead-meeting-prep-2026-07-12.md) — підготовка Дениса до внутрішньої зустрічі «Обговорення бачення AI-команди»: enterprise AI vision, controlled pilots, AI-assisted SDLC guardrails, 90-денний plan і позиціонування на Tech Lead.
+- [small-creator-brand-deals-playbook-2026-07-12](research/small-creator-brand-deals-playbook-2026-07-12.md) — процес пошуку, пітчингу, узгодження та вимірювання перших brand deals для малого автора.
+- [small-creator-brand-deals-pricing-2026-07-12](research/small-creator-brand-deals-pricing-2026-07-12.md) — робоча логіка rate card для «Все про Royal» на основі релевантності й перевіреної конверсії, а не лише CPM.
 - [ai-assisted-sdlc-vibe-coding-project-lifecycle-2026-07-02](research/ai-assisted-sdlc-vibe-coding-project-lifecycle-2026-07-02.md) — AI-assisted SDLC для vibe-coded продуктів: PoC/Prototype/RAT/Walking Skeleton/Vertical Slice/MLP/Pilot замість автоматичного “MVP”.
 - [emergency-fund-dashboard](research/emergency-fund-dashboard.md) — Obsidian Dataview dashboard для трекінгу Emergency Fund: фази $6k/$12k/$18k, рівні доступу, географія, категорії та current/target по інструментах.
 - [emergency-fund-strategy](research/emergency-fund-strategy.md) — стратегія побудови подушки Denys: $2k/міс витрат, ціль $18k, структура Р1/Р2/Р3, правила використання і квартальний ребаланс.

@@ -22,6 +22,12 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Memory Candidates
 
+- [ ] **2026-07-13 — Apply safe memory compaction when the memory tool is available**
+  - Proposed change: compact `MEMORY.md` to preserve project roots, source pointers and routing rules; remove volatile cron IDs and verbose duplicate phrasing. Replace the VPS Monitor credential-bearing `USER.md` entry with a non-secret host/port and operational config pointer.
+  - Why durable: live pressure remains `2024 / 2200` (`92.0%`) for MEMORY and `1358 / 1375` (`98.8%`) for USER.
+  - Risk/staleness: retain identity, stable preferences and infrastructure pointers; never mirror credentials or keys into wiki.
+  - Evidence: 2026-07-13 nightly consolidation; one batched operation per target was attempted but the memory tool is disabled/unavailable.
+
 - [ ] **2026-07-12 — Proposed compaction for MEMORY.md; tool unavailable**
   - Proposed change: shorten verbose Rocket/wiki/specialist/media/Beauty entries and remove volatile cron IDs while retaining project roots, routing rules, and non-secret configuration pointers.
   - Why durable: `MEMORY.md` is `2024 / 2200` chars (`92.0%`), above threshold.
@@ -690,6 +696,12 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-07-13 — Validate the «Все про Royal» tour-conversion case before using it in a rate card**
+  - Context: the session reported 10 confirmed participants for an author-led European tour. Confirm attribution, period, booking evidence and partner permission; then use it as a case study with UTM/promo-code tracking.
+
+- [ ] **2026-07-13 — Enable or repair memory-tool availability for nightly compaction**
+  - Context: both memory files remain above the 80% pressure threshold. The cron environment again returned `Memory is not available`; no compaction could be applied.
 
 - [ ] **2026-07-11 — Resume or explicitly close interrupted Hermes update**
   - Context: Jul 10 update attempt backed up/stashed local patches and started `hermes update`, but the active session was interrupted by gateway restart; verify git status/stash, Hermes version, local patches, gateway services, and cron `[SILENT]` behavior before considering update complete.

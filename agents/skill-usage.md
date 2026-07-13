@@ -1,7 +1,7 @@
 ---
 title: Hermes Skill Usage Review
 created: 2026-07-03
-updated: 2026-07-11
+updated: 2026-07-13
 type: query
 tags: [wiki, skills]
 ---
@@ -12,80 +12,49 @@ Operational note for the nightly sleep job. Related: [[agents/knowledge-policy]]
 
 ## Purpose
 
-Track which Hermes skills are actually used so Bogdan can keep the skill library lean:
-
-- preserve high-signal skills that are repeatedly loaded or patched;
-- identify zero-use / stale skills for review;
-- avoid deleting useful but rare skills automatically;
-- use Hermes Curator for lifecycle state and backups.
+Track actual Hermes skill use to preserve high-signal workflows, identify candidates for human review, and avoid automatic deletion of rare but legitimate tools.
 
 ## Data Sources
 
-- Runtime usage sidecar: `/root/.hermes/skills/.usage.json`
-- Curator CLI summary: `hermes curator status`
-- Installed skill inventory: `hermes skills list`
-- Hub/marketplace discovery when a missing skill is needed: `hermes skills search`, `hermes skills inspect`, `hermes skills install`
+- Runtime usage: `/root/.hermes/skills/.usage.json`
+- Curator: `hermes curator status`
 
-## Current Snapshot — 2026-07-12
-
-From `/root/.hermes/skills/.usage.json`:
+## Current Snapshot — 2026-07-13
 
 | Metric | Value |
 |---|---:|
 | Skills tracked | 113 |
 | Zero-use skills | 59 |
-| Never-active skills | 57 |
+| Never-active skills (`use + view + patch = 0`) | 57 |
+| Agent-created skills | 80 active; 0 stale; 0 archived |
 
-Most active examples by total activity (`use + view + patch`):
+Most active by total activity:
 
-| Skill | Total |
+| Skill | Total activity |
 |---|---:|
 | `nodejs-vps-operations` | 156 |
 | `crypto-fiat-onramps` | 69 |
 | `gemini-web-controller` | 67 |
 | `ukraine-specialists-finder` | 58 |
 | `mobile-app-idea-factory` | 50 |
+| `obsidian` | 49 |
 | `beauty-saas-product-design` | 49 |
-| `obsidian` | 46 |
 | `vps-monitor-telegram` | 46 |
 
-Zero-use examples to review, not auto-delete: `airtable`, `apple-notes`, `apple-reminders`, `architecture-diagram`, `arxiv`, `ascii-art`, `ascii-video`, `audiocraft-audio-generation`, `baoyu-infographic`, `codebase-inspection`.
+Zero-activity examples for human review only: `airtable`, `apple-notes`, `apple-reminders`, `architecture-diagram`, `arxiv`, `ascii-art`, `ascii-video`, `audiocraft-audio-generation`, `baoyu-infographic`, `codebase-inspection`.
 
-Notable active skills:
+Curator is enabled: 6 runs, last run 5 days ago; 7-day interval; stale threshold 30 days; archive threshold 90 days; LLM consolidation is off. Least recently active examples include `google-ai-tools` (26 days), `online-shopping-research` (23 days), `xurl` (21 days), then never-active tools.
 
-- `ck3-economic-vassal-play`: 3 uses / 3 views; keep while CK3 coaching continues, but fact-check broader mechanics before patching.
-- `steam-game-purchase-advice`: active after recent real use; keep and review overlap only after more evidence.
-- `obsidian`: used by this nightly job; operationally important.
+## Review Recommendations — 2026-07-13
 
-Curator status (`hermes curator status`):
-
-- Enabled; 6 runs; last run 4 days ago; last summary `auto: no changes; llm: skipped (consolidation off)`.
-- Interval: 7d; stale after 30d unused; archive after 90d unused.
-- Agent-created: 80 active, 0 stale, 0 archived.
-- Least recently active: `google-ai-tools`, `online-shopping-research`, `xurl`, then zero-activity `airtable` and `apple-notes`.
-- Most active curator examples: `crypto-fiat-onramps`, `obsidian`, `claude-code`, `systematic-debugging`, `youtube-content`.
-
-## Review Recommendations — 2026-07-12
-
-- **Pin/review for criticality:** `obsidian`, `hermes-agent`, `wiki-knowledge-pipelines`, `claude-code`, `gemini-web-controller`, `hermes-deferred-task-queue`, `hermes-update-operations`, `youtube-content`, plus production/project runbooks once promoted.
-- **Keep but monitor rare utility skills:** `codex`, `comfyui`, `ocr-and-documents`, `maps`, `game-walkthrough-visual-guidance`, `ck3-economic-vassal-play`, and `steam-game-purchase-advice` are low-use/new but plausibly useful; low count alone is not archive evidence.
-- **CK3 skill/library review:** `ck3-economic-vassal-play` is now carrying recurring CK3 questions beyond economy (marriage acceptance, inheritance, council eligibility); consider broadening it or splitting a CK3 strategy playbook if this continues.
-- **Hermes update runbook review:** Jul 10 update attempt was interrupted by gateway restart; preserve safe-resume/update verification as a review candidate, not an automatic skill edit from SAFE MODE.
-- **Archive review only after human approval:** zero-use official/optional tools should stay unless agent-created, redundant, old enough, and no cron/project reference exists.
-- **Marketplace replacement:** safe to propose missing skills via review queue, but do not auto-install from the nightly job.
+- Keep `obsidian`, `claude-code`, `youtube-content`, `gemini-and-notebooklm`, and other high-impact operational skills under explicit pin/review consideration; do not pin automatically.
+- Keep new or rare skills when they have plausible task value; zero use alone is not deletion evidence.
+- Review the growing CK3 coaching scope only after verified mechanics support a narrow update.
+- Do not archive, delete, install or consolidate skills in the nightly job without explicit approval.
 
 ## Nightly Job Rules
 
-1. Read `/root/.hermes/skills/.usage.json` if it exists.
-2. Run `hermes curator status` when available.
-3. Update this note with a concise snapshot: totals, most active, least active, zero-use, stale candidates.
-4. Add review candidates to `agents/review-queue.md` instead of deleting skills directly.
-5. Never delete or archive skills from the daily job. Use curator or explicit Denys approval for destructive changes.
-6. Treat hub-installed/official skills conservatively: unused does not mean worthless; many are intentionally rare tools.
-
-## Review Thresholds
-
-- **Candidate for review:** `use_count=0`, `view_count=0`, `patch_count=0` and older than 30 days / never active.
-- **Candidate for consolidation:** overlaps heavily with a more active skill or has duplicated purpose.
-- **Candidate for pinning:** rare but high-impact operational skill where losing it would be costly.
-- **Candidate for archive:** agent-created, unused/stale, not pinned, no active cron/job reference, and no recent session mentions.
+1. Read the usage sidecar and curator status.
+2. Update totals, activity examples and candidates concisely.
+3. Queue human review instead of destructive skill actions.
+4. Treat marketplace/official skills conservatively: unused does not mean obsolete.
