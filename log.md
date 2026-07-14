@@ -224,3 +224,10 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Skill automation: created 0 draft skills, patched 0 skills, queued 0 candidates, rejected 2 one-off/non-procedural candidates.
 - Added 1 memory-compaction candidate and 2 open loops to `agents/review-queue.md`.
 - Created `research/small-creator-brand-deals-{playbook,pricing}-2026-07-12.md`; updated `index.md`.
+
+## [2026-07-14] update | Daily knowledge consolidation
+- Created/updated `logs/daily/2026-07-14.md`.
+- Memory pressure: MEMORY `2024→2024 / 2200`, USER `1358→1358 / 1375`; compaction proposed only because the `memory` tool is unavailable.
+- Skill usage: updated `agents/skill-usage.md`; 113 tracked, 59 zero-use, 57 never-active; added 1 skill-review candidate.
+- Skill automation: created 0 draft skills, patched 0 skills, queued 1 candidate, rejected 1 candidate.
+- Added 1 memory candidate, 1 skill candidate, 0 wiki candidates, and 2 open loops to `agents/review-queue.md`.

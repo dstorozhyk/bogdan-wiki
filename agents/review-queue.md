@@ -22,6 +22,12 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Memory Candidates
 
+- [ ] **2026-07-14 — Apply staged non-secret memory compaction after memory-tool repair**
+  - Proposed change: compact `MEMORY.md` into shorter project/config/routing pointers and replace the credential-bearing VPS Monitor user-memory line with a non-secret endpoint plus secure-config pointer.
+  - Why durable: current live pressure is `2024 / 2200` (92.0%) for MEMORY and `1358 / 1375` (98.8%) for USER.
+  - Risk/staleness: retain identity, stable preferences, active roots and essential config pointers; do not mirror credentials/keys in wiki.
+  - Evidence: 2026-07-14 nightly consolidation; one batched `memory` operation failed because memory is unavailable in the cron environment.
+
 - [ ] **2026-07-13 — Apply safe memory compaction when the memory tool is available**
   - Proposed change: compact `MEMORY.md` to preserve project roots, source pointers and routing rules; remove volatile cron IDs and verbose duplicate phrasing. Replace the VPS Monitor credential-bearing `USER.md` entry with a non-secret host/port and operational config pointer.
   - Why durable: live pressure remains `2024 / 2200` (`92.0%`) for MEMORY and `1358 / 1375` (`98.8%`) for USER.
@@ -233,6 +239,11 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-07-14 — Human review of critical-skill pinning from repeated telemetry**
+  - Proposed action: explicitly decide whether high-impact skills such as `obsidian`, `claude-code`, `youtube-content`, `gemini-and-notebooklm`, and Hermes operations runbooks should be pinned.
+  - Evidence: repeated nightly telemetry reviews (2026-07-07–14); current usage shows `obsidian` activity 50 and curator reports 80 agent-created skills active, none stale/archived.
+  - Boundary: this is a human lifecycle decision; nightly consolidation must not pin, archive, delete, install or consolidate automatically.
 
 - [ ] **2026-07-12 — Fact-check before broadening `ck3-economic-vassal-play`**
   - Proposed action: verify and then narrowly patch `gaming/ck3-economic-vassal-play/SKILL.md` for council eligibility, faith-defined criminal status, inherited claims, and papal/event claims.
