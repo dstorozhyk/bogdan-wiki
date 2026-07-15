@@ -1,7 +1,7 @@
 ---
 title: Hermes Skill Usage Review
 created: 2026-07-03
-updated: 2026-07-14
+updated: 2026-07-15
 type: query
 tags: [wiki, skills]
 ---
@@ -19,7 +19,7 @@ Track actual Hermes skill use to preserve high-signal workflows, identify candid
 - Runtime usage: `/root/.hermes/skills/.usage.json`
 - Curator: `hermes curator status`
 
-## Current Snapshot — 2026-07-14
+## Current Snapshot — 2026-07-15
 
 | Metric | Value |
 |---|---:|
@@ -36,21 +36,21 @@ Most active by total activity:
 | `crypto-fiat-onramps` | 69 |
 | `gemini-web-controller` | 67 |
 | `ukraine-specialists-finder` | 58 |
-| `obsidian` | 50 |
+| `obsidian` | 51 |
 | `mobile-app-idea-factory` | 50 |
 | `beauty-saas-product-design` | 49 |
 | `vps-monitor-telegram` | 46 |
 
 Zero-activity examples for human review only: `airtable`, `apple-notes`, `apple-reminders`, `architecture-diagram`, `arxiv`, `ascii-art`, `ascii-video`, `audiocraft-audio-generation`, `baoyu-infographic`, `codebase-inspection`.
 
-Curator is enabled: 6 runs; last run 6 days ago; 7-day interval; stale threshold 30 days; archive threshold 90 days; LLM consolidation is off. Least-recently-active examples include `google-ai-tools` (27 days), `online-shopping-research` (24 days), `xurl` (22 days), then never-active skills.
+Curator is enabled: 7 runs; last run about 2 hours before this snapshot; 7-day interval; stale threshold 30 days; archive threshold 90 days; LLM consolidation is off. Least-recently-active examples: `google-ai-tools` (28 days), `online-shopping-research` (25 days), `xurl` (23 days), then never-active skills.
 
-## Review Recommendations — 2026-07-14
+## Review Recommendations — 2026-07-15
 
 - Keep high-impact operational skills—including `obsidian`, `claude-code`, `youtube-content`, `gemini-and-notebooklm`, and relevant Hermes operations runbooks—under explicit human pin/review consideration; do not pin automatically.
 - Keep new or rare skills when they have plausible task value; zero use alone is not deletion or consolidation evidence.
-- Review growing CK3 coaching scope only after verified mechanics support a narrow update.
-- Do not archive, delete, install, or consolidate skills in the nightly job without explicit approval.
+- Review CK3 coaching broadening only after mechanics are independently verified.
+- Do not archive, delete, install, consolidate, or pin skills in the nightly job without explicit approval.
 
 ## Nightly Job Rules
 

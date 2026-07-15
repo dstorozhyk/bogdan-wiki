@@ -22,6 +22,12 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Memory Candidates
 
+- [ ] **2026-07-15 — Apply staged safe non-secret memory compaction after memory-tool repair**
+  - Proposed change: compact `MEMORY.md` to concise project/config/routing pointers; replace the credential-bearing VPS Monitor user-memory content with a non-secret endpoint plus secure-config pointer.
+  - Why durable: live pressure is `2024 / 2200` (92.0%) for MEMORY and `1358 / 1375` (98.8%) for USER.
+  - Risk/staleness: retain identity, stable preferences, active roots, and essential non-secret configuration pointers; do not mirror credentials or keys in the wiki.
+  - Evidence: 2026-07-15 nightly consolidation; one batched `memory` operation per target returned unavailable.
+
 - [ ] **2026-07-14 — Apply staged non-secret memory compaction after memory-tool repair**
   - Proposed change: compact `MEMORY.md` into shorter project/config/routing pointers and replace the credential-bearing VPS Monitor user-memory line with a non-secret endpoint plus secure-config pointer.
   - Why durable: current live pressure is `2024 / 2200` (92.0%) for MEMORY and `1358 / 1375` (98.8%) for USER.
@@ -239,6 +245,11 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-07-15 — Human review of critical-skill pinning from repeated telemetry**
+  - Proposed action: explicitly decide whether high-impact skills such as `obsidian`, `claude-code`, `youtube-content`, `gemini-and-notebooklm`, and Hermes operational runbooks should be pinned.
+  - Evidence: nightly telemetry from 2026-07-07 through 2026-07-15; current usage: 113 tracked, `obsidian` activity 51, and curator reports 80 agent-created skills active with none stale/archived.
+  - Boundary: pinning is a human lifecycle decision; nightly consolidation must not pin, archive, delete, install, or consolidate automatically.
 
 - [ ] **2026-07-14 — Human review of critical-skill pinning from repeated telemetry**
   - Proposed action: explicitly decide whether high-impact skills such as `obsidian`, `claude-code`, `youtube-content`, `gemini-and-notebooklm`, and Hermes operations runbooks should be pinned.
@@ -707,6 +718,12 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-07-15 — Enable or repair memory-tool availability for nightly compaction**
+  - Context: `MEMORY.md` remains `2024 / 2200` (92.0%) and `USER.md` `1358 / 1375` (98.8%). Both batched safe-compaction attempts again returned `Memory is not available`; secret minimization remains blocked.
+
+- [ ] **2026-07-15 — Human-review critical-skill pinning**
+  - Context: repeated telemetry supports review of high-impact operational skills, but no lifecycle action was taken automatically.
 
 - [ ] **2026-07-13 — Validate the «Все про Royal» tour-conversion case before using it in a rate card**
   - Context: the session reported 10 confirmed participants for an author-led European tour. Confirm attribution, period, booking evidence and partner permission; then use it as a case study with UTM/promo-code tracking.
