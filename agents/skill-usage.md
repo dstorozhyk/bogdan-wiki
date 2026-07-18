@@ -1,7 +1,7 @@
 ---
 title: Hermes Skill Usage Review
 created: 2026-07-03
-updated: 2026-07-17
+updated: 2026-07-18
 type: query
 tags: [wiki, skills]
 ---
@@ -19,7 +19,7 @@ Track actual Hermes skill use to preserve high-signal workflows, identify candid
 - Runtime usage: `/root/.hermes/skills/.usage.json`
 - Curator: `hermes curator status`
 
-## Current Snapshot — 2026-07-17
+## Current Snapshot — 2026-07-18
 
 | Metric | Value |
 |---|---:|
@@ -36,16 +36,16 @@ Most active by total activity:
 | `crypto-fiat-onramps` | 69 |
 | `gemini-web-controller` | 67 |
 | `ukraine-specialists-finder` | 58 |
-| `obsidian` | 53 |
+| `obsidian` | 54 |
 | `mobile-app-idea-factory` | 50 |
 | `beauty-saas-product-design` | 49 |
 | `vps-monitor-telegram` | 46 |
 
 Zero-activity examples for human review only: `airtable`, `apple-notes`, `apple-reminders`, `architecture-diagram`, `arxiv`, `ascii-art`, `ascii-video`, `audiocraft-audio-generation`, `baoyu-infographic`, `codebase-inspection`.
 
-Curator is enabled: 7 runs; last run about 2 days before this snapshot; 7-day interval; stale threshold 30 days; archive threshold 90 days; LLM consolidation is off. Least-recently-active examples: `google-ai-tools` (30 days), `online-shopping-research` (27 days), `xurl` (25 days), then never-active skills.
+Curator is enabled: 7 runs; last run 3 days before this snapshot; 7-day interval; stale threshold 30 days; archive threshold 90 days; LLM consolidation is off. Least-recently-active examples: `google-ai-tools` (31 days), `online-shopping-research` (28 days), `xurl` (26 days), then never-active skills.
 
-## Review Recommendations — 2026-07-17
+## Review Recommendations — 2026-07-18
 
 - Keep high-impact operational skills—including `obsidian`, `claude-code`, `youtube-content`, `gemini-and-notebooklm`, and relevant Hermes operations runbooks—under explicit human pin/review consideration; do not pin automatically.
 - Keep new or rare skills when they have plausible task value; zero use alone is not deletion or consolidation evidence.
