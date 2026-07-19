@@ -1,7 +1,7 @@
 ---
 title: Hermes Skill Usage Review
 created: 2026-07-03
-updated: 2026-07-18
+updated: 2026-07-19
 type: query
 tags: [wiki, skills]
 ---
@@ -19,7 +19,7 @@ Track actual Hermes skill use to preserve high-signal workflows, identify candid
 - Runtime usage: `/root/.hermes/skills/.usage.json`
 - Curator: `hermes curator status`
 
-## Current Snapshot — 2026-07-18
+## Current Snapshot — 2026-07-19
 
 | Metric | Value |
 |---|---:|
@@ -36,19 +36,20 @@ Most active by total activity:
 | `crypto-fiat-onramps` | 69 |
 | `gemini-web-controller` | 67 |
 | `ukraine-specialists-finder` | 58 |
-| `obsidian` | 54 |
+| `obsidian` | 55 |
 | `mobile-app-idea-factory` | 50 |
 | `beauty-saas-product-design` | 49 |
 | `vps-monitor-telegram` | 46 |
 
 Zero-activity examples for human review only: `airtable`, `apple-notes`, `apple-reminders`, `architecture-diagram`, `arxiv`, `ascii-art`, `ascii-video`, `audiocraft-audio-generation`, `baoyu-infographic`, `codebase-inspection`.
 
-Curator is enabled: 7 runs; last run 3 days before this snapshot; 7-day interval; stale threshold 30 days; archive threshold 90 days; LLM consolidation is off. Least-recently-active examples: `google-ai-tools` (31 days), `online-shopping-research` (28 days), `xurl` (26 days), then never-active skills.
+Curator is enabled: 7 runs; last run 4 days before this snapshot; 7-day interval; stale threshold 30 days; archive threshold 90 days; LLM consolidation is off. Least-recently-active examples: `google-ai-tools` (32 days), `online-shopping-research` (29 days), `xurl` (27 days), then never-active skills.
 
-## Review Recommendations — 2026-07-18
+## Review Recommendations — 2026-07-19
 
 - Keep high-impact operational skills—including `obsidian`, `claude-code`, `youtube-content`, `gemini-and-notebooklm`, and relevant Hermes operations runbooks—under explicit human pin/review consideration; do not pin automatically.
 - Keep new or rare skills when they have plausible task value; zero use alone is not deletion or consolidation evidence.
+- The repeated Claude Code update procedure was narrowly added to `hermes-update-operations`; a bounded `claude doctor` timeout is not itself a failed update when the authenticated print-mode smoke test succeeds.
 - Review CK3 coaching broadening only after mechanics are independently verified.
 - Do not archive, delete, install, consolidate, or pin skills in the nightly job without explicit approval.
 

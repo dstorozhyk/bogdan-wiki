@@ -22,6 +22,12 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Memory Candidates
 
+- [ ] **2026-07-19 — Restore memory tool, then apply staged non-secret compaction**
+  - Proposed change: compact `MEMORY.md` to concise project/config/routing pointers; replace the credential-bearing VPS Monitor user-memory text with a non-secret endpoint plus secure-config pointer.
+  - Why durable: current live pressure remains `2024 / 2200` (92.0%) for MEMORY and `1358 / 1375` (98.8%) for USER.
+  - Risk/staleness: retain identity, stable preferences, active roots, and essential non-secret configuration pointers; do not mirror credentials or keys in wiki.
+  - Evidence: 2026-07-19 nightly consolidation; one batched memory operation returned `Memory is not available`.
+
 - [ ] **2026-07-18 — Apply safe non-secret memory compaction after memory-tool repair**
   - Proposed change: compact `MEMORY.md` to concise project/config/routing pointers and replace the credential-bearing VPS Monitor user-memory entry with a non-secret endpoint plus secure-config pointer.
   - Why durable: live pressure remains `2024 / 2200` (92.0%) for MEMORY and `1358 / 1375` (98.8%) for USER.
@@ -964,6 +970,11 @@ The nightly sleep job should prepend new candidates below.
   - Context: from `Кульпарківська 64а`, RSP was closest, but public court price was not found.
 
 ## Archive / Decisions
+
+- [x] **2026-07-19 — Patched `hermes-update-operations` for Claude Code-only updates**
+  - Decision: patched `devops/hermes-update-operations/SKILL.md` with exact pre/post commands (`claude --version`, `claude auth status --text`, `claude update`, `claude -p 'Say OK' --max-turns 1`) and a bounded-`claude doctor` timeout caveat.
+  - Evidence: repeated operational records on 2026-06-30, 2026-07-10, and `20260712_155402_433d3750` (last active 2026-07-17); successful update `2.1.199 → 2.1.212` plus authenticated smoke test.
+  - Status: narrow patch applied; future human review may revise it if Claude CLI behavior changes.
 
 - [x] **2026-06-22 — Rocket bot update announcement delivery verified early**
   - Result: the scheduled 2026-06-22 12:30 announcement was deleted and sent immediately in `20260621_094520_60c52a99`; delivery was `17/18`, with 1 Telegram `Forbidden: bot was blocked by the user` failure.
