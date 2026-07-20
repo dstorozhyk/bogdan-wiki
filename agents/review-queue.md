@@ -22,6 +22,12 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Memory Candidates
 
+- [ ] **2026-07-20 — Restore memory tool, then apply staged non-secret compaction**
+  - Proposed change: compact `MEMORY.md` to concise project/config/routing pointers and replace credential-bearing `USER.md` text with a non-secret endpoint plus secure-config pointer.
+  - Why durable: live pressure remains `2024 / 2200` (92.0%) for MEMORY and `1358 / 1375` (98.8%) for USER.
+  - Risk/staleness: retain identity, stable preferences, active roots, and essential non-secret configuration pointers; do not mirror credentials or keys in wiki.
+  - Evidence: 2026-07-20 nightly consolidation; one batched operation per target returned `Memory is not available`.
+
 - [ ] **2026-07-19 — Restore memory tool, then apply staged non-secret compaction**
   - Proposed change: compact `MEMORY.md` to concise project/config/routing pointers; replace the credential-bearing VPS Monitor user-memory text with a non-secret endpoint plus secure-config pointer.
   - Why durable: current live pressure remains `2024 / 2200` (92.0%) for MEMORY and `1358 / 1375` (98.8%) for USER.
@@ -263,6 +269,11 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-07-20 — Human review of critical-skill pinning from repeated telemetry**
+  - Proposed action: decide whether high-impact skills such as `obsidian`, `claude-code`, `youtube-content`, `gemini-and-notebooklm`, and Hermes operational runbooks should be pinned.
+  - Evidence: nightly telemetry 2026-07-07–2026-07-20; 113 tracked skills, `obsidian` activity 56, and curator reports 80 agent-created skills active with none stale/archived.
+  - Boundary: pinning is a human lifecycle decision; nightly consolidation must not pin, archive, delete, install, or consolidate automatically.
 
 - [ ] **2026-07-18 — Human review of critical-skill pinning from repeated telemetry**
   - Proposed action: explicitly decide whether high-impact skills such as `obsidian`, `claude-code`, `youtube-content`, `gemini-and-notebooklm`, and Hermes operational runbooks should be pinned.

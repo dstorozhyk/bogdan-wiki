@@ -266,3 +266,10 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Skill usage: updated `agents/skill-usage.md`; 113 tracked, 59 zero-use, 57 never-active; refreshed the human pinning recommendation.
 - Skill automation: created 0 draft skills, patched 1 skill (`hermes-update-operations`), queued 1 candidate, rejected 0 candidates.
 - Added 1 memory candidate, 0 new skill candidates, 0 wiki candidates, and 3 open loops to `agents/review-queue.md`.
+
+## [2026-07-20] update | Daily knowledge consolidation
+- Created `logs/daily/2026-07-20.md`.
+- Memory pressure: MEMORY `2024→2024 / 2200`, USER `1358→1358 / 1375`; compaction proposed only because batched memory operations were unavailable.
+- Skill usage: updated `agents/skill-usage.md`; 113 tracked, 59 zero-use, 57 never-active; refreshed the human pinning recommendation.
+- Skill automation: created 0 draft skills, patched 0 skills, queued 1 candidate, rejected 1 candidate.
+- Added 1 memory candidate, 0 new skill candidates, 0 wiki candidates, and 3 open loops to `agents/review-queue.md`.
