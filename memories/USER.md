@@ -12,6 +12,6 @@ Denys prefers direct execution, minimal re-verification, public HTTPS for UIs un
 §
 Denys prefers code-review/fix workflows delegated to Claude Code; for Claude/Fable production audits, the model should independently identify critical issues/fixes, not be steered to a preselected bottleneck.
 §
-Denys’s reference location for local distance calculations in Lviv: Кульпарківська 64а.
+Molodo: 2×18.9 L to Кульпарківська 64а; I prepare orders, Denys pays.
 §
 Denys plays CK3 with Ukrainian UI; explain in Ukrainian and use Ukrainian in-game labels.
