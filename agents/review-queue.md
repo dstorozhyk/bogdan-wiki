@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Review Queue
 created: 2026-06-20
-updated: 2026-07-16
+updated: 2026-07-22
 type: query
 tags: [wiki]
 ---
@@ -21,6 +21,12 @@ The nightly sleep job should prepend new candidates below.
 ---
 
 ## Pending Memory Candidates
+
+- [ ] **2026-07-22 — Restore memory tool, then apply staged non-secret compaction**
+  - Proposed change: compact `MEMORY.md` to concise project/config/routing pointers; replace credential-bearing `USER.md` text with a non-secret endpoint plus secure-config pointer.
+  - Why durable: live pressure is `2024 / 2200` (92.0%) for MEMORY and `1340 / 1375` (97.5%) for USER.
+  - Risk/staleness: retain identity, stable preferences, active roots, and essential non-secret configuration pointers; do not mirror credentials or keys in wiki.
+  - Evidence: 2026-07-22 nightly consolidation; one batched operation per target returned `Memory is not available`.
 
 - [ ] **2026-07-21 — Restore memory tool, then apply staged non-secret compaction**
   - Proposed change: compact `MEMORY.md` to concise project/config/routing pointers; replace credential-bearing `USER.md` text with a non-secret endpoint plus secure-config pointer.
@@ -275,6 +281,11 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-07-22 — Human review of two curator-stale agent-created skills**
+  - Proposed action: inspect the two skills marked stale in the current curator report and decide whether to retain, pin, repair, consolidate later, or archive manually.
+  - Evidence: `hermes curator status` on 2026-07-22: 80 agent-created skills, 78 active, 2 stale, 0 archived; automatic consolidation is off.
+  - Boundary: nightly consolidation must not archive, pin, delete, install, or consolidate skills automatically.
 
 - [ ] **2026-07-21 — Human review of critical-skill pinning from repeated telemetry**
   - Proposed action: decide whether high-impact skills such as `obsidian`, `claude-code`, `youtube-content`, `gemini-and-notebooklm`, and Hermes operational runbooks should be pinned.

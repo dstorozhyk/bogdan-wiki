@@ -1,7 +1,7 @@
 ---
 title: Hermes Skill Usage Review
 created: 2026-07-03
-updated: 2026-07-21
+updated: 2026-07-22
 type: query
 tags: [wiki, skills]
 ---
@@ -19,16 +19,16 @@ Track actual Hermes skill use to preserve high-signal workflows, identify candid
 - Runtime usage: `/root/.hermes/skills/.usage.json`
 - Curator: `hermes curator status`
 
-## Current Snapshot — 2026-07-21
+## Current Snapshot — 2026-07-22
 
 | Metric | Value |
 |---|---:|
 | Skills tracked | 113 |
 | Zero-use skills | 59 |
 | Never-active skills (`use + view + patch = 0`) | 57 |
-| Agent-created skills | 80 active; 0 stale; 0 archived |
+| Agent-created skills | 78 active; 2 stale; 0 archived |
 
-Most active by total activity:
+Most active by total sidecar activity:
 
 | Skill | Total activity |
 |---|---:|
@@ -36,17 +36,18 @@ Most active by total activity:
 | `crypto-fiat-onramps` | 69 |
 | `gemini-web-controller` | 67 |
 | `ukraine-specialists-finder` | 58 |
-| `obsidian` | 57 |
+| `obsidian` | 58 |
 | `mobile-app-idea-factory` | 50 |
 | `beauty-saas-product-design` | 49 |
 | `vps-monitor-telegram` | 46 |
 
 Zero-activity examples for human review only: `airtable`, `apple-notes`, `apple-reminders`, `architecture-diagram`, `arxiv`, `ascii-art`, `ascii-video`, `audiocraft-audio-generation`, `baoyu-infographic`, `codebase-inspection`.
 
-Curator is enabled: 7 runs; last run 6 days before this snapshot; 7-day interval; stale threshold 30 days; archive threshold 90 days; LLM consolidation is off. Least-recently-active nonzero examples: `google-ai-tools` (34 days), `xurl` (29 days); never-active skills follow.
+Curator is enabled: 8 runs; last run about 2 hours before this snapshot; 7-day interval; stale threshold 30 days; archive threshold 90 days; LLM consolidation is off. Curator’s latest automatic summary marked two agent-created skills stale. It did not archive anything.
 
-## Review Recommendations — 2026-07-21
+## Review Recommendations — 2026-07-22
 
+- Identify the two curator-stale agent-created skills before deciding whether they need remediation, pinning, or later archival; do not act automatically.
 - Keep high-impact operational skills—including `obsidian`, `claude-code`, `youtube-content`, `gemini-and-notebooklm`, and relevant Hermes operations runbooks—under explicit human pin/review consideration; do not pin automatically.
 - Keep new or rare skills when they have plausible task value; zero use alone is not deletion or consolidation evidence.
 - Retain the existing CK3 coaching broadening candidate only until mechanics are independently verified.
