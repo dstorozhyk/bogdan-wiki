@@ -22,17 +22,11 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Memory Candidates
 
-- [ ] **2026-07-22 — Restore memory tool, then apply staged non-secret compaction**
+- [ ] **2026-07-23 — Restore memory tool, then apply staged non-secret compaction**
   - Proposed change: compact `MEMORY.md` to concise project/config/routing pointers; replace credential-bearing `USER.md` text with a non-secret endpoint plus secure-config pointer.
-  - Why durable: live pressure is `2024 / 2200` (92.0%) for MEMORY and `1340 / 1375` (97.5%) for USER.
+  - Why durable: live pressure remains `2024 / 2200` (92.0%) for MEMORY and `1340 / 1375` (97.5%) for USER.
   - Risk/staleness: retain identity, stable preferences, active roots, and essential non-secret configuration pointers; do not mirror credentials or keys in wiki.
-  - Evidence: 2026-07-22 nightly consolidation; one batched operation per target returned `Memory is not available`.
-
-- [ ] **2026-07-21 — Restore memory tool, then apply staged non-secret compaction**
-  - Proposed change: compact `MEMORY.md` to concise project/config/routing pointers; replace credential-bearing `USER.md` text with a non-secret endpoint plus secure-config pointer.
-  - Why durable: live pressure is `2024 / 2200` (92.0%) for MEMORY and `1340 / 1375` (97.5%) for USER.
-  - Risk/staleness: retain identity, stable preferences, active roots, and essential non-secret configuration pointers; do not mirror credentials or keys in wiki.
-  - Evidence: 2026-07-21 nightly consolidation; one batched operation per target returned `Memory is not available`.
+  - Evidence: 2026-07-23 nightly consolidation; one batched operation per target returned `Memory is not available`.
 
 - [ ] **2026-07-20 — Restore memory tool, then apply staged non-secret compaction**
   - Proposed change: compact `MEMORY.md` to concise project/config/routing pointers and replace credential-bearing `USER.md` text with a non-secret endpoint plus secure-config pointer.
@@ -281,6 +275,12 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-07-23 — Fact-check before broadening `ck3-economic-vassal-play`**
+  - Proposed action: independently validate council eligibility, claim acquisition, inheritance/war-goal rules, and papal/event claims; then patch the existing CK3 skill narrowly if confirmed.
+  - Trigger: Denys’s CK3 coaching now repeatedly spans small-count growth, scholarly lifestyle, dynasty management, and heir education beyond economy.
+  - Evidence: 4 sessions across 2026-07-09–2026-07-22: `20260709_144322_da2aa910`, `20260710_211638_149336a6`, `20260711_121523_815dd800`, `20260722_095609_38d7b422`.
+  - Blocker: earlier answers included conflicting or unverified mechanics. Do not encode broader claims until an in-game tooltip/current source confirms them.
 
 - [ ] **2026-07-22 — Human review of two curator-stale agent-created skills**
   - Proposed action: inspect the two skills marked stale in the current curator report and decide whether to retain, pin, repair, consolidate later, or archive manually.

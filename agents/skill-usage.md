@@ -1,7 +1,7 @@
 ---
 title: Hermes Skill Usage Review
 created: 2026-07-03
-updated: 2026-07-22
+updated: 2026-07-23
 type: query
 tags: [wiki, skills]
 ---
@@ -19,7 +19,7 @@ Track actual Hermes skill use to preserve high-signal workflows, identify candid
 - Runtime usage: `/root/.hermes/skills/.usage.json`
 - Curator: `hermes curator status`
 
-## Current Snapshot — 2026-07-22
+## Current Snapshot — 2026-07-23
 
 | Metric | Value |
 |---|---:|
@@ -35,22 +35,22 @@ Most active by total sidecar activity:
 | `nodejs-vps-operations` | 156 |
 | `crypto-fiat-onramps` | 69 |
 | `gemini-web-controller` | 67 |
+| `obsidian` | 59 |
 | `ukraine-specialists-finder` | 58 |
-| `obsidian` | 58 |
 | `mobile-app-idea-factory` | 50 |
 | `beauty-saas-product-design` | 49 |
 | `vps-monitor-telegram` | 46 |
 
 Zero-activity examples for human review only: `airtable`, `apple-notes`, `apple-reminders`, `architecture-diagram`, `arxiv`, `ascii-art`, `ascii-video`, `audiocraft-audio-generation`, `baoyu-infographic`, `codebase-inspection`.
 
-Curator is enabled: 8 runs; last run about 2 hours before this snapshot; 7-day interval; stale threshold 30 days; archive threshold 90 days; LLM consolidation is off. Curator’s latest automatic summary marked two agent-created skills stale. It did not archive anything.
+Curator is enabled: 8 runs; last run 1 day ago; 7-day interval; stale threshold 30 days; archive threshold 90 days; LLM consolidation is off. Its latest automatic summary marked two agent-created skills stale. It did not archive anything.
 
-## Review Recommendations — 2026-07-22
+## Review Recommendations — 2026-07-23
 
 - Identify the two curator-stale agent-created skills before deciding whether they need remediation, pinning, or later archival; do not act automatically.
 - Keep high-impact operational skills—including `obsidian`, `claude-code`, `youtube-content`, `gemini-and-notebooklm`, and relevant Hermes operations runbooks—under explicit human pin/review consideration; do not pin automatically.
 - Keep new or rare skills when they have plausible task value; zero use alone is not deletion or consolidation evidence.
-- Retain the existing CK3 coaching broadening candidate only until mechanics are independently verified.
+- Retain the CK3 coaching broadening candidate only until disputed mechanics are independently verified.
 - Do not archive, delete, install, consolidate, or pin skills in the nightly job without explicit approval.
 
 ## Nightly Job Rules
