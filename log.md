@@ -294,3 +294,10 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Skill usage: updated `agents/skill-usage.md`; 113 tracked, 59 zero-use, 57 never-active; curator reports 2 stale agent-created skills.
 - Skill automation: created 0 draft skills, patched 0 skills, queued 1 fact-check candidate (`ck3-economic-vassal-play`), rejected 1 duplicate/new-skill candidate.
 - Refreshed 1 memory-compaction candidate; added 1 skill candidate, 0 wiki candidates, and 3 open loops to `agents/review-queue.md`.
+
+## [2026-07-24] update | Daily knowledge consolidation
+- Created `logs/daily/2026-07-24.md`.
+- Memory pressure: MEMORY `2024→2024 / 2200`, USER `1340→1340 / 1375`; compaction proposed only because one batched memory operation per target returned unavailable.
+- Skill usage: updated `agents/skill-usage.md`; 113 tracked, 59 zero-use, 57 never-active; named the 2 stale skills for human review.
+- Skill automation: created 0 draft skills, patched 0 skills, queued 1 candidate, rejected 1 candidate.
+- Added 1 memory-compaction candidate, 1 skill-review candidate, 0 wiki candidates, and 3 open loops to `agents/review-queue.md`.

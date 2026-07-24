@@ -22,6 +22,12 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Memory Candidates
 
+- [ ] **2026-07-24 — Restore memory tool, then apply staged non-secret compaction**
+  - Proposed change: compact `MEMORY.md` to concise project/config/routing pointers; replace credential-bearing `USER.md` text with a non-secret endpoint plus secure-config pointer.
+  - Why durable: live pressure remains `2024 / 2200` (92.0%) for MEMORY and `1340 / 1375` (97.5%) for USER.
+  - Risk/staleness: retain identity, stable preferences, active roots, and essential non-secret configuration pointers; do not mirror credentials or keys in wiki.
+  - Evidence: 2026-07-24 nightly consolidation; one batched operation per target returned `Memory is not available`.
+
 - [ ] **2026-07-23 — Restore memory tool, then apply staged non-secret compaction**
   - Proposed change: compact `MEMORY.md` to concise project/config/routing pointers; replace credential-bearing `USER.md` text with a non-secret endpoint plus secure-config pointer.
   - Why durable: live pressure remains `2024 / 2200` (92.0%) for MEMORY and `1340 / 1375` (97.5%) for USER.
@@ -275,6 +281,11 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260622_163026_d7eee1f1`.
 
 ## Pending Skill Candidates
+
+- [ ] **2026-07-24 — Human review of named curator-stale skills**
+  - Proposed action: inspect `google-ai-tools` and `xurl` and decide whether to retain, repair, pin, consolidate later, or archive manually.
+  - Evidence: `hermes curator status` and `.usage.json` on 2026-07-24: 80 agent-created skills, 78 active, 2 stale (`google-ai-tools`, `xurl`), 0 archived.
+  - Boundary: nightly consolidation must not archive, pin, delete, install, or consolidate skills automatically.
 
 - [ ] **2026-07-23 — Fact-check before broadening `ck3-economic-vassal-play`**
   - Proposed action: independently validate council eligibility, claim acquisition, inheritance/war-goal rules, and papal/event claims; then patch the existing CK3 skill narrowly if confirmed.
