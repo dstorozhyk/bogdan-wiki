@@ -1,20 +1,20 @@
 “Повітряні Загрози” `/opt/apps/rocket-attack-alarm`: city click stays on region list with visible `☑️`; whole-region exclusive; alerts exclude `#зведення`/`візуалізація` retrospectives.
 §
-GitHub auth: gh CLI as dstorozhyk with fine-grained PAT in `~/.config/gh/hosts.yml`; Denys can expand access in GitHub UI.
+GitHub: `gh` authenticated as dstorozhyk; auth config at `~/.config/gh/hosts.yml`.
 §
-Hermes local patches after updates: `/balance` direct_script (`agent/skill_commands.py`, `gateway/run.py`); cron `[SILENT]` delivery check = exact equality in `cron/scheduler.py`.
+Hermes local patches: `/balance` direct_script; cron `[SILENT]` must use exact equality. See `agent/skill_commands.py`, `gateway/run.py`, `cron/scheduler.py`.
 §
-Hermes providers priority in config: OpenAI primary; fallbacks GitHub Copilot haiku → Copilot gpt-4.1 → Google Gemini flash → OpenRouter deepseek-v4-flash.
+Hermes providers: OpenAI primary; fallbacks Copilot haiku → gpt-4.1 → Gemini flash → OpenRouter DeepSeek flash.
 §
-Wiki system: `/root/bogdan-wiki`; sleep cron `1773cf46a5ec` 03:30 UTC digest+>80% memory compaction+skill usage, sync `f7d4225863b6` 04:00 UTC via `wiki-sync-bogdan.sh`.
+Wiki: `/root/bogdan-wiki`; nightly digest/compaction and sync run via `wiki-sync-bogdan.sh`. Inspect live cron for IDs/schedules.
 §
 **Wiki-first:** Research docs → bogdan-wiki/research/. Options guide: `options-investor-guide.md`; IV=Implied Volatility. MEMORY=configs/credentials only.
 §
 Hermes CLI: The command for a single query in non-interactive mode is `hermes chat -q`, not `hermes ask`.
 §
-ukraine-specialists: wiki `/root/bogdan-wiki/research/ukraine-specialists.md`; run `python3 ~/.hermes/skills/ukraine-specialists-finder/scripts/find_specialist.py`; Lviv base JSON in skill refs.
+Ukraine specialists: wiki `research/ukraine-specialists.md`; use `ukraine-specialists-finder` script and its Lviv refs.
 §
-Image/media gen: prefer gweb/Gemini first. Denys wants self-approved final media only; don’t send weak wallpaper outpaint/collage intermediates—iterate or switch to fictionalized/designed scene.
+Media: prefer gweb/Gemini; deliver only visually verified finals, not weak wallpaper/outpaint intermediates.
 §
 Broker funding: Raiffeisen EUR → Wise EUR → Freedom EUR = 0 fee. Avoid USD conversion/card top-ups/direct SWIFT/Paysera.
 §

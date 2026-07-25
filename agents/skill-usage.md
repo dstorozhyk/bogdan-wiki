@@ -1,7 +1,7 @@
 ---
 title: Hermes Skill Usage Review
 created: 2026-07-03
-updated: 2026-07-24
+updated: 2026-07-25
 type: query
 tags: [wiki, skills]
 ---
@@ -19,14 +19,14 @@ Track actual Hermes skill use to preserve high-signal workflows, identify candid
 - Runtime usage: `/root/.hermes/skills/.usage.json`
 - Curator: `hermes curator status`
 
-## Current Snapshot — 2026-07-24
+## Current Snapshot — 2026-07-25
 
 | Metric | Value |
 |---|---:|
 | Skills tracked | 113 |
 | Zero-use skills | 59 |
 | Never-active skills (`use + view + patch = 0`) | 57 |
-| Agent-created skills | 78 active; 2 stale; 0 archived |
+| Agent-created skills | 75 active; 2 stale; 0 archived (77 total) |
 
 Most active by total sidecar activity:
 
@@ -35,19 +35,19 @@ Most active by total sidecar activity:
 | `nodejs-vps-operations` | 156 |
 | `crypto-fiat-onramps` | 69 |
 | `gemini-web-controller` | 67 |
-| `obsidian` | 60 |
+| `obsidian` | 61 |
 | `ukraine-specialists-finder` | 58 |
 | `mobile-app-idea-factory` | 50 |
 | `beauty-saas-product-design` | 49 |
-| `vps-monitor-telegram` | 46 |
+| `claude-code` | 49 |
 
 Zero-activity examples for human review only: `airtable`, `apple-notes`, `apple-reminders`, `architecture-diagram`, `arxiv`, `ascii-art`, `ascii-video`, `audiocraft-audio-generation`, `baoyu-infographic`, `codebase-inspection`.
 
-Curator is enabled: 8 runs; its latest run was 2 days ago; 7-day interval; stale threshold 30 days; archive threshold 90 days; LLM consolidation is off. It reports two stale agent-created skills: `google-ai-tools` and `xurl`. Nothing was archived.
+Curator is enabled: 8 runs; its latest run was 3 days ago; 7-day interval; stale threshold 30 days; archive threshold 90 days; LLM consolidation is off. It reports two stale agent-created skills and no archives. The status command did not name them; use the curator report or sidecar before acting.
 
-## Review Recommendations — 2026-07-24
+## Review Recommendations — 2026-07-25
 
-- Human-review stale `google-ai-tools` and `xurl`; decide whether to retain, repair, pin, consolidate later, or archive manually. Do not act automatically.
+- Human-review the two curator-stale skills; retain, repair, pin, consolidate later, or archive only through an explicit decision.
 - Keep high-impact operational skills—including `obsidian`, `claude-code`, `youtube-content`, `gemini-and-notebooklm`, and relevant Hermes operations runbooks—under explicit human pin/review consideration; do not pin automatically.
 - Keep new or rare skills when they have plausible task value; zero use alone is not deletion or consolidation evidence.
 - Retain the CK3 coaching broadening candidate only until disputed mechanics are independently verified.

@@ -282,6 +282,11 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Skill Candidates
 
+- [ ] **2026-07-25 — Review `hermes-update-operations` after an interrupted gateway update**
+  - Proposed action: inspect the existing skill after a complete recovery; narrowly patch it only with verified backup, update, custom-patch validation, gateway-service, and resume steps.
+  - Evidence: `20260710_075319_5503656c` and `20260722_095609_38d7b422`; a 2026-07-11 candidate already records the workflow.
+  - Blocker: the 2026-07-24 update restarted the gateway and the requested daily auto-update/report work was explicitly left incomplete; do not encode an unverified continuation.
+
 - [ ] **2026-07-24 — Human review of named curator-stale skills**
   - Proposed action: inspect `google-ai-tools` and `xurl` and decide whether to retain, repair, pin, consolidate later, or archive manually.
   - Evidence: `hermes curator status` and `.usage.json` on 2026-07-24: 80 agent-created skills, 78 active, 2 stale (`google-ai-tools`, `xurl`), 0 archived.

@@ -1,16 +1,16 @@
 Agent name: Bohdan/Богдан/Бодя. User: Denys/Денис, primary operator.
 §
-Denys is a Senior .NET Developer (C# is his main language). He also works with Python and TypeScript. He holds a Doctor of Philosophy (PhD) degree.
+Denys: Senior .NET/C# developer; also Python/TypeScript; PhD.
 §
-Denys wants full unrestricted access to all infrastructure available to the agent. He wants the agent to be able to manage other Hermes profiles and delegate to sub-agents as needed.
+Denys permits infrastructure access, other-profile management, and sub-agent delegation.
 §
-Denys expects Claude Code for backend/coding/reviews unless told otherwise; exception: beauty frontend/UI should be manually controlled by Bohdan unless explicitly requested, but Claude may review/critique UI.
+Use Claude Code for backend/coding/reviews; Bohdan manually controls Beauty frontend/UI unless asked, while Claude may critique it.
 §
-Hates raw JSON; format status/info as readable Markdown. VPS Monitor: port 3000, IP 178.105.214.165, admin/Клубняк2007, OpenRouter key via env.
+Prefers readable Markdown, not raw JSON. VPS Monitor: `178.105.214.165:3000`; credentials and API keys are in secure operational config.
 §
-Denys prefers direct execution, minimal re-verification, public HTTPS for UIs unless local-only, wiki-first research, low-fee broker funding, and autonomous deferred/background handling for long tasks.
+Prefers direct execution, public HTTPS UIs, wiki-first research, low-fee funding, and autonomous long-task handling.
 §
-Denys prefers code-review/fix workflows delegated to Claude Code; for Claude/Fable production audits, the model should independently identify critical issues/fixes, not be steered to a preselected bottleneck.
+Delegate code review/fixes to Claude; production audits should independently identify critical issues.
 §
 Molodo: 2×18.9 L to Кульпарківська 64а; I prepare orders, Denys pays.
 §
