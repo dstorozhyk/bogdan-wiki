@@ -308,3 +308,10 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Skill usage: updated `agents/skill-usage.md`; 113 tracked, 59 zero-use, 57 never-active; curator reports 2 stale agent-created skills.
 - Skill automation: created 0 draft skills, patched 0 skills, queued 1 candidate (`hermes-update-operations`), rejected 1 unverified CK3 automation candidate.
 - Added 0 memory candidates, 1 skill candidate, 0 wiki candidates, and 3 open loops to `agents/review-queue.md`.
+
+## [2026-07-26] update | Daily knowledge consolidation
+- Created `logs/daily/2026-07-26.md`.
+- Memory pressure: MEMORY `1718→1718 / 2200`, USER `884→884 / 1375`; none, both stores remain below threshold.
+- Skill usage: updated `agents/skill-usage.md`; 115 tracked, 60 zero-use, 57 never-active; curator reports 2 stale agent-created skills.
+- Skill automation: created 0 draft skills, patched 0 skills, queued 1 human-review candidate, rejected 1 duplicate/new-procedure candidate.
+- Added 0 memory candidates, 0 new skill candidates, 0 wiki candidates, and 2 open loops to `agents/review-queue.md`.
