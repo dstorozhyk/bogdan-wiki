@@ -282,6 +282,11 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Skill Candidates
 
+- [ ] **2026-07-27 — Human review of the two currently curator-stale agent-created skills**
+  - Proposed action: identify the two stale skills from the curator report or usage sidecar, then explicitly decide retain, repair, pin, consolidate later, or archive manually.
+  - Evidence: `hermes curator status` on 2026-07-27: 79 agent-created skills, 77 active, 2 stale, 0 archived; 115 tracked skills, 60 zero-use, 57 never active.
+  - Boundary: the nightly job must not pin, archive, delete, install, or consolidate skills automatically. The status command did not name the two stale skills.
+
 - [ ] **2026-07-26 — Human review of the two curator-stale agent-created skills**
   - Proposed action: identify the two currently stale skills from the curator report/sidecar, then explicitly decide retain, repair, pin, consolidate later, or archive manually.
   - Evidence: `hermes curator status` on 2026-07-26: 79 agent-created skills, 77 active, 2 stale, 0 archived; 115 tracked skills overall and 57 never active.
