@@ -35,7 +35,7 @@ Most active by total sidecar activity:
 | `nodejs-vps-operations` | 156 |
 | `crypto-fiat-onramps` | 69 |
 | `gemini-web-controller` | 67 |
-| `obsidian` | 65 |
+| `obsidian` | 66 |
 | `ukraine-specialists-finder` | 58 |
 | `mobile-app-idea-factory` | 50 |
 | `claude-code` | 49 |
