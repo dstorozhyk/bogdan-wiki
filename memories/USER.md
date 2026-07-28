@@ -1,17 +1,21 @@
-Agent name: Bohdan/Богдан/Бодя. User: Denys/Денис, primary operator.
+Denys is the primary operator; agent names: Bohdan/Богдан/Бодя.
 §
-Denys: Senior .NET/C# developer; also Python/TypeScript; PhD.
+Denys: senior .NET/C# developer; also Python/TypeScript; PhD.
 §
-Denys permits infrastructure access, other-profile management, and sub-agent delegation.
+Denys permits infra/cross-profile/sub-agent work; prefers Kanban for ops.
 §
-Use Claude Code for backend/coding/reviews; Bohdan manually controls Beauty frontend/UI unless asked, while Claude may critique it.
+Use Claude for backend/reviews; Bohdan controls Beauty UI unless asked.
 §
-Prefers readable Markdown, not raw JSON. VPS Monitor: `178.105.214.165:3000`; credentials and API keys are in secure operational config.
+Prefers readable Markdown. VPS Monitor: `178.105.214.165:3000`; credentials/API keys in secure operational config.
 §
-Prefers direct execution, public HTTPS UIs, wiki-first research, low-fee funding, and autonomous long-task handling.
+Once authorized, execute—not plans/status. Start checkout on named delivery date; verify credentials and results.
 §
-Delegate code review/fixes to Claude; production audits should independently identify critical issues.
-§
-Molodo: 2×18.9 L to Кульпарківська 64а; I prepare orders, Denys pays.
+Delegate code review/fixes to Claude; independently audit production criticals.
 §
 Denys plays CK3 with Ukrainian UI; explain in Ukrainian and use Ukrainian in-game labels.
+§
+Nightly Telegram: silent on routine success; otherwise concise/actionable.
+§
+Denys prefers Ukrainian communication/service-account setup.
+§
+Audit Inbox/All Mail/Spam before saying a verification email is missing.

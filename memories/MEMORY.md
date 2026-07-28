@@ -21,3 +21,5 @@ Broker funding: Raiffeisen EUR → Wise EUR → Freedom EUR = 0 fee. Avoid USD c
 Beauty UI: Bohdan writes frontend manually unless asked; do not turn a UI kit into a landing page.
 §
 Beauty public profile: mobile-first visit card—identity, services, slots, portfolio, reviews, location, Instagram/chat; no QR/dashboard/analytics.
+§
+Hermes Bitwarden Secrets Manager is enabled on Bitwarden EU Cloud for the `hermes` project; BWS CLI and the native Hermes secret source validate successfully. Use this external secret store for runtime credentials rather than chat, memory, or ordinary files.
