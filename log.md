@@ -329,3 +329,10 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Skill usage: updated `agents/skill-usage.md`; 121 tracked, 60 zero-use, 57 never-active; curator reports 2 named stale agent-created skills.
 - Skill automation: created 0 draft skills, patched 0 skills, queued 0 candidates, rejected 1 duplicate/existing-skill candidate.
 - Added 0 memory candidates, 0 skill candidates, 0 wiki candidates, and 1 open loop; existing `agents/review-queue.md` candidates preserved.
+
+## [2026-07-29] update | Daily knowledge consolidation
+- Created `logs/daily/2026-07-29.md`.
+- Memory pressure: MEMORY `1735→1735 / 2200`, USER `1127→1097 / 1375`; safe user-memory compaction applied.
+- Skill usage: updated `agents/skill-usage.md`; 125 tracked, 59 zero-use, 56 never-active; curator reports 47 stale agent-created skills.
+- Skill automation: created 0 draft skills, patched 0 skills, queued 1 human-review candidate, rejected 1 duplicate/existing-skill candidate.
+- Added 0 memory candidates, 0 new procedural skill candidates, 0 wiki candidates, and 2 open loops to `agents/review-queue.md`.

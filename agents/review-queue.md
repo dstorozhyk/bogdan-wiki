@@ -282,6 +282,11 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Skill Candidates
 
+- [ ] **2026-07-29 — Human review of curator-stale skills; reconcile telemetry discrepancy**
+  - Proposed action: review `google-ai-tools` first, then identify the curator-reported stale cohort and explicitly decide retain, repair, pin, consolidate later, or archive manually.
+  - Evidence: 2026-07-29 `hermes curator status` reports 84 agent-created skills: 37 active, 47 stale, 0 archived; `.usage.json` records one named agent-created stale skill, `google-ai-tools`.
+  - Boundary: provenance/state sources disagree; do not infer deletions or perform lifecycle actions automatically.
+
 - [ ] **2026-07-27 — Human review of the two currently curator-stale agent-created skills**
   - Proposed action: identify the two stale skills from the curator report or usage sidecar, then explicitly decide retain, repair, pin, consolidate later, or archive manually.
   - Evidence: `hermes curator status` on 2026-07-27: 79 agent-created skills, 77 active, 2 stale, 0 archived; 115 tracked skills, 60 zero-use, 57 never active.

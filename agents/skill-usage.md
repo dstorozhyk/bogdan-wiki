@@ -19,32 +19,32 @@ Track actual Hermes skill use to preserve high-signal workflows, identify candid
 - Runtime usage: `/root/.hermes/skills/.usage.json`
 - Curator: `hermes curator status`
 
-## Current Snapshot — 2026-07-28
+## Current Snapshot — 2026-07-29
 
 | Metric | Value |
 |---|---:|
-| Skills tracked | 121 |
-| Zero-use skills | 60 |
-| Never-active skills (`use + view + patch = 0`) | 57 |
-| Agent-created skills | 81 active; 2 stale; 0 archived (83 total) |
+| Skills tracked | 125 |
+| Zero-use skills | 59 |
+| Never-active skills (`use + view + patch = 0`) | 56 |
+| Curator agent-created skills | 37 active; 47 stale; 0 archived (84 total) |
 
 Most active by total sidecar activity:
 
 | Skill | Total activity |
 |---|---:|
-| `nodejs-vps-operations` | 156 |
+| `nodejs-vps-operations` | 201 |
 | `crypto-fiat-onramps` | 69 |
+| `obsidian` | 68 |
 | `gemini-web-controller` | 67 |
-| `obsidian` | 67 |
 | `ukraine-specialists-finder` | 58 |
 
-Zero-activity examples for human review only: `agent-assisted-account-verification`, `airtable`, `apple-notes`, `apple-reminders`, `architecture-diagram`, `arxiv`, `ascii-art`, `ascii-video`, `audiocraft-audio-generation`, `baoyu-infographic`.
+Zero-activity examples for human review only: `docx`, `pdf`, `xlsx`, `airtable`, `apple-notes`, `apple-reminders`, `architecture-diagram`, `arxiv`, `ascii-art`, `ascii-video`.
 
-Curator is enabled: 8 runs; latest run was 6 days ago; 7-day interval; stale threshold 30 days; archive threshold 90 days; LLM consolidation is off. It reports two stale agent-created skills—`google-ai-tools` and `xurl`—and no archives.
+Curator is enabled: 9 runs; latest run was about 1 hour ago; 7-day interval; stale threshold 30 days; archive threshold 90 days; LLM consolidation is off. Its summary reports 47 stale agent-created skills. The sidecar's direct provenance field names only one stale agent-created skill, `google-ai-tools`; this discrepancy must not drive automatic lifecycle action.
 
-## Review Recommendations — 2026-07-28
+## Review Recommendations — 2026-07-29
 
-- Human-review `google-ai-tools` and `xurl`; retain, repair, pin, consolidate later, or archive only through an explicit decision.
+- Human-review `google-ai-tools` and the curator-reported stale cohort; retain, repair, pin, consolidate later, or archive only through an explicit decision.
 - Keep high-impact operational skills—including `obsidian`, `claude-code`, `youtube-content`, `gemini-and-notebooklm`, and relevant Hermes operations runbooks—under explicit human pin/review consideration; do not pin automatically.
 - Keep new or rare skills when they have plausible task value; zero use alone is not deletion or consolidation evidence.
 - Retain the CK3 coaching broadening candidate only until disputed mechanics are independently verified.

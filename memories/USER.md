@@ -8,7 +8,7 @@ Use Claude for backend/reviews; Bohdan controls Beauty UI unless asked.
 §
 Prefers readable Markdown. VPS Monitor: `178.105.214.165:3000`; credentials/API keys in secure operational config.
 §
-Once authorized, execute—not plans/status. Start checkout on named delivery date; verify credentials and results.
+Once authorized, execute and verify results; start checkout on named delivery date.
 §
 Delegate code review/fixes to Claude; independently audit production criticals.
 §
@@ -19,3 +19,5 @@ Nightly Telegram: silent on routine success; otherwise concise/actionable.
 Denys prefers Ukrainian communication/service-account setup.
 §
 Audit Inbox/All Mail/Spam before saying a verification email is missing.
+§
+Denys wants VPS monitoring/remediation delegated to `vps-manager`, while all user-facing alerts, decisions, and Telegram communication route only through `default`; prefers Kanban audit→narrow remediation→synthesis workflows.
