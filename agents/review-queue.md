@@ -282,6 +282,11 @@ The nightly sleep job should prepend new candidates below.
 
 ## Pending Skill Candidates
 
+- [ ] **2026-07-30 — Human review of curator-stale skills; reconcile telemetry discrepancy**
+  - Proposed action: review `google-ai-tools` first, then identify the curator-reported stale cohort and explicitly decide retain, repair, pin, consolidate later, or archive manually.
+  - Evidence: `hermes curator status` reports 84 agent-created skills: 37 active, 47 stale, 0 archived; `.usage.json` names one stale agent-created skill, `google-ai-tools`.
+  - Boundary: the sources disagree; do not infer deletions or perform lifecycle actions automatically.
+
 - [ ] **2026-07-29 — Human review of curator-stale skills; reconcile telemetry discrepancy**
   - Proposed action: review `google-ai-tools` first, then identify the curator-reported stale cohort and explicitly decide retain, repair, pin, consolidate later, or archive manually.
   - Evidence: 2026-07-29 `hermes curator status` reports 84 agent-created skills: 37 active, 47 stale, 0 archived; `.usage.json` records one named agent-created stale skill, `google-ai-tools`.
@@ -810,6 +815,9 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
 ## Open Loops
+
+- [ ] **2026-07-30 — Decide VPS memory-capacity mitigation**
+  - Context: live checks kept ports 3000/3010/9090 healthy and found no stale browser worker, but the 4 GiB host has no swap and historical kernel `oom_kill=35` (no newer event after 2026-07-28). Choose RAM upgrade, stricter browser/Hermes concurrency, or separately reviewed swapfile authorization.
 
 - [ ] **2026-07-15 — Enable or repair memory-tool availability for nightly compaction**
   - Context: `MEMORY.md` remains `2024 / 2200` (92.0%) and `USER.md` `1358 / 1375` (98.8%). Both batched safe-compaction attempts again returned `Memory is not available`; secret minimization remains blocked.
