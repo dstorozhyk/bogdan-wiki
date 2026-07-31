@@ -816,6 +816,10 @@ The nightly sleep job should prepend new candidates below.
 
 ## Open Loops
 
+- [ ] **2026-07-31 — Restore official Molodo access before asserting delivery/payment state**
+  - Context: `20260730_160659_dac91941` could not access authenticated order history; secret stores and expired browser profile did not provide a Molodo login.
+  - Required next action: obtain a live authenticated session through the official form (user-only CAPTCHA if prompted), then verify the claimed order/payment directly in history. Do not infer status from session text or a cart.
+
 - [ ] **2026-07-30 — Decide VPS memory-capacity mitigation**
   - Context: live checks kept ports 3000/3010/9090 healthy and found no stale browser worker, but the 4 GiB host has no swap and historical kernel `oom_kill=35` (no newer event after 2026-07-28). Choose RAM upgrade, stricter browser/Hermes concurrency, or separately reviewed swapfile authorization.
 
