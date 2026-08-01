@@ -350,3 +350,10 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Skill usage: updated agents/skill-usage.md; added 0 skill-review candidates.
 - Skill automation: created 0 draft skills, patched 2 skills (`nodejs-vps-operations`, `molodo-water-ordering`), queued 0 candidates, rejected 0 candidates.
 - Added 0 memory candidates, 0 skill candidates, 0 wiki candidates, 1 open loop to agents/review-queue.md.
+
+## [2026-08-01] update | Daily knowledge consolidation
+- Created/updated `logs/daily/2026-08-01.md`.
+- Memory pressure: MEMORY `1781→1752 / 2200`; USER `1122→1078 / 1375`; safe compaction applied to both stores.
+- Skill usage: updated `agents/skill-usage.md`; added 0 skill-review candidates.
+- Skill automation: created 0 draft skills, patched 0 skills, queued 0 candidates, rejected 1 duplicate/existing-procedure candidate.
+- Added 0 memory candidates, 0 skill candidates, 0 wiki candidates, and 1 carried-forward open loop; existing `agents/review-queue.md` candidates preserved.

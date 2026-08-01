@@ -1,14 +1,14 @@
-Rocket alerts `/opt/apps/rocket-attack-alarm`: city selection stays in region list; whole-region exclusive; exclude `#зведення`/`візуалізація` retrospectives.
+Rocket alerts `/opt/apps/rocket-attack-alarm`: city is a region-list option; whole-region exclusive; exclude retrospective `#зведення`/`візуалізація`.
 §
 GitHub: `gh` authenticated as dstorozhyk; auth config at `~/.config/gh/hosts.yml`.
 §
-Hermes patches: `/balance` direct_script; cron `[SILENT]` requires exact equality. Sources: `agent/skill_commands.py`, `gateway/run.py`, `cron/scheduler.py`.
+Hermes patches: `/balance` direct_script; cron `[SILENT]` exact equality. Sources: `agent/skill_commands.py`, `gateway/run.py`, `cron/scheduler.py`.
 §
 Hermes providers: OpenAI primary; fallbacks Copilot haiku → gpt-4.1 → Gemini flash → OpenRouter DeepSeek flash.
 §
-Wiki `/root/bogdan-wiki`; nightly digest and sync via `wiki-sync-bogdan.sh`. Inspect live cron for schedules.
+Wiki `/root/bogdan-wiki`; nightly digest/sync: `wiki-sync-bogdan.sh`; inspect live cron for schedules.
 §
-Wiki-first: research → `bogdan-wiki/research/`; options guide `options-investor-guide.md`; IV=implied volatility. Memory=config/preferences only.
+Wiki-first: research → `bogdan-wiki/research/`; options guide `options-investor-guide.md`; IV=implied volatility; memory=config/preferences.
 §
 Hermes CLI: The command for a single query in non-interactive mode is `hermes chat -q`, not `hermes ask`.
 §

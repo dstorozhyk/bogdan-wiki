@@ -20,4 +20,4 @@ Denys prefers Ukrainian communication/service-account setup.
 §
 Audit Inbox/All Mail/Spam before saying a verification email is missing.
 §
-Denys wants VPS monitoring/remediation delegated to `vps-manager`, while all user-facing alerts, decisions, and Telegram communication route only through `default`; prefers Kanban audit→narrow remediation→synthesis workflows.
+Denys wants VPS monitoring/remediation delegated to `vps-manager`; user-facing alerts, decisions, and Telegram only via `default`; prefers Kanban audit→narrow remediation→synthesis.
