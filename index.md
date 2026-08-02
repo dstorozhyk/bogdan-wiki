@@ -38,6 +38,7 @@ Read this first to find relevant pages for any query.
 
 ## Summaries / Research
 
+- [corporate-influence-reading-path-2026-08](research/corporate-influence-reading-path-2026-08.md) — список і послідовність читання для розвитку стратегічного та організаційного впливу: стратегія, управління, влада, судження, культура й кроскомандна координація.
 - [enterprise-ai-team-vision-tech-lead-meeting-prep-2026-07-12](research/enterprise-ai-team-vision-tech-lead-meeting-prep-2026-07-12.md) — підготовка Дениса до внутрішньої зустрічі «Обговорення бачення AI-команди»: enterprise AI vision, controlled pilots, AI-assisted SDLC guardrails, 90-денний plan і позиціонування на Tech Lead.
 - [small-creator-brand-deals-playbook-2026-07-12](research/small-creator-brand-deals-playbook-2026-07-12.md) — процес пошуку, пітчингу, узгодження та вимірювання перших brand deals для малого автора.
 - [small-creator-brand-deals-pricing-2026-07-12](research/small-creator-brand-deals-pricing-2026-07-12.md) — робоча логіка rate card для «Все про Royal» на основі релевантності й перевіреної конверсії, а не лише CPM.

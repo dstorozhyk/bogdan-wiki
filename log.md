@@ -4,6 +4,18 @@ Chronological record of all wiki actions. Append-only.
 Format: `## [YYYY-MM-DD] action | subject`
 Actions: ingest, update, query, lint, create, archive, delete
 
+## [2026-08-01] update | corporate influence reading path — verified e-books
+- Оновлено `research/corporate-influence-reading-path-2026-08.md` після live-перевірки каталогу LitRes.
+- Підтверджено повний легальний російський e-book Rumelt «Хорошая стратегия, плохая стратегия» (текст, переклад Оксани Медведь).
+- Для Grove, Pfeffer і Duke чітко розділено: повний текст, саммарі та тематично близькі, але інші книги; не зроблено хибних заяв про переклад оригіналу.
+- Українські переклади першої фази не підтверджені надійним джерелом через блокування доступу до українських видавців/магазинів.
+
+## [2026-08-01] create | corporate influence reading path
+- Створено `research/corporate-influence-reading-path-2026-08.md`.
+- Зафіксовано три фази читання для розвитку стратегічного й організаційного впливу: стратегія, management, влада, рішення в невизначеності, ментальні моделі, культура, коаліції та кроскомандна координація.
+- Додано етичну рамку: політична грамотність не дорівнює кар'єризму; ціль — якісніші рішення й сильніша система.
+- Оновлено `index.md`; окремо триває перевірка українських перекладів першої фази.
+
 ## [2026-05-29] create | Wiki initialized
 - Domain: General knowledge base (AI/ML, .NET, infrastructure, tools, people, learning)
 - Structure: SCHEMA.md, index.md, log.md, raw/, entities/, concepts/, comparisons/, queries/
@@ -357,3 +369,10 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Skill usage: updated `agents/skill-usage.md`; added 0 skill-review candidates.
 - Skill automation: created 0 draft skills, patched 0 skills, queued 0 candidates, rejected 1 duplicate/existing-procedure candidate.
 - Added 0 memory candidates, 0 skill candidates, 0 wiki candidates, and 1 carried-forward open loop; existing `agents/review-queue.md` candidates preserved.
+
+## [2026-08-02] update | Daily knowledge consolidation
+- Created `logs/daily/2026-08-02.md`.
+- Memory pressure: MEMORY `2055→1635 / 2200`; USER `1053→1053 / 1375`; safe compaction applied to MEMORY only.
+- Skill usage: updated `agents/skill-usage.md`; 126 tracked, 58 zero-use, 55 never-active; curator reports 47 stale agent-created skills.
+- Skill automation: created 0 draft skills, patched 0 skills, queued 0 candidates, rejected 2 non-procedural/duplicate candidates.
+- Added 0 memory candidates, 0 skill candidates, 0 wiki candidates, and refreshed 1 open loop in `agents/review-queue.md`.

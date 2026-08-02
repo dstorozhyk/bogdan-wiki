@@ -820,8 +820,9 @@ The nightly sleep job should prepend new candidates below.
   - Context: `20260730_160659_dac91941` could not access authenticated order history; secret stores and expired browser profile did not provide a Molodo login.
   - Required next action: obtain a live authenticated session through the official form (user-only CAPTCHA if prompted), then verify the claimed order/payment directly in history. Do not infer status from session text or a cart.
 
-- [ ] **2026-07-30 — Decide VPS memory-capacity mitigation**
-  - Context: live checks kept ports 3000/3010/9090 healthy and found no stale browser worker, but the 4 GiB host has no swap and historical kernel `oom_kill=35` (no newer event after 2026-07-28). Choose RAM upgrade, stricter browser/Hermes concurrency, or separately reviewed swapfile authorization.
+- [ ] **2026-08-02 — Decide VPS memory-capacity mitigation**
+  - Context: a Chromium process in `hermes-gateway.service` was OOM-killed on 2026-08-01 21:59 UTC (`oom_kill=36`). Repeated checks kept ports 3000/3010/9090 and `rocket-attack-alarm` healthy and found no stale browser/worker safe to stop. The 4 GiB host has no swap. Choose RAM upgrade, stricter browser/Hermes concurrency, or separately reviewed swapfile authorization.
+  - Evidence: `cron_4e34af0ceec1_20260802_020531`, `023531`, `030532`.
 
 - [ ] **2026-07-15 — Enable or repair memory-tool availability for nightly compaction**
   - Context: `MEMORY.md` remains `2024 / 2200` (92.0%) and `USER.md` `1358 / 1375` (98.8%). Both batched safe-compaction attempts again returned `Memory is not available`; secret minimization remains blocked.
