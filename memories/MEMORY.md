@@ -22,6 +22,6 @@ Beauty UI: Bohdan writes frontend manually; do not turn a UI kit into a landing 
 §
 Beauty public profile: mobile-first identity/services/slots/portfolio/reviews/location/Instagram-chat; no QR/dashboard/analytics.
 §
-Hermes Bitwarden Secrets Manager (EU, `hermes` project) is validated; use it for runtime credentials, never chat/memory/files.
+Hermes Bitwarden Secrets Manager uses the EU vault and `hermes` project; direct BWS CLI calls require `BWS_SERVER_URL=https://vault.bitwarden.eu`. Runtime credentials belong in Bitwarden, not chat/memory/source.
 §
 Denys prioritizes a corporate path to real organizational influence: substantive trust, system view, sound judgment, enterprise-architect direction—not startup/title signaling.

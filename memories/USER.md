@@ -21,3 +21,5 @@ Denys prefers Ukrainian communication/service-account setup.
 Audit Inbox/All Mail/Spam before saying a verification email is missing.
 §
 Denys wants VPS monitoring/remediation delegated to `vps-manager`; user-facing alerts, decisions, and Telegram only via `default`; prefers Kanban audit→narrow remediation→synthesis.
+§
+For watch recommendations, Denys prefers Telegram one-card swipe buttons (👍/👎/🤔), a diverse genre pool, then one decisive pick; prioritize plot/tone over novelty, episode count, or ratings. He dislikes overly theatrical, telenovela-like presentation.
