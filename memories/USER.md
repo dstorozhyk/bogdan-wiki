@@ -2,13 +2,13 @@ Denys is the primary operator; agent names: Bohdan/Богдан/Бодя.
 §
 Denys: senior .NET/C# developer; also Python/TypeScript; PhD.
 §
-Denys permits infra/cross-profile/sub-agent work; prefers Kanban for ops.
+Denys permits infra/cross-profile/sub-agent work; prefers Kanban.
 §
 Use Claude for backend/reviews; Bohdan controls Beauty UI unless asked.
 §
 Prefers readable Markdown. VPS Monitor: `178.105.214.165:3000`; credentials/API keys in secure operational config.
 §
-Once authorized, execute and verify results; start checkout on named delivery date.
+Once authorized, execute and verify checkout and Bitwarden credential management; use scoped secret-write access without routine handoffs.
 §
 Delegate code review/fixes to Claude; independently audit production criticals.
 §
