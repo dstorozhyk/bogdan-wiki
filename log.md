@@ -40,6 +40,12 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Створено time-sensitive shortlist: Mirko Tech Lead як direct fit; CHI Data Engineer Consultant як selective fit; Glorium Solution Architect як stretch; D365/X++ як mismatch.
 - Додано contractual/IP/conflict-of-interest перевірку перед будь-яким відгуком і оновлено `index.md`.
 
+## [2026-08-15] create | job-search sources and Ukrainian-language .NET scan
+- Збережено user-provided `research/job-search-sources-denys.md`: критерії .NET Senior/Lead, booking, Київ/remote, $3.5k+, цільові домени, cadence і правило не припускати booking.
+- Перевірено DOU RSS за `.NET + бронювання`, DOU exact part-time та LinkedIn public listings.
+- Створено `research/dotnet-ukrainian-language-vacancies-2026-08-15.md`: FLEXIFAI Payment Platform ($5k–$7k), Boovatech AdaptiveCash Tech Lead і Credit Agricole agentic .NET; explicit booking не знайдено в цих трьох текстах.
+- У DOU exact part-time .NET знайдено тільки D365 F&O/X++, не direct .NET backend fit.
+
 ## [2026-08-01] update | corporate influence reading path — verified e-books
 - Оновлено `research/corporate-influence-reading-path-2026-08.md` після live-перевірки каталогу LitRes.
 - Підтверджено повний легальний російський e-book Rumelt «Хорошая стратегия, плохая стратегия» (текст, переклад Оксани Медведь).
