@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "seeded_at": "2026-08-15T22:25:00Z",
+  "purpose": "Existing vacancies already shown to Denys before recurring monitoring; do not deliver them again.",
+  "urls": [
+    "https://djinni.co/jobs/825585-strong-junior-middle-net-developer",
+    "https://djinni.co/jobs/839999-d365-finance-and-operations-developer",
+    "https://jobs.dou.ua/companies/mobilunity/vacancies/367008",
+    "https://djinni.co/jobs/691172-back-end-c-developer-volonterstvo-",
+    "https://djinni.co/jobs/784135-net-sde-internship",
+    "https://djinni.co/jobs/815539-tech-lead-java-node-js-net",
+    "https://djinni.co/jobs/841107-solution-architect-pre-sales-discovery",
+    "https://djinni.co/jobs/838021-senior-data-engineer-consultant"
+  ]
+}
