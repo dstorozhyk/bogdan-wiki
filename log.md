@@ -15,6 +15,11 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Скориговано висновок: $6k+ — реалістичний target для Tech Lead/Architect scope, а не репрезентативна медіана чистого .NET Senior; user-stated base — $3.8k.
 - Додано legal/contractual guardrail для моделі кількох потоків доходу; AI leverage не є підставою приховувати паралельні full-time зобов'язання.
 
+## [2026-08-15] create | DOU raw .NET salary analysis
+- Знайдено й клоновано `imax/dou-salaries`; підтверджено, що raw/mini CSV закінчуються survey 2020-06, попри пізніший metadata update репозиторію.
+- Python-скрипт проаналізував 2015–2020 C#/.NET записи: trend, quantiles, $6k+ tail, self-reported role і experience bands.
+- Створено `research/dou-raw-salaries-dotnet-analysis-2026-08.md`; оновлено `index.md`.
+
 ## [2026-08-01] update | corporate influence reading path — verified e-books
 - Оновлено `research/corporate-influence-reading-path-2026-08.md` після live-перевірки каталогу LitRes.
 - Підтверджено повний легальний російський e-book Rumelt «Хорошая стратегия, плохая стратегия» (текст, переклад Оксани Медведь).
