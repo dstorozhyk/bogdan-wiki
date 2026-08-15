@@ -20,6 +20,11 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Python-скрипт проаналізував 2015–2020 C#/.NET записи: trend, quantiles, $6k+ tail, self-reported role і experience bands.
 - Створено `research/dou-raw-salaries-dotnet-analysis-2026-08.md`; оновлено `index.md`.
 
+## [2026-08-15] correct + create | актуальний DOU raw dataset
+- Виявлено, що попередньо обраний `imax/dou-salaries` — застарілий mirror, а коректний офіційний набір: `github.com/devua/csv/tree/master/salaries`.
+- Склоновано актуальний CSV (останній commit 2026-08-14) і Python-скриптом проаналізовано 704 C#/.NET Software Engineering відповідей за 2026-06.
+- Створено `research/dou-current-raw-salaries-dotnet-analysis-2026-08.md`; стару mirror-сторінку та index явно позначено як superseded.
+
 ## [2026-08-01] update | corporate influence reading path — verified e-books
 - Оновлено `research/corporate-influence-reading-path-2026-08.md` після live-перевірки каталогу LitRes.
 - Підтверджено повний легальний російський e-book Rumelt «Хорошая стратегия, плохая стратегия» (текст, переклад Оксани Медведь).

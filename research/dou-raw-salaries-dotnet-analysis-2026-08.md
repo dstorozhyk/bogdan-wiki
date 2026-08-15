@@ -1,5 +1,7 @@
 # DOU raw salaries: Python-аналіз C#/.NET
 
+> **Superseded:** цей аналіз використовує застарілий mirror `imax/dou-salaries`, який закінчується 2020-06. Для актуальних даних див. [[dou-current-raw-salaries-dotnet-analysis-2026-08]].
+>
 > Дата аналізу: 2026-08-15.  
 > Дані: `imax/dou-salaries`, анонімні CSV DOU.  
 > Пов'язано з: [[ukraine-it-market-baseline-2026-08]] і [[ukraine-it-career-advantage-hypotheses-2026-08]].
