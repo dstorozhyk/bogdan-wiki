@@ -88,6 +88,17 @@
 - 1 incident/failure/recovery story;
 - CV headline та LinkedIn positioning під Senior Backend/Integration або Technical Lead.
 
+## Reading cadence: підсилити практику, а не відкласти її
+
+Цей 90-денний план варто вести паралельно з короткою послідовністю читання — одна книга на 3–4 тижні, але кожна має породити конкретний робочий експеримент:
+
+1. **High Output Management** (дні 1–21): застосувати до service maturity baseline, weekly risk review і делегування. Питання: *де я є bottleneck і який процес збільшить output команди?*
+2. **The Staff Engineer’s Path** (дні 22–42): застосувати до architecture brief, standards і cross-team trust. Питання: *який вплив я можу створити без формальної влади?*
+3. **Good Strategy/Bad Strategy** (дні 43–63): застосувати до quarterly technical roadmap. Питання: *який реальний діагноз payment/platform проблеми, а не перелік бажань?*
+4. **Thinking in Bets** (дні 64–90): застосувати до risk register, rollout/rollback і decision reviews. Питання: *чи було рішення хорошим до того, як став відомий результат?*
+
+Не робити «книжковий план» окремим хобі: після кожної книги — один короткий memo, одна перевірена гіпотеза та одна зміна робочого процесу. Це прямо накопичує evidence для Tech Lead case.
+
 ## Success scoreboard
 
 | Напрям | Minimum evidence |
