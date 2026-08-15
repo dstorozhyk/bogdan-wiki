@@ -1,6 +1,7 @@
-# .NET вакансії без mandatory English — shortlist 2026-08-15
+# Full-time reference scan, не actionable shortlist — 2026-08-15
 
-> Time-sensitive screening, не особистий план Дениса.  
+> **Статус змінено 2026-08-15:** Денис підтвердив, що розглядає **лише справжній part-time**. Тому наведені нижче full-time вакансії не є рекомендаціями для відгуку; це лише ринкові референси близьких .NET backend ролей і ставок.
+
 > Профіль: Senior .NET, фінансовий B2B SaaS, payments, .NET microservices, PostgreSQL, DDD, Wolverine, high-load, AI-assisted/spec-driven development.  
 > Фільтр: максимально близькі до backend .NET ролі; не відкидати вакансію, якщо текст англійською, але **не включати**, коли English явно є обов’язковим requirement. Бронювання позначено лише як `explicit`, якщо це написано у тексті вакансії.
 

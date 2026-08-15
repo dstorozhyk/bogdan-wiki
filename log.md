@@ -45,6 +45,7 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Перевірено DOU RSS за `.NET + бронювання`, DOU exact part-time та LinkedIn public listings.
 - Створено `research/dotnet-ukrainian-language-vacancies-2026-08-15.md`: FLEXIFAI Payment Platform ($5k–$7k), Boovatech AdaptiveCash Tech Lead і Credit Agricole agentic .NET; explicit booking не знайдено в цих трьох текстах.
 - У DOU exact part-time .NET знайдено тільки D365 F&O/X++, не direct .NET backend fit.
+- Денис підтвердив, що part-time є hard requirement: full-time scan позначено як reference-only, а пошукові критерії уточнено до explicit part-time / bounded consulting/fractional scope.
 
 ## [2026-08-01] update | corporate influence reading path — verified e-books
 - Оновлено `research/corporate-influence-reading-path-2026-08.md` після live-перевірки каталогу LitRes.

@@ -9,6 +9,7 @@
 - Київ, remote або hybrid.
 - Цільова компенсація: від $3,500.
 - Домени: FinTech, e-commerce, GovTech, DefTech, B2B SaaS, product companies.
+- Формат: **лише справжній part-time** (explicit `part-time`, погоджені години або bounded consulting/fractional scope). Не підміняти його full-time «гнучким графіком», short-term без зазначеного навантаження чи прихованою другою full-time зайнятістю.
 - Поточне обмеження: не включати ролі, де англійська прямо вказана як обов’язкова; Денис лише почав її вивчати.
 
 ## Джерела й cadence
