@@ -25,6 +25,11 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Склоновано актуальний CSV (останній commit 2026-08-14) і Python-скриптом проаналізовано 704 C#/.NET Software Engineering відповідей за 2026-06.
 - Створено `research/dou-current-raw-salaries-dotnet-analysis-2026-08.md`; стару mirror-сторінку та index явно позначено як superseded.
 
+## [2026-08-15] create | персональний $6k Senior → Tech Lead gap analysis
+- На основі CV Дениса й current DOU raw .NET зрізу створено `research/denys-6k-senior-to-tech-lead-gap-analysis-2026-08.md`.
+- Розділено підтверджені сильні сторони від capability, які CV поки не доводить: architecture evidence, platform depth, system design interview fluency, people leadership, English/executive communication і commercial positioning.
+- Додано 60–90-day evidence artifacts та перелік даних, потрібних із поточного місця для фінальної оцінки.
+
 ## [2026-08-01] update | corporate influence reading path — verified e-books
 - Оновлено `research/corporate-influence-reading-path-2026-08.md` після live-перевірки каталогу LitRes.
 - Підтверджено повний легальний російський e-book Rumelt «Хорошая стратегия, плохая стратегия» (текст, переклад Оксани Медведь).
