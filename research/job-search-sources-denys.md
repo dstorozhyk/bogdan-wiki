@@ -8,10 +8,11 @@
 
 - .NET; Senior / Team Lead / Tech Lead.
 - Бронювання — критичний атрибут: вважати його наявним лише коли це прямо зазначено у вакансії або підтверджено роботодавцем.
-- Київ, remote або hybrid.
+- Локація: **лише fully remote**. Відсівати hybrid, офісні та ролі з будь-якою обов’язковою фізичною присутністю.
 - Цільова компенсація: від $3,500.
 - Домени: FinTech, e-commerce, GovTech, DefTech, B2B SaaS, product companies.
-- Формат: **лише справжній part-time** (explicit `part-time`, погоджені години або bounded consulting/fractional scope). Не підміняти його full-time «гнучким графіком», short-term без зазначеного навантаження чи прихованою другою full-time зайнятістю.
+- **Part-time stream:** лише справжній `part-time` (explicit part-time, погоджені години або bounded consulting/fractional scope). Не підміняти його full-time «гнучким графіком», short-term без зазначеного навантаження чи прихованою другою full-time зайнятістю.
+- **Full-time stream:** Senior / Team Lead / Tech Lead .NET, лише fully remote, із explicit або окремо перевірюваним бронюванням.
 - Поточне обмеження: не включати ролі, де англійська прямо вказана як обов’язкова; Денис лише почав її вивчати.
 
 ## Джерела й cadence
