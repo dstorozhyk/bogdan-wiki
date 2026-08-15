@@ -35,6 +35,11 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Gap analysis уточнено: для $6k+ Senior пріоритет — evidence payments/distributed-systems rigor і system-design articulation; для Tech Lead — leverage through others, stakeholder operating model та platform governance.
 - Створено `research/denys-tech-lead-90-day-plan-2026-08.md`; оновлено `index.md`.
 
+## [2026-08-15] create | part-time opportunities shortlist
+- Перевірено live part-time фільтри Djinni для .NET, Tech Leadership, Architecture та Data Engineering і прочитано повні тексти релевантних вакансій.
+- Створено time-sensitive shortlist: Mirko Tech Lead як direct fit; CHI Data Engineer Consultant як selective fit; Glorium Solution Architect як stretch; D365/X++ як mismatch.
+- Додано contractual/IP/conflict-of-interest перевірку перед будь-яким відгуком і оновлено `index.md`.
+
 ## [2026-08-01] update | corporate influence reading path — verified e-books
 - Оновлено `research/corporate-influence-reading-path-2026-08.md` після live-перевірки каталогу LitRes.
 - Підтверджено повний легальний російський e-book Rumelt «Хорошая стратегия, плохая стратегия» (текст, переклад Оксани Медведь).
