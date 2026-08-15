@@ -9,7 +9,45 @@
 
 **Висновок:** $6k+ Senior — це не новий tech stack, а доведений рівень senior ownership. Tech Lead — наступний scope: не тільки робити систему, а систематично підвищувати capability команди й якість технічних рішень.
 
-## Що вже є: сильний evidence
+## Актуальне місце: уточнення від Дениса
+
+Поточна роль: **Senior .NET Engineer в OKKO**. Продукт — financial B2B SaaS; технічний контекст: **microservices, PostgreSQL, Wolverine, DDD, high-load**.
+
+Це істотно підсилює профіль: product + financial domain + distributed backend відповідають сегментам, де у DOU високозаробляючі .NET Senior/Lead трапляються найчастіше (product, enterprise/SaaS, fintech).[13]
+
+### Оновлена оцінка
+
+**Для $6k+ Senior:** немає очевидного фундаментального stack gap. Твій поточний контекст уже сильніший за типову .NET-вакансію. Головний gap — перетворити real work на зовнішньо переконливий evidence: high-load scale, SLO/latency/throughput, consistency/failure-mode рішення, відповідальність за bounded context або сервіс, вплив на revenue/risk/cost.
+
+**Для Tech Lead:** DDD і мікросервіси — сильна технічна база, але title потребує доказу leverage через інших: planning, technical decision ownership, standards, delegation, mentoring і delivery predictability. Це треба оцінити за поточним scope, не за стеком.
+
+### Scope, про який повідомив Денис
+
+- фактично володіє всім проєктом, але **без формального ownership/title**;
+- не має прямих підлеглих;
+- самостійно побудував AI-enabled development process;
+- розробив кілька мікросервісів і payment processing.
+
+Це вже **Technical Lead-shaped scope**, але поки він персонально концентрований. Найважливіший transition: від «я якісно володію всім» до «система і команда якісно працюють без мого постійного втручання». Для Tech Lead не потрібні прямі reports, але потрібні видимі механізми technical leadership.
+
+## Конкретна карта skill gaps після уточнення
+
+| Ціль | Already strong | Gap, який треба закрити / довести | Найкращий доказ |
+|---|---|---|---|
+| $6k+ Senior | .NET, DDD, microservices, PostgreSQL, high-load, фінансовий B2B, delivery ownership | **Payments/distributed-systems rigor:** idempotency, retries, outbox/inbox, saga/process manager, reconciliation, audit trail, failure recovery | ADR + failure-mode analysis + SLO/alerting/runbook для payment flow |
+| $6k+ Senior | AI-enabled development process | **Engineering impact narrative:** не «використовую AI», а що саме змінилося в lead time, defects, coverage, review quality або документації | Baseline → policy/process → measured delta |
+| $6k+ Senior | Кілька мікросервісів, production delivery | **System-design articulation** | 45-min design walkthrough: payment processing, bounded contexts, data ownership, event contract, consistency, observability, rollout |
+| Tech Lead | Фактичне end-to-end ownership | **Leverage through others:** delegation, standards, onboarding, code-review culture, technical decision cadence | Один engineer/team, який може безпечно змінювати сервіс через твої docs/standards/reviews |
+| Tech Lead | AI process і product roadmap experience | **Stakeholder operating model:** scope trade-offs, estimates, risks, roadmap, dependencies | Щотижневий one-page status/risk update та quarterly technical roadmap |
+| Tech Lead | DDD/services | **Platform governance:** API/event versioning, ownership boundaries, architecture review, service maturity standards | Lightweight architecture review + service scorecard adopted командою |
+
+## Що НЕ є головним gap
+
+- Не треба йти в junior ML/AI, щоб виправдати $6k: AI — multiplier до твого financial distributed-systems профілю.
+- Не треба чекати прямих підлеглих, щоб діяти як Tech Lead.
+- Не треба вивчати ще один web framework заради резюме.
+
+
 
 | Area | Доказ із CV | Оцінка для $6k Senior | Оцінка для Tech Lead |
 |---|---|---|---|

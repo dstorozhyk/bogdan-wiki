@@ -30,6 +30,11 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Розділено підтверджені сильні сторони від capability, які CV поки не доводить: architecture evidence, platform depth, system design interview fluency, people leadership, English/executive communication і commercial positioning.
 - Додано 60–90-day evidence artifacts та перелік даних, потрібних із поточного місця для фінальної оцінки.
 
+## [2026-08-15] update + create | OKKO scope і Tech Lead 90-day plan
+- Додано current scope Дениса в OKKO: неформальне end-to-end ownership financial B2B SaaS, .NET microservices, PostgreSQL, Wolverine, DDD, high-load, payment processing та AI-enabled development process.
+- Gap analysis уточнено: для $6k+ Senior пріоритет — evidence payments/distributed-systems rigor і system-design articulation; для Tech Lead — leverage through others, stakeholder operating model та platform governance.
+- Створено `research/denys-tech-lead-90-day-plan-2026-08.md`; оновлено `index.md`.
+
 ## [2026-08-01] update | corporate influence reading path — verified e-books
 - Оновлено `research/corporate-influence-reading-path-2026-08.md` після live-перевірки каталогу LitRes.
 - Підтверджено повний легальний російський e-book Rumelt «Хорошая стратегия, плохая стратегия» (текст, переклад Оксани Медведь).
