@@ -3,7 +3,7 @@
 Content catalog. Every wiki page listed under its type with a one-line summary.
 Read this first to find relevant pages for any query.
 
-> Last updated: 2026-07-03 | Content pages listed: 28 | Markdown files total: 48 including schema/log/memory
+> Last updated: 2026-08-15 | Catalog updated after Ukraine IT market research.
 
 ## Core / Meta
 
@@ -39,6 +39,8 @@ Read this first to find relevant pages for any query.
 ## Summaries / Research
 
 - [corporate-influence-reading-path-2026-08](research/corporate-influence-reading-path-2026-08.md) — список і послідовність читання для розвитку стратегічного та організаційного впливу: стратегія, управління, влада, судження, культура й кроскомандна координація.
+- [ukraine-it-market-baseline-2026-08](research/ukraine-it-market-baseline-2026-08.md) — первинний, джерельно-обмежений зріз Djinni/офіційної статистики ІТ-ринку України: попит, конкуренція, Data/AI та макроконтекст.
+- [ukraine-it-career-advantage-hypotheses-2026-08](research/ukraine-it-career-advantage-hypotheses-2026-08.md) — ранжовані гіпотези переваги Дениса: enterprise AI/platform architecture, regulated B2B/fintech, governance і технічний вплив; 90-денний експеримент.
 - [enterprise-ai-team-vision-tech-lead-meeting-prep-2026-07-12](research/enterprise-ai-team-vision-tech-lead-meeting-prep-2026-07-12.md) — підготовка Дениса до внутрішньої зустрічі «Обговорення бачення AI-команди»: enterprise AI vision, controlled pilots, AI-assisted SDLC guardrails, 90-денний plan і позиціонування на Tech Lead.
 - [small-creator-brand-deals-playbook-2026-07-12](research/small-creator-brand-deals-playbook-2026-07-12.md) — процес пошуку, пітчингу, узгодження та вимірювання перших brand deals для малого автора.
 - [small-creator-brand-deals-pricing-2026-07-12](research/small-creator-brand-deals-pricing-2026-07-12.md) — робоча логіка rate card для «Все про Royal» на основі релевантності й перевіреної конверсії, а не лише CPM.

@@ -4,6 +4,12 @@ Chronological record of all wiki actions. Append-only.
 Format: `## [YYYY-MM-DD] action | subject`
 Actions: ingest, update, query, lint, create, archive, delete
 
+## [2026-08-15] create | Ukraine IT market baseline and career-advantage hypotheses
+- Створено `research/ukraine-it-market-baseline-2026-08.md`: перевірені сигнали Djinni Q1/Data-ринку та офіційний експортний контекст; розмежовано platform-specific цифри й весь ринок.
+- Створено `research/ukraine-it-career-advantage-hypotheses-2026-08.md`: напрям enterprise AI/platform architect + regulated B2B/fintech + architecture governance; задано 90-денний test.
+- DOU визначено як пріоритетне salary-джерело, але його автоматичний збір заблокував Cloudflare 403; неперевірені цифри не додавалися.
+- Оновлено `index.md`; створено скіл `ukraine-it-market-statistics` для актуалізації даних і цитування.
+
 ## [2026-08-01] update | corporate influence reading path — verified e-books
 - Оновлено `research/corporate-influence-reading-path-2026-08.md` після live-перевірки каталогу LitRes.
 - Підтверджено повний легальний російський e-book Rumelt «Хорошая стратегия, плохая стратегия» (текст, переклад Оксани Медведь).
