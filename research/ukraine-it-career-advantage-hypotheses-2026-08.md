@@ -3,6 +3,10 @@
 > Пов'язано з: [[ukraine-it-market-baseline-2026-08]]  
 > Горизонт: 5 років; найближча перевірка гіпотез — 12 місяців.  
 > Ціль: +25% доходу рік-до-року та зростання реального організаційного впливу.
+>
+> Фактологічна база цих гіпотез — ринкові сигнали Djinni про senior-компенсацію, дефіцитні технічні категорії та demand на досвідчені Data/AI ролі, а також офіційні дані про експортну орієнтацію галузі.[3][4][5]
+>
+> Для наступного оновлення також закладено актуальні DOU salary report і top-earners report; у цій версії вони є первинними URL для ручного збору, а не джерелом чисел.[1][2]
 
 ## Робоча теза
 
@@ -61,6 +65,8 @@
 
 ## Sources
 
+[1] https://dou.ua/lenta/articles/salary-report-devs-summer-2026
+[2] https://dou.ua/lenta/articles/top-it-earners-2026
 [3] https://blog.djinni.co/post/analitika-djinni-q1-2026-aktivizaciya-kandidativ
 [4] https://blog.djinni.co/post/data-analytics-science-engineer
 [5] https://digitalstate.gov.ua/news/it-outsourcing/it-posluhy-staly-holovnym-drayverom-eksportu-ukrayiny-u-2025-rotsi
