@@ -10,6 +10,11 @@ Actions: ingest, update, query, lint, create, archive, delete
 - DOU визначено як пріоритетне salary-джерело, але його автоматичний збір заблокував Cloudflare 403; неперевірені цифри не додавалися.
 - Оновлено `index.md`; створено скіл `ukraine-it-market-statistics` для актуалізації даних і цитування.
 
+## [2026-08-15] update | .NET / Tech Lead compensation correction
+- Додано live-зріз Djinni salary statistics для C#/.NET, Tech Leadership, Software Architect і Engineering Manager (5+ років).
+- Скориговано висновок: $6k+ — реалістичний target для Tech Lead/Architect scope, а не репрезентативна медіана чистого .NET Senior; user-stated base — $3.8k.
+- Додано legal/contractual guardrail для моделі кількох потоків доходу; AI leverage не є підставою приховувати паралельні full-time зобов'язання.
+
 ## [2026-08-01] update | corporate influence reading path — verified e-books
 - Оновлено `research/corporate-influence-reading-path-2026-08.md` після live-перевірки каталогу LitRes.
 - Підтверджено повний легальний російський e-book Rumelt «Хорошая стратегия, плохая стратегия» (текст, переклад Оксани Медведь).

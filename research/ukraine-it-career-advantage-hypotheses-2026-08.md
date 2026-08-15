@@ -12,6 +12,12 @@
 
 Ціль +25% щороку означає не «попросити індексацію», а системно переходити в дорожчий тип відповідальності. Якщо умовна база доходу дорівнює `S`, через 5 років цільовий рівень — `S × 1.25^5 ≈ 3.05S`; цього важко досягти лише ринковим рухом медіанної зарплати.
 
+Для Дениса це не абстрактна траєкторія: з поточних $3.8k перший milestone — $6k+ через **Tech Lead / Staff-like technical ownership**, а не обов'язково через повну зміну технологічної спеціалізації. Live Djinni показує для 5+ років Tech Leadership медіанний range вакансій $4k–$7k, а для Software Architect — $4k–$7k.[7][8]
+
+### Модель доходу: один core role + контрольований upside
+
+AI справді здешевлює виконання, документацію, analysis і prototyping, тому дає змогу вести більше цінного output. Але не варто планувати приховані 2–3 full-time jobs: це легко конфліктує з договорами, exclusivity, конфіденційністю й якістю роботи. Стратегічно сильніша модель — один основний Tech Lead/Architect контракт, а після стабілізації — прозорий advisory, paid pilot або власний B2B asset з жорсткими межами часу та IP.
+
 ## Ранжований набір переваг
 
 | Ранг | Гіпотеза | Чому це захищає від commoditization | Ринковий сигнал | Як довести за 12 місяців |
@@ -70,3 +76,9 @@
 [3] https://blog.djinni.co/post/analitika-djinni-q1-2026-aktivizaciya-kandidativ
 [4] https://blog.djinni.co/post/data-analytics-science-engineer
 [5] https://digitalstate.gov.ua/news/it-outsourcing/it-posluhy-staly-holovnym-drayverom-eksportu-ukrayiny-u-2025-rotsi
+[6] https://djinni.co/salaries/?category=dotnet&exp=5
+[7] https://djinni.co/salaries/?category=lead&exp=5
+[8] https://djinni.co/salaries/?category=architect&exp=5
+[9] https://djinni.co/salaries/?category=engineering_manager&exp=5
+[10] https://guide.djinni.co/salaries
+[11] https://ithub.ua/salaries/c-net
