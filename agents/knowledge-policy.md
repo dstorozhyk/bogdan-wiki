@@ -24,6 +24,27 @@ The rule of thumb:
 - **Wiki** stores durable, human-readable knowledge, research, decisions, and daily summaries, routed by `SCHEMA.md` rather than written to `research/` by default.
 - **Session DB** stores raw conversation history and should be searched instead of duplicated.
 
+## Wiki-First Bootstrap for New Sessions
+
+New Hermes sessions must consult the wiki before advising or acting on Denys-specific projects, career, finances, infrastructure, recurring workflows, prior decisions, or stable preferences.
+
+Bootstrap sequence:
+
+1. If Denys supplied a direct source or a live system is accessible, inspect it first. The wiki is durable context, not proof of current external state.
+2. Read `index.md` and select the smallest relevant canonical page set; do not scan the whole vault by default.
+3. Read the relevant project/domain/concept/workflow pages and respect `status`, `approval`, source provenance and freshness dates.
+4. Use `session_search` only to reconstruct historical gaps that are missing from the wiki; session history does not prove current account/file/site state.
+5. Ask Denys to repeat context only after targeted wiki and session retrieval fail.
+
+The runtime enforcement layers are:
+
+- active-profile `~/.hermes/SOUL.md` — global wiki-first instruction loaded by new sessions;
+- persistent memory — compact path and retrieval rule;
+- `bogdan-wiki-first` skill — exact retrieval, routing, write-back and verification procedure;
+- this page and `SCHEMA.md` — canonical human-readable policy.
+
+Wiki consultation is default for relevant personal context. Wiki mutation is not: discussion or a draft does not authorize file edits, jobs, deployments, pushes, outreach or other side effects. Generic questions unrelated to Denys's durable context do not require a wiki lookup.
+
 ## Routing Rules
 
 | Destination | Save when | Do not save |

@@ -4,6 +4,11 @@ Chronological record of all wiki actions. Append-only.
 Format: `## [YYYY-MM-DD] action | subject`
 Actions: ingest, update, query, lint, create, archive, delete
 
+## [2026-08-17] update | new-session wiki-first bootstrap
+- Added a canonical bootstrap sequence to `agents/knowledge-policy.md`: direct source first, then targeted index/canonical-page retrieval, then session history for gaps.
+- Recorded the runtime enforcement layers: active-profile `SOUL.md`, persistent memory, the pinned `bogdan-wiki-first` skill, and wiki policy/schema.
+- Preserved the boundary that relevant wiki reads are default but wiki writes and external side effects remain approval-gated.
+
 ## [2026-08-17] extract | finance, Beauty onboarding, and memory lifecycle
 - Extracted the stable emergency-fund liquidity-tier concept and a quarterly live-verification/rebalancing workflow from the approved strategy and dated research cluster.
 - Created the standalone-first Beauty public-profile onboarding workflow with explicit owner/deployment approval boundaries and no QR/dashboard/analytics on the public surface.
