@@ -4,11 +4,12 @@ created: 2026-06-20
 updated: 2026-07-22
 type: query
 tags: [wiki]
+sources: []
 ---
 
 # Agent Knowledge Review Queue
 
-Staging area for nightly consolidation candidates. Related: [[agent-knowledge-policy]], [[log]], [[index]].
+Staging area for nightly consolidation candidates. Related: [[agents/knowledge-policy|agent knowledge policy]], [[log]], [[index]].
 
 ## How to Use
 
@@ -268,7 +269,7 @@ The nightly sleep job should prepend new candidates below.
   - Risk/staleness: broker ticker suffixes, availability, yields, and tax treatment can change; treat as symbol lookup, not investment advice.
   - Evidence: `20260624_151903_aef3232f`.
 
-- [ ] **2026-06-24 — Broker funding route confirmed with 0 EUR observed fee**
+- [x] **2026-06-24 — Broker funding route confirmed with 0 EUR observed fee**
   - Proposed text: `Broker funding confirmed: Raiffeisen EUR → Wise EUR balance/main account → Freedom/Freedom24 EUR credited successfully; observed test transfer 8.72 EUR arrived as 8.72 EUR, implying 0 EUR route fee if no separate Wise/bank fee exists.`
   - Why durable: account-specific route confirmation that should prevent repeated exploration of Paysera/SWIFT/card alternatives for the same workflow.
   - Risk/staleness: financial rails and account rules can change; mark as confirmed as of 2026-06-23.
@@ -665,7 +666,7 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260703_145854_9a7ecf72`.
 
 - [ ] **2026-07-04 — Update emergency fund / ETF note with IBTA screenshot confirmation**
-  - Suggested destination: `research/emergency-fund-strategy.md`, `research/emergency-fund-dashboard.md`, or a future cash-like UCITS ETF note.
+  - Suggested destination: `finance/emergency-fund/strategy.md`, `finance/emergency-fund/dashboard.md`, or a future cash-like UCITS ETF note.
   - Candidate content: Denys screenshot of `IBTA.EU / IBTA` was confirmed as the 1–3yr US Treasury UCITS Acc candidate for the podushka strategy; it maps to VGSH-like exposure and should be verified by ISIN `IE00BYXPSP02` before trading. `IB01` remains the more cash-like 0–1yr option.
   - Evidence: `20260703_144155_2968a206`.
 
@@ -690,7 +691,7 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260702_060227_507ddd8d`.
 
 - [ ] **2026-07-02 — Update emergency fund stablecoin note with custody split discussion**
-  - Suggested destination: `research/emergency-fund-usdt-usdc-research.md` and possibly `research/emergency-fund-strategy.md`.
+  - Suggested destination: `research/emergency-fund-usdt-usdc-research.md` and possibly `finance/emergency-fund/strategy.md`.
   - Candidate content: clarify that CEX balance is an operational hot exchange path, not the safest store; self-custody can usually be converted via wallet → WhiteBIT/Binance deposit → sell → card in ~10–30 minutes on normal days but adds network/deposit/error friction; Earn locks reduce emergency liquidity. Candidate alternative crypto sleeve: `$200–300 WhiteBIT hot balance`, `$700–1000 self-custody USDT/USDC`, `$1,200 30d Earn`, and `$1,300–1,700 60–90d Earn`, instead of keeping the full instant/long sleeve on CEX.
   - Evidence: `20260701_110157_85b8c913`.
 
@@ -754,12 +755,12 @@ The nightly sleep job should prepend new candidates below.
   - Candidate content: `IB01` / `IE00BGSF1X88` as SGOV-like accumulating 0–1yr US Treasury UCITS; `IBTA` / `IE00BYXPSP02` as VGSH-like 1–3yr; `IBTE` / `IE00BDFK1573` as EUR-hedged 1–3yr; Freedom may show `IB01.EU`; explain inverted yield curve and why 1–3yr yield can be below 0–1yr; include tax/staleness caveats.
   - Evidence: `20260624_151903_aef3232f`.
 
-- [ ] **2026-06-24 — Update Freedom24/broker-funding wiki with confirmed route**
+- [x] **2026-06-24 — Update Freedom24/broker-funding wiki with confirmed route**
   - Suggested destination: `research/freedom24-ukraine-funding-2026-06.md` and/or a focused route note.
   - Candidate content: `Raiffeisen EUR → Wise EUR balance/main account → Freedom/Freedom24 EUR` was confirmed by a test transfer: 8.72 EUR arrived as 8.72 EUR; apparent route fee is 0 EUR if Wise/bank show no separate fee; keep date and caveat that rails can change.
   - Evidence: `20260623_120149_3bb6c070`.
 
-- [ ] **2026-06-24 — Update Rocket Attack Alarm project/runbook with dedup + recovery notes**
+- [x] **2026-06-24 — Update Rocket Attack Alarm project/runbook with dedup + recovery notes**
   - Suggested destination: `projects/rocket-attack-alarm.md` or decomposed `projects/rocket-attack-alarm/{overview,runbook,decisions,open-loops}.md`.
   - Candidate content: state-based dedup by user/filter/threat category; MiG duplicate suppression across channels; 30-minute re-alert cooldown; content-hash dedup retained; user-facing wording caveat; verification commands; SQLite WAL/SHM + disk-full recovery steps; DB size after incident (~1.9 MB plus WAL/SHM).
   - Evidence: `20260623_192047_4f643f`.
@@ -769,7 +770,7 @@ The nightly sleep job should prepend new candidates below.
   - Candidate content: if WhiteBIT UAH deposit/quick exchange is expensive, use Binance P2P UAH→USDT then withdraw to WhiteBIT over a supported low-fee network; avoid auto-selected Binance Buy Crypto offers when they are materially worse than manual P2P; compare final effective UAH/USDT with a timestamp.
   - Evidence: `20260623_193417_3dd79fc7`.
 
-- [ ] **2026-06-23 — Create/update Rocket Attack Alarm project/runbook page**
+- [x] **2026-06-23 — Create/update Rocket Attack Alarm project/runbook page**
   - Suggested destination: `projects/rocket-attack-alarm.md` or decomposed `projects/rocket-attack-alarm/{overview,runbook,roadmap,open-loops}.md`, linked from `index.md`.
   - Candidate content: air-alert API source `https://ubilling.net.ua/aerialalerts/`; `air_alert_api` synthetic source; 30s polling; startup baseline/no burst; active/clear synthetic messages; removal of `sirena_kyiv`; city suggestion `Кривий Ріг` marked `added` without duplicate; `markSuggestionStatus`; tests/deploy/health verification; broadcast script with marker protection.
   - Evidence: `20260622_190640_2a951e4e`.
@@ -779,7 +780,7 @@ The nightly sleep job should prepend new candidates below.
   - Candidate content: replace raw event stream/concatenation with one live card per active incident; edit card for minor updates; push only on significant risk changes; group by incident type; expose optional history/details buttons.
   - Evidence: `20260622_211516_f2939aa1`.
 
-- [ ] **2026-06-23 — Update Freedom24/broker-funding wiki after final credit confirmation**
+- [x] **2026-06-23 — Update Freedom24/broker-funding wiki after final credit confirmation**
   - Suggested destination: `research/freedom24-ukraine-funding-2026-06.md` and/or focused route note.
   - Candidate content: Paysera rejected for this route; current best candidate is `Raiffeisen EUR → Wise EUR balance/main account → Freedom EUR`; avoid USD conversion, Wise card payment, direct SWIFT, direct broker card top-up; compute all-in friction after Freedom credits funds.
   - Evidence: `20260622_163026_d7eee1f1`.
@@ -789,9 +790,9 @@ The nightly sleep job should prepend new candidates below.
   - Candidate content: consultant-report holdings/targets, satellite thesis monitors, DCA plan, podushka distinction, and a checklist for future “глянь портфель” requests; do not treat prices as durable.
   - Evidence: `20260622_061004_e3501b49`.
 
-- [ ] **2026-06-22 — Create Life RPG project overview / validation hub**
+- [x] **2026-06-22 — Create Life RPG project overview / validation hub**
   - Suggested destination: `projects/life-rpg/overview.md` or `research/life-rpg-validation-hub-2026-06.md`, linked from `index.md`.
-  - Candidate content: central links to `research/life-rpg-startup-strategy-2026-06-21.md`, `research/life-rpg-habit-app-roadmap-2026-06-21.md`, `/root/life-rpg-validation` artifact pack, landing/mockup/video files, current positioning, validation metrics, and next actions.
+  - Candidate content: central links to `projects/life-rpg/startup-strategy.md`, `projects/life-rpg/product-roadmap.md`, `/root/life-rpg-validation` artifact pack, landing/mockup/video files, current positioning, validation metrics, and next actions.
   - Evidence: `20260621_130017_acde58`.
 
 - [ ] **2026-06-22 — Integrate mobile app-store payment route into SaaS payments wiki set**
@@ -799,7 +800,7 @@ The nightly sleep job should prepend new candidates below.
   - Candidate content: app stores can reduce Ukrainian PSP friction for B2C/prosumer SaaS by using Apple/Google IAP/subscriptions, but require store fees, app review, platform policy compliance, entitlement sync, and payout/KYC verification; verify Apple App Store Connect for Denys’s real account/entity.
   - Evidence: `20260621_130017_acde58`.
 
-- [ ] **2026-06-21 — Create Rocket Attack Alarm project/runbook wiki page**
+- [x] **2026-06-21 — Create Rocket Attack Alarm project/runbook wiki page**
   - Suggested destination: new `projects/rocket-attack-alarm.md` or decomposed `projects/rocket-attack-alarm/{overview,runbook,decisions,open-loops}.md`, linked from `index.md`.
   - Candidate content: current operational facts for `/opt/apps/rocket-attack-alarm`, MiG-31K as `mig` nationwide alert category, `threat_ended` suppression for MiG all-clear posts, source-text sanitization of promotional lines, Boryspil/Bucha city-filter changes, `/suggestcity` workflow, daily city-suggestion digest, and production deploy verification checklist.
   - Evidence: `20260620_211226_b41178`.
@@ -809,8 +810,8 @@ The nightly sleep job should prepend new candidates below.
   - Candidate content: Paysera app showed basic EUR accounts for Denys, but practical IBAN/top-up/SEPA operations likely require `https://bank.paysera.com` web banking; confirm KYC status, EUR IBAN, top-up fees, outbound SEPA fee/limits before treating it as a recommended route.
   - Evidence: `20260619_181923_8e5326e1`.
 
-- [ ] **2026-06-20 — Consider project note for rocket-alert non-alert filtering rules**
-  - Suggested destination: existing `research/rocket-attack-alarm-marketing.md` only if it is also used as project notes, or a new project/runbook page if rocket bot ops become recurring wiki content.
+- [x] **2026-06-20 — Consider project note for rocket-alert non-alert filtering rules**
+  - Suggested destination: `projects/rocket-attack-alarm/overview.md`; marketing-only ideas live in `projects/rocket-attack-alarm/marketing-ideas.md`.
   - Candidate content: user-facing alerts must filter retrospective reports/digests and promotional/social posts such as `#зведення`, `візуалізація`, and footer combo `Підписатись | Підтримати канал`, while preserving live alert markers.
   - Evidence: `20260618_050621_9d7fda8b` and `20260615_200525_df2af912`.
 
@@ -820,8 +821,8 @@ The nightly sleep job should prepend new candidates below.
   - Context: `20260730_160659_dac91941` could not access authenticated order history; secret stores and expired browser profile did not provide a Molodo login.
   - Required next action: obtain a live authenticated session through the official form (user-only CAPTCHA if prompted), then verify the claimed order/payment directly in history. Do not infer status from session text or a cart.
 
-- [ ] **2026-08-02 — Decide VPS memory-capacity mitigation**
-  - Context: a Chromium process in `hermes-gateway.service` was OOM-killed on 2026-08-01 21:59 UTC (`oom_kill=36`). Repeated checks kept ports 3000/3010/9090 and `rocket-attack-alarm` healthy and found no stale browser/worker safe to stop. The 4 GiB host has no swap. Choose RAM upgrade, stricter browser/Hermes concurrency, or separately reviewed swapfile authorization.
+- [x] **2026-08-02 — Decide VPS memory-capacity mitigation**
+  - Context: after the Chromium OOM, Denys authorized a conservative mitigation. A persistent 2 GiB `/swapfile` with `vm.swappiness=10` was installed; CUPS, libvirt helper sockets and `multipathd` were disabled while Tor and application workloads were preserved. Live verification on 2026-08-16 confirmed the swap is still active.
   - Evidence: `cron_4e34af0ceec1_20260802_020531`, `023531`, `030532`.
 
 - [ ] **2026-07-15 — Enable or repair memory-tool availability for nightly compaction**
@@ -1004,8 +1005,8 @@ The nightly sleep job should prepend new candidates below.
 - [ ] **2026-06-23 — Verify Rocket bot 12:30 broadcast delivery**
   - Context: one-shot cron job `5ab7ee5a7792` should run at 2026-06-23 09:30 UTC / 12:30 Kyiv; dry-run showed 21 active subscribers and marker-file duplicate protection.
 
-- [ ] **2026-06-23 — Confirm broker-funding route after Freedom credits funds**
-  - Context: need Raif spent, Wise received, Wise sent, Freedom credited, fees/conversions, and timing; then compute all-in friction as `1 - Freedom credited / Raif spent` normalized to one currency.
+- [x] **2026-06-23 — Confirm broker-funding route after Freedom credits funds**
+  - Context: confirmed on 2026-06-23; 8.72 EUR sent through Raiffeisen EUR → Wise EUR balance → Freedom EUR was credited as 8.72 EUR. Future runs still require receipt-level fee and FX verification.
 
 - [ ] **2026-06-23 — Decide whether to create a persistent portfolio tracker**
   - Context: no saved portfolio/targets were found before Denys pasted the consultant report; a structured wiki/file would let future “глянь портфель” checks run without re-supplying data.

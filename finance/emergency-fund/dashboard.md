@@ -1,9 +1,13 @@
 ---
-Parent: "[[AREA - Фінанси]]"
-tags:
-  - фінанси
-  - emergency-fund
-  - dashboard
+title: Emergency Fund Dashboard
+created: 2026-06-25
+updated: 2026-08-16
+type: dashboard
+status: reference
+approval: user-directed
+tags: [finance]
+sources:
+  - "finance/emergency-fund/strategy.md"
 last_updated: 2026-06-25
 monthly_expenses: 2000
 target_total: 18000
@@ -20,6 +24,8 @@ ovdp_long: 0
 ucits_long: 0
 usdt_earn_long: 0
 ---
+
+> ⚠️ Numeric values are a historical dashboard state last updated `2026-06-25`, not a live balance confirmation.
 
 > 💡 **Як користуватись:** редагуй значення у Properties (Ctrl+;) — суми по інструментах. Дашборд оновиться автоматично. Цільові суми (target_*) і місячні витрати теж тут.
 
@@ -370,7 +376,7 @@ dv.el('div', focusHTML);
 
 ## 🔗 Зв'язані файли
 
-- [[Стратегія побудови Emergency fund]] — стратегія, фази, правила використання
-- [[Дослідження ОВДП]] — де купляти USD ОВДП
-- [[Budget Allocation Dashboard]] — місячний бюджет (50/10/25/15)
-- [[Capital Report]] — загальний капітал
+- [[strategy|Стратегія побудови Emergency fund]] — стратегія, фази, правила використання
+- [[research/emergency-fund-ovdp-research|Дослідження ОВДП]] — dated research про USD ОВДП
+- `Budget Allocation Dashboard` — окрема сторінка ще не створена
+- `Capital Report` — окрема сторінка ще не створена

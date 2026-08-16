@@ -1,3 +1,14 @@
+---
+title: AI-Powered Life RPG Habit App Roadmap
+created: 2026-06-21
+updated: 2026-08-16
+type: draft
+status: archived
+approval: unapproved
+tags: [project, startup, life-rpg, validation]
+sources: []
+---
+
 # AI-Powered Life RPG Habit App Roadmap
 
 **Date:** 2026-06-21  

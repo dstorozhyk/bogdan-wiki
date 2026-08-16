@@ -1,3 +1,14 @@
+---
+title: Маркетинг бота “Повітряні Загрози”
+created: 2026-06-10
+updated: 2026-08-16
+type: idea
+status: idea
+approval: unapproved
+tags: [project, telegram]
+sources: []
+---
+
 # Маркетинг бота “Повітряні Загрози”
 
 Дата: 2026-06-10  

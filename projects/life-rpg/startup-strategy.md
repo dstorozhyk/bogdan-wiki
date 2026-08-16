@@ -1,3 +1,14 @@
+---
+title: Life RPG Habit App — Startup Strategy
+created: 2026-06-21
+updated: 2026-08-16
+type: draft
+status: archived
+approval: unapproved
+tags: [project, startup, life-rpg, validation]
+sources: []
+---
+
 # Life RPG Habit App — Startup Strategy
 
 **Date:** 2026-06-21  

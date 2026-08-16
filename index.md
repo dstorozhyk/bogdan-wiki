@@ -3,7 +3,7 @@
 Content catalog. Every wiki page listed under its type with a one-line summary.
 Read this first to find relevant pages for any query.
 
-> Last updated: 2026-08-16 | Catalog aligned to semantic directory routing.
+> Last updated: 2026-08-16 | First structured ingest from VPS assets and confirmed conversation context.
 
 ## Core / Meta
 
@@ -22,12 +22,35 @@ Read this first to find relevant pages for any query.
 
 ## Career Context
 
+- [career/profile/denys-career-direction](career/profile/denys-career-direction.md) — confirmed corporate-career direction: system-level influence, architecture judgment and Staff/Principal/Architect scope rather than startup/title signaling.
 - [career/profile/denys-6k-senior-to-tech-lead-gap-analysis-2026-08](career/profile/denys-6k-senior-to-tech-lead-gap-analysis-2026-08.md) — draft evidence-based profile/gap analysis; explicitly not an approved plan.
 - [career/job-search/job-search-sources-denys](career/job-search/job-search-sources-denys.md) — Denys-provided active vacancy-monitoring criteria; not a career plan.
 - [career/learning/corporate-influence-reading-path-2026-08](career/learning/corporate-influence-reading-path-2026-08.md) — active reading path for strategy, judgment, organizational influence, and cross-team coordination.
 - [career/work-context/enterprise-ai-team-vision-tech-lead-meeting-prep-2026-07-12](career/work-context/enterprise-ai-team-vision-tech-lead-meeting-prep-2026-07-12.md) — durable reference from internal enterprise-AI meeting preparation.
 - [career/ideas/denys-tech-lead-90-day-plan-2026-08](career/ideas/denys-tech-lead-90-day-plan-2026-08.md) — unapproved assistant draft; not Denys's plan.
 - [career/ideas/work-situation-documentation-idea](career/ideas/work-situation-documentation-idea.md) — unapproved idea for anonymized work-situation notes; no routine is active.
+
+## Projects
+
+- [projects/rocket-attack-alarm/overview](projects/rocket-attack-alarm/overview.md) — active Telegram threat-alert bot: product scope, source-of-truth boundaries, documentation map and verified deployment snapshot.
+- [projects/rocket-attack-alarm/operations-reference](projects/rocket-attack-alarm/operations-reference.md) — source-checked operational behavior, dedup distinctions, API/city workflow, disk-full SQLite lesson and deploy verification checklist.
+- [projects/rocket-attack-alarm/marketing-ideas](projects/rocket-attack-alarm/marketing-ideas.md) — unapproved growth/content backlog; not an active publishing plan.
+- [projects/beauty-growth-assistant/overview](projects/beauty-growth-assistant/overview.md) — active product context for the mobile-first beauty-master public profile and optional trust-first automation.
+- [projects/beauty-growth-assistant/product-requirements](projects/beauty-growth-assistant/product-requirements.md) — user-directed product requirements, MVP/anti-automation response and confirmed public-profile direction.
+- [projects/life-rpg/overview](projects/life-rpg/overview.md) — archived startup direction retained as a validation/product-asset case; no completed launch evidence found.
+- [projects/life-rpg/startup-strategy](projects/life-rpg/startup-strategy.md) — archived assistant strategy draft.
+- [projects/life-rpg/product-roadmap](projects/life-rpg/product-roadmap.md) — archived assistant roadmap draft.
+
+## Personal Finance
+
+- [finance/overview](finance/overview.md) — map of active strategy, historical state and time-sensitive research plus the observed EUR broker-funding route.
+- [finance/emergency-fund/strategy](finance/emergency-fund/strategy.md) — user-directed $6k/$12k/$18k emergency-fund strategy and usage/rebalance rules; live facts must be rechecked before action.
+- [finance/emergency-fund/dashboard](finance/emergency-fund/dashboard.md) — Dataview dashboard with numeric state last updated 2026-06-25; not a live balance.
+- [finance/portfolio/snapshots/2026-06-22](finance/portfolio/snapshots/2026-06-22.md) — historical portfolio snapshot, not current holdings.
+
+## Infrastructure
+
+- [infrastructure/vps-main](infrastructure/vps-main.md) — credential-free host/service context and timestamped resource/deployment snapshot for the main VPS.
 
 ## Entities
 
@@ -60,25 +83,19 @@ Read this first to find relevant pages for any query.
 - [part-time-opportunities-shortlist-2026-08-15](research/part-time-opportunities-shortlist-2026-08-15.md) — time-sensitive shortlist part-time Djinni ролей, оцінений під .NET/fintech/microservices профіль Дениса; відокремлено direct fit від stretch і mismatch.
 - [part-time-dotnet-availability-snapshot-2026-08-15](research/part-time-dotnet-availability-snapshot-2026-08-15.md) — статистичний зріз доступності public .NET part-time: DOU 1 картка, Djinni 4, із **0** Senior backend/payments fit; короткострокова оцінка, не стратегія.
 
-- [dotnet-ukrainian-language-vacancies-2026-08-15](research/dotnet-ukrainian-language-vacancies-2026-08-15.md) — **full-time reference scan, не actionable shortlist**: DOU/LinkedIn близькі .NET backend вакансії без explicit mandatory English; Денис підтвердив, що розглядає лише part-time.
+- [dotnet-ukrainian-language-vacancies-2026-08-15](research/dotnet-ukrainian-language-vacancies-2026-08-15.md) — dated full-time reference scan of nearby .NET backend roles; current monitoring criteria are maintained separately in `career/job-search/`.
 - [ukraine-it-career-advantage-hypotheses-2026-08](research/ukraine-it-career-advantage-hypotheses-2026-08.md) — ранжовані гіпотези переваги Дениса: enterprise AI/platform architecture, regulated B2B/fintech, governance і технічний вплив; 90-денний експеримент.
 
 - [small-creator-brand-deals-playbook-2026-07-12](research/small-creator-brand-deals-playbook-2026-07-12.md) — процес пошуку, пітчингу, узгодження та вимірювання перших brand deals для малого автора.
 - [small-creator-brand-deals-pricing-2026-07-12](research/small-creator-brand-deals-pricing-2026-07-12.md) — робоча логіка rate card для «Все про Royal» на основі релевантності й перевіреної конверсії, а не лише CPM.
 - [ai-assisted-sdlc-vibe-coding-project-lifecycle-2026-07-02](research/ai-assisted-sdlc-vibe-coding-project-lifecycle-2026-07-02.md) — AI-assisted SDLC для vibe-coded продуктів: PoC/Prototype/RAT/Walking Skeleton/Vertical Slice/MLP/Pilot замість автоматичного “MVP”.
-- [emergency-fund-dashboard](research/emergency-fund-dashboard.md) — Obsidian Dataview dashboard для трекінгу Emergency Fund: фази $6k/$12k/$18k, рівні доступу, географія, категорії та current/target по інструментах.
-- [emergency-fund-strategy](research/emergency-fund-strategy.md) — стратегія побудови подушки Denys: $2k/міс витрат, ціль $18k, структура Р1/Р2/Р3, правила використання і квартальний ребаланс.
 - [emergency-fund-ovdp-research](research/emergency-fund-ovdp-research.md) — дослідження USD ОВДП для подушки; фінальне рішення: mono валютна банка $5k, звільнені $600 → SGOV/UCITS-equivalent routing.
 - [emergency-fund-usdt-usdc-research](research/emergency-fund-usdt-usdc-research.md) — дослідження USDT/USDC частини подушки; фінальне рішення: $3.8k stablecoin sleeve через WhiteBIT/Binance, транші instant/30д/90д, ризики CEX/емітентів.
-- [beauty-masters-saas-ukraine-requirements-2026-06-29](research/beauty-masters-saas-ukraine-requirements-2026-06-29.md) — вимоги, MVP, позиціонування, standalone-first public-візитівка і objection handling для SaaS/CRM українських beauty-майстрів із optional automation modules.
-- [life-rpg-startup-strategy-2026-06-21](research/life-rpg-startup-strategy-2026-06-21.md) — startup strategy for a mobile-first AI-powered Life RPG habit/self-improvement app.
-- [life-rpg-habit-app-roadmap-2026-06-21](research/life-rpg-habit-app-roadmap-2026-06-21.md) — roadmap, MVP scope, validation metrics, and launch plan for the Life RPG habit app concept.
 - [mobile-app-stores-as-saas-payment-route-ukraine-2026-06-21](research/mobile-app-stores-as-saas-payment-route-ukraine-2026-06-21.md) — using iOS/Android app stores and in-app purchases as a B2C/prosumer SaaS payment workaround for Ukraine.
 - [saas-payments-ukraine-validation-2026-06](research/saas-payments-ukraine-validation-2026-06.md) — як тестити SaaS payments з України без негайного відкриття іноземної компанії.
 
 - [whitebit-binance-usdt-staking-route-2026-06](research/whitebit-binance-usdt-staking-route-2026-06.md) — when WhiteBIT direct UAH→USDT beats Binance P2P, and Binance→WhiteBIT network workflow for USDT staking/lending.
-- [freedom24-ukraine-funding-2026-06](research/freedom24-ukraine-funding-2026-06.md) — практичний маршрут поповнення Freedom24/Freedom Finance з України; Wise/ZEN викреслені, Genome/SEPA лишається fallback через ~20 EUR/USD monthly fee.
-- [rocket-attack-alarm-marketing](research/rocket-attack-alarm-marketing.md) — marketing/research notes for the Повітряні Загрози / rocket attack alarm project.
+- [freedom24-ukraine-funding-2026-06](research/freedom24-ukraine-funding-2026-06.md) — account-specific route confirmed 2026-06-23: Raiffeisen EUR → Wise EUR balance → Freedom EUR; 8.72 EUR credited as 8.72 EUR, with receipt-level fee verification still required.
 - [hermes-memory-roadmap](research/hermes-memory-roadmap.md) — roadmap/research notes for Hermes memory improvements.
 - [ai-agent-memory-landscape-2026](research/ai-agent-memory-landscape-2026.md) — landscape of AI agent memory approaches.
 - [ai-agent-memory-papers-deep-dive](research/ai-agent-memory-papers-deep-dive.md) — deeper notes on AI agent memory papers.

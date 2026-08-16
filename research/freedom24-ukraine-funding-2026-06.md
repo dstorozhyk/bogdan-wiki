@@ -1,19 +1,40 @@
+---
+title: Freedom24/Freedom Finance поповнення з України — червень 2026
+created: 2026-06-09
+updated: 2026-08-16
+type: research
+status: reference
+tags: [finance, payments]
+sources:
+  - "session:default/20260623_120149_3bb6c070"
+  - "session:default/20260622_163026_d7eee1f1"
+---
+
 # Freedom24/Freedom Finance поповнення з України — червень 2026
 
-Дата перевірки: 2026-06-09 20:41 UTC.
+Останній account-specific verification: **2026-06-23**.
 
 ## Короткий висновок
 
-Пряме поповнення Freedom24 українською карткою офіційно існує, але на практиці для резидентів України часто блокується банком/НБУ як переказ на інвестиційну/брокерську платформу. Офіційна комісія Freedom24 за картку — 2%, за банківський переказ — 0% з боку Freedom24, 1–3 робочих дні.
+**Confirmed best observed route for Denys:**
 
-Станом на 2026-06-14 для Denys:
+> **Raiffeisen EUR → Wise EUR balance/main account → Freedom24/Freedom Finance Europe EUR**
 
-- **Wise** не підходить як on-ramp: українські картки не поповнюють, а Binance/Crypto P2P → Wise має високий ризик Wise freeze/ban.
-- **ZEN** не підходить: акаунт заблоковано через проживання/адресу в Україні.
-- **Genome** ще не заблокував Denys, але має суттєвий тариф для України/non-EEA: орієнтир **~20 EUR/USD на місяць**; тому це fallback для більших сум, де підписка не зʼїдає економіку.
-- **Crypto для Freedom24** має сенс тільки якщо Freedom24 прямо показує офіційний USDT/crypto deposit у кабінеті. Інакше не гнати крипту через Wise/ZEN.
+Тестовий переказ **8.72 EUR** був зарахований брокером як **8.72 EUR**. Це підтверджує нульову втрату на credited amount у конкретному тесті; окрему комісію Raiffeisen/Wise, якщо вона списувалась поза сумою переказу, завжди треба перевіряти у квитанціях.
 
-Найпрактичніший маршрут без crypto: українська картка/банк → TransferGo або прямий bank-to-card/IBAN → власний Genome EUR IBAN → SEPA на Freedom24. Ключова умова: рахунок Genome і Freedom24 мають бути на ту саму особу; не використовувати рахунки друзів/третіх осіб.
+Практичні правила:
+
+- використовувати EUR end-to-end без USD→EUR conversion;
+- відправляти саме з Wise EUR balance/main account, а не через Wise card payment;
+- вказувати Freedom reference/client ID;
+- власники рахунків Raiffeisen, Wise і Freedom мають збігатися;
+- перевіряти live quote і broker credit перед масштабуванням.
+
+Не рекомендуються для цього account-specific flow: direct Ukrainian card top-up to broker, direct SWIFT, Paysera, USD conversion, third-party accounts. Genome/SEPA нижче збережено як **superseded discovery context**, а не поточна основна рекомендація.
+
+## Superseded discovery context (2026-06-09 — 2026-06-14)
+
+До успішного Wise test основним fallback-кандидатом розглядався Genome EUR IBAN → SEPA. Genome не блокував Denys, але тариф для Ukraine/non-EEA (~20 EUR/USD monthly) і card top-up до 3% робили його економічно слабшим.
 
 ## Дані зі скріну Дениса, 2026.02
 
@@ -54,18 +75,19 @@
   - SWIFT для фізосіб під час воєнного стану суттєво обмежений і не покриває звичайне поповнення брокера для інвестицій;
   - P2P/карткові перекази за кордон мають ліміти й банки можуть відхиляти операції за MCC/призначенням.
 
-## Практичний маршрут
+## Confirmed practical route
 
-### Основний кандидат: Genome → SEPA
+1. Поповнити власний **Wise EUR balance** із власного Raiffeisen EUR account перевіреним account flow.
+2. У Freedom24 відкрити `Поповнити → Банківський переказ → EUR` і взяти актуальні EUR реквізити та payment reference.
+3. У Wise відправити з **EUR balance/main account** на Freedom EUR details.
+4. Внести Freedom reference/client ID навіть якщо Wise позначає поле необов'язковим.
+5. Після зарахування звірити `Raiffeisen spent`, `Wise received/sent`, `Freedom credited`, fees і час проходження.
 
-1. Відкрити/верифікувати Genome personal account, отримати EUR IBAN.
-2. Завести невелику тестову суму з українського банку:
-   - пріоритетно TransferGo → Genome через банки зі скріну з 0–0.6%;
-   - або прямий bank→Genome, якщо банк показує адекватну комісію;
-   - не використовувати Genome in-app card top-up, якщо він показує 3%.
-3. У Freedom24: `Поповнити → Банківський переказ → EUR`, скопіювати реквізити та payment purpose.
-4. З Genome зробити SEPA переказ на реквізити Freedom24, вказати точне призначення платежу з Freedom24 (номер брокерського рахунку). Очікування 1–3 робочих дні.
-5. Після успішного тесту масштабувати суму в межах банківських/НБУ/AML лімітів.
+Observed test: **8.72 EUR sent/credited as 8.72 EUR on 2026-06-23**.
+
+### Superseded fallback: Genome → SEPA
+
+Genome може бути технічним fallback, але не є рекомендованим основним маршрутом через monthly fee і top-up friction. Якщо Wise route перестане працювати, Genome слід перевіряти заново live, починаючи з малої тестової суми.
 
 ### Crypto fallback
 
@@ -75,7 +97,7 @@
 UAH → Binance/WhiteBIT USDT → Freedom24 USDT deposit
 ```
 
-Якщо crypto deposit у Freedom24 недоступний, не використовувати Wise або ZEN як міст для Binance P2P: Wise ризиковий для crypto/P2P, ZEN для Denys заблокований через Україну.
+Якщо crypto deposit у Freedom24 недоступний, не використовувати Wise або ZEN як міст для crypto/P2P. Підтверджений Wise route — це EUR bank/balance flow, а не crypto on-ramp.
 
 ## Ризики/пастки
 

@@ -27,6 +27,9 @@ Route by the page's semantic role, not merely by whether sources were consulted:
 - `research/` — provisional/source-backed investigations, datasets, and dated market scans or snapshots.
 - `entities/`, `concepts/`, `comparisons/`, `queries/` — stable reusable knowledge by type.
 - `workflows/` — executable playbooks and repeatable procedures.
+- `projects/` — durable project context, product requirements, status pages, and project-specific ideas/reference documents. Implementation details remain in the source repository and are linked rather than duplicated.
+- `finance/` — Denys's personal finance context, active strategies, dashboards, and clearly dated historical snapshots. Time-sensitive instrument/rate/regulatory investigations remain in `research/`.
+- `infrastructure/` — host/service context and timestamped operational snapshots without credentials or secret values.
 - `career/` — Denys's durable career context, clearly separated into profile, job-search, learning, work-context, and unapproved ideas/drafts.
 - `logs/` — chronology and generated daily digests; `agents/` — agent policy and review queues.
 - `state/` — persisted machine/runtime state such as crawler seen-URL files. It is not human-readable knowledge and is not indexed page-by-page.
@@ -41,7 +44,7 @@ User-approved decisions/plans must say `status: approved`. Assistant-generated p
 title: Page Title
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
-type: entity | concept | comparison | query | summary | research | workflow | profile | context | guide | idea | draft | decision | plan
+type: entity | concept | comparison | query | summary | research | workflow | profile | context | guide | idea | draft | decision | plan | project | requirements | snapshot | dashboard
 tags: [tag1, tag2]  # Only from taxonomy below
 sources: [raw/articles/source-name.md, ...]
 status: active | reference | idea | draft | approved | superseded | archived  # Optional, required for ideas/drafts/plans/decisions
@@ -78,7 +81,7 @@ The `sha256` prevents duplicate ingests and detects source drift on re-ingest.
 - algorithm, optimization, concurrency, async, design-pattern, refactoring, testing, debugging
 
 ### Infrastructure & DevOps
-- kubernetes, docker, systemd, networking, monitoring, ci-cd, postgres, redis, vps
+- infrastructure, kubernetes, docker, systemd, networking, monitoring, ci-cd, postgres, redis, vps
 
 ### Data & ML Ops
 - dataset, evaluation, fine-tuning, rag, inference, prompt-engineering, alignment
@@ -87,10 +90,10 @@ The `sha256` prevents duplicate ingests and detects source drift on re-ingest.
 - python, typescript, nodejs, bash, git, cli, ide
 
 ### People & Organizations
-- person, company, lab, open-source, researcher, startup
+- person, company, lab, open-source, researcher, startup, project
 
 ### Product & Business
-- saas, payments, invoicing, validation, workflow, wiki
+- saas, payments, invoicing, validation, workflow, wiki, beauty, life-rpg, telegram
 
 ### Career & Personal Context
 - career, tech-lead, job-search, learning, enterprise, architecture, delivery, finance

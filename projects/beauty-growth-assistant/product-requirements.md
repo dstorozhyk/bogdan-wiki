@@ -1,3 +1,15 @@
+---
+title: SaaS для beauty-майстрів України — вимоги, MVP і заперечення щодо автоматизації
+created: 2026-06-29
+updated: 2026-08-16
+type: requirements
+status: active
+approval: user-directed
+tags: [project, saas, beauty, validation]
+sources:
+  - "session:default/20260629_183841_50ab40de"
+---
+
 # SaaS для beauty-майстрів України — вимоги, MVP і заперечення щодо автоматизації
 
 > Date: 2026-06-29  

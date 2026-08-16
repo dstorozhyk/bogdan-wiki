@@ -1,3 +1,19 @@
+---
+title: Emergency fund strategy
+created: 2026-06-07
+updated: 2026-08-16
+type: plan
+status: approved
+approval: user-directed
+tags: [finance]
+sources:
+  - "research/emergency-fund-ovdp-research.md"
+  - "research/emergency-fund-usdt-usdc-research.md"
+---
+
+# Emergency fund strategy
+
+> The allocations below are Denys's recorded strategy context. Product availability, regulation, rates and actual balances must be checked live before action.
 
 **База розрахунку:** обов'язкові витрати — **$2,000 / міс**
 ## Цільові розміри

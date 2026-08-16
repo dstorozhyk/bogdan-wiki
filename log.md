@@ -4,6 +4,17 @@ Chronological record of all wiki actions. Append-only.
 Format: `## [YYYY-MM-DD] action | subject`
 Actions: ingest, update, query, lint, create, archive, delete
 
+## [2026-08-16] ingest | first structured VPS and conversation knowledge wave
+- Added official `projects/`, `finance/`, and `infrastructure/` routing to `SCHEMA.md`; expanded types and tag taxonomy.
+- Created project overview pages for Rocket Attack Alarm, Beauty Growth Assistant, and Life RPG with source-of-truth boundaries, confirmed status, provenance, and explicit draft/archive labels.
+- Added a source-checked Rocket operations reference covering API baseline behavior, delivery dedup vs analytics grouping, city suggestions, promo/report filtering, the historical disk-full SQLite incident and deployment verification.
+- Moved Rocket marketing, Beauty product requirements, and Life RPG strategy/roadmap from `research/` into project domains using `git mv`.
+- Created `finance/overview.md`; moved the emergency-fund strategy/dashboard and 2026-06-22 portfolio snapshot into the finance domain. OVDP and stablecoin investigations remain under `research/` as time-sensitive material.
+- Created `infrastructure/vps-main.md` from a credential-free live host/service/resource check; recorded root disk at 90% as a timestamped concern, not an authorization to delete files.
+- Created `career/profile/denys-career-direction.md` from user-confirmed corporate influence, remote-search, and evidence preferences.
+- Corrected the stale Freedom24 conclusion: 8.72 EUR was confirmed credited as 8.72 EUR through Raiffeisen EUR → Wise EUR balance → Freedom EUR; Genome was demoted to superseded fallback context.
+- Updated `index.md`, `agents/migration-review.md`, and current review-queue destinations. Historical logs retain their original paths; this entry records the path migration.
+
 ## [2026-08-16] update | semantic architecture migration
 - Added schema routing for research, stable typed knowledge, workflows, career context, agent/log chronology, and runtime state.
 - Moved five explicit career-context pages under `career/`; extracted the work-situation documentation proposal as an unapproved idea.
