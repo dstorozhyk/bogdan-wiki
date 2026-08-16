@@ -1,7 +1,7 @@
 ---
 title: Wiki migration review
 created: 2026-08-16
-updated: 2026-08-16
+updated: 2026-08-17
 type: query
 status: active
 tags: [wiki]
@@ -28,6 +28,12 @@ Pages intentionally left in place because their primary semantic role remains de
 
 - Decomposed the mixed AI-assisted SDLC research into `concepts/ai-assisted-sdlc.md` and `workflows/ai-assisted-product-lifecycle.md`; retained the original research note as sourced provenance.
 - Added a user-requested technical communication guide and a value-free secret-management policy.
+
+## Resolved in third structured ingest
+
+- Extracted stable emergency-fund tier logic and an approval-gated quarterly review workflow; kept dated platform/rate/tax facts in research and historical balances in the dashboard.
+- Extracted a public-profile onboarding workflow from Beauty requirements while excluding later QR/dashboard/analytics candidates that conflict with the confirmed public scope.
+- Created the canonical Hermes memory lifecycle from current policy/docs; retained the old enhancement roadmap as explicitly unapproved dated research.
 
 ## Known pre-existing link review
 

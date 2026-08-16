@@ -3,7 +3,7 @@
 Content catalog. Every wiki page listed under its type with a one-line summary.
 Read this first to find relevant pages for any query.
 
-> Last updated: 2026-08-16 | First structured ingest from VPS assets and confirmed conversation context.
+> Last updated: 2026-08-17 | Third structured ingest: canonical finance/Beauty/memory lifecycle extraction.
 
 ## Core / Meta
 
@@ -61,6 +61,8 @@ Read this first to find relevant pages for any query.
 ## Concepts
 
 - [ai-assisted-sdlc](concepts/ai-assisted-sdlc.md) — canonical boundary: AI accelerates implementation but increases the need for scope, architecture guardrails and executable verification.
+- [emergency-fund-liquidity-tiers](concepts/emergency-fund-liquidity-tiers.md) — approved three-tier model organized by time-to-access, failure domains and resilience rather than yield alone.
+- [hermes-memory-lifecycle](concepts/hermes-memory-lifecycle.md) — canonical routing and lifecycle across working context, sessions, compact memory/profile, skills, wiki and runtime state.
 - [hermes-codex-oauth-quota-exhaustion](concepts/hermes-codex-oauth-quota-exhaustion.md) — чому Codex (ChatGPT OAuth) застрягає в `exhausted` після 429 і як лікувати (`hermes auth reset openai-codex`).
 - [wiki-decomposition-workflow](concepts/wiki-decomposition-workflow.md) — правило розкладати wiki-дослідження на overview/entity/comparison/workflow/checklist файли.
 
@@ -72,6 +74,8 @@ Read this first to find relevant pages for any query.
 
 - [ai-assisted-product-lifecycle](workflows/ai-assisted-product-lifecycle.md) — RAT/prototype → walking skeleton → vertical slice → MLP → controlled pilot, with verification gates for agent-generated changes.
 - [automation-idea-validation-funnel](workflows/automation-idea-validation-funnel.md) — approved multi-cycle filter: evidence/dedup → user fit → feasibility → ROI → adversarial pre-mortem → scored judge → gap recovery.
+- [beauty-public-profile-onboarding](workflows/beauty-public-profile-onboarding.md) — owner-approved identity/services/trust/location/contact intake, mobile page hierarchy and pre-release verification without forcing CRM.
+- [emergency-fund-quarterly-review](workflows/emergency-fund-quarterly-review.md) — refresh balances, recalculate resilience, verify live platform/instrument facts and prepare approval-gated rebalancing decisions.
 - [manual-paid-pilot-workflow](workflows/manual-paid-pilot-workflow.md) — manual landing → invoice → activation workflow for SaaS validation.
 
 ## Queries

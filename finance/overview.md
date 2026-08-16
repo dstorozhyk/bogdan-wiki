@@ -1,7 +1,7 @@
 ---
 title: Personal finance knowledge map
 created: 2026-08-16
-updated: 2026-08-16
+updated: 2026-08-17
 type: context
 status: active
 approval: user-directed
@@ -15,8 +15,10 @@ sources: []
 
 ## Emergency fund
 
+- [[emergency-fund-liquidity-tiers]] — stable model of access tiers and failure-domain diversification.
 - [[strategy]] — user-directed структура подушки, фази й правила використання.
 - [[dashboard]] — Obsidian Dataview dashboard; numeric state має власну дату оновлення і може бути застарілим.
+- [[emergency-fund-quarterly-review]] — live-data refresh, resilience checks and approval-gated rebalancing workflow.
 - [[emergency-fund-ovdp-research]] — дослідження ОВДП; ставки, право й продуктова доступність потребують live-перевірки.
 - [[emergency-fund-usdt-usdc-research]] — крипто-дослідження; regulatory/exchange/earn факти є time-sensitive.
 

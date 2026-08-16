@@ -1,7 +1,7 @@
 ---
 title: Beauty Growth Assistant — project overview
 created: 2026-08-16
-updated: 2026-08-16
+updated: 2026-08-17
 type: project
 status: active
 approval: user-directed
@@ -14,7 +14,7 @@ sources:
 
 # Beauty Growth Assistant
 
-Продуктовий напрям для українських solo beauty-майстрів: почати з mobile-first публічної візитівки та поступово додавати booking/CRM-модулі без втрати контролю майстром.
+Продуктовий напрям для українських solo beauty-майстрів: почати з mobile-first публічної візитівки та поступово додавати booking/CRM-модулі без втрати контролю майстром. ^[session:default/20260629_183841_50ab40de]
 
 ## Confirmed product direction
 
@@ -28,7 +28,7 @@ sources:
 6. локація і маршрут;
 7. Instagram та прямий чат.
 
-Базовий сценарій має працювати **без CRM**: клієнт переглядає роботи, ціни й адресу та пише майстру. QR, dashboard, analytics і внутрішня CRM не повинні перетворювати public page на mini-dashboard.
+Базовий сценарій має працювати **без CRM**: клієнт переглядає роботи, ціни й адресу та пише майстру. QR, dashboard, analytics і внутрішня CRM не повинні перетворювати public page на mini-dashboard. ^[session:default/20260629_183841_50ab40de]
 
 ## Product principles confirmed by Denys
 
@@ -44,7 +44,7 @@ sources:
 - Frontend base: React + TypeScript + Vite.
 - Product-rebuild docs: `/opt/apps/beauty-growth-assistant/docs/beauty-crm-rebuild/`.
 - Master workflow визначає послідовність: requirements → product design → architecture → backend → frontend → integration → QA → deploy.
-- Business requirements документ існує, але source repository має незатрекані work-in-progress docs. Тому вони є сильним робочим джерелом, а не immutable approved specification.
+- Business requirements документ існує, але source repository має незатрекані work-in-progress docs. Тому вони є сильним робочим джерелом, а не immutable approved specification. ^[/opt/apps/beauty-growth-assistant/docs/beauty-crm-rebuild/00-master-workflow.md] ^[/opt/apps/beauty-growth-assistant/docs/beauty-crm-rebuild/01-business-requirements.md]
 
 ## Source-of-truth boundaries
 
@@ -55,5 +55,6 @@ sources:
 ## Related
 
 - [[product-requirements]]
+- [[beauty-public-profile-onboarding]] — approved content/onboarding workflow for the standalone-first page.
 - [[manual-paid-pilot-workflow]]
 - [[saas-payments-ukraine-validation-2026-06]]

@@ -1,4 +1,19 @@
+---
+title: Hermes Memory Enhancement Roadmap (Based on Research)
+created: 2026-05-29
+updated: 2026-08-17
+type: research
+status: draft
+approval: unapproved
+tags: [wiki, workflow]
+sources:
+  - "research/ai-agent-memory-landscape-2026.md"
+  - "research/ai-agent-memory-papers-deep-dive.md"
+---
+
 # Hermes Memory Enhancement Roadmap (Based on Research)
+
+> ⚠️ Dated, unapproved research roadmap. It contains speculative implementation sketches and historical pseudo-commands. For current durable behavior and routing, use [[hermes-memory-lifecycle]] and [[agents/knowledge-policy|Agent knowledge policy]].
 
 > Як покращити Hermes Agent на основі наукових досліджень про AI agent memory  
 > Практичні кроки для offline consolidation, selective forgetting, cross-session awareness

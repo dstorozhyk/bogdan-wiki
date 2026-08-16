@@ -4,6 +4,12 @@ Chronological record of all wiki actions. Append-only.
 Format: `## [YYYY-MM-DD] action | subject`
 Actions: ingest, update, query, lint, create, archive, delete
 
+## [2026-08-17] extract | finance, Beauty onboarding, and memory lifecycle
+- Extracted the stable emergency-fund liquidity-tier concept and a quarterly live-verification/rebalancing workflow from the approved strategy and dated research cluster.
+- Created the standalone-first Beauty public-profile onboarding workflow with explicit owner/deployment approval boundaries and no QR/dashboard/analytics on the public surface.
+- Created the canonical Hermes memory lifecycle across context, sessions, compact memory/profile, skills, wiki and operational state.
+- Standardized the old Hermes memory roadmap as an unapproved dated research source, then updated backlinks, index and migration review.
+
 ## [2026-08-16] extract | canonical workflows and operating policies
 - Processed late read-only audit/session-mining results after the first ingest commit; deduplicated findings against pages already created.
 - Extracted canonical `AI-assisted SDLC` concept and executable product-lifecycle workflow from the mixed research note while retaining source provenance.

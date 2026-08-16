@@ -1,14 +1,17 @@
 ---
 title: Agent Knowledge Policy
 created: 2026-06-20
-updated: 2026-08-16
+updated: 2026-08-17
 type: concept
+status: approved
+approval: user-directed
 tags: [wiki, guide]
+sources: []
 ---
 
 # Agent Knowledge Policy
 
-Policy for deciding what Bogdan should preserve after daily work. Related: [[log]], [[index]], [[wiki-decomposition-workflow]].
+Policy for deciding what Bogdan should preserve after daily work. Related: [[log]], [[index]], [[wiki-decomposition-workflow]], [[hermes-memory-lifecycle]].
 
 ## Purpose
 

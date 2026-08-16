@@ -1,7 +1,7 @@
 ---
 title: Emergency fund strategy
 created: 2026-06-07
-updated: 2026-08-16
+updated: 2026-08-17
 type: plan
 status: approved
 approval: user-directed
@@ -118,3 +118,9 @@ sources:
 - Стан біржі (PoR Hacken, новини, хаки) — при погіршенні тихо переносиш на іншу
 - Крипто-картко-активність тримати < 30k UAH/міс (ризик блоку mono/Privat); купівля через WhiteBIT direct top-up, не P2P
 - Довгий транш — 50/50 USDT/USDC, розкид по мережах
+
+## Related
+
+- [[emergency-fund-liquidity-tiers]] — stable conceptual model behind the three tiers.
+- [[emergency-fund-quarterly-review]] — workflow that requires live verification before proposing actions.
+- [[dashboard]] — historical/current-state dashboard; use only after refreshing `last_updated` and balances.
