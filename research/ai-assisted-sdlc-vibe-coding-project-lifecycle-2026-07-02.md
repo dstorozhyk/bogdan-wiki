@@ -1,10 +1,18 @@
 ---
 title: AI-assisted SDLC / vibe-coding project lifecycle
-date: 2026-07-02
-tags: [sdlc, ai-assisted-development, vibe-coding, product-development, startup]
+created: 2026-07-02
+updated: 2026-08-16
+type: research
+status: reference
+tags: [workflow, architecture, prompt-engineering, validation]
+sources:
+  - "https://www.atlassian.com/agile/software-development/sdlc"
+  - "https://www.ibm.com/topics/software-development-life-cycle"
 ---
 
 # AI-assisted SDLC / vibe-coding project lifecycle
+
+> Source/synthesis note retained for provenance. Canonical reusable pages: [[ai-assisted-sdlc]] and [[ai-assisted-product-lifecycle]].
 
 ## Коротка відповідь
 

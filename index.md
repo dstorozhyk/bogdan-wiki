@@ -23,6 +23,7 @@ Read this first to find relevant pages for any query.
 ## Career Context
 
 - [career/profile/denys-career-direction](career/profile/denys-career-direction.md) — confirmed corporate-career direction: system-level influence, architecture judgment and Staff/Principal/Architect scope rather than startup/title signaling.
+- [career/skills/professional-communication](career/skills/professional-communication.md) — practical structures for concise technical positions, calibrated confidence, trade-offs and decision-oriented Staff/architect communication.
 - [career/profile/denys-6k-senior-to-tech-lead-gap-analysis-2026-08](career/profile/denys-6k-senior-to-tech-lead-gap-analysis-2026-08.md) — draft evidence-based profile/gap analysis; explicitly not an approved plan.
 - [career/job-search/job-search-sources-denys](career/job-search/job-search-sources-denys.md) — Denys-provided active vacancy-monitoring criteria; not a career plan.
 - [career/learning/corporate-influence-reading-path-2026-08](career/learning/corporate-influence-reading-path-2026-08.md) — active reading path for strategy, judgment, organizational influence, and cross-team coordination.
@@ -51,6 +52,7 @@ Read this first to find relevant pages for any query.
 ## Infrastructure
 
 - [infrastructure/vps-main](infrastructure/vps-main.md) — credential-free host/service context and timestamped resource/deployment snapshot for the main VPS.
+- [infrastructure/secret-management-policy](infrastructure/secret-management-policy.md) — Bitwarden EU/project-scoped least-privilege policy; deliberately contains no secret values or account-specific credentials.
 
 ## Entities
 
@@ -58,6 +60,7 @@ Read this first to find relevant pages for any query.
 
 ## Concepts
 
+- [ai-assisted-sdlc](concepts/ai-assisted-sdlc.md) — canonical boundary: AI accelerates implementation but increases the need for scope, architecture guardrails and executable verification.
 - [hermes-codex-oauth-quota-exhaustion](concepts/hermes-codex-oauth-quota-exhaustion.md) — чому Codex (ChatGPT OAuth) застрягає в `exhausted` після 429 і як лікувати (`hermes auth reset openai-codex`).
 - [wiki-decomposition-workflow](concepts/wiki-decomposition-workflow.md) — правило розкладати wiki-дослідження на overview/entity/comparison/workflow/checklist файли.
 
@@ -67,6 +70,8 @@ Read this first to find relevant pages for any query.
 
 ## Workflows
 
+- [ai-assisted-product-lifecycle](workflows/ai-assisted-product-lifecycle.md) — RAT/prototype → walking skeleton → vertical slice → MLP → controlled pilot, with verification gates for agent-generated changes.
+- [automation-idea-validation-funnel](workflows/automation-idea-validation-funnel.md) — approved multi-cycle filter: evidence/dedup → user fit → feasibility → ROI → adversarial pre-mortem → scored judge → gap recovery.
 - [manual-paid-pilot-workflow](workflows/manual-paid-pilot-workflow.md) — manual landing → invoice → activation workflow for SaaS validation.
 
 ## Queries
@@ -88,7 +93,7 @@ Read this first to find relevant pages for any query.
 
 - [small-creator-brand-deals-playbook-2026-07-12](research/small-creator-brand-deals-playbook-2026-07-12.md) — процес пошуку, пітчингу, узгодження та вимірювання перших brand deals для малого автора.
 - [small-creator-brand-deals-pricing-2026-07-12](research/small-creator-brand-deals-pricing-2026-07-12.md) — робоча логіка rate card для «Все про Royal» на основі релевантності й перевіреної конверсії, а не лише CPM.
-- [ai-assisted-sdlc-vibe-coding-project-lifecycle-2026-07-02](research/ai-assisted-sdlc-vibe-coding-project-lifecycle-2026-07-02.md) — AI-assisted SDLC для vibe-coded продуктів: PoC/Prototype/RAT/Walking Skeleton/Vertical Slice/MLP/Pilot замість автоматичного “MVP”.
+- [ai-assisted-sdlc-vibe-coding-project-lifecycle-2026-07-02](research/ai-assisted-sdlc-vibe-coding-project-lifecycle-2026-07-02.md) — original sourced synthesis retained for provenance; canonical concept and executable workflow now live under `concepts/` and `workflows/`.
 - [emergency-fund-ovdp-research](research/emergency-fund-ovdp-research.md) — дослідження USD ОВДП для подушки; фінальне рішення: mono валютна банка $5k, звільнені $600 → SGOV/UCITS-equivalent routing.
 - [emergency-fund-usdt-usdc-research](research/emergency-fund-usdt-usdc-research.md) — дослідження USDT/USDC частини подушки; фінальне рішення: $3.8k stablecoin sleeve через WhiteBIT/Binance, транші instant/30д/90д, ризики CEX/емітентів.
 - [mobile-app-stores-as-saas-payment-route-ukraine-2026-06-21](research/mobile-app-stores-as-saas-payment-route-ukraine-2026-06-21.md) — using iOS/Android app stores and in-app purchases as a B2C/prosumer SaaS payment workaround for Ukraine.

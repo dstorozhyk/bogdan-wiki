@@ -93,7 +93,7 @@ The `sha256` prevents duplicate ingests and detects source drift on re-ingest.
 - person, company, lab, open-source, researcher, startup, project
 
 ### Product & Business
-- saas, payments, invoicing, validation, workflow, wiki, beauty, life-rpg, telegram
+- saas, payments, invoicing, validation, workflow, automation, wiki, beauty, life-rpg, telegram, security, secrets
 
 ### Career & Personal Context
 - career, tech-lead, job-search, learning, enterprise, architecture, delivery, finance

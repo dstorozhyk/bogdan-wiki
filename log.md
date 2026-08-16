@@ -4,6 +4,18 @@ Chronological record of all wiki actions. Append-only.
 Format: `## [YYYY-MM-DD] action | subject`
 Actions: ingest, update, query, lint, create, archive, delete
 
+## [2026-08-16] extract | canonical workflows and operating policies
+- Processed late read-only audit/session-mining results after the first ingest commit; deduplicated findings against pages already created.
+- Extracted canonical `AI-assisted SDLC` concept and executable product-lifecycle workflow from the mixed research note while retaining source provenance.
+- Added a professional technical-communication guide sourced from Denys's explicit request.
+- Added a Bitwarden EU / least-privilege secret-management policy with no secret values, account identifiers or recovery material.
+- Updated schema tags, index routing and migration review.
+
+## [2026-08-17] create | automation idea validation funnel
+- Added the user-approved multi-cycle theory for filtering automation ideas before recommendation.
+- Captured independent generation lanes, explicit kill criteria, user-fit/feasibility/ROI gates, adversarial pre-mortem, weighted final scoring and gap recovery.
+- Added the workflow to `index.md` and the controlled tag taxonomy.
+
 ## [2026-08-16] ingest | first structured VPS and conversation knowledge wave
 - Added official `projects/`, `finance/`, and `infrastructure/` routing to `SCHEMA.md`; expanded types and tag taxonomy.
 - Created project overview pages for Rocket Attack Alarm, Beauty Growth Assistant, and Life RPG with source-of-truth boundaries, confirmed status, provenance, and explicit draft/archive labels.
