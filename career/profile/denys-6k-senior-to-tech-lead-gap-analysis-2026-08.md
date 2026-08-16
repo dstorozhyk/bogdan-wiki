@@ -1,7 +1,19 @@
+---
+title: "Денис: skill-gap analysis для $6k+ Senior → Tech Lead"
+created: 2026-08-15
+updated: 2026-08-16
+type: profile
+status: draft
+approval: unapproved
+tags: [career, tech-lead]
+sources: [research/dou-current-raw-salaries-dotnet-analysis-2026-08.md]
+---
+
 # Денис: skill-gap analysis для $6k+ Senior → Tech Lead
 
 > Статус: **чернетка на основі CV до поточного місця**. Не інтерпретувати «не вказано» як «не вміє».  
 > База: CV Дениса, 2026-08-15; [[dou-current-raw-salaries-dotnet-analysis-2026-08]].
+> Можлива, але непогоджена чернетка кроків: [[denys-tech-lead-90-day-plan-2026-08]].
 
 ## Цільовий профіль і ринковий поріг
 

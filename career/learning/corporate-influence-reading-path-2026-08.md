@@ -1,3 +1,13 @@
+---
+title: "Читання: організаційний вплив, стратегія і судження"
+created: 2026-08-01
+updated: 2026-08-16
+type: guide
+status: active
+tags: [career, learning]
+sources: []
+---
+
 # Читання: організаційний вплив, стратегія і судження
 
 **Статус:** активний список читання  
@@ -112,3 +122,4 @@
 ## Пов'язані сторінки
 
 - [[enterprise-ai-team-vision-tech-lead-meeting-prep-2026-07-12]] — попередні нотатки про enterprise AI та внутрішній технічний вплив.
+- [[denys-6k-senior-to-tech-lead-gap-analysis-2026-08]] — draft profile/gap analysis, до якого reading path може дати моделі, але не замінює evidence.

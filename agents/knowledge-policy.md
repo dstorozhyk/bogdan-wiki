@@ -1,7 +1,7 @@
 ---
 title: Agent Knowledge Policy
 created: 2026-06-20
-updated: 2026-07-03
+updated: 2026-08-16
 type: concept
 tags: [wiki, guide]
 ---
@@ -18,7 +18,7 @@ The rule of thumb:
 
 - **Memory** stores compact, stable facts that reduce repeated steering.
 - **Skills** store reusable procedures and workflows.
-- **Wiki** stores durable, human-readable knowledge, research, decisions, and daily summaries.
+- **Wiki** stores durable, human-readable knowledge, research, decisions, and daily summaries, routed by `SCHEMA.md` rather than written to `research/` by default.
 - **Session DB** stores raw conversation history and should be searched instead of duplicated.
 
 ## Routing Rules
@@ -29,6 +29,8 @@ The rule of thumb:
 | Skill | Reusable workflow; 5+ tool calls; tricky error/pitfall; exact commands; repeatable verification | One-off task status, broad research notes, artifact-specific logs |
 | Wiki | Research, decisions, comparisons, architecture, runbooks, daily digests, review queues | Secrets, noisy raw output, unverified speculative claims without labels |
 | Discard | Trivial, duplicate, already captured, or transient | Anything with future operational value |
+
+Within the wiki, use `research/` only for provisional/source-backed investigations, datasets, and dated scans. Put stable entities/concepts/comparisons/workflows in their semantic directories, career context in `career/`, chronology in `logs/`, agent operations in `agents/`, and crawler/runtime state in `state/`. Assistant-generated ideas and drafts must remain visibly unapproved until Denys approves them.
 
 ## Daily Sleep Job Behavior
 

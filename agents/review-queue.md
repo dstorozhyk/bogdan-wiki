@@ -795,7 +795,7 @@ The nightly sleep job should prepend new candidates below.
   - Evidence: `20260621_130017_acde58`.
 
 - [ ] **2026-06-22 — Integrate mobile app-store payment route into SaaS payments wiki set**
-  - Suggested destination: update `research/saas-payments-ukraine-validation-2026-06.md` and `research/saas-invoice-service-shortlist-ukraine.md` to link `research/mobile-app-stores-as-saas-payment-route-ukraine-2026-06-21.md` as a B2C/prosumer route.
+  - Suggested destination: update `research/saas-payments-ukraine-validation-2026-06.md` and `comparisons/saas-invoice-service-shortlist-ukraine.md` to link `research/mobile-app-stores-as-saas-payment-route-ukraine-2026-06-21.md` as a B2C/prosumer route.
   - Candidate content: app stores can reduce Ukrainian PSP friction for B2C/prosumer SaaS by using Apple/Google IAP/subscriptions, but require store fees, app review, platform policy compliance, entitlement sync, and payout/KYC verification; verify Apple App Store Connect for Denys’s real account/entity.
   - Evidence: `20260621_130017_acde58`.
 

@@ -1,7 +1,11 @@
 ---
 title: Підготовка до зустрічі «Обговорення бачення AI-команди»
-date: 2026-07-12
-tags: [career, tech-lead, enterprise, ai, delivery, architecture]
+created: 2026-07-12
+updated: 2026-08-16
+type: context
+status: reference
+tags: [career, tech-lead, enterprise, delivery, architecture]
+sources: []
 ---
 
 # Підготовка до зустрічі «Обговорення бачення AI-команди»
@@ -188,3 +192,8 @@ tags: [career, tech-lead, enterprise, ai, delivery, architecture]
 - [ ] Шість-вісім питань із другого розділу.
 - [ ] Не більше двох ідей для перших сценаріїв, близьких до реальних процесів компанії.
 - [ ] Чітка нижня межа: ти не береш «відповідальність за AI-напрям» без повноважень, команди або узгоджених критеріїв.
+
+## Пов’язано
+
+- [[corporate-influence-reading-path-2026-08]]
+- [[denys-6k-senior-to-tech-lead-gap-analysis-2026-08]]

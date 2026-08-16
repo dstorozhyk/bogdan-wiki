@@ -1,8 +1,20 @@
+---
+title: "Непогоджена чернетка: можливі кроки $6k+ Senior → Tech Lead"
+created: 2026-08-15
+updated: 2026-08-16
+type: draft
+status: draft
+approval: unapproved
+tags: [career, tech-lead]
+sources: [research/dou-current-raw-salaries-dotnet-analysis-2026-08.md]
+---
+
 # Непогоджена чернетка: можливі кроки $6k+ Senior → Tech Lead
 
 > Це **не план Дениса** і не домовленість про дії. Це лише research outline, сформований з ринкових даних і CV; використовувати його можна тільки після того, як Денис сам створить або підтвердить власний план.
 
 > Пов'язано з: [[denys-6k-senior-to-tech-lead-gap-analysis-2026-08]].
+> Окрема непогоджена ідея для майбутніх case notes: [[work-situation-documentation-idea]].
 
 ## Рамка
 

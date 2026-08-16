@@ -3,7 +3,7 @@
 Content catalog. Every wiki page listed under its type with a one-line summary.
 Read this first to find relevant pages for any query.
 
-> Last updated: 2026-08-15 | Catalog updated after Ukraine IT market research.
+> Last updated: 2026-08-16 | Catalog aligned to semantic directory routing.
 
 ## Core / Meta
 
@@ -17,11 +17,21 @@ Read this first to find relevant pages for any query.
 - [agents/knowledge-policy](agents/knowledge-policy.md) — routing policy for memory vs skills vs wiki plus nightly sleep job behavior.
 - [agents/review-queue](agents/review-queue.md) — safe-mode staging queue for memory, skill, wiki, and open-loop candidates.
 - [agents/skill-usage](agents/skill-usage.md) — skill usage telemetry and review rules for pruning/pinning/consolidation candidates.
+- [agents/migration-review](agents/migration-review.md) — ambiguous legacy classifications and pre-existing link/frontmatter debt intentionally left for review.
 - `logs/daily/` — generated daily knowledge digests from the safe nightly consolidation job.
+
+## Career Context
+
+- [career/profile/denys-6k-senior-to-tech-lead-gap-analysis-2026-08](career/profile/denys-6k-senior-to-tech-lead-gap-analysis-2026-08.md) — draft evidence-based profile/gap analysis; explicitly not an approved plan.
+- [career/job-search/job-search-sources-denys](career/job-search/job-search-sources-denys.md) — Denys-provided active vacancy-monitoring criteria; not a career plan.
+- [career/learning/corporate-influence-reading-path-2026-08](career/learning/corporate-influence-reading-path-2026-08.md) — active reading path for strategy, judgment, organizational influence, and cross-team coordination.
+- [career/work-context/enterprise-ai-team-vision-tech-lead-meeting-prep-2026-07-12](career/work-context/enterprise-ai-team-vision-tech-lead-meeting-prep-2026-07-12.md) — durable reference from internal enterprise-AI meeting preparation.
+- [career/ideas/denys-tech-lead-90-day-plan-2026-08](career/ideas/denys-tech-lead-90-day-plan-2026-08.md) — unapproved assistant draft; not Denys's plan.
+- [career/ideas/work-situation-documentation-idea](career/ideas/work-situation-documentation-idea.md) — unapproved idea for anonymized work-situation notes; no routine is active.
 
 ## Entities
 
-- [payoneer-invoice-payment-request-ukraine-saas](research/payoneer-invoice-payment-request-ukraine-saas.md) — Payoneer invoice/payment request як швидкий спосіб приймати B2B/prosumer SaaS paid pilot платежі з України.
+- [payoneer-invoice-payment-request-ukraine-saas](entities/payoneer-invoice-payment-request-ukraine-saas.md) — Payoneer invoice/payment request як швидкий спосіб приймати B2B/prosumer SaaS paid pilot платежі з України.
 
 ## Concepts
 
@@ -30,7 +40,11 @@ Read this first to find relevant pages for any query.
 
 ## Comparisons
 
-- [saas-invoice-service-shortlist-ukraine](research/saas-invoice-service-shortlist-ukraine.md) — shortlist Payoneer, crypto invoices, PayPal fallback, PayRequest, Zoho/Invoicely/Bonsai/Invoice2go для українського SaaS validation.
+- [saas-invoice-service-shortlist-ukraine](comparisons/saas-invoice-service-shortlist-ukraine.md) — shortlist Payoneer, crypto invoices, PayPal fallback, PayRequest, Zoho/Invoicely/Bonsai/Invoice2go для українського SaaS validation.
+
+## Workflows
+
+- [manual-paid-pilot-workflow](workflows/manual-paid-pilot-workflow.md) — manual landing → invoice → activation workflow for SaaS validation.
 
 ## Queries
 
@@ -38,18 +52,17 @@ Read this first to find relevant pages for any query.
 
 ## Summaries / Research
 
-- [corporate-influence-reading-path-2026-08](research/corporate-influence-reading-path-2026-08.md) — список і послідовність читання для розвитку стратегічного та організаційного впливу: стратегія, управління, влада, судження, культура й кроскомандна координація.
+
 - [ukraine-it-market-baseline-2026-08](research/ukraine-it-market-baseline-2026-08.md) — первинний, джерельно-обмежений зріз Djinni/офіційної статистики ІТ-ринку України: попит, конкуренція, Data/AI та макроконтекст.
 - [dou-raw-salaries-dotnet-analysis-2026-08](research/dou-raw-salaries-dotnet-analysis-2026-08.md) — **застарілий mirror-аналітичний зріз 2015–2020**; збережено тільки для історії, поточне джерело нижче.
 - [dou-current-raw-salaries-dotnet-analysis-2026-08](research/dou-current-raw-salaries-dotnet-analysis-2026-08.md) — Python-аналіз актуального `devua/csv` DOU raw dataset за 2026-06: .NET P25/median/P75/P90, $6k+ upper tail і тайтли.
-- [denys-6k-senior-to-tech-lead-gap-analysis-2026-08](research/denys-6k-senior-to-tech-lead-gap-analysis-2026-08.md) — персональний evidence-based gap analysis Дениса для $6k+ Senior і Tech Lead: сильні сторони, не доведені capability, 60–90-day артефакти та потрібні дані з поточного місця.
-- [denys-tech-lead-90-day-plan-2026-08](research/denys-tech-lead-90-day-plan-2026-08.md) — **непогоджений research outline**, а не план Дениса; можливі кроки для майбутнього Tech Lead case в OKKO.
+
 - [part-time-opportunities-shortlist-2026-08-15](research/part-time-opportunities-shortlist-2026-08-15.md) — time-sensitive shortlist part-time Djinni ролей, оцінений під .NET/fintech/microservices профіль Дениса; відокремлено direct fit від stretch і mismatch.
 - [part-time-dotnet-availability-snapshot-2026-08-15](research/part-time-dotnet-availability-snapshot-2026-08-15.md) — статистичний зріз доступності public .NET part-time: DOU 1 картка, Djinni 4, із **0** Senior backend/payments fit; короткострокова оцінка, не стратегія.
-- [job-search-sources-denys](research/job-search-sources-denys.md) — надані Денисом active search criteria й джерела: .NET Senior/Lead, booking, Київ/remote, $3.5k+, домени та поточний мовний фільтр.
+
 - [dotnet-ukrainian-language-vacancies-2026-08-15](research/dotnet-ukrainian-language-vacancies-2026-08-15.md) — **full-time reference scan, не actionable shortlist**: DOU/LinkedIn близькі .NET backend вакансії без explicit mandatory English; Денис підтвердив, що розглядає лише part-time.
 - [ukraine-it-career-advantage-hypotheses-2026-08](research/ukraine-it-career-advantage-hypotheses-2026-08.md) — ранжовані гіпотези переваги Дениса: enterprise AI/platform architecture, regulated B2B/fintech, governance і технічний вплив; 90-денний експеримент.
-- [enterprise-ai-team-vision-tech-lead-meeting-prep-2026-07-12](research/enterprise-ai-team-vision-tech-lead-meeting-prep-2026-07-12.md) — підготовка Дениса до внутрішньої зустрічі «Обговорення бачення AI-команди»: enterprise AI vision, controlled pilots, AI-assisted SDLC guardrails, 90-денний plan і позиціонування на Tech Lead.
+
 - [small-creator-brand-deals-playbook-2026-07-12](research/small-creator-brand-deals-playbook-2026-07-12.md) — процес пошуку, пітчингу, узгодження та вимірювання перших brand deals для малого автора.
 - [small-creator-brand-deals-pricing-2026-07-12](research/small-creator-brand-deals-pricing-2026-07-12.md) — робоча логіка rate card для «Все про Royal» на основі релевантності й перевіреної конверсії, а не лише CPM.
 - [ai-assisted-sdlc-vibe-coding-project-lifecycle-2026-07-02](research/ai-assisted-sdlc-vibe-coding-project-lifecycle-2026-07-02.md) — AI-assisted SDLC для vibe-coded продуктів: PoC/Prototype/RAT/Walking Skeleton/Vertical Slice/MLP/Pilot замість автоматичного “MVP”.
@@ -62,7 +75,7 @@ Read this first to find relevant pages for any query.
 - [life-rpg-habit-app-roadmap-2026-06-21](research/life-rpg-habit-app-roadmap-2026-06-21.md) — roadmap, MVP scope, validation metrics, and launch plan for the Life RPG habit app concept.
 - [mobile-app-stores-as-saas-payment-route-ukraine-2026-06-21](research/mobile-app-stores-as-saas-payment-route-ukraine-2026-06-21.md) — using iOS/Android app stores and in-app purchases as a B2C/prosumer SaaS payment workaround for Ukraine.
 - [saas-payments-ukraine-validation-2026-06](research/saas-payments-ukraine-validation-2026-06.md) — як тестити SaaS payments з України без негайного відкриття іноземної компанії.
-- [manual-paid-pilot-workflow](research/manual-paid-pilot-workflow.md) — покроковий ручний paid pilot workflow: landing → form → invoice → manual activation.
+
 - [whitebit-binance-usdt-staking-route-2026-06](research/whitebit-binance-usdt-staking-route-2026-06.md) — when WhiteBIT direct UAH→USDT beats Binance P2P, and Binance→WhiteBIT network workflow for USDT staking/lending.
 - [freedom24-ukraine-funding-2026-06](research/freedom24-ukraine-funding-2026-06.md) — практичний маршрут поповнення Freedom24/Freedom Finance з України; Wise/ZEN викреслені, Genome/SEPA лишається fallback через ~20 EUR/USD monthly fee.
 - [rocket-attack-alarm-marketing](research/rocket-attack-alarm-marketing.md) — marketing/research notes for the Повітряні Загрози / rocket attack alarm project.

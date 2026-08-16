@@ -4,6 +4,14 @@ Chronological record of all wiki actions. Append-only.
 Format: `## [YYYY-MM-DD] action | subject`
 Actions: ingest, update, query, lint, create, archive, delete
 
+## [2026-08-16] update | semantic architecture migration
+- Added schema routing for research, stable typed knowledge, workflows, career context, agent/log chronology, and runtime state.
+- Moved five explicit career-context pages under `career/`; extracted the work-situation documentation proposal as an unapproved idea.
+- Moved the Payoneer entity, SaaS invoice comparison, and manual paid-pilot workflow to their semantic directories.
+- Moved vacancy-monitor seen-state JSON from `research/monitoring/` to `state/job-search/`; volatile state remains outside the human knowledge index.
+- Added `agents/migration-review.md` for ambiguous legacy pages and pre-existing link/frontmatter debt; no speculative bulk moves or knowledge deletion.
+- Updated `index.md`, touched-page frontmatter, knowledge policy, and affected cron path/routing prompts.
+
 ## [2026-08-15] create | Ukraine IT market baseline and career-advantage hypotheses
 - Створено `research/ukraine-it-market-baseline-2026-08.md`: перевірені сигнали Djinni Q1/Data-ринку та офіційний експортний контекст; розмежовано platform-specific цифри й весь ринок.
 - Створено `research/ukraine-it-career-advantage-hypotheses-2026-08.md`: напрям enterprise AI/platform architect + regulated B2B/fintech + architecture governance; задано 90-денний test.

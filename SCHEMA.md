@@ -19,6 +19,21 @@ cross-references, and maintains consistency.
   to paragraphs so claims can be traced back without re-reading the source.
 - **Raw sources:** Immutable. Never edit files in `raw/`. Corrections go in wiki pages.
 
+## Directory Routing
+
+Route by the page's semantic role, not merely by whether sources were consulted:
+
+- `raw/` — immutable source captures.
+- `research/` — provisional/source-backed investigations, datasets, and dated market scans or snapshots.
+- `entities/`, `concepts/`, `comparisons/`, `queries/` — stable reusable knowledge by type.
+- `workflows/` — executable playbooks and repeatable procedures.
+- `career/` — Denys's durable career context, clearly separated into profile, job-search, learning, work-context, and unapproved ideas/drafts.
+- `logs/` — chronology and generated daily digests; `agents/` — agent policy and review queues.
+- `state/` — persisted machine/runtime state such as crawler seen-URL files. It is not human-readable knowledge and is not indexed page-by-page.
+- `_archive/` — superseded material retained for history.
+
+User-approved decisions/plans must say `status: approved`. Assistant-generated proposals must use `status: idea` or `status: draft` plus `approval: unapproved`; never call them Denys's plan before approval. Ambiguous legacy pages stay in place and are listed in `agents/migration-review.md` rather than moved speculatively.
+
 ## Frontmatter (Wiki Pages)
 
 ```yaml
@@ -26,9 +41,11 @@ cross-references, and maintains consistency.
 title: Page Title
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
-type: entity | concept | comparison | query | summary
+type: entity | concept | comparison | query | summary | research | workflow | profile | context | guide | idea | draft | decision | plan
 tags: [tag1, tag2]  # Only from taxonomy below
 sources: [raw/articles/source-name.md, ...]
+status: active | reference | idea | draft | approved | superseded | archived  # Optional, required for ideas/drafts/plans/decisions
+approval: unapproved | user-directed  # Optional; required when approval could be confused
 confidence: high | medium | low    # Optional; omit if high is implied
 contested: false                   # Set true if unresolved contradictions exist
 contradictions: [other-page-slug]  # Optional; pages this one conflicts with
@@ -74,6 +91,9 @@ The `sha256` prevents duplicate ingests and detects source drift on re-ingest.
 
 ### Product & Business
 - saas, payments, invoicing, validation, workflow, wiki
+
+### Career & Personal Context
+- career, tech-lead, job-search, learning, enterprise, architecture, delivery, finance
 
 ### Meta
 - comparison, timeline, controversy, prediction, guide, tutorial
@@ -122,4 +142,4 @@ When new information conflicts with existing content:
 
 ---
 
-*Last updated: 2026-06-10*
+*Last updated: 2026-08-16*

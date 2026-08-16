@@ -1,3 +1,14 @@
+---
+title: Job Search Sources — Денис
+created: 2026-08-15
+updated: 2026-08-16
+type: context
+status: active
+approval: user-directed
+tags: [career, job-search]
+sources: []
+---
+
 # Job Search Sources — Денис
 
 > Джерело: надано Денисом 2026-08-15. Статус: критерії моніторингу, **не план Дениса**.
@@ -27,3 +38,8 @@
 Для кожної вакансії фіксувати URL, джерело, дату, компанію, title, домен, формат, salary/range, стек, обов’язкову мову, бронювання (`explicit` / `unconfirmed` / `not offered`), fit, ризики та питання до рекрутера.
 
 Не вважати бронювання наявним за назвою компанії або доменом. Не рекомендувати Junior/Middle, офіс поза Києвом, hard-requirement Full-stack/embedded/IoT чи legacy-only ролі, якщо немає виняткової стратегічної причини.
+
+## Пов’язано
+
+- [[part-time-dotnet-availability-snapshot-2026-08-15]]
+- [[dotnet-ukrainian-language-vacancies-2026-08-15]]

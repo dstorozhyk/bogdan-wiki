@@ -1,9 +1,9 @@
 ---
 title: Manual paid pilot workflow for SaaS validation
 created: 2026-06-10
-updated: 2026-06-10
-type: summary
-tags: [guide, saas, payments, validation, invoicing]
+updated: 2026-08-16
+type: workflow
+tags: [guide, workflow, saas, payments, validation, invoicing]
 sources:
   - https://www.payoneer.com/invoice-payments/
   - https://www.payoneer.com/get-paid-by-clients/payment-request/
