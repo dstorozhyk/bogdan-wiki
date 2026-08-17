@@ -8,7 +8,7 @@ Hermes providers: OpenAI primary; fallback Copilot Haiku → gpt-4.1 → Gemini 
 §
 Wiki: `/root/bogdan-wiki`; nightly sync `wiki-sync-bogdan.sh`; inspect live cron for schedules.
 §
-Wiki-first: research → `research/`; options guide `options-investor-guide.md`; IV = implied volatility; memory holds config/preferences.
+Wiki-first `/root/bogdan-wiki`: for Denys-specific project, career, finance, infrastructure, workflow, or prior-decision tasks, inspect `index.md` and relevant canonical pages before advising/acting; direct/live sources remain authoritative. Follow SCHEMA routing, update index/log for approved writes, and keep research provisional.
 §
 Hermes CLI: The command for a single query in non-interactive mode is `hermes chat -q`, not `hermes ask`.
 §
