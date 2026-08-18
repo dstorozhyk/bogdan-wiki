@@ -462,3 +462,12 @@ Actions: ingest, update, query, lint, create, archive, delete
 - Skill usage: updated `agents/skill-usage.md`; 126 tracked, 58 zero-use, 55 never-active; curator reports 47 stale agent-created skills.
 - Skill automation: created 0 draft skills, patched 0 skills, queued 0 candidates, rejected 2 non-procedural/duplicate candidates.
 - Added 0 memory candidates, 0 skill candidates, 0 wiki candidates, and refreshed 1 open loop in `agents/review-queue.md`.
+
+## [2026-08-17] create | full-time .NET booking market scan
+- Added `research/fulltime-dotnet-booking-scan-2026-08-17.md` with five new fully remote Senior .NET findings; all booking statuses remain explicitly `unconfirmed`.
+- Updated `state/job-search/fulltime-dotnet-booking-seen.json` and created the JSONL discovery ledger under `state/job-search/`.
+- Recorded the incomplete-scan boundary: direct DOU Cloudflare 403 was recovered through Feed2JSON/Jina for discovery and 25 full pages, but twelve later Jina candidate-page requests returned 429 and were not classified from snippets.
+
+## [2026-08-17] update | correct full-time booking hard filter
+- Clarified the user-directed rule: only `booking: explicit` may be delivered or included in full-time daily, weekly, and monthly reports; `unconfirmed` and `not offered` are rejected.
+- Marked the 2026-08-17 six-vacancy unconfirmed shortlist as superseded and removed those records from qualifying discovery/seen state.

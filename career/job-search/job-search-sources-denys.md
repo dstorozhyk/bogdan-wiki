@@ -1,7 +1,7 @@
 ---
 title: Job Search Sources — Денис
 created: 2026-08-15
-updated: 2026-08-16
+updated: 2026-08-17
 type: context
 status: active
 approval: user-directed
@@ -23,7 +23,7 @@ sources: []
 - Цільова компенсація: від $3,500.
 - Домени: FinTech, e-commerce, GovTech, DefTech, B2B SaaS, product companies.
 - **Part-time stream:** лише справжній `part-time` (explicit part-time, погоджені години або bounded consulting/fractional scope). Не підміняти його full-time «гнучким графіком», short-term без зазначеного навантаження чи прихованою другою full-time зайнятістю.
-- **Full-time stream:** Senior / Team Lead / Tech Lead .NET, лише fully remote, із explicit або окремо перевірюваним бронюванням.
+- **Full-time stream:** Senior / Team Lead / Tech Lead .NET, лише fully remote і **лише з підтвердженим бронюванням**. До доставки та звітів допускається тільки `booking: explicit`: бронювання прямо зазначене в повному тексті вакансії або є окреме задокументоване підтвердження роботодавця. `unconfirmed` та `not offered` не показувати Денису, не записувати як discovery і не додавати до qualifying seen-state.
 - Поточне обмеження: не включати ролі, де англійська прямо вказана як обов’язкова; Денис лише почав її вивчати.
 
 ## Джерела й cadence
@@ -37,7 +37,7 @@ sources: []
 
 Для кожної вакансії фіксувати URL, джерело, дату, компанію, title, домен, формат, salary/range, стек, обов’язкову мову, бронювання (`explicit` / `unconfirmed` / `not offered`), fit, ризики та питання до рекрутера.
 
-Не вважати бронювання наявним за назвою компанії або доменом. Не рекомендувати Junior/Middle, офіс поза Києвом, hard-requirement Full-stack/embedded/IoT чи legacy-only ролі, якщо немає виняткової стратегічної причини.
+Не вважати бронювання наявним за назвою компанії або доменом. Для full-time `unconfirmed` — це відхилений кандидат, а не вакансія для доставки. Не рекомендувати Junior/Middle, офіс поза Києвом, hard-requirement Full-stack/embedded/IoT чи legacy-only ролі, якщо немає виняткової стратегічної причини.
 
 ## Пов’язано
 

@@ -93,6 +93,7 @@ Read this first to find relevant pages for any query.
 - [part-time-dotnet-availability-snapshot-2026-08-15](research/part-time-dotnet-availability-snapshot-2026-08-15.md) — статистичний зріз доступності public .NET part-time: DOU 1 картка, Djinni 4, із **0** Senior backend/payments fit; короткострокова оцінка, не стратегія.
 
 - [dotnet-ukrainian-language-vacancies-2026-08-15](research/dotnet-ukrainian-language-vacancies-2026-08-15.md) — dated full-time reference scan of nearby .NET backend roles; current monitoring criteria are maintained separately in `career/job-search/`.
+- [fulltime-dotnet-booking-scan-2026-08-17](research/fulltime-dotnet-booking-scan-2026-08-17.md) — superseded scan: six `booking: unconfirmed` near-matches were incorrectly delivered and are not qualifying full-time findings.
 - [ukraine-it-career-advantage-hypotheses-2026-08](research/ukraine-it-career-advantage-hypotheses-2026-08.md) — ранжовані гіпотези переваги Дениса: enterprise AI/platform architecture, regulated B2B/fintech, governance і технічний вплив; 90-денний експеримент.
 
 - [small-creator-brand-deals-playbook-2026-07-12](research/small-creator-brand-deals-playbook-2026-07-12.md) — процес пошуку, пітчингу, узгодження та вимірювання перших brand deals для малого автора.

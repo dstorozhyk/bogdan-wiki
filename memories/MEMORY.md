@@ -25,3 +25,5 @@ Beauty public profile: mobile-first identity/services/slots/portfolio/reviews/lo
 Hermes Bitwarden Secrets Manager uses the EU vault and `hermes` project; direct BWS CLI calls require `BWS_SERVER_URL=https://vault.bitwarden.eu`. Runtime credentials belong in Bitwarden, not chat/memory/source.
 §
 Denys prioritizes a corporate path to real organizational influence: substantive trust, system view, sound judgment, enterprise-architect direction—not startup/title signaling.
+§
+Full-time vacancy monitoring delivers only roles with confirmed booking (`booking: explicit`); never send `unconfirmed` or `not offered`.
