@@ -1,29 +1,7 @@
-Rocket bot `/opt/apps/rocket-attack-alarm`: city is a region filter; exclude retrospective `#зведення`/`візуалізація`.
+Перед кожною відповіддю на питання про проекти, робочу інфраструктуру, фінанси, рішення, працi Denysʼа або стійкі workflow, я ОБОВʼЯЗКОВО шукаю релевантну інформацію у вікі / skillах. Якщо нічого не знайдено — підкреслюю це прямим рядком у відповіді. Відповідь без такого пошуку є помилковою. Це — policy #1 для Hermes Bogdan.
 §
-GitHub `gh` is authenticated as dstorozhyk (`~/.config/gh/hosts.yml`).
+Зберігай усі стійкі знання у вікі, шукай інформацію насамперед у вікі. Тимчасові або мінливі записи видаляй відразу, як тільки вони втратили актуальність — не накопичуй їх у пам’яті. Hermes CLI — для одиночних запитів hermes chat -q; workflow веди через вікі-first. Не запитуй дозволу на чистку після прямої вказівки — виконуй одразу.
 §
-Hermes patches: `/balance` direct_script; cron `[SILENT]` exact match. Sources: `agent/skill_commands.py`, `gateway/run.py`, `cron/scheduler.py`.
+Denys хоче, щоб усі стійкі знання одразу переносились у вікі, а Hermes пам’ять була короткою й лише для оперативного/тимчасового, що автоматично чиститься. Не слід питати дозволу на чистку/оновлення пам’яті після явної вказівки — робити це ініціативно, лаконічно і без зайвих питань.
 §
-Hermes providers: OpenAI primary; fallback Copilot Haiku → gpt-4.1 → Gemini Flash → OpenRouter DeepSeek Flash.
-§
-Wiki: `/root/bogdan-wiki`; nightly sync `wiki-sync-bogdan.sh`; inspect live cron for schedules.
-§
-Wiki-first `/root/bogdan-wiki`: for Denys-specific project, career, finance, infrastructure, workflow, or prior-decision tasks, inspect `index.md` and relevant canonical pages before advising/acting; direct/live sources remain authoritative. Follow SCHEMA routing, update index/log for approved writes, and keep research provisional.
-§
-Hermes CLI: The command for a single query in non-interactive mode is `hermes chat -q`, not `hermes ask`.
-§
-Ukraine specialists: `research/ukraine-specialists.md`; use `ukraine-specialists-finder` and its Lviv refs.
-§
-Media: prefer gweb/Gemini; deliver only visually verified finals.
-§
-Broker funding: Raiffeisen EUR → Wise EUR → Freedom EUR observed 0 fee; avoid USD conversion, card top-ups, direct SWIFT/Paysera.
-§
-Beauty UI: Bohdan writes frontend manually; do not turn a UI kit into a landing page.
-§
-Beauty public profile: mobile-first identity/services/slots/portfolio/reviews/location/Instagram-chat; no QR/dashboard/analytics.
-§
-Hermes Bitwarden Secrets Manager uses the EU vault and `hermes` project; direct BWS CLI calls require `BWS_SERVER_URL=https://vault.bitwarden.eu`. Runtime credentials belong in Bitwarden, not chat/memory/source.
-§
-Denys prioritizes a corporate path to real organizational influence: substantive trust, system view, sound judgment, enterprise-architect direction—not startup/title signaling.
-§
-Full-time vacancy monitoring delivers only roles with confirmed booking (`booking: explicit`); never send `unconfirmed` or `not offered`.
+Denys вимагає: до відповіді на будь-яке питання про роботу, рішення, стабільні робочі процеси чи власний досвід Hermes завжди проводить пошук у вікі й скілах і явно звітує, якщо не знайдено. Відсутність такого пошуку/звіту є помилкою з його точки зору.
