@@ -1,0 +1,72 @@
+{
+  "collector_version": 2,
+  "collector_run_id": "20260820T211929Z-parttime",
+  "mode": "parttime",
+  "checked_at": "2026-08-20T21:19:27.876402+00:00",
+  "scan_complete": true,
+  "failed_sources": [],
+  "payload_truncated": false,
+  "source_health": [
+    {
+      "source": "djinni_dotnet_parttime",
+      "url": "https://djinni.co/jobs/?primary_keyword=dotnet&employment=parttime",
+      "retrieval": "direct",
+      "candidate_count": 1,
+      "full_text_count": 1,
+      "error": null
+    },
+    {
+      "source": "djinni_lead_parttime",
+      "url": "https://djinni.co/jobs/?primary_keyword=lead&employment=parttime",
+      "retrieval": "direct",
+      "candidate_count": 1,
+      "full_text_count": 1,
+      "error": null
+    },
+    {
+      "source": "djinni_architect_parttime",
+      "url": "https://djinni.co/jobs/?primary_keyword=architect&employment=parttime",
+      "retrieval": "direct",
+      "candidate_count": 0,
+      "full_text_count": 0,
+      "error": null
+    },
+    {
+      "source": "dou_dotnet_parttime_en",
+      "url": "https://jobs.dou.ua/vacancies/feeds/?category=.NET&search=part-time",
+      "retrieval": "feed2json_live",
+      "candidate_count": 0,
+      "full_text_count": 0,
+      "error": null
+    },
+    {
+      "source": "dou_dotnet_parttime_nepovna",
+      "url": "https://jobs.dou.ua/vacancies/feeds/?category=.NET&search=%D0%BD%D0%B5%D0%BF%D0%BE%D0%B2%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%B9%D0%BD%D1%8F%D1%82%D1%96%D1%81%D1%82%D1%8C",
+      "retrieval": "feed2json_live",
+      "candidate_count": 0,
+      "full_text_count": 0,
+      "error": null
+    },
+    {
+      "source": "dou_dotnet_parttime_chastkova",
+      "url": "https://jobs.dou.ua/vacancies/feeds/?category=.NET&search=%D1%87%D0%B0%D1%81%D1%82%D0%BA%D0%BE%D0%B2%D0%B0%20%D0%B7%D0%B0%D0%B9%D0%BD%D1%8F%D1%82%D1%96%D1%81%D1%82%D1%8C",
+      "retrieval": "feed2json_live",
+      "candidate_count": 0,
+      "full_text_count": 0,
+      "error": null
+    },
+    {
+      "source": "linkedin_dotnet_parttime",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=.NET%20part-time%20remote&location=Ukraine",
+      "retrieval": "jina_live",
+      "candidate_count": 6,
+      "full_text_count": 6,
+      "error": null
+    }
+  ],
+  "candidate_count": 8,
+  "full_text_classified_count": 8,
+  "rejected_count": 8,
+  "survivor_count": 0,
+  "fulltext_failures": []
+}

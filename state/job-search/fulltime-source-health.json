@@ -1,0 +1,56 @@
+{
+  "collector_version": 2,
+  "collector_run_id": "20260820T211930Z-fulltime",
+  "mode": "fulltime",
+  "checked_at": "2026-08-20T21:19:27.997014+00:00",
+  "scan_complete": true,
+  "failed_sources": [],
+  "payload_truncated": false,
+  "source_health": [
+    {
+      "source": "dou_dotnet_booking",
+      "url": "https://jobs.dou.ua/vacancies/feeds/?category=.NET&search=%D0%B1%D1%80%D0%BE%D0%BD%D1%8E%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F",
+      "retrieval": "feed2json_live",
+      "candidate_count": 0,
+      "full_text_count": 0,
+      "error": null
+    },
+    {
+      "source": "djinni_dotnet_5plus",
+      "url": "https://djinni.co/jobs/?primary_keyword=dotnet&exp_level=5y",
+      "retrieval": "direct",
+      "candidate_count": 15,
+      "full_text_count": 15,
+      "error": null
+    },
+    {
+      "source": "djinni_lead_5plus",
+      "url": "https://djinni.co/jobs/?primary_keyword=lead&exp_level=5y",
+      "retrieval": "direct",
+      "candidate_count": 0,
+      "full_text_count": 0,
+      "error": null
+    },
+    {
+      "source": "deftech_jobs",
+      "url": "https://deftech.dou.ua/jobs/",
+      "retrieval": "jina_live",
+      "candidate_count": 0,
+      "full_text_count": 0,
+      "error": null
+    },
+    {
+      "source": "linkedin_dotnet_senior",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=.NET%20Senior&location=Kyiv%2C%20Ukraine",
+      "retrieval": "jina_live",
+      "candidate_count": 28,
+      "full_text_count": 28,
+      "error": null
+    }
+  ],
+  "candidate_count": 43,
+  "full_text_classified_count": 43,
+  "rejected_count": 43,
+  "survivor_count": 0,
+  "fulltext_failures": []
+}
