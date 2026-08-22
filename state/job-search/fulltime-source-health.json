@@ -1,8 +1,8 @@
 {
   "collector_version": 2,
-  "collector_run_id": "20260820T211930Z-fulltime",
+  "collector_run_id": "20260821T053104Z-fulltime",
   "mode": "fulltime",
-  "checked_at": "2026-08-20T21:19:27.997014+00:00",
+  "checked_at": "2026-08-21T05:30:10.601699+00:00",
   "scan_complete": true,
   "failed_sources": [],
   "payload_truncated": false,
@@ -43,14 +43,14 @@
       "source": "linkedin_dotnet_senior",
       "url": "https://www.linkedin.com/jobs/search/?keywords=.NET%20Senior&location=Kyiv%2C%20Ukraine",
       "retrieval": "jina_live",
-      "candidate_count": 28,
-      "full_text_count": 28,
+      "candidate_count": 29,
+      "full_text_count": 29,
       "error": null
     }
   ],
-  "candidate_count": 43,
-  "full_text_classified_count": 43,
-  "rejected_count": 43,
+  "candidate_count": 44,
+  "full_text_classified_count": 44,
+  "rejected_count": 44,
   "survivor_count": 0,
   "fulltext_failures": []
 }
